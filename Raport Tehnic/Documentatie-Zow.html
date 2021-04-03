@@ -5,6 +5,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="author" content="Isac Iulian-George">
+    <meta name="author" content="Nechita Roberta">
+    <meta name="author" content="Silviu Dumitru">
     <title> ZoW Documentation</title>
     <link rel="stylesheet" href="scholarly.min.css">
 </head>
@@ -80,9 +83,9 @@
         <section id="chapter1_1">
             <h3> 1.1 Purpose </h3>
             <p>
-               &nbsp; &nbsp; &nbsp; &nbsp;<strong>SRS </strong>(<strong>S</strong>oftware <strong>R</strong>equirements <strong>S</strong>pecification) este un document ce proiecteza prin specificatiile concrete oferite de dezvoltatori, un sistem software, 
-                mai exact un atlas zoologic digital,care urmeaza a fi dezvoltat pe baza rapoartelor descrise in cadrul acestuia,totodata ajutand la o mai buna sincronizare a membrilor echipei in vederea obtinerii produsului final. 
-                Domeniu de aplicare este WEB-ul, produsul indreptandu-se spre o arie informationala.
+                &nbsp; &nbsp; &nbsp; &nbsp;<strong>SRS </strong>(<strong>S</strong>oftware <strong>R</strong>equirements <strong>S</strong>pecification) este un document ce proiecteza prin specificatiile concrete oferite de dezvoltatori, un sistem software,
+                mai exact un atlas zoologic digital,care urmeaza a fi dezvoltat pe baza rapoartelor descrise in cadrul acestuia,totodata ajutand la o mai buna sincronizare a membrilor echipei in vederea obtinerii produsului final. Domeniu de aplicare
+                este WEB-ul, produsul indreptandu-se spre o arie informationala.
             </p>
         </section>
         <section id="chapter1_2">
@@ -90,30 +93,29 @@
             <p>
                 &nbsp; &nbsp; &nbsp; &nbsp; Documentul a fost realizat utilizand sintaxa HTML (pentru creearea paginii Web) + CSS(stilizare la nivel de pagina web : culori, dimensiuni,sapatiere,font,spatiere dintre elemente).
                 <br> &nbsp; &nbsp; &nbsp; &nbsp; Specificatii: </br>
-                <img src = C:\Users\40744\Desktop\bodyCSS.jpg  width ='500' height="170">
-                <img src = C:\Users\40744\Desktop\hedereCSS.jpg width ='800' height="170">
+                <img src=C :\Users\40744\Desktop\bodyCSS.jpg width='500' height="170">
+                <img src=C :\Users\40744\Desktop\hedereCSS.jpg width='800' height="170">
                 <br> &nbsp; &nbsp; &nbsp; &nbsp; De asemenea, in vederea structurarii intregului schelet se foloseste o lista ordonata in HTML, cat si bookmark-uri cu link-uri care te trimit prin click la un id de pe pagina.
-                
+
             </p>
         </section>
         <section id="chapter1_3">
             <h3> 1.3 Intended Audience and Reading Suggestions </h3>
             <p>
                 &nbsp; &nbsp; &nbsp; &nbsp;Acest SRS este dedicat cu precadere dezvoltatorilor aplicatiei WEB, dar poate fi accesat si de utlizatorii aplicatiei.
-                <br>&nbsp; &nbsp; &nbsp; &nbsp;In cazul dezvoltatorilor aplicatiei WEB este recomandata pracurgerea intregului material, categorie cu categorie, pentru a se reusi o sincronizare la nivel de echipa,
-                pentru a intelege cerintele proiectului si pentru a avea acces la toate tehnologiile utilizate pe diferite sectoare de lucru (backend, frontend, database connection etc. )
-                 ca la final sa fie asigurata functionalitatea produsului.</br>
+                <br>&nbsp; &nbsp; &nbsp; &nbsp;In cazul dezvoltatorilor aplicatiei WEB este recomandata pracurgerea intregului material, categorie cu categorie, pentru a se reusi o sincronizare la nivel de echipa, pentru a intelege cerintele proiectului
+                si pentru a avea acces la toate tehnologiile utilizate pe diferite sectoare de lucru (backend, frontend, database connection etc. ) ca la final sa fie asigurata functionalitatea produsului.</br>
                 &nbsp; &nbsp; &nbsp; &nbsp;Utiliatorilor le este recomandata accesarea categoriei Introduction, subpunctele Product Scope si Product Functions, pentru a se familiariza cu conceptul aplicatiiei , scopul si functionalitatile de care acestia pot beneficia.
-                
+
             </p>
         </section>
         <section id="chapter1_4">
             <h3> 1.4 Product Scope </h3>
             <p>
-                &nbsp; &nbsp; &nbsp; &nbsp; Proiectul <strong>ZoW - Zoological Web Organizer</strong> are drept scop final realizarea unei aplicatii web, mai exact unui atlas zoologic digital ce ofera utilizatorului o serie de functionalitati.
-                Acesta poate sa vizualizeze albumele intial generate de catre aplicatie dar si   sa genereze propriile albume tematice  personalizate in functie de cerintele sale(animale de companie, domestice, salbatice etc)
-                prin intermediul unei cautari multi-criteriale pe baza unor filtre la nivelul bazei de date.Se va crea atat un clasament al celor mai populare animale pe baza sistemului de rating de care dispune utilizatorul,
-                disponibil si ca flux de date RSS  cat si diverse statistici disponibile in formate deschise-minimal, CSV si PDF.
+                &nbsp; &nbsp; &nbsp; &nbsp; Proiectul <strong>ZoW - Zoological Web Organizer</strong> are drept scop final realizarea unei aplicatii web, mai exact unui atlas zoologic digital ce ofera utilizatorului o serie de functionalitati. Acesta
+                poate sa vizualizeze albumele intial generate de catre aplicatie dar si sa genereze propriile albume tematice personalizate in functie de cerintele sale(animale de companie, domestice, salbatice etc) prin intermediul unei cautari multi-criteriale
+                pe baza unor filtre la nivelul bazei de date.Se va crea atat un clasament al celor mai populare animale pe baza sistemului de rating de care dispune utilizatorul, disponibil si ca flux de date RSS cat si diverse statistici disponibile
+                in formate deschise-minimal, CSV si PDF.
 
             </p>
         </section>
@@ -135,91 +137,87 @@
         <section id="chapter2_1">
             <h3> 2.1 Product Perspective </h3>
             <p>
-                &nbsp; &nbsp; &nbsp; &nbsp; Produsul final este un atlas Zoologic Digital, mai exact o aplicatie web (open-source) ce functioneaza independent si este destinata uzului general.
-                Fiind o aplicatie open-source, se presupune a fi utilizata de un numar nelimitat de useri, incluzand si un sistem de logare,ce aduce o serie de functionalitati in plus.
-                Componentele majore ale aplicatie sunt doua : FRONTEND si BACKEND.
-                <br> &nbsp; &nbsp; &nbsp; &nbsp;Partea de FRONT (HTML,CSS,JavaScript) face legatura cu user-ul,prin intermediul ei acesta poate vedea si interactiona cu WEB sever-ul,
-                 beneficiind astfel de toate functionalitatile aplicatiei.</br>
-                 &nbsp; &nbsp; &nbsp; &nbsp;Partea de BACK(Node.js, Typescript, Typeorm) asigura corectitudinea functionalitatilor, fiind zona de implementare propriu-zisa.
-                 Desigur, ca modalitate de stocare a datelor ce intra in componenta produsului, este folosita o baza de date MySQL.
+                &nbsp; &nbsp; &nbsp; &nbsp; Produsul final este un atlas Zoologic Digital, mai exact o aplicatie web (open-source) ce functioneaza independent si este destinata uzului general. Fiind o aplicatie open-source, se presupune a fi utilizata de un numar nelimitat
+                de useri, incluzand si un sistem de logare,ce aduce o serie de functionalitati in plus. Componentele majore ale aplicatie sunt doua : FRONTEND si BACKEND.
+                <br> &nbsp; &nbsp; &nbsp; &nbsp;Partea de FRONT (HTML,CSS,JavaScript) face legatura cu user-ul,prin intermediul ei acesta poate vedea si interactiona cu WEB sever-ul, beneficiind astfel de toate functionalitatile aplicatiei.</br>
+                &nbsp; &nbsp; &nbsp; &nbsp;Partea de BACK(Node.js, Typescript, Typeorm) asigura corectitudinea functionalitatilor, fiind zona de implementare propriu-zisa. Desigur, ca modalitate de stocare a datelor ce intra in componenta produsului, este folosita o
+                baza de date MySQL.
                 <br> Atasez diagrama aplicatiei ce ilustreaza componentele principale din care este alcatuita :</br>
-                 <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;Electron\&quot; modified=\&quot;2021-04-01T16:13:54.314Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.4.3 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36\&quot; etag=\&quot;PzsMiJq3R2HyJdykBY5f\&quot; version=\&quot;14.4.3\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;GmiwDMexxhOpCZKFl61L\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
-                 <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+                <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;Electron\&quot; modified=\&quot;2021-04-01T16:13:54.314Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.4.3 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36\&quot; etag=\&quot;PzsMiJq3R2HyJdykBY5f\&quot; version=\&quot;14.4.3\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;GmiwDMexxhOpCZKFl61L\&quot; name=\&quot;Page-1\&quot;&gt;7Vtbc5s4FP41fiyDuBkeEydpppN2suvOpn3qyKDY2mJEhHzrr18JBAYJF5I1buvEnknQQRyh852bjuSRPVlu31OYLj6SCMUjy4y2I/tqZFnAtBz+T1B2BcUNrIIwpziSnfaEKf6ByicldYUjlDU6MkJihtMmMSRJgkLWoEFKyabZ7ZHEzVFTOEcaYRrCWKc+4IgtCqpvjff0W4Tni3Jk4AXFnSUsO8uZZAsYkU2NZF+P7AklhBVXy+0ExUJ4pVyK524O3K1ejKKE9Xng+sOnf8Bt+PS0viPg/YrdXe027ySXNYxXcsLyZdmulADM0kKwj3iLOK/LlOCEIXq95gML6QJOqyZn8kYEs4XomTcWbBmXnRgl39GExIRySkISPsJlDGcovicZZpgknBwiwZzfWCPKMAfiTukwI4yRZa3DRYzn4gYjKadC2ar4POI4LsccWbZpAt+/Kl45FVNcbudCdQ34Y0WRscr4Q5pkSzHxEdG2RpKSfo/IEjG6413kXUeCLrW+am/2OjR2DSnsRU2BfNkRSr2dV6z30PILie4zkLa6kUZJdCFMRkgvhlmGwyZ+B+WCooYR6VKpTds19UmXNIpiyPC6aXptkpAj3AtN3AsdWIrUx4HhNplkZEVDJJ+rG4vCiutJk5WKC4N0jpjGKIemmvjL0bLPHy1VxNwyX4aVCrvGaGCsHA0r7m5i4TN52IMMashxH8J6eMa645IkzbmpPnCJo0gMc7lZYIamKQzFmBvu4DiNklUSVY75CF4OqFbi6W7Ob9Egaygn52pQXOEsjeEuV9dsFfOAdb5oOAfsoB50WtCwh0LD63ZibYKpIaHlHkcQk+p3QIvSgjatBYPF5nGLoLw410o+F2/O8pkXlEeS+76wymi8pxUpOtgzV3zrpOLZG8of4vGi5MFfsmDTZM3J9fGeaSd8fC//6DnXoyu+R7YYMYPaGMXnSCriuU1LAi0qAk7p2IJuU3otefoyCyEy8qdSijNkhDHmrW8wTWM+TD76MVRA8RLjFhUwA8P2dS0YD6UFpcrV1OBhAYU7YAvE/xaLFzNDfMUsVNGDy1zU+V/BXAiNwjwz2WA+jbONhVWSulPadficU1owaEvpu116BMRXd+m3nz/ejSz+KuZkOi0uPsA1nIYUp+ygnz9fuJsOu8o663DbJ4VbXxVo4v/TV3AOUIzMDpos+q7gXHXhrjIaeAUH9HXD2YGlydgzXwaWhrqrVVmGhktfWPyNnlYoY+fr4Ry1omjpHu608cxvASFLSZKhM0ZBTSta1o6nRUFfGEzydPh8MXDHhmfWPlYDEftX24Wl5+gaFr+g6qG6f9CypG0XlDOYpNo2n45Z9riE4fe3qkd/FfGbKmKbrqYip02irR7bIK+27LFBs298vb8+yn6lZzmG13QQtu4gPNNoKXcMt2Wpr6HuyByHorhBHquqh1b4Oc+o153/gbblw3DG2bZoenlB4xOJkPFvVpQyPu9SlMlSRtkmdPnq6hquWtfou1cx2J6O1bapU6AyOxCz98CUmIsb77L8rM8F7wDG6VZXiIdrUbKcSg/XFcJnr0AZAkUZWg6VnHZXgnul7gDdVThBW8y+iGvDNH3Z/iqkZrjOWLavtlKMeWNXa9wjivlkBDw/l3NR3uiRuP8u9ZpAycYCBcW+9RrfbDJyeh6P4KDl++Zltzyvyg6/sK8WmBzw8/dSj22o59c6+pfz2Ctw8cZHLTXxpPgtBT2YgorTLTOYoW9zlHA7DI/g5MbqIYaWfTcXtKWhg+26cVPUdOBKzryKffQ5C9ZDOdDH3fSvu1eX5Iwd1wiapt12XNIxwEnznB51nM7QlvBX+ZLHsjHwS8LXIthVHfbBLW/t6q3e4a1w4n9OeFPtXItKfcOb18XoSOHNKw+unzT8eD0OaNe0UBp4FV5AR+nKtoPg5uZnevWbqItlNj2Eq+a0vQ/2KoxOfK7X8qw3QHMclF3EFwPqOx2MBkf0eWe1OxAV9HvIuMdPcopl2hXO5Q9QrLNCXrXAlwJ/ckt+3gmPs7Vk32kGxv9hyVVe/6sgPVzSXDhqgo+fk/GLjcogOFTkuqhXsM0LGoq0O2QriroLX9priP0s5/xXDbayFe8E+prBPlJBnDf3v9MrtG3/a0f7+j8=&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+                <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
             </p>
         </section>
         <section id="chapter2_2">
             <h3> 2.2 Product Functions </h3>
             <p>
-               &nbsp; &nbsp; &nbsp; &nbsp; Aceasta aplicatie ofera utilizatorului o serie de functionalitati:
-               <ul type = square>
-                   <li id = "unord"> Inregistrare </li>
-                   <li id = "unord"> Autentificare </li>
-                   <li id = "unord"> Search bar </li> 
-                   <li id = "unord"> Vizualizare informatii </li>
-                   <li id = "unord"> Generare de albume personalizate </li>
-                   <li id = "unord"> Carduri cu animale </li>
-                   <li id = "unord"> Slider de imagini </li>
-                   <li id = "unord"> Generare Top 10 Clasament</li>
-                   <li id = "unord"> Like Animal- sistem de rating </li>
-                   <li id = "unord"> Filtrare Albume </li> 
-                   <li id = "unord"> Generare statistici</li>
-                   <li id = "unord"> Creare albume personalizate</li>
-                   <li id = "unord"> Adaugare animal la un album personalizat</li>
-                   <li id = "unord"> Salvare albume personalizate in MyAlbums</li>
-                   </ul>
-                &nbsp; &nbsp; &nbsp; &nbsp;  De mentionat faptul ca toate aceste functionalitati sunt disponibile doar pentru utilizatori inregistrati si logati in aplicatie.
-                 Restul utilizatorilor nelogati au accesul limitat la unele functionalitati precum creare/salvare albume personale/ adaugare animal la album personal. Atasez diagrama :
-                 <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;Electron\&quot; modified=\&quot;2021-04-01T16:28:09.636Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.4.3 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36\&quot; etag=\&quot;7OYbk65znj1GANzVFchE\&quot; version=\&quot;14.4.3\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;e4CY1KfmZ_HjEQV-NOpp\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+                &nbsp; &nbsp; &nbsp; &nbsp; Aceasta aplicatie ofera utilizatorului o serie de functionalitati:
+                <ul type=s quare>
+                    <li id="unord"> Inregistrare </li>
+                    <li id="unord"> Autentificare </li>
+                    <li id="unord"> Search bar </li>
+                    <li id="unord"> Vizualizare informatii </li>
+                    <li id="unord"> Generare de albume personalizate </li>
+                    <li id="unord"> Carduri cu animale </li>
+                    <li id="unord"> Slider de imagini </li>
+                    <li id="unord"> Generare Top 10 Clasament</li>
+                    <li id="unord"> Like Animal- sistem de rating </li>
+                    <li id="unord"> Filtrare Albume </li>
+                    <li id="unord"> Generare statistici</li>
+                    <li id="unord"> Creare albume personalizate</li>
+                    <li id="unord"> Adaugare animal la un album personalizat</li>
+                    <li id="unord"> Salvare albume personalizate in MyAlbums</li>
+                </ul>
+                &nbsp; &nbsp; &nbsp; &nbsp; De mentionat faptul ca toate aceste functionalitati sunt disponibile doar pentru utilizatori inregistrati si logati in aplicatie. Restul utilizatorilor nelogati au accesul limitat la unele functionalitati precum creare/salvare
+                albume personale/ adaugare animal la album personal. Atasez diagrama :
+                <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;Electron\&quot; modified=\&quot;2021-04-01T16:28:09.636Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.4.3 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36\&quot; etag=\&quot;7OYbk65znj1GANzVFchE\&quot; version=\&quot;14.4.3\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;e4CY1KfmZ_HjEQV-NOpp\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
                 <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
-                 
+
             </p>
         </section>
         <section id="chapter2_3">
             <h3> 2.3 User Classes and Characteristics </h3>
             <p>
-                &nbsp; &nbsp; &nbsp; &nbsp; Aplicatia ZoW este destinata tuturor utilizatorilor de aplicatii web. Datorita functionalitatilor pe care le detine, aceasta se adreseaza in special utilizatorilor care doresc sa afle informatii despre diferite categorii de animale. 
-                Se considera ca utilizatorul are cunostintele de baza de operare pe internet si acces la un dispozitiv conectat la retea.
-                <br>&nbsp; &nbsp; &nbsp; &nbsp;Aplicatia va avea in principiu doua clase majore de utilizatori : utilizatori activi - inregistrati / ce folosesc aplicatia pentru functionalitatile premium de creare albume personalizate, respectiv simpli vizitatori care intra in general pentru a vizualiza si a cauta informatii cu privire la un animal din aplicatie. 
-                Se presupune ca, categoria majoritara va fi cea a userilor activi care vor frecventa regulat aplicatia. </br>
+                &nbsp; &nbsp; &nbsp; &nbsp; Aplicatia ZoW este destinata tuturor utilizatorilor de aplicatii web. Datorita functionalitatilor pe care le detine, aceasta se adreseaza in special utilizatorilor care doresc sa afle informatii despre diferite categorii de
+                animale. Se considera ca utilizatorul are cunostintele de baza de operare pe internet si acces la un dispozitiv conectat la retea.
+                <br>&nbsp; &nbsp; &nbsp; &nbsp;Aplicatia va avea in principiu doua clase majore de utilizatori : utilizatori activi - inregistrati / ce folosesc aplicatia pentru functionalitatile premium de creare albume personalizate, respectiv simpli
+                vizitatori care intra in general pentru a vizualiza si a cauta informatii cu privire la un animal din aplicatie. Se presupune ca, categoria majoritara va fi cea a userilor activi care vor frecventa regulat aplicatia. </br>
 
             </p>
         </section>
         <section id="chapter2_4">
             <h3> 2.4 Operating Environment </h3>
             <p>
-                &nbsp; &nbsp; &nbsp; &nbsp; Fiind o aplicatie web, ZoW poate fi accesata de pe toate sistemele de operare( Windows, Linux cat si MacOS) respectiv de pe orice tip de browser. Aceste medii de operare constau intr-o interfata cu utilizatorul furnizata in general 
-                de un manager de aplicatii , repectiv de o interfata de programare a aplicatiilor ( API ) frunizata de managerul de aplicatii. Aplicatia functioneaza de pe orice dispozitiv/PC cu specificatii standard, chiar minimale, dpdv 
-                al vitezei proceorului, RAM, ROM. Dispozitivul trebuie sa fie conectat la internet.
+                &nbsp; &nbsp; &nbsp; &nbsp; Fiind o aplicatie web, ZoW poate fi accesata de pe toate sistemele de operare( Windows, Linux cat si MacOS) respectiv de pe orice tip de browser. Aceste medii de operare constau intr-o interfata cu utilizatorul furnizata in
+                general de un manager de aplicatii , repectiv de o interfata de programare a aplicatiilor ( API ) frunizata de managerul de aplicatii. Aplicatia functioneaza de pe orice dispozitiv/PC cu specificatii standard, chiar minimale, dpdv al vitezei
+                proceorului, RAM, ROM. Dispozitivul trebuie sa fie conectat la internet.
             </p>
         </section>
         <section id="chapter2_5">
             <h3> 2.5 Design and Implementation Constraints </h3>
             <p>
-                &nbsp; &nbsp; &nbsp; &nbsp; In ceea ce priveste elementele de design, se va recurge la un Design UI/UX ce va facilita utilizarea cu usurinta de catre toate persoanele interesate de site. Este de datoria dezvoltatorilor 
-                sa respecte niste specificatii stabilite de comun acord cu privire la paleta de culori, dimensiune font, dimensiuni imagini,spatiere samd.
-	            <br>Paleta de culori aleasa : <img src=C:\Users\40744\Desktop\PaletaCulori.jpg alt = "Paleta Culori"  width = "800" height="300"></br>
+                &nbsp; &nbsp; &nbsp; &nbsp; In ceea ce priveste elementele de design, se va recurge la un Design UI/UX ce va facilita utilizarea cu usurinta de catre toate persoanele interesate de site. Este de datoria dezvoltatorilor sa respecte niste specificatii stabilite
+                de comun acord cu privire la paleta de culori, dimensiune font, dimensiuni imagini,spatiere samd.
+                <br>Paleta de culori aleasa : <img src=C:\Users\40744\Desktop\PaletaCulori.jpg alt="Paleta Culori" width="800" height="300"></br>
 
-	            &nbsp; &nbsp; &nbsp; &nbsp;De asemenea, exista constrangeri si pe partea de Backend : fiecare membru din echipa trebuie sa scrie cod in limbajele stabilite initial : Node.js, Typescript, Typeorm.
-	            <br>O alta constrangere de ordin tehnic pentru buna colaborare a echipei de dezvoltatori este actualizarea regulata(push) pe git a oricaror tipuri de informatii, fie ele implementari si nu numai. 
-                Lucrul in paralel la acelasi produs poate fi destul de solicitant si este recomandata o atentie sporita la imbinarea partilor de cod lucrate individual.</br>
+                &nbsp; &nbsp; &nbsp; &nbsp;De asemenea, exista constrangeri si pe partea de Backend : fiecare membru din echipa trebuie sa scrie cod in limbajele stabilite initial : Node.js, Typescript, Typeorm.
+                <br>O alta constrangere de ordin tehnic pentru buna colaborare a echipei de dezvoltatori este actualizarea regulata(push) pe git a oricaror tipuri de informatii, fie ele implementari si nu numai. Lucrul in paralel la acelasi produs poate
+                fi destul de solicitant si este recomandata o atentie sporita la imbinarea partilor de cod lucrate individual.</br>
 
             </p>
         </section>
         <section id="chapter2_6">
             <h3> 2.6 User Documentation </h3>
             <p>
-                &nbsp; &nbsp; &nbsp; &nbsp; Aplicatia intra in categoria aplicatiilor web, iar folosirea acesteia va fi una intuitiva,mai exact sugerata de intrega interfata ce faciliteaza utilizatorului navigarea in aplicatie si descoperirea de comenzi utile.
-                 Suplimentar, va fi introdusa in subsolul paginii o rubrica <strong>About</strong>>, ce trimite catre un ghid de utilizare ale comenzilor site-ului.
+                &nbsp; &nbsp; &nbsp; &nbsp; Aplicatia intra in categoria aplicatiilor web, iar folosirea acesteia va fi una intuitiva,mai exact sugerata de intrega interfata ce faciliteaza utilizatorului navigarea in aplicatie si descoperirea de comenzi utile. Suplimentar,
+                va fi introdusa in subsolul paginii o rubrica <strong>About</strong>>, ce trimite catre un ghid de utilizare ale comenzilor site-ului.
             </p>
         </section>
         <section id="chapter2_7">
             <h3> 2.7 Assumptions and Dependencies </h3>
             <p>
                 &nbsp; &nbsp; &nbsp; &nbsp; Daca utilizatorul pierde conexiunea cu internetul, atunci inevitabil aplicatia web nu va mai raspunde si functionalitatile sale devin indisponibile.
-                <br> &nbsp; &nbsp; &nbsp; &nbsp; Dependenta SOFTWARE: Daca dezvolatorii aplicatie nu acorda atentie necesara asupra codului scris, mai ales,
-                 atunci cand folosesc API - uri ameninta performanta si securitatea aplicatiei.  </br>    
-                 &nbsp; &nbsp; &nbsp; &nbsp; Conexiunea cu baza de date trebuie sa fie una sigura, este foarte importanta structurarea sa deoarece 
-                pe baza acesteia se construiesc filtrele de cautare multi-criteriala.
+                <br> &nbsp; &nbsp; &nbsp; &nbsp; Dependenta SOFTWARE: Daca dezvolatorii aplicatie nu acorda atentie necesara asupra codului scris, mai ales, atunci cand folosesc API - uri ameninta performanta si securitatea aplicatiei. </br>
+                &nbsp; &nbsp; &nbsp; &nbsp; Conexiunea cu baza de date trebuie sa fie una sigura, este foarte importanta structurarea sa deoarece pe baza acesteia se construiesc filtrele de cautare multi-criteriala.
             </p>
         </section>
     </section>
