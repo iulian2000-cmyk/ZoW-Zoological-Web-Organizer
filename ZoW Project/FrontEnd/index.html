@@ -9,16 +9,17 @@
     <meta name="description" content="Zoo">
     <link rel="stylesheet" href="styles/styleMainPage.css">
     <link rel="shortcut icon" href="images/logo/logo1.png" type="image/x-icon">
+    <script src="scripts/script.js"></script>
     <title> Zow Atlas</title>
 </head>
 
 <body>
     <nav class="navBar">
         <div class="settings">
-            <img src="icons/logo3.png" height="70" width="100">
+            <input type="image" src="icons/logo3.png" alt="Alt text" width="45" height="70" id="menuShow" onclick="showMenu()" />
         </div>
         <div class="logo">
-            <img src="icons/logo1.png" height="70" width="200">
+            <img src="icons/logo1.png" height="70" width="200" alt="Image not found!">
         </div>
         <div class="search">
             <input type="text" name="search" class="round" placeholder="Search" />
@@ -29,6 +30,10 @@
         </div>
     </nav>
 
+    <div class="separator_menu_from_others"> </div>
+    <div id="menu">
+
+    </div>
 </body>
 
 </html>
