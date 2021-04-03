@@ -19,26 +19,20 @@ body {
     order: 1;
     margin-left: 10px;
     color: black;
-<<<<<<< HEAD
     position: relative;
     left: 2%;
-=======
->>>>>>> f861e9a5f7a98cdd84a713c5b7c962c92d1723ca
 }
 
 .search {
     order: 2;
-<<<<<<< HEAD
     left: 40%;
     position: relative;
     width: 300px;
     height: 40px;
-=======
     left: 10%;
     position: relative;
     width: 300px;
     height: 30px;
->>>>>>> f861e9a5f7a98cdd84a713c5b7c962c92d1723ca
 }
 
 .round {
