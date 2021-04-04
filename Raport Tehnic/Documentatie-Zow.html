@@ -272,97 +272,420 @@
     <section id="chapter4_1">
         <h3> 4.1 Inregistrare </h3>
         <p>
-            TEXT AICI
+            4.1.1 Description and Priority Provide
+            <br>
+            Priority Medium
+            <br>
+            Componenta permite utilizatorului sa se inregistreze pe site folosind un nume de utilizator, un email si o parola.
+            <br>
+            <br>
+            4.1.2  Stimulus/Response Sequences
+            <br>
+            Utilizatorul apasa click pe casetele unde trebuie introduse datele – Sistemul permite utilizatorului introducerea de text in casetele respective.
+            <br>
+            Utilizatorul introduce text in campurile necesare inregistrarii – Sistemul verifica ca datele introduse sa corespunda campului completat si sa fie corecte (e.g in campul pentru email se verifica sa fie introdusa o adresa de email corecta)
+            <br>
+            Utilizatorul apasa pe butonul de inregistrare, dar nu a completat toate campurile necesare – Sistemul nu permite inregistrarea si atentioneaza utilizatorul faptul ca a omis un camp ce trebuie completat.
+            <br>
+            Utilizatorul apasa pe butonul de inregistrare, iar toate campurile sunt completate corect – Sistemul inregistreaza cu succes utilizatorul in baza de date.
+            <br>
+            <br>
+            4.1.3 Functional Requirments
+            <br>
+            Preluarea textului din field-urile de input din form-ul de inregistrare.
+            <br>
+            Request de la frontend catre backend si transmiterea datelor din frontend.
+            <br>
+            Accesarea bazei de date din backend si interogarea ei pentru a verifica ca nu exista deja un utilizator cu acelasi nume. In caz afirmativ se vor insera datele noului user in tabela Users.
+            <br>
+            Response de la backend catre frontend si afisarea continutului corespunzator in frontend in functie de response. In cazul in care username-ul exista deja in baza de date se va afisa faptul ca username-ul ales este indisponibil.
         </p>
     </section>
     <section id="chapter4_2">
         <h3> 4.2 Autentificare </h3>
         <p>
-            TEXT AICI
+            4.2.1 Description and Priority Provide
+            <br>
+            Priority Medium
+            <br>
+            Componenta permite utilizatorului sa se logheze pe site folosind un nume de utilizator si o parola.
+            <br>
+            <br>
+            4.2.2  Stimulus/Response Sequences
+            <br>
+            Utilizatorul apasa click pe casetele unde trebuie introduse datele – Sistemul permite utilizatorului introducerea de text in casetele respective.
+            <br>
+            Utilizatorul apasa pe butonul de logare, dar nu a completat toate campurile necesare – Sistemul nu permite inregistrarea si atentioneaza utilizatorul faptul ca a omis un camp ce trebuie completat.
+            <br>
+            Utilizatorul apasa pe butonul de logare, dar introduce un username inexistent in baza de date – Sistemul nu permite logarea si atentioneaza utilizatorul faptul ca a introdus un username inexistent.
+            <br>
+            Utilizatorul apasa pe butonul de logare, dar introduce o parola gresita – Sistemul nu permite logarea si atentioneaza utilizatorul faptul ca a introdus o parola gresita.
+            <br>
+            Utilizatorul apasa pe butonul de logare, iar toate campurile sunt completate corect – Sistemul permite logarea cu succes a utilizatorului pe site.
+            <br>
+            <br>
+            4.2.3 Functional Requirments
+            <br>
+            Preluarea textului din field-urile de input ale username-ului si parolei.
+            <br>
+            Request din frontend catre backend. 
+            <br>
+            Call catre baza de date din backend si interogarea acesteia pentru verificarea existentei user-ului si corectitudinea parolei.
+            Daca datele corespund se interogheaza baza de date din nou pentru a prelua numele si id-urile albumelor personale ale utilizatorului.
+            <br>
+            Response de la backend catre frontend cu datele obtinute in urma interogarii.
+            <br>
+            Afisarea continutului corespunzator si incarcarea componentei ce contine numele utilizatorului pe pagina principala plus numele albumelor personale in sectiunea “Albumele mele” din meniu.
         </p>
     </section>
     <section id="chapter4_3">
         <h3> 4.3 Search bar </h3>
         <p>
-            TEXT AICI
+            4.3.1 Description and Priority Provide
+            <br>
+            Priority High
+            <br>
+            Componenta permite cautarea multi-criteriala si generarea rezultatelor corespunzatoare cautarii.
+            <br>
+            <br>
+            4.3.2  Stimulus/Response Sequences
+            <br>
+            Utilizatorul apasa pe bara de search – Sistemul focuseaza bara de search si permite utilizatorului introducerea de text.
+            <br>
+            Utilizatorul apasa enter dupa ce a introdus text in bara de cautare – Sistemul afiseaza rezultatele pentru acea cautare.
+            <br>
+            <br>
+            4.3.3 Functional Requirments
+            <br>
+            Preluarea textului din field-ul de input al barii de cautare.
+            <br>
+            Request din frontend catre backend.
+            <br>
+            Call catre baza de date din backend si interogarea acesteia pentru a selecta datele care corespund cu textul introdus in bara de cautare.
+            <br>
+            Response din backend catre frontend cu datele obtinute in urma interogarii.
+            <br>
+            Crearea componentelor de afisat in frontend, in functie de datele primite de la backend.
         </p>
     </section>
     <section id="chapter4_4">
         <h3> 4.4 Afisare album selectat (albume prestabilite) </h3>
         <p>
-            TEXT AICI
+            4.4.1 Description and Priority Provide
+            <br>
+            Priority High
+            <br>
+            Componenta permite utilizatorilor selectarea si vizualizarea unui anumit album prestabilit.
+            <br>
+            <br>
+            4.4.2  Stimulus/Response Sequences
+            <br>
+            Utilizatorul selecteaza un album pe care doreste sa il vada – Sistemul permite utiliztorului sa selecteze un singur album.
+            <br>
+            Utilizatorul apasa pe butonul “Afiseaza album” – Sistemul genereaza si afiseaza in pagina albumul selectat.
+            <br>
+            <br>
+            4.4.3 Functional Requirments
+            <br>
+            Request din frontend catre backend.
+            <br>
+            Accesarea si interogarea bazei de date pentru a selecta animalele corespunzatoare albumului dorit.
+            <br>
+            Response de la backend catre frontend cu datele obtinute in urma interogarii.
+            <br>
+            Crearea componentelor de afisat in frontend, in functie de datele primite de la backend.
         </p>
     </section>
     <section id="chapter4_5">
         <h3> 4.5 Filtrare album </h3>
         <p>
-            TEXT AICI
+            4.5.1 Description and Priority Provide
+            <br>
+            Priority High
+            <br>
+            Componenta permite utilizatorului sa filtreze un album in functie de anumite proprietati generale.
+            <br>
+            <br>
+            4.5.2  Stimulus/Response Sequences
+            <br>
+            Utilizatorul selecteaza proprietatea dorita pentru filtrare si apasa pe butonul “Filtreaza album” – Sistemul filtreaza albumul si il afiseaza conform preferintelor.
+            <br>
+            <br>
+            4.5.3 Functional Requirments
+            <br>
+            Sortarea si rearanjarea componentelor albumului in pagina in functie de proprietatea selectata pentru filtrare.
         </p>
     </section>
     <section id="chapter4_6">
         <h3> 4.6 Salvarea unui album in colectia persoanala </h3>
         <p>
-            TEXT AICI
+            4.6.1 Description and Priority Provide
+            <br>
+            Priority Medium
+            <br>
+            Componenta permite utilizatorului logat sa salveze albumul curent de pe pagina in colectia personala.
+            <br>
+            <br>
+            4.6.2  Stimulus/Response Sequences
+            <br>
+            Utilizatorul apasa pe butonul “Salveaza album”, dar nu este logat pe site – sistemul directioneaza utilizatorul catre pagina de autentificare.
+            <br>
+            Utilizatorul apasa pe butonul “Salveaza album” si este logat pe site – sistemul salveaza respectivul album in colectia utilizatorului.
+            <br>
+            <br>
+            4.6.3 Functional Requirments
+            <br>
+            Verificare daca utilizatorul este logat prin interogarea statusului din baza de date.
+            <br>
+            Identificarea albumului pe care utilizatorul doreste sa il salveze si transmiterea acestor date din frontend catre backend.
+            <br>
+            Accesarea bazei de date din backend si inserarea datelor preluate in tabelul special destinat albumelor userilor.
         </p>
     </section>
     <section id="chapter4_7">
         <h3> 4.7 Generare de albume bazate pe anumite proprietati alese de utilizator </h3>
         <p>
-            TEXT AICI
+            4.7.1 Description and Priority Provide
+            <br>
+            Priority High
+            <br>
+            Componenta permite utilizatorului sa aleaga mai multe propietati in functie de care se vor tria animalele si se va genera un album.
+            <br>
+            <br>
+            4.7.2  Stimulus/Response Sequences
+            <br>
+            Utilizatorul selecteaza proprietatile dorite si apasa pe butonul “Generare album” – Sistemul afiseaza albumul conform preferintelor.
+            <br>
+            <br>
+            4.7.3 Functional Requirments
+            <br>
+            Preluarea proprietatilor selectate din listele de tip dropdown.
+            <br>
+            Request din frontend catre backend.
+            <br>
+            Call la baza de date in backend si interogarea acesteia pentru a selecta datele corespunzatoare cu proprietatile selectate.
+            <br>
+            Response de la backend catre frontend cu datele obtinute in urma interogarii.
+            <br>
+            Generarea si afisarea albumului in frontend.   
         </p>
     </section>
     <section id="chapter4_8">
         <h3> 4.8 Crearea unui album personal </h3>
         <p>
-            TEXT AICI
+            4.8.1 Description and Priority Provide
+            <br>
+            Priority Medium
+            <br>
+            Componenta permite unui utilizator logat sa isi creeze propriul album cu animale.
+            <br>
+            <br>
+            4.8.2  Stimulus/Response Sequences
+            <br>
+            Utilizatorul apasa pe butonul “Creare album”, dar nu este logat pe site – Sistemul nu permite utilizarea butonului si directioneaza user-ul catre pagina de autentificare.
+            <br>
+            Utilizatorul apasa pe butonul “Creare album” si este logat pe site – Sistemul permite utilizarea butonului si creeaza albumul.
+            <br>
+            <br>
+            4.8.3 Functional Requirments
+            <br>
+            Verificare daca utilizatorul este logat prin interogarea statusului din baza de date.
+            <br>
+            Pop-up a unei casete de input text atunci cand user-ul apasa pe butonul de creare album pentru a alege numele albumului.
+            <br>
+            Trasmiterea datelor introduse din frontend catre backend.
+            <br>
+            Accesarea bazei de date din backend si inserarea albumului in tabelul special destinat albumelor userilor.
+            <br>
+            Afisarea din frontend a textului “Album creat cu succes” si introducerea acestuia in meniul din stanga la sectiunea “Albumele mele”.
         </p>
     </section>
     <section id="chapter4_9">
         <h3> 4.9 Card animal </h3>
         <p>
-            TEXT AICI
+            4.9.1 Description and Priority Provide
+            <br>
+            Priority High
+            <br>
+            Fiecare album este format din mai multe carduri cu animale. Cardul cuprinde o poza si numele animalului.
+            <br>
+            <br>
+            4.9.2  Stimulus/Response Sequences
+            <br>
+            Utilizatorul apasa click pe un card cu un animal specific – Sistemul incarca pagina corespunzatoare animalului.
+            <br>
+            <br>
+            4.9.3 Functional Requirments
+            <br>
+            Onclick event pe card in urma caruia se va face un html request si se va incarca pagina corespunzatoare.
         </p>
     </section>
     <section id="chapter4_10">
         <h3> 4.10 Slider de imagini pentru fiecare animal </h3>
         <p>
-            TEXT AICI
+            4.10.1 Description and Priority Provide
+            <br>
+            Priority Low
+            <br>
+            Slider de imagini cu un anumit animal care iti permite sa misti imaginile la stanga sau la dreapta si sa le maresti.
+            <br>
+            <br>
+            4.10.2  Stimulus/Response Sequences
+            <br>
+            Utilizatorul apasa pe imaginea principala a slider-ului – Sistemul mareste imaginea si o plaseaza pe centrul ecranului.
+            <br>
+            Utilizatorul apasa pe sageata dreapta a slider-ului – Sistemul modifica imaginea principala si o afiseaza pe cea de la dreapta.
+            <br>
+            Utilizatorul apasa pe sageata stanga a slider-ului – Sistemul modifica imaginea principala si o afiseaza pe cea de la stanga.
+            <br>
+            <br>
+            4.10.3 Functional Requirments
+            <br>
+            JavaScript Carousel.
         </p>
     </section>
     <section id="chapter4_11">
         <h3> 4.11 Like animal </h3>
         <p>
-            TEXT AICI
+            4.11.1 Description and Priority Provide
+            <br>
+            Priority Low
+            <br>
+            Fiecare animal va avea pe pagina proprie un buton de like si numarul de like-uri pe care le are. Componenta ajuta la generarea clasamentului celor mai populare animale.
+            <br>
+            <br>
+            4.11.2  Stimulus/Response Sequences
+            <br>
+            Utilizatorul apasa pe butonul de like – Sistemul mareste cu +1 numarul de like-uri ale animalului corespunzator.
+            <br>
+            <br>
+            4.11.3 Functional Requirments
+            <br>
+            Request din frontend catre backend.
+            <br>
+            Accesarea bazei de date din backend si update la numarul de like-uri ale animalului.
+            <br>
+            Schimbarea numarului de like-uri pe frontend in urma update-ului.
         </p>
     </section>
     <section id="chapter4_12">
         <h3> 4.12 Adaugarea unui animal intr-un album personal </h3>
         <p>
-            TEXT AICI
+            4.12.1 Description and Priority Provide
+            <br>
+            Fiecare animal va avea pe pagina proprie un buton “Adauga in album” care permite utilizatorului sa adauge un animal intr-un album propriu.
+            <br>
+            Priority Medium
+            <br>
+            <br>
+            4.12.2  Stimulus/Response Sequences
+            <br>
+            Utilizatorul apasa pe butonul “Adauga in album”, dar nu  este logat pe site – Sistemul directioneaza utilizatorul catre pagina de autentificare.
+            <br>
+            Utilizatorul apasa pe butonul “Adauga in album” si este logat – Sistemul afiseaza lista cu albumele utilizatorului disponibile in care poate adauga animalul.
+            <br>
+            <br>
+            4.12.3 Functional Requirments
+            <br>
+            Verificare daca utilizatorul este logat prin interogarea statusului din baza de date.
+            <br>
+            Selectarea numelor albumelor incarcate in sectiunea “Albumele mele” si afisarea acestora intr-o lista din care se poate alege un singur album.
+            <br>
+            Accesarea din backend a bazei de date si inserarea id-ului animalului corespunzator in albumul personal ales de user.
+            <br>
+            Afisarea mesajului “Animalul a fost adaugat cu succes in album”.
         </p>
     </section>
     <section id="chapter4_13">
         <h3> 4.13 Generare de statistici CSV, PDF </h3>
         <p>
-            TEXT AICI
+            4.13.1 Description and Priority Provide
+            <br>
+            Priority High
+            <br>
+            In pagina principala va exista un buton “Generare statistici” care va genera diverse statistici disponibile in formate CSV si PDF.
+            <br>
+            <br>
+            4.13.2  Stimulus/Response Sequences
+            <br>
+            Utilizatorul apasa pe butonul “Generare statisitici” – Sistemul genereaza statisici diverse in formar CSV si PDF.
+            <br>
+            <br>
+            4.13.3 Functional Requirments
+            <br>
+            TBD            
         </p>
     </section>
     <section id="chapter4_14">
         <h3> 4.14 Generare clasament animale populare (flux RSS)</h3>
         <p>
-            TEXT AICI
+            4.14.1 Description and Priority Provide
+            <br>
+            Priority Medium
+            <br>
+            In pagina principala va exista un buton “Generare clasament” care va genera top 20 animale in functie de popularitate (numarul de like-uri).
+            <br>
+            <br>
+            4.14.2  Stimulus/Response Sequences
+            <br>
+            Utilizatorul apasa pe butonul “Generare clasament” – Sistemul genereaza clasamentul primelor 20 de animale cele mai populare.
+            <br>
+            <br>
+            4.14.3 Functional Requirments
+            <br>
+            TBD
         </p>
     </section>
     <section id="chapter4_15">
         <h3> 4.15 Albumele mele</h3>
         <p>
-            TEXT AICI
+            4.15.1 Description and Priority Provide
+            <br>
+            Priority Medium
+            <br>
+            Componenta permite utilziatorului logat vizualizarea si afisarea albumelor salvate sau a albumelor personale create.
+            <br>
+            <br>
+            4.15.2  Stimulus/Response Sequences
+            <br>
+            Userul apasa pe lista de tip dropdown din sectiunea “Albumele mele” – Sistemul afiseaza albule personale si salvate ale utilizatorului si ii permite selectarea unuia.
+            <br>
+            Userul selecteaza unul dintre albume si apasa pe butonul “Afiseaza album” – Sistemul afiseaza albumul selectat.
+            <br>
+            <br>
+            4.15.3 Functional Requirments
+            <br>
+            Request din frontend catre backend.
+            <br>
+            Accesarea si interogarea bazei de date din backend pentru a selecta animalele corespunzatoare albumului dorit.
+            <br>
+            Response de la backend catre frontend cu datele obtinute in urma interogarii.
+            <br>
+            Crearea componentelor de afisat in frontend, in functie de datele primite de la backend. 
         </p>
     </section>
     <section id="chapter4_16">
         <h3> 4.16 Deconectare</h3>
         <p>
-            TEXT AICI
+            4.16.1 Description and Priority Provide
+            <br>
+            Priority Low
+            <br>
+            Componenta permite unui utilizator logat sa se delogheze de pe site.
+            <br>
+            <br>
+            4.16.2  Stimulus/Response Sequences
+            <br>
+            Userul apasa pe butonul “Delogare” – Sistemul delogheaza utilizatorul de pe site.
+            <br>
+            <br>
+            4.16.3 Functional Requirments
+            <br>
+            Request din frontend catre backend.
+            <br>
+            Accesarea bazei de date din backend si update la statusul utilizatorului pe 0 (delogat).
+            <br>
+            Response de la backend catre frontend si actualizarea componentelor din frontend in urma delogarii.
         </p>
     </section>
     <section id="chapter5">
@@ -370,25 +693,32 @@
         <section id="chapter5_1">
             <h3> 5.1 Performance Requirements </h3>
             <p>
-                TEXT AICI
+                Se va dori ca filtrarea albumelor, cautarea multi-criteriala, generarea albumelor bazate pe proprietati si afisarea albumelor sa se realizeze cat mai rapid. Prin urmare se va opta pentru imagini de tip .jpg / .jpeg care se pot incarca rapid si se va utiliza lazy loading.
             </p>
         </section>
         <section id="chapter5_2">
             <h3> 5.2 Safety Requirements</h3>
             <p>
-                TEXT AICI
+                Nu vor fi adaugate imagini sau informatii cu impact emotional asupra utilizatorilor.
             </p>
         </section>
         <section id="chapter5_3">
             <h3> 5.3 Security Requirements </h3>
             <p>
-                TEXT AICI
+                Se va recurge la tehnici de prevenire a atacurilor precum Cross Site Scripting sau SQL injection.
             </p>
         </section>
         <section id="chapter5_4">
             <h3> 5.4 Software Quality Attributes </h3>
             <p>
-                TEXT AICI
+                Usability
+                <br>
+                Site-ul poate fi utilizat prin intermediul unui browser de catre persoanele dornice sa afle informatii referitoare la diverse animale si de a vizualiza imagini cu acestea.
+                <br>
+                <br>
+                Accesibility
+                <br>
+                Se va recurge la un Design UI/UX care sa ofere posibilitatea tuturor persoanelor, inclusiv cele cu probleme (distingerea culorilor, focusarea atentiei, etc.), sa acceseze si sa foloseasca site-ul. Pentru aceasta se va tine cont de contrastul culorilor si implementarea va permite utilizatorilor folosirea unui screen reader.
             </p>
         </section>
     </section>
