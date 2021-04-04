@@ -7,6 +7,19 @@ body {
     padding: 0;
 }
 
+.loginstatus {
+    order: 9;
+    margin-left: 10px;
+    color: black;
+    position: relative;
+    left: 50%;
+}
+
+.settings {
+    position: relative;
+    left: 2%;
+}
+
 .navBar {
     display: flex;
     background-color: aquamarine;
@@ -19,10 +32,61 @@ body {
     order: 1;
     margin-left: 10px;
     color: black;
+    position: relative;
+    left: 4%;
+}
+
+p#generateAlbum {
+    font-size: 15px;
+    font-weight: normal;
+    color: black;
+}
+
+p#choosealbum,
+p#Habitat,
+p#Type,
+p#longevitate {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p#menuIntroduction {
+    font-size: 25px;
+    font-weight: normal;
+    color: green;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button#generateAlbums,
+button#showStats {
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 45%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 4px 2px;
+}
+
+.separator_menu_from_others {
+    border-left: 1px solid black;
+    min-height: 100vh;
+    position: absolute;
+    left: 10%;
 }
 
 .search {
     order: 2;
+    left: 40%;
+    position: relative;
+    width: 300px;
+    height: 40px;
     left: 10%;
     position: relative;
     width: 300px;
