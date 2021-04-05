@@ -58,8 +58,28 @@ p#menuIntroduction {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+div.filters {
+    position: absolute;
+    left: 15%;
+}
+
+p#textFilters {
+    font-size: 20px;
+    height: 50%;
+    width: 10%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: green;
+}
+
+fieldset#filter1,
+fieldset#filter2,
+fieldset#filter3 {
+    border: 0;
+}
+
 button#generateAlbums,
-button#showStats {
+button#showStats,
+button#myAlbums {
     position: relative;
     background-color: #4CAF50;
     border: none;

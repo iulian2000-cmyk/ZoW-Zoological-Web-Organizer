@@ -16,23 +16,24 @@ function showMenu() {
 
     document.getElementById('menu').innerHTML += '<p id="Type"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Type </p>';
     document.getElementById('menu').innerHTML += "&nbsp; &nbsp; &nbsp; &nbsp; <select name=\"type\" id=\"type\">" +
-        "<option value=\"val1\"> val1 </option>" +
+        "<option value=\"value1\"> val1 </option>" +
         "<option value=\"value2\"> val2 </option>" +
         "</select>";
 
 
     document.getElementById('menu').innerHTML += '<p id="longevitate"> &nbsp; &nbsp; &nbsp; &nbsp; Longevitate </p>';
     document.getElementById('menu').innerHTML += "&nbsp; &nbsp; &nbsp; &nbsp;" +
-        "<select name=\"longevitate\" id=\"longevitate\">" +
+        "<select name=\"longevitate\" id=\"longevitateAnimal\">" +
         "<option value=\"val1\">val1</option>" +
         "<option value=\"val2\">val2</option>" +
         "</select>";
 
     document.getElementById('menu').innerHTML += '<p id="choosealbum"> &nbsp; &nbsp; &nbsp; <strong><i> Choose album </i><strong> </p> ';
     document.getElementById('menu').innerHTML += "<form action=\"\ id=\"chooseAlbum \">" +
-        "<input type=\"radio\" name=\"gender\" value=\"mamifere\" id=\"chooseAlbum1\" > &nbsp; &nbsp; Mamifere <br> <br>" +
+        "<input type=\"radio\" name=\"gender\" value=\"Mamifere\" id=\"chooseAlbum1\" > &nbsp; &nbsp; Mamifere <br> <br>" +
         "<input type=\"radio\" name=\"gender\" value=\"Pasari\"   id=\"chooseAlbum2\"> &nbsp; &nbsp; Pasari <br> <br>" +
         "<input type=\"radio\" name=\"gender\" value=\"Reptile\"  id=\"chooseAlbum3\"> &nbsp; &nbsp; Reptile <br> <br>" +
         "<input type=\"radio\" name=\"gender\" value=\"Acvatice\" id=\"chooseAlbum4\"> &nbsp; &nbsp; Acvatice <br> <br>" +
         "</form>";
+    document.getElementById('menu').innerHTML += '<br> &nbsp; &nbsp; &nbsp; &nbsp;<button type="button" id="myAlbums"> My albums  </button>';
 }
