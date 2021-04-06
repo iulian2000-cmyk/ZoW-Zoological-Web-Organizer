@@ -92,6 +92,7 @@ p#textFilters {
 
 .usermenu {
     height: 100%;
+    transition: left 5s;
     width: 186px;
     position: absolute;
     top: 8%;
@@ -99,6 +100,7 @@ p#textFilters {
     background-color: azure;
     overflow-x: hidden;
     padding-top: 20px;
+    transition: 4s;
 }
 
 select#habitat,
