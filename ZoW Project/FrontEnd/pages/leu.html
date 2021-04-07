@@ -1,54 +1,140 @@
 <!DOCTYPE html>
-<html lang="ro">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nechita Roberta">
     <meta name="description" content="ZoW App">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="images/logo/logo1.png" type="image/x-icon">
-    <link rel="stylesheet" href="../styles/style.css">
-
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/scriptAnimalPage.js"></script>
+    <script src="scripts/ZoomScript.js"></script>
     <title>Leu</title>
 </head>
-
 <body>
 
     <nav class="navigationBar">
         <div class="logo">
-            <img src="../icons/logo1.png" height="50" width="150" alt="Image not found!">
+            <img src="icons/logo1.png" height="50" width="150" alt="Image not found!">
         </div>
         <div class="loginStatus">
             Name Username
         </div>
     </nav>
 
-    <h1> LEUL </h1>
-    <div class="container">
-        <div class="box">
-            <div class="icon"><img id="InfoIcon" src="../icons/infoIcon.svg" alt="Image not found!"></div>
-            <div class="contentBox">
-                <h3>INFO BOX</h3>
-                <ul>
-                    <li> <strong>Longetivitate</strong> : 10 ani salbaticie, 25 ani captivitate </li>
-                    <li> <strong>Categorie</strong> : Mamifere </li>
-                    <li> <strong>Greutate medie</strong> : 200 kg </li>
-                    <li> <strong>Inaltime medie</strong> : 1,2m </li>
-                    <li> <strong>Mediu de viata</strong> : campii deschise, Africa </li>
-                    <li> <strong>Mod de hranire</strong> : carnivor </li>
-                </ul>
-                <img id="LikeIcon" src="../icons/likeIcon.svg" alt="Image not found!">
+    <div class="mare">
+        <div class="container">
+            <div class="box">
+                <div class="contentBox">
+                    <h1>LEU</h1>
+
+                    <div class ="whiteBox">
+                        <br><br>
+                        <ul id="bullet">
+                            <li> <strong>Longetivitate</strong> : 10 ani salbaticie, 25 ani captivitate </li>
+                            <li> <strong>Categorie</strong> : Mamifere </li>
+                            <li> <strong>Greutate medie</strong> : 200 kg </li>
+                            <li> <strong>Inaltime medie</strong> : 1,2m </li>
+                            <li> <strong>Mediu de viata</strong> : campii deschise, Africa </li>
+                            <li> <strong>Mod de hranire</strong> : carnivor </li>
+                        </ul>
+                        <img id="LikeIconCard" src="icons/likeIcon.svg">
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button class="button1"><img id = "LikeIcon" src ="icons/likeIcon.svg"> Like </button>
+                    <button class="button2"> <img id = "AddIcon" src="icons/addIcon.svg"> Add to album </button>
+                </div>
             </div>
+           
         </div>
-        <div class="buttons">
-            <button class="button1"> <img id = "LikeIcon1" src ="../icons/likeIcon.svg" alt="Image not found!"> Like </button>
-            <button class="button2"> <img id = "AddIcon" src="../icons/addIcon.svg" alt="Image not found!" > Add to album </button>
+
+
+
+        <div class="containerImages">
+
+
+            <div class="Slides">
+                <div class="numberImage">1 / 4</div>
+                <img class="ImgGallery" src="../FrontEnd/images/leu/leu1.jpg" style="width:800px;height:400px; max-width: 100%;">
+            </div>
+
+            <div class="Slides">
+                <div class="numberImage">2 / 4</div>
+                <img  class="ImgGallery" src="../FrontEnd/images/leu/leu2.jpg" style="width:800px;height:400px; max-width: 100%;">              
+            </div>
+
+            <div class="Slides">
+                <div class="numberImage">3 / 4</div>
+                <img class ="ImgGallery" src="../FrontEnd/images/leu/leu3.jpg" style="width:800px;height:400px;max-width: 100%;">
+            </div>
+
+            <div class="Slides">
+                <div class="numberImage">4 / 4</div>
+                <img class="ImgGallery" src="../FrontEnd/images/leu/leu4.jpg" style="width:800px;height:400px;max-width: 100%;">
+            </div>
+
+         
+            <div class="modal">
+                <span class="close">×</span>
+                <img class="modalImage" id="img01" />
+            </div>
+
+
+            <script>
+            var modalEle = document.querySelector(".modal");
+            var modalImage = document.querySelector(".modalImage");
+
+            Array.from(document.querySelectorAll(".ImgGallery")).forEach(item => {
+
+            item.addEventListener("click", event => {
+                modalEle.style.display = "block";
+                modalImage.src = event.target.src;
+                });
+            });
+            document.querySelector(".close").addEventListener("click", () => {
+            modalEle.style.display = "none";
+            });
+
+            </script>
+            
+             
+            <a class="prevButton" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="nextButton" onclick="plusSlides(1)">&#10095;</a>
+
+
+
+            <div class="row">
+                <div class="col">
+                    <img class="demo cursor" src="../FrontEnd/images/leu/leu1.jpg" style="width:200px; height:150px" onclick="currentSlide(1)">
+                </div>
+                <div class="col">
+                    <img class="demo cursor" src="../FrontEnd/images/leu/leu2.jpg" style="width:200px; height:150px" onclick="currentSlide(2)">
+                </div>
+                <div class="col">
+                    <img class="demo cursor" src="../FrontEnd/images/leu/leu3.jpg" style="width:200px; height:150px" onclick="currentSlide(3)">
+                </div>
+                <div class="col">
+                    <img class="demo cursor" src="../FrontEnd/images/leu/leu4.jpg" style="width:200px; height:150px" onclick="currentSlide(4)">
+                </div>
+            </div>
+
+
+
+
         </div>
     </div>
 
+
+
+
+<div class ="ContentPage" >
+
     <div class="Generalitati">
-        <h3 id="subtitle1"> Generalitati </h3>
+        <h3 id="subtitle"> Generalitati </h3>
         <p> &nbsp; &nbsp; &nbsp; &nbsp; Leul (Panthera Leo) este o specie de mamifere carnivore din familia felidelor, fiind una dintre cele patru specii ale genului Panthera, reprezentant al subfamiliei felinelor mari. Este una dintre cele mai mari feline
             și unul dintre cei mai mari răpitori tereștri (după ursul polar, ursul brun și tigru).</p>
         <p> &nbsp; &nbsp; &nbsp; &nbsp;Leii sunt animale carnivore care trăiesc în grupuri (familii) constând din femele înrudite, pui de ambele sexe și un mascul neînrudit, care se împerechează cu femelele adulte. Femelele se ocupă cu vânatul, în timp ce
@@ -61,10 +147,10 @@
             în artă și literatură. În Biblie este amintit de 130 de ori. În arta epocii pietrei, în special în picturile rupestre, se întâlnesc frecvent desene reprezentând lei.</p>
     </div>
 
-    <div class="Stiati ca">
+    <div class="Stiatica">
         <h3 id="subtitle"> Stiati ca ... </h3>
         <ul>
-            <li> Ragetul unui leu se poate auzi si de la 8 km distanta. </li>
+            <li > Ragetul unui leu se poate auzi si de la 8 km distanta. </li>
             <li> Prin raget acestia isi stabilesc drepturile teritoriale sau cheama membrii rataciti.</li>
             <li> Femela are nevoie de aproximativ 5 kg de carne pe zi, iar masculul de minimum 7 kg.</li>
             <li> Femelele sunt cele care in mare parte vaneaza. 85-90 % din prada este capturata de femele, in timp ce masculii stau sa pazeasca teritoriul.</li>
@@ -72,6 +158,11 @@
             <li> Este singura specie de felina mare sociabila; traieste in grupuri de cate 15 membri, uneori fiind formate chiar si grupuri de 40 de membri.</li>
         </ul>
     </div>
+</div>
+   
+
+
+
 </body>
 
 </html>
