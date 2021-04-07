@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nechita Roberta">
+    <meta name="description" content="ZoW App">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="shortcut icon" href="../images/logo/logo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="../scripts/scriptAnimalPage.js"></script>
+    <script src="../scripts/ZoomScript.js"></script>
+    <title>Ftiraptere</title>
+</head>
+
+<body>
+
+    <nav class="navigationBar">
+        <div class="logo">
+            <img src="../icons/logo1.png" height="50" width="150" alt="Image not found!">
+        </div>
+        <div class="loginStatus">
+            Name Username
+        </div>
+    </nav>
+
+    <div class="mare">
+        <div class="container">
+            <div class="box">
+                <div class="contentBox">
+                    <h1>FTIRAPTERE</h1>
+
+                    <div class="whiteBox">
+                        <br><br>
+                        <ul id="bullet">
+                            <li> <strong>Longetivitate</strong> : 1 an </li>
+                            <li> <strong>Categorie</strong> : Insecte </li>
+                            <li> <strong>Greutate medie</strong> : 0.03g </li>
+                            <li> <strong>Inaltime medie</strong> : 10mm </li>
+                            <li> <strong>Mediu de viata</strong> : campii deschise, Europa </li>
+                            <li> <strong>Mod de hranire</strong> : carnivor </li>
+                        </ul>
+                        <img id="LikeIconCard" src="../icons/likeIcon.svg">
+                    </div>
+                </div>
+                <br>
+                <div class="buttons">
+                    <button class="button1"><img id = "LikeIcon" src ="../icons/likeIcon.svg"> Like </button>
+                    <button class="button2"> <img id = "AddIcon" src="../icons/addIcon.svg"> Add to album </button>
+                </div>
+            </div>
+        </div>
+        <div class="containerImages">
+            <div class="Slides">
+                <div class="numberImage">1 / 4</div>
+                <img class="ImgGallery" src="../images/ftiraptere/ftiraptere1.jpg" style="width:800px;height:400px; max-width: 100%;">
+            </div>
+
+            <div class="Slides">
+                <div class="numberImage">2 / 4</div>
+                <img class="ImgGallery" src="../images/ftiraptere/ftiraptere2.jpg" style="width:800px;height:400px; max-width: 100%;">
+            </div>
+
+            <div class="Slides">
+                <div class="numberImage">3 / 4</div>
+                <img class="ImgGallery" src="../images/ftiraptere/ftiraptere3.jpeg" style="width:800px;height:400px;max-width: 100%;">
+            </div>
+
+            <div class="Slides">
+                <div class="numberImage">4 / 4</div>
+                <img class="ImgGallery" src="../images/ftiraptere/ftiraptere4.png" style="width:800px;height:400px;max-width: 100%;">
+            </div>
+            <div class="modal">
+                <span class="close">×</span>
+                <img class="modalImage" id="img01" />
+            </div>
+            <script>
+                var modalEle = document.querySelector(".modal");
+                var modalImage = document.querySelector(".modalImage");
+
+                Array.from(document.querySelectorAll(".ImgGallery")).forEach(item => {
+
+                    item.addEventListener("click", event => {
+                        modalEle.style.display = "block";
+                        modalImage.src = event.target.src;
+                    });
+                });
+                document.querySelector(".close").addEventListener("click", () => {
+                    modalEle.style.display = "none";
+                });
+            </script>
+            <a class="prevButton" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="nextButton" onclick="plusSlides(1)">&#10095;</a>
+            <div class="row">
+                <div class="col">
+                    <img class="demo cursor" src="../images/ftiraptere/ftiraptere1.jpg" style="width:200px; height:150px" onclick="currentSlide(1)">
+                </div>
+                <div class="col">
+                    <img class="demo cursor" src="../images/ftiraptere/ftiraptere2.jpg" style="width:200px; height:150px" onclick="currentSlide(2)">
+                </div>
+                <div class="col">
+                    <img class="demo cursor" src="../images/ftiraptere/ftiraptere3.jpeg" style="width:200px; height:150px" onclick="currentSlide(3)">
+                </div>
+                <div class="col">
+                    <img class="demo cursor" src="../images/ftiraptere/ftiraptere4.png" style="width:200px; height:150px" onclick="currentSlide(4)">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ContentPage">
+
+        <div class="Generalitati">
+            <h3 id="subtitle"> Generalitati </h3>
+            <p> &nbsp; &nbsp; &nbsp; &nbsp; Ftirapterele (Phthiraptera) (din greaca phtheir = păduche + apteron = fără aripi) sau păduchii animali, este un ordin de insecte ectoparazite aptere (fără aripi) cu trei stadii nimfale, metamorfoza simplă, și cu
+                piesele bucale conformate pentru mestecat la malofage sau pentru înțepat și supt la anoplure. Au corpul turtit dorsoventral, capul proeminent, mai îngust decât toracele la anoplure sau mai lat decât torace la malofage. Au o pereche de
+                ochi simpli. Antenele sunt compuse din 3, 4 sau 5 articole. Dezvoltarea lor se face fără metamorfoză. Oul (lindină) este ovoid și are un opercul (căpăcel), care conține numeroase perforații mici prin care pătrunde aerul spre embrion. La
+                eclozare, nimfa este foarte asemănătoare cu adultul; cele trei stadii nimfale se hrănesc ca și adulții. Ftirapterele au câțiva milimetri în lungime . </p>
+            <p> &nbsp; &nbsp; &nbsp; &nbsp; Tradițional ordinul ftirapterelor este împărțit în 2 subordine: malofage (Mallophaga) și anoplure (Anoplura). Subordinul malofage cuprinde 3 infraordine: Amblycera, Ischnocera și Rhyncophthirina, pe care mai mulți
+                autori le ridică în rang de subordine </p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; alofagele (păduchii rozători) sunt paraziți la păsări și mamifere și se hrănesc cu resturi de epidermă, peri, puf și fulgi, sau cu sânge uscat. Nu sunt deci paraziți veritabili, însă prezența lor pe corpul animalelor
+                produce acestora mâncărimi și iritări ale pielii care creează gazdelor o proastă stare generală. Animalele care au malofage pe corp se scarpină puternic, zgâriindu-și pielea și producându-și sângerări, iar picăturile de sânge se usucă,
+                fiind consumate apoi de insectele malofage.</p>
+        </div>
+
+        <div class="Stiatica">
+            <h3 id="subtitle"> Stiati ca ... </h3>
+            <ul>
+                <li> Paduchii sunt paraziti ce traiesc pe pielea sau in blana animalului. Acestia sunt specifici fiecarei specii. </li>
+                <li>
+                    Exista doua specii comune de paduchi care infesteaza cainii și pisicile: care se hranesc cu fire de par/celule epidermice si cele care se hranesc cu sange. Infestatiile cu paduchi sunt des intalnite si la rozatoarele de casa. Paduchii depun oua (lindine)
+                    pe animal, atasandu-le de firele de par.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
