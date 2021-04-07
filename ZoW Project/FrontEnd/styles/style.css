@@ -3,7 +3,6 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
-   
 }
 
 .navigationBar {
@@ -23,11 +22,11 @@ body {
 }
 
 h1 {
-    color:white solid;
+    color: white solid;
     text-align: left;
     margin-left: 35%;
     font-size: 40px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .mare {
@@ -48,14 +47,14 @@ h1 {
     position: relative;
     width: calc(400px - 30px);
     height: calc(565px - 10px);
-    background-color :aquamarine;
+    background-color: aquamarine;
     float: left;
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 10px;
     margin-left: 15%;
-    box-shadow:0 0 25px 24px rgba(0,0,0,0.06);
-    margin-top : 15%;
+    box-shadow: 0 0 25px 24px rgba(0, 0, 0, 0.06);
+    margin-top: 15%;
     border-style: double;
     border-width: large;
 }
@@ -64,15 +63,15 @@ h1 {
     mask-position: relative;
     background: rgb(252, 252, 252);
     height: 320px;
-    width : 320px;
+    width: 320px;
     border-radius: 20px;
-    box-shadow:0 0 25px 24px rgba(0,0,0,0.06);
-    top : 10%;
+    box-shadow: 0 0 25px 24px rgba(0, 0, 0, 0.06);
+    top: 10%;
     border-style: solid;
     border-width: medium;
 }
 
-#bullet{
+#bullet {
     text-align: left;
     font-size: 20px;
     font-style: italic;
@@ -86,15 +85,14 @@ h1 {
     height: 30px;
     width: 20px;
 }
-#LikeIconCard {
 
+#LikeIconCard {
     position: relative;
     color: black;
     shape-image-threshold: inherit;
     left: 85%;
     height: 40px;
     width: 30px;
-
 }
 
 #AddIcon {
@@ -112,11 +110,10 @@ h1 {
     top: 0%;
     text-align: left;
     padding: 10px;
-    left : 12px;
+    left: 12px;
     box-sizing: border-box;
     transition: 0.5s;
 }
-
 
 li {
     list-style-type: disc;
@@ -129,17 +126,15 @@ li {
     font-size: 20px;
     position: relative;
     margin-top: 30px;
-    background-color : aquamarine;
+    background-color: aquamarine;
 }
 
 .Stiatica {
-    
-    margin-right:4.5%;
-    margin-left:3%;
+    margin-right: 4.5%;
+    margin-left: 3%;
     font-family: cursive;
     position: relative;
-    font-size:15px;
-   
+    font-size: 20px;
 }
 
 .Generalitati {
@@ -148,7 +143,7 @@ li {
     margin-top: 10%;
     margin-right: 4.5%;
     font-family: cursive;
-    font-size :15px;
+    font-size: 20px;
 }
 
 .buttons {
@@ -168,7 +163,7 @@ li {
     position: absolute;
     margin-top: 0;
     left: 27px;
-    border : solid;
+    border: solid;
 }
 
 .buttons .button2 {
@@ -178,8 +173,8 @@ li {
     position: absolute;
     margin-top: 0;
     left: 170px;
-    margin-bottom : 20px;
-    border : solid;
+    margin-bottom: 20px;
+    border: solid;
 }
 
 .button1:hover {
@@ -205,17 +200,15 @@ li {
     top: 12%;
     left: 40%;
     margin: auto;
-   
 }
 
-img{
+img {
     vertical-align: middle;
 }
 
 .Slides {
     display: none;
 }
-
 
 .numberImage {
     color: #000000;
@@ -275,18 +268,18 @@ img{
     opacity: 1;
 }
 
-
-
 .ImgGallery {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.5s;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- }
- .ImgThumbnail:nth-of-type(1) {
+}
+
+.ImgThumbnail:nth-of-type(1) {
     margin-left: 0;
- }
- .modal {
+}
+
+.modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -298,15 +291,17 @@ img{
     overflow: auto;
     background-color: rgb(150, 141, 141);
     background-color: rgba(148, 144, 144, 0.9);
- }
- .modalImage {
-    margin : auto;
+}
+
+.modalImage {
+    margin: auto;
     display: block;
     width: 50%;
     height: 60%;
     max-width: 700px;
- }
- #caption {
+}
+
+#caption {
     margin: auto;
     display: block;
     width: 80%;
@@ -315,8 +310,9 @@ img{
     color: #ccc;
     padding: 10px 0;
     height: 150px;
- }
- .close {
+}
+
+.close {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -324,14 +320,16 @@ img{
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
- }
- .close:hover,
- .close:focus {
-    color:aquamarine;
+}
+
+.close:hover,
+.close:focus {
+    color: aquamarine;
     cursor: pointer;
- }
- @media only screen and (max-width: 700px) {
+}
+
+@media only screen and (max-width: 700px) {
     .modalImage {
-       width: 100%;
+        width: 100%;
     }
- }
+}
