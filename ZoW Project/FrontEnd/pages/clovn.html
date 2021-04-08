@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Isac Iulian-George">
+    <meta name="description" content="ZoW App">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="shortcut icon" href="../images/logo/logo1.png" type="image/x-icon">
+    <script src="../scripts/scriptAnimalPage.js"></script>
+    <script src="../scripts/ZoomScript.js"></script>
+    <title>Clovn </title>
+</head>
+
+<body>
+
+    <nav class="navigationBar">
+        <div class="logo">
+            <img src="../icons/logo1.png" height="50" width="150" alt="Image not found!">
+        </div>
+        <div class="loginStatus">
+            Name Username
+        </div>
+    </nav>
+
+    <div class="mare">
+        <div class="container">
+            <div class="box">
+                <div class="contentBox">
+                    <h1>CLOVN </h1>
+
+                    <div class="whiteBox">
+                        <br><br>
+                        <ul id="bullet">
+                            <li> <strong>Longetivitate</strong> : 3-4 ani </li>
+                            <li> <strong>Categorie</strong> : Pesti </li>
+                            <li> <strong>Greutate medie</strong> : 0.1-0.9kg</li>
+                            <li> <strong>Inaltime medie</strong> : 10cm </li>
+                            <li> <strong>Mediu de viata</strong> : Europa ,America de Nord,Asia</li>
+                            <li> <strong>Mod de hranire</strong> : omnivor </li>
+                        </ul>
+                        <br>
+                        <img id="LikeIconCard" src="../icons/likeIcon.svg">
+                    </div>
+                </div>
+                <br>
+                <div class="buttons">
+                    <button class="button1"><img id = "LikeIcon" src ="../icons/likeIcon.svg"> Like </button>
+                    <button class="button2"> <img id = "AddIcon" src="../icons/addIcon.svg"> Add to album </button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="containerImages">
+
+
+            <div class="Slides">
+                <div class="numberImage">1 / 4</div>
+                <img class="ImgGallery" src="../images/clovn/clovn1.jpg" style="width:800px;height:400px; max-width: 100%;">
+            </div>
+
+            <div class="Slides">
+                <div class="numberImage">2 / 4</div>
+                <img class="ImgGallery" src="../images/clovn/clovn2.jpeg" style="width:800px;height:400px; max-width: 100%;">
+            </div>
+
+            <div class="Slides">
+                <div class="numberImage">3 / 4</div>
+                <img class="ImgGallery" src="../images/clovn/clovn3.jpeg" style="width:800px;height:400px;max-width: 100%;">
+            </div>
+
+            <div class="Slides">
+                <div class="numberImage">4 / 4</div>
+                <img class="ImgGallery" src="../images/clovn/clovn4.jpeg" style="width:800px;height:400px;max-width: 100%;">
+            </div>
+
+
+            <div class="modal">
+                <span class="close">×</span>
+                <img class="modalImage" id="img01" />
+            </div>
+
+
+            <script>
+                var modalEle = document.querySelector(".modal");
+                var modalImage = document.querySelector(".modalImage");
+
+                Array.from(document.querySelectorAll(".ImgGallery")).forEach(item => {
+
+                    item.addEventListener("click", event => {
+                        modalEle.style.display = "block";
+                        modalImage.src = event.target.src;
+                    });
+                });
+                document.querySelector(".close").addEventListener("click", () => {
+                    modalEle.style.display = "none";
+                });
+            </script>
+
+
+            <a class="prevButton" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="nextButton" onclick="plusSlides(1)">&#10095;</a>
+
+
+
+            <div class="row">
+                <div class="col">
+                    <img class="demo cursor" src="../images/clovn/clovn1.jpg" style="width:200px; height:150px" onclick="currentSlide(1)">
+                </div>
+                <div class="col">
+                    <img class="demo cursor" src="../images/clovn/clovn2.jpeg" style="width:200px; height:150px" onclick="currentSlide(2)">
+                </div>
+                <div class="col">
+                    <img class="demo cursor" src="../images/clovn/clovn3.jpeg" style="width:200px; height:150px" onclick="currentSlide(3)">
+                </div>
+                <div class="col">
+                    <img class="demo cursor" src="../images/clovn/clovn4.jpeg" style="width:200px; height:150px" onclick="currentSlide(4)">
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <div class="ContentPage">
+
+        <div class="Generalitati">
+            <h3 id="subtitle"> Generalitati </h3>
+            <p> &nbsp; &nbsp; &nbsp; &nbsp; Pestele clovn (Amphiprion percula), originar din zona Pacificului Indian si a Marii Bariere de Corali, este regasit din Nordul Queensland-ului pana in Malaezia, teritoriu care cuprinde Noua Guinee, New Britain,
+                New Irland, Solomon Island si Vanuatu. In habitatul sau natural, traieste in apele marine la adancimi de 1-12 metri. In concluzie, pestele clovn este un peste de apa sarata, care, datorita coloritului sau caracteristic, se enumera printre
+                preferintele acvaristilor. </p>
+            <p> &nbsp; &nbsp; &nbsp; &nbsp; Este cunoscut si sub numele de peste Nemo, Pestele Anemona sau Pestele Arlechin. Ca toti pesti-anemone, pestele clovn isi creaza legaturi simbiotice cu anemonele marine. El isi foloseste gazda, atat ca adapost,
+                cat si pentru a se proteja de pradatori si, in schimb, pestele clovn indeparteaza intrusii si isi toaleteaza gazda, inlaturand parazitii.</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; Peștele clovn trăiește în oceanul Pacific, în partea de vest, preferând locurile ascunse și pietrele. În cazul în care peștele clovn trăiește în acvariu, se înțelege foarte bine cu toate speciile de pești.El preferă
+                acvariile mijlocii .Această specie de pește se adaptează repede la mediul în care trăiește și de aceea se poate lipsi de anemonă.Peștele clovn se hrănește atât cu alge cât și cu carne, ceea ce ne spune despre el că este un pește omnivor.
+                Dacă trăiește în acvariu, peștele trebuie hrănit de 2 sau 3 ori pe zi cu mâncare marină de calitate.
+            </p>
+
+        </div>
+
+        <div class="Stiatica">
+            <h3 id="subtitle"> Stiati ca ... </h3>
+            <ul>
+                <li>
+                    Peștele clovn se împerechează pe tot parcursul anului. Femela dă naștere la o singură fătare la circa 100-1000 de descendenți. Perechile formate pentru reproducție sunt monogame. După ce femela depune ouăle, masculul vine să le fertilizeze.
+                </li>
+                <li>
+                    După o incubație de 6-7 zile, ouăle de pește clovn sunt apte pentru a ecloza. Chiar înainte de eclozare, embrionul este vizibil prin transparența membranei oului. După eclozare, larva are o lungime de 3-4 mm și este aproape transparentă, excepție făcând
+                    ochii, sacul vitelin și prezența câtorva pigmenți.
+                </li>
+                <li>
+                    El preferă acvariile mijlocii .Această specie de pește se adaptează repede la mediul în care trăiește și de aceea se poate lipsi de anemonă.Peștele clovn se hrănește atât cu alge cât și cu carne, ceea ce ne spune despre el că este un pește omnivor. Dacă
+                    trăiește în acvariu, peștele trebuie hrănit de 2 sau 3 ori pe zi cu mâncare marină de calitate.
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
