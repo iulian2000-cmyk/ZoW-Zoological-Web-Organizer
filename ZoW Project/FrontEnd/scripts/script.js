@@ -6,26 +6,26 @@ var displaySettings = 0;
 function showMenu() {
     var menu = document.getElementById('menu');
     menu.innerHTML = '<div class="sidenav">' +
-        '<p> User menu </p>' +
+        '<p> USER MENU </p>' +
         '<button id="generateStats">Generate stats </button>' +
         '<button id="generateOrder">Generate clasament</button>' +
-        '<button class="habitat"> Habitat ' +
+        '<button class="habitat"> HABITAT ' +
         '<form>' +
         '<select id="habitat" > ' +
         '<option val=1> value1 </option>' +
-        '<option val=2> value 2</option>' +
+        '<option val=2> value2</option>' +
         '</select>' +
         '</form>' +
         '</button> <br> ' +
-        '<button class="type"> Type ' +
+        '<button class="type"> TYPE' +
         '<form>' +
         '<select id="type" > ' +
         '<option val=1> value1 </option>' +
-        '<option val=2> value 2</option>' +
+        '<option val=2> value2</option>' +
         '</select>' +
         '</form>' +
         '</button> <br> ' +
-        '<button class="longevitate">  Longevitate ' +
+        '<button class="longevitate">  LONGEVITATE' +
         '<form>' +
         '<select id="longevitate" > ' +
         '<option val=1> value1 </option>' +
@@ -62,7 +62,7 @@ function showMenu() {
 
 function showSettings() {
     var settings = document.getElementById('settings');
-    settings.innerHTML = '<a href="#"> Logout </a>';
+    settings.innerHTML = '<a href="#"> <strong> Logout </strong> </a>';
     if (displaySettings == 0) {
         settings.style.display = "none";
         displaySettings = 1;
