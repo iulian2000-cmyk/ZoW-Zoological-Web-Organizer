@@ -27,7 +27,7 @@
                 flex-wrap: wrap;
                 align-items: center;
                 height: 5em;
-                width: auto;
+                width: 100%;
             }
             
             .logo {
