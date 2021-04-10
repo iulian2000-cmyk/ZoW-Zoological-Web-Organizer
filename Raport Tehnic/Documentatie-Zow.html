@@ -81,6 +81,7 @@
             <a href="#Appendix_A:_Glossary"> Appendix A : Glossary </a> <br>
             <a href="#Appendix_B:_Analysis Models"> Appendix B : Analysis Models </a> <br>
             <a href="#Appendix_C:_To_Be_Determined_List"> Appendix C : To Be Determined List </a>
+            <a href="#InterfaceContributions"> Other Requirments </a> <br>
         </ol>
     </section>
     <div role="contentinfo">
@@ -139,8 +140,8 @@
         <section id="chapter1_2">
             <h3> 1.2 Document conventions </h3>
             <p>
-                &nbsp; &nbsp; &nbsp; &nbsp; Documentul a fost realizat utilizand sintaxa HTML (pentru creearea paginii Web) + CSS(stilizare la nivel de pagina web : culori, dimensiuni,sapatiere,font,spatiere dintre elemente).
-                Specificatii:<br>
+                &nbsp; &nbsp; &nbsp; &nbsp; Documentul a fost realizat utilizand sintaxa HTML (pentru creearea paginii Web) + CSS(stilizare la nivel de pagina web : culori, dimensiuni,sapatiere,font,spatiere dintre elemente). Specificatii:
+                <br>
                 <img src="ImagesScholaryHTML/bodyCSS.jpg" width='500' height="170" alt="Image not found">
                 <img src="ImagesScholaryHTML/headereCSS.jpg" width='800' height="170" alt="Image not found">
                 <br> &nbsp; &nbsp; &nbsp; &nbsp; De asemenea, in vederea structurarii intregului schelet se foloseste o lista ordonata in HTML, cat si bookmark-uri cu link-uri care te trimit prin click la un id de pe pagina.
@@ -625,15 +626,15 @@
     </section>
     <section id="Appendix_B:_Analysis Models">
         <h2> Appendix B: Analysis Models </h2>
-        <p> &nbsp; &nbsp; &nbsp; &nbsp;Stocarea informatiilor in vederea filtrarii multi-criteriale se face prin intermediul unei baze de date MySQL, ce va contine mai multe tabele care sunt conectate cu ajutorul anumitor constrageri : chei primare respectiv chei straine. Tabelele principale sunt doua : Tabela USERS - unde se va stoca username-ul si parola utilizatorului,iar drept cheie primara vom folosi un id_user, 
-           respectiv tabela ANIMALS ce cuprinde numele animalului, path-ul catre pagina sa, si o serie de caracteristici(cu ajutorul carora se va realiza filtrarea albumelor) si un ID_animal utilizat drept cheie primara.
-           Comunicarea intre cele doua tabele se va realiza folosind o tabela intermediara UsersAnimal care va avea
-           drept elemente cele doua ID-uri, ID-user, ID-animal cu valoare de chei straine in tabela curenta.</p>
+        <p> &nbsp; &nbsp; &nbsp; &nbsp;Stocarea informatiilor in vederea filtrarii multi-criteriale se face prin intermediul unei baze de date MySQL, ce va contine mai multe tabele care sunt conectate cu ajutorul anumitor constrageri : chei primare respectiv
+            chei straine. Tabelele principale sunt doua : Tabela USERS - unde se va stoca username-ul si parola utilizatorului,iar drept cheie primara vom folosi un id_user, respectiv tabela ANIMALS ce cuprinde numele animalului, path-ul catre pagina
+            sa, si o serie de caracteristici(cu ajutorul carora se va realiza filtrarea albumelor) si un ID_animal utilizat drept cheie primara. Comunicarea intre cele doua tabele se va realiza folosind o tabela intermediara UsersAnimal care va avea drept
+            elemente cele doua ID-uri, ID-user, ID-animal cu valoare de chei straine in tabela curenta.</p>
         <p> &nbsp; &nbsp; &nbsp; &nbsp;Pe langa tabelele mentionate anterior, este necesara si adaugarea a diverse tabele pentru fiecare functionalitate a aplicatiei :</p>
-        <p> &nbsp; &nbsp; &nbsp; &nbsp;Pentru a crea un album este necesara identificarea userului si pastrarea acestor informatii in baza de date. Asadar, va fi nevoie de o tabela CREATE-ALBUM : ce pastreaza
-           ID-user(cheie straina),userul ce a creat albumul ,nume-album creat de user , ID_ALBUM (cheie primara) ce este necesara mai departe atunci cand userul doreste sa adauge un animal la un album creat anterior.</p>
-        <p> &nbsp; &nbsp; &nbsp; &nbsp;Pentru functia de ADD-ANIMAL-TO-THE-ALBUM vom folosi 3 tabele, prima cea descrisa anterior, cea de-a doua ADD-TO-ALBUM este o tabela intermediara ce pastreaza ID_album (cheie straina) ,ID_ANIMAL (cheie straina)
-           si urmeaza sa faca legatura cu tabela numarul 3 (ANIMAL-PAGE) ce contine ID_Animal respectiv Path-ul catre pagina acestuia.</p>
+        <p> &nbsp; &nbsp; &nbsp; &nbsp;Pentru a crea un album este necesara identificarea userului si pastrarea acestor informatii in baza de date. Asadar, va fi nevoie de o tabela CREATE-ALBUM : ce pastreaza ID-user(cheie straina),userul ce a creat albumul
+            ,nume-album creat de user , ID_ALBUM (cheie primara) ce este necesara mai departe atunci cand userul doreste sa adauge un animal la un album creat anterior.</p>
+        <p> &nbsp; &nbsp; &nbsp; &nbsp;Pentru functia de ADD-ANIMAL-TO-THE-ALBUM vom folosi 3 tabele, prima cea descrisa anterior, cea de-a doua ADD-TO-ALBUM este o tabela intermediara ce pastreaza ID_album (cheie straina) ,ID_ANIMAL (cheie straina) si urmeaza
+            sa faca legatura cu tabela numarul 3 (ANIMAL-PAGE) ce contine ID_Animal respectiv Path-ul catre pagina acestuia.</p>
     </section>
     <section id="Appendix_C:_To_Be_Determined_List">
         <h2> Appendix C: To Be Determined List </h2>
@@ -641,6 +642,10 @@
             &nbsp; &nbsp; &nbsp; &nbsp; Aplicatia WEB determina niste statistici referitoare la animalele prezentate in momentul apasarii butonului "Generare statistici" , raportul statistic poate fi vizualizat de utilizator fie in format CSV fie in format PDF.
             <p> &nbsp; &nbsp; &nbsp; &nbsp; Un alt lucru determinat de aplicatia WEB e un clasament al animalelor bazat pe mai multe criterii precum habitatul,longevitatea si tipul animalului .</p>
         </p>
+    </section>
+    <section id="#InterfaceContributions">
+        <h2> Dumitru Silviu </h2>
+        <p> bla bla bla </p>
     </section>
 </body>
 
