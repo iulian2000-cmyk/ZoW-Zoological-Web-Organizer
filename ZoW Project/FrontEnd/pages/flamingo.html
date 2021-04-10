@@ -13,12 +13,14 @@
 </head>
 <body>
 
-    <nav class="navigationBar">
+   <nav class="navigationBar">
         <div class="logo">
-            <img src="../images/logo/logo.png" height="50" width="150" alt="Image not found!">
-        </div>
+            <a href="../index.html">
+            <img src="../images/logo/logo.png"height="50" width="150" alt="Image not found!">
+            </a>
+        </div>    
         <div class="loginStatus">
-            Name Username
+            <a href="../pages/authentication.html">  Username </a>
         </div>
     </nav>
 
@@ -150,6 +152,63 @@
     </div>
 </div>
    
+ <footer>
+    <div class="footerContent">
+        <p> &#169; All rights reserved </p>
+        <p> ZoW Atlas 2021 </p>
+        <button id="aboutBtn"> About </button>
+    </div>
+</footer>
+
+<div id="aboutModal" class="modaldisplay">
+    <div class="aboutContent">
+        <div class="aboutHeader">
+            <span class="closebutton">&times;</span>
+            <h3>ZoW Atlas</h3>
+        </div>
+        <div class="aboutBody">
+            <p>
+                <b>ZoW Atlas</b> este o aplicatie WEB ce permite utilizatorilor vizualizarea unor albume cu animale impartite pe diverse categorii, generarea de albume in functie de anumite criterii alese de utilizator, filtrarea albumelor, cautarea
+                multi-criteriala din searchbar, salvarea unui album in coletia personala sau chiar crearea propriilor albume. Pentru fiecare animal in parte exista o pagina specifica cu informatii si imagini.
+                <br> <br> De asemenea aplicatia permite generarea de statistici in format PDF si CSV cat si generarea unui clasament a celor mai populare animale.
+                <br><br> Pentru a intelege mai bine ce posibilitati ofera aplicatia va rugam sa cititi functionalitatile.
+                <br><br> <b>Functionalitati</b> <br> <br>
+                <b>1. Inregistrare </b>
+                <br> Componenta permite utilizatorului sa se inregistreze pe site folosind un nume de utilizator, un email si o parola.<br><br>
+                <b>2. Autentificare</b>
+                <br>Componenta permite utilizatorului sa se logheze pe site folosind un nume de utilizator si o parola.<br><br>
+                <b>3. Search bar</b>
+                <br>Componenta permite cautarea multi-criteriala si generarea rezultatelor corespunzatoare cautarii.<br><br>
+                <b>4. Afisare album selectat (albume prestabilite)</b>
+                <br>Componenta permite utilizatorilor selectarea si vizualizarea unui anumit album prestabilit.<br><br>
+                <b>5. Filtrare album</b>
+                <br>Componenta permite utilizatorului sa filtreze un album in functie de anumite proprietati generale.<br><br>
+                <b>6. Salvarea unui album in colectia persoanala</b>
+                <br>Componenta permite utilizatorului logat sa salveze albumul curent de pe pagina in colectia personala.<br><br>
+                <b>7. Generare de albume bazate pe anumite proprietati alese de utilizator</b>
+                <br>Componenta permite utilizatorului sa aleaga mai multe propietati in functie de care se vor tria animalele si se va genera un album.<br><br>
+                <b>8. Crearea unui album personal</b>
+                <br>Componenta permite unui utilizator logat sa isi creeze propriul album cu animale.<br><br>
+                <b>9. Card animal</b>
+                <br>Fiecare album este format din mai multe carduri cu animale. Cardul cuprinde o poza si numele animalului.<br><br>
+                <b>10. Slider de imagini pentru fiecare animal</b>
+                <br>Slider de imagini cu un anumit animal care iti permite sa misti imaginile la stanga sau la dreapta si sa le maresti.<br><br>
+                <b>11. Like animal</b>
+                <br>Fiecare animal are pe pagina proprie un buton de like si numarul de like-uri pe care le are. Componenta ajuta la generarea clasamentului celor mai populare animale.<br><br>
+                <b>12. Adaugarea unui animal intr-un album personal</b>
+                <br>Fiecare animal are pe pagina proprie un buton “Adauga in album” care permite utilizatorului sa adauge un animal intr-un album propriu.<br><br>
+                <b>13. Generare de statistici CSV, PDF</b>
+                <br>In pagina principala exista un buton “Generare statistici” care va genera diverse statistici disponibile in formate CSV si PDF.<br><br>
+                <b>14. Generare clasament animale populare (flux RSS)</b>
+                <br>In pagina principala exista un buton “Generare clasament” care va genera top 20 animale in functie de popularitate (numarul de like-uri).<br><br>
+                <b>15. Albumele mele</b>
+                <br>Componenta permite utilziatorului logat vizualizarea si afisarea albumelor salvate sau a albumelor personale create.<br><br>
+                <b>16. Deconectare</b>
+                <br>Componenta permite unui utilizator logat sa se delogheze de pe site.<br><br>
+            </p>
+        </div>
+    </div>
+</div>
 
 </body>
 
