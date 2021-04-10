@@ -51,13 +51,6 @@
                 color: #2c4868;
             }
             
-            .separator_menu_from_others {
-                border-left: 1px solid black;
-                min-height: 100vh;
-                position: absolute;
-                left: 10.9%;
-            }
-            
             .search {
                 order: 2;
                 left: 40%;
