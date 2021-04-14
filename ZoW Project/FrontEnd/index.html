@@ -15,21 +15,25 @@
 
 <body>
     <nav class="navBar">
-        <div class="settings">
-            <input type="image" src="images/icons/menu.png" alt="Alt text" width="45" height="70" id="menuShow" onclick="showMenu()" />
-        </div>
-        <div class="logo">
-            <img src="images/logo/logo.png" height="70" width="200" alt="Image not found!">
+        <div class="navBar-begin">
+            <div class="settings">
+                <input type="image" src="images/icons/menu.png" alt="Alt text" width="45" height="70" id="menuShow" onclick="showMenu()" />
+            </div>
+            <div class="logo">
+                <img src="images/logo/logo.png" height="70" width="200" alt="Image not found!">
+            </div>
         </div>
         <div class="search">
             <input type="text" name="search" class="round" placeholder="Search" />
             <input type="submit" class="corner" value="" />
         </div>
-        <div class="username">
-            <p> <a href="pages/authentication.html" style="text-decoration: none;"> Username </a> </p>
-        </div>
-        <div class="loginstatus">
-            <input type="image" src="images/icons/arrow.png" alt="Alt text" width="25" height="25" id="settingsShow" onclick="showSettings()" />
+        <div class="user">
+            <div class="username">
+                <p> <a href="pages/authentication.html" style="text-decoration: none;"> Username </a> </p>
+            </div>
+            <div class="loginstatus">
+                <input type="image" src="images/icons/arrow.png" alt="Alt text" width="25" height="25" id="settingsShow" onclick="showSettings()" />
+            </div>
         </div>
     </nav>
     <div class="filters">
@@ -54,8 +58,57 @@
             </div>
         </div>
     </a>
-    <div id="menu"> </div>
-    <div id="settings"> </div>
+    <div id="menu">
+        <div class="sidenav">
+            <p> USER MENU </p>
+            <button id="generateStats">Generate stats </button>
+            <button id="generateOrder">Generate clasament</button>
+            <button class="habitat"> HABITAT
+          <form>
+            <select id="habitat" >
+              <option val=1> value1 </option>
+              <option val=2> value2</option>
+            </select>
+          </form>
+        </button> <br>
+            <button class="type"> TYPE
+          <form>
+            <select id="type" >
+              <option val=1> value1 </option>
+              <option val=2> value2</option>
+            </select>
+          </form>
+        </button> <br>
+            <button class="longevitate">  LONGEVITATE
+          <form>
+            <select id="longevitate" >
+              <option val=1> value1 </option>
+              <option val=2> value 2</option>
+            </select>
+          </form>
+        </button> <br>
+            <button id="generateAlbum"> Generare album </button>
+            <div class="dropdown1">
+                <button id="predefinedAlbums"> Albume predefinite </button>
+                <div class="dropdown-content1">
+                    <a href="#"> Pasari </a>
+                    <a href="#"> Reptile </a>
+                    <a href="#"> Mamifere </a>
+                    <a href="#"> Acvatice </a>
+                </div>
+            </div>
+            <div class="dropdown2">
+                <button id="myAlbums"> Albumele mele </button>
+                <div class="dropdown-content2">
+                    <a href="#"> Album1  </a>
+                    <a href="#"> Album2 </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="settings">
+        <a href="#"> <strong> Logout </strong> </a>
+    </div>
 </body>
 
 </html>
