@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ro">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,37 +8,38 @@
     <meta name="author" content="Nechita Roberta">
     <meta name="description" content="ZoW App">
     <link rel="stylesheet" href="../styles/styleAnimalPage.css">
-    <link rel="shortcut icon" href="../images/logo/logo1.png" type="image/x-icon">
+    <link rel="icon" href="../images/icons/iconZ.png">
     <script src="../scripts/scriptAnimalPage.js"></script>
     <title>Leu</title>
 </head>
+
 <body>
 
 
     <nav class="navigationBar">
         <div class="logo">
             <a href="../index.html">
-                <img src="../images/logo/logo.png"height="50" width="150" alt="Image not found!">
+                <img src="../images/logo/logo.png" height="50" width="150" alt="Image not found!">
             </a>
         </div>
         <div class="loginStatus">
             <a href="../pages/authentication.html"> Username </a>
         </div>
     </nav>
-    
+
     <div class="mare">
         <div class="container">
             <div class="box">
                 <div class="contentBox">
                     <h1>LEU</h1>
 
-                    <div class ="whiteBox">
+                    <div class="whiteBox">
                         <br><br>
                         <div class="bullet">
                             <strong>LONGETIVITATE</strong>10 ani salbaticie, 25 ani captivitate
-                            <strong>CATEGORIE</strong>Mamifere 
-                            <strong>GREUTATE MEDIE</strong>200 kg 
-                            <strong>INALTIME MEDIE</strong>1,2m 
+                            <strong>CATEGORIE</strong>Mamifere
+                            <strong>GREUTATE MEDIE</strong>200 kg
+                            <strong>INALTIME MEDIE</strong>1,2m
                             <strong>MEDIU DE VIATA</strong>campii deschise, Africa
                             <strong>MOD DE HARNIRE</strong>carnivor
                             <strong>LIKES </strong> 80
@@ -50,7 +52,7 @@
                     <button class="button2"> <img id = "AddIcon" src="../images/icons/addIcon.svg"  alt="add icon"> <strong>Add to album</strong> </button>
                 </div>
             </div>
-           
+
         </div>
 
 
@@ -60,17 +62,17 @@
 
             <div class="Slides">
                 <div class="numberImage">1 / 4</div>
-                <img class="ImgGallery" src="../images/leu/leu1.jpg"  alt="no1" style="width:800px;height:400px; max-width: 100%;">
+                <img class="ImgGallery" src="../images/leu/leu1.jpg" alt="no1" style="width:800px;height:400px; max-width: 100%;">
             </div>
 
             <div class="Slides">
                 <div class="numberImage">2 / 4</div>
-                <img  class="ImgGallery" src="../images/leu/leu2.jpg"   alt="no2" style="width:800px;height:400px; max-width: 100%;">              
+                <img class="ImgGallery" src="../images/leu/leu2.jpg" alt="no2" style="width:800px;height:400px; max-width: 100%;">
             </div>
 
             <div class="Slides">
                 <div class="numberImage">3 / 4</div>
-                <img class ="ImgGallery" src="../images/leu/leu3.jpg"  alt="no3" style="width:800px;height:400px;max-width: 100%;">
+                <img class="ImgGallery" src="../images/leu/leu3.jpg" alt="no3" style="width:800px;height:400px;max-width: 100%;">
             </div>
 
             <div class="Slides">
@@ -78,32 +80,31 @@
                 <img class="ImgGallery" src="../images/leu/leu4.jpg" alt="no4" style="width:800px;height:400px;max-width: 100%;">
             </div>
 
-         
+
             <div class="modal">
                 <span class="close">×</span>
-                <img class="modalImage" id="img01"  alt="zoomImage" >
+                <img class="modalImage" id="img01" alt="zoomImage">
             </div>
 
 
             <script>
-            var modalEle = document.querySelector(".modal");
-            var modalImage = document.querySelector(".modalImage");
-         
-            Array.from(document.querySelectorAll(".ImgGallery")).forEach(item => {
+                var modalEle = document.querySelector(".modal");
+                var modalImage = document.querySelector(".modalImage");
 
-            item.addEventListener("click", event => {
-                modalEle.style.display = "block";
-                modalImage.src = event.target.src;
+                Array.from(document.querySelectorAll(".ImgGallery")).forEach(item => {
+
+                    item.addEventListener("click", event => {
+                        modalEle.style.display = "block";
+                        modalImage.src = event.target.src;
+                    });
                 });
-            });
 
-            document.querySelector(".close").addEventListener("click", () => {
-            modalEle.style.display = "none";
-            });
-
+                document.querySelector(".close").addEventListener("click", () => {
+                    modalEle.style.display = "none";
+                });
             </script>
-            
-             
+
+
             <a class="prevButton" onclick="plusSlides(-1)">&#10094;</a>
             <a class="nextButton" onclick="plusSlides(1)">&#10095;</a>
 
@@ -117,7 +118,7 @@
                     <img class="demo cursor" src="../images/leu/leu2.jpg" alt="no2" style="width:200px; height:150px" onclick="currentSlide(2)">
                 </div>
                 <div class="col">
-                    <img class="demo cursor" src="../images/leu/leu3.jpg"  alt="no3" style="width:200px; height:150px" onclick="currentSlide(3)">
+                    <img class="demo cursor" src="../images/leu/leu3.jpg" alt="no3" style="width:200px; height:150px" onclick="currentSlide(3)">
                 </div>
                 <div class="col">
                     <img class="demo cursor" src="../images/leu/leu4.jpg" alt="no4" style="width:200px; height:150px" onclick="currentSlide(4)">
@@ -133,35 +134,35 @@
 
 
 
-<div class ="ContentPage" >
+    <div class="ContentPage">
 
-    <div class="Generalitati">
-        <h3 id="subtitle1"> Generalitati </h3>
-        <p> &nbsp; &nbsp; &nbsp; &nbsp; Leul (Panthera Leo) este o specie de mamifere carnivore din familia felidelor, fiind una dintre cele patru specii ale genului Panthera, reprezentant al subfamiliei felinelor mari. Este una dintre cele mai mari feline
-            și unul dintre cei mai mari răpitori tereștri (după ursul polar, ursul brun și tigru).</p>
-        <p> &nbsp; &nbsp; &nbsp; &nbsp;Leii sunt animale carnivore care trăiesc în grupuri (familii) constând din femele înrudite, pui de ambele sexe și un mascul neînrudit, care se împerechează cu femelele adulte. Femelele se ocupă cu vânatul, în timp ce
-            masculii apără și mențin frontierele teritoriului. Puii masculi sunt dați afară din grup când ajung la maturitate. </p>
-        <p>&nbsp; &nbsp; &nbsp; &nbsp;Cu toate că este cunoscut ca „regele junglei”, leul este un animal care trăiește în câmpii deschise, și poate fi găsit prin toată Africa. Chiar și așa, este o specie în pericol, populații semnificative găsindu-se doar
-            în parcurile naționale din Tanzania și Africa de Sud.Ultimul rămas al subspeciei leului asiatic (Panthera leo persica), care în vechime trăia din Grecia până în India, trăiește acum în Pădurea Gir din nord-vestul Indiei. Aproximativ 700 de
-            lei mai trăiesc într-un sanctuar din statul Gujarat.</p>
-        <p>&nbsp; &nbsp; &nbsp; &nbsp;Leii au dispărut din Grecia, ultimul loc în care mai trăiau în Europa până în anul 100 d.Hr., dar populații semnificative au rămas în nordul Africii până la începutul secolului XX.Dacă în anii 1960 existau 450.000 de
-            lei, în anul 2011 mai erau cel mult 20.000. Leii sunt un simbol care apare des în heraldica familiilor regale și a nobilimii. Apar și în arta plastică chineză, deși nu au trăit niciodată în China. Niciun alt animal nu a primit mai multă atenție
-            in artă și literatură. În Biblie este amintit de 130 de ori. În arta epocii pietrei, în special în picturile rupestre, se întâlnesc frecvent desene reprezentând lei.</p>
+        <div class="Generalitati">
+            <h3 id="subtitle1"> Generalitati </h3>
+            <p> &nbsp; &nbsp; &nbsp; &nbsp; Leul (Panthera Leo) este o specie de mamifere carnivore din familia felidelor, fiind una dintre cele patru specii ale genului Panthera, reprezentant al subfamiliei felinelor mari. Este una dintre cele mai mari feline
+                și unul dintre cei mai mari răpitori tereștri (după ursul polar, ursul brun și tigru).</p>
+            <p> &nbsp; &nbsp; &nbsp; &nbsp;Leii sunt animale carnivore care trăiesc în grupuri (familii) constând din femele înrudite, pui de ambele sexe și un mascul neînrudit, care se împerechează cu femelele adulte. Femelele se ocupă cu vânatul, în timp
+                ce masculii apără și mențin frontierele teritoriului. Puii masculi sunt dați afară din grup când ajung la maturitate. </p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp;Cu toate că este cunoscut ca „regele junglei”, leul este un animal care trăiește în câmpii deschise, și poate fi găsit prin toată Africa. Chiar și așa, este o specie în pericol, populații semnificative găsindu-se
+                doar în parcurile naționale din Tanzania și Africa de Sud.Ultimul rămas al subspeciei leului asiatic (Panthera leo persica), care în vechime trăia din Grecia până în India, trăiește acum în Pădurea Gir din nord-vestul Indiei. Aproximativ
+                700 de lei mai trăiesc într-un sanctuar din statul Gujarat.</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp;Leii au dispărut din Grecia, ultimul loc în care mai trăiau în Europa până în anul 100 d.Hr., dar populații semnificative au rămas în nordul Africii până la începutul secolului XX.Dacă în anii 1960 existau 450.000
+                de lei, în anul 2011 mai erau cel mult 20.000. Leii sunt un simbol care apare des în heraldica familiilor regale și a nobilimii. Apar și în arta plastică chineză, deși nu au trăit niciodată în China. Niciun alt animal nu a primit mai multă
+                atenție in artă și literatură. În Biblie este amintit de 130 de ori. În arta epocii pietrei, în special în picturile rupestre, se întâlnesc frecvent desene reprezentând lei.</p>
+        </div>
+
+        <div class="Stiatica">
+            <h3 id="subtitle2"> Stiati ca ... </h3>
+            <ul>
+                <li> Ragetul unui leu se poate auzi si de la 8 km distanta. </li>
+                <li> Prin raget acestia isi stabilesc drepturile teritoriale sau cheama membrii rataciti.</li>
+                <li> Femela are nevoie de aproximativ 5 kg de carne pe zi, iar masculul de minimum 7 kg.</li>
+                <li> Femelele sunt cele care in mare parte vaneaza. 85-90 % din prada este capturata de femele, in timp ce masculii stau sa pazeasca teritoriul.</li>
+                <li> Leul este in top 5 cele mai rapide animale de pe uscat. Poate atinge viteze de pana la 80 km / ora.</li>
+                <li> Este singura specie de felina mare sociabila; traieste in grupuri de cate 15 membri, uneori fiind formate chiar si grupuri de 40 de membri.</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="Stiatica">
-        <h3 id="subtitle2"> Stiati ca ... </h3>
-        <ul>
-            <li > Ragetul unui leu se poate auzi si de la 8 km distanta. </li>
-            <li> Prin raget acestia isi stabilesc drepturile teritoriale sau cheama membrii rataciti.</li>
-            <li> Femela are nevoie de aproximativ 5 kg de carne pe zi, iar masculul de minimum 7 kg.</li>
-            <li> Femelele sunt cele care in mare parte vaneaza. 85-90 % din prada este capturata de femele, in timp ce masculii stau sa pazeasca teritoriul.</li>
-            <li> Leul este in top 5 cele mai rapide animale de pe uscat. Poate atinge viteze de pana la 80 km / ora.</li>
-            <li> Este singura specie de felina mare sociabila; traieste in grupuri de cate 15 membri, uneori fiind formate chiar si grupuri de 40 de membri.</li>
-        </ul>
-    </div>
-</div>
-   
     <footer>
         <div class="footerContent">
             <p> &#169; All rights reserved </p>
@@ -169,56 +170,56 @@
             <button id="aboutBtn"> About </button>
         </div>
     </footer>
-    
+
     <div id="aboutModal" class="modaldisplay">
-    <div class="aboutContent">
-        <div class="aboutHeader">
-            <span class="closebutton">&times;</span>
-            <h3>ZoW Atlas</h3>
-        </div>
-        <div class="aboutBody">
-            <p>
-                <b>ZoW Atlas</b> este o aplicatie WEB ce permite utilizatorilor vizualizarea unor albume cu animale impartite pe diverse categorii, generarea de albume in functie de anumite criterii alese de utilizator, filtrarea albumelor, cautarea
-                multi-criteriala din searchbar, salvarea unui album in coletia personala sau chiar crearea propriilor albume. Pentru fiecare animal in parte exista o pagina specifica cu informatii si imagini.
-                <br> <br> De asemenea aplicatia permite generarea de statistici in format PDF si CSV cat si generarea unui clasament a celor mai populare animale.
-                <br><br> Pentru a intelege mai bine ce posibilitati ofera aplicatia va rugam sa cititi functionalitatile.
-                <br><br> <b>Functionalitati</b> <br> <br>
-                <b>1. Inregistrare </b>
-                <br> Componenta permite utilizatorului sa se inregistreze pe site folosind un nume de utilizator, un email si o parola.<br><br>
-                <b>2. Autentificare</b>
-                <br>Componenta permite utilizatorului sa se logheze pe site folosind un nume de utilizator si o parola.<br><br>
-                <b>3. Search bar</b>
-                <br>Componenta permite cautarea multi-criteriala si generarea rezultatelor corespunzatoare cautarii.<br><br>
-                <b>4. Afisare album selectat (albume prestabilite)</b>
-                <br>Componenta permite utilizatorilor selectarea si vizualizarea unui anumit album prestabilit.<br><br>
-                <b>5. Filtrare album</b>
-                <br>Componenta permite utilizatorului sa filtreze un album in functie de anumite proprietati generale.<br><br>
-                <b>6. Salvarea unui album in colectia persoanala</b>
-                <br>Componenta permite utilizatorului logat sa salveze albumul curent de pe pagina in colectia personala.<br><br>
-                <b>7. Generare de albume bazate pe anumite proprietati alese de utilizator</b>
-                <br>Componenta permite utilizatorului sa aleaga mai multe propietati in functie de care se vor tria animalele si se va genera un album.<br><br>
-                <b>8. Crearea unui album personal</b>
-                <br>Componenta permite unui utilizator logat sa isi creeze propriul album cu animale.<br><br>
-                <b>9. Card animal</b>
-                <br>Fiecare album este format din mai multe carduri cu animale. Cardul cuprinde o poza si numele animalului.<br><br>
-                <b>10. Slider de imagini pentru fiecare animal</b>
-                <br>Slider de imagini cu un anumit animal care iti permite sa misti imaginile la stanga sau la dreapta si sa le maresti.<br><br>
-                <b>11. Like animal</b>
-                <br>Fiecare animal are pe pagina proprie un buton de like si numarul de like-uri pe care le are. Componenta ajuta la generarea clasamentului celor mai populare animale.<br><br>
-                <b>12. Adaugarea unui animal intr-un album personal</b>
-                <br>Fiecare animal are pe pagina proprie un buton “Adauga in album” care permite utilizatorului sa adauge un animal intr-un album propriu.<br><br>
-                <b>13. Generare de statistici CSV, PDF</b>
-                <br>In pagina principala exista un buton “Generare statistici” care va genera diverse statistici disponibile in formate CSV si PDF.<br><br>
-                <b>14. Generare clasament animale populare (flux RSS)</b>
-                <br>In pagina principala exista un buton “Generare clasament” care va genera top 20 animale in functie de popularitate (numarul de like-uri).<br><br>
-                <b>15. Albumele mele</b>
-                <br>Componenta permite utilziatorului logat vizualizarea si afisarea albumelor salvate sau a albumelor personale create.<br><br>
-                <b>16. Deconectare</b>
-                <br>Componenta permite unui utilizator logat sa se delogheze de pe site.<br><br>
-            </p>
+        <div class="aboutContent">
+            <div class="aboutHeader">
+                <span class="closebutton">&times;</span>
+                <h3>ZoW Atlas</h3>
+            </div>
+            <div class="aboutBody">
+                <p>
+                    <b>ZoW Atlas</b> este o aplicatie WEB ce permite utilizatorilor vizualizarea unor albume cu animale impartite pe diverse categorii, generarea de albume in functie de anumite criterii alese de utilizator, filtrarea albumelor, cautarea
+                    multi-criteriala din searchbar, salvarea unui album in coletia personala sau chiar crearea propriilor albume. Pentru fiecare animal in parte exista o pagina specifica cu informatii si imagini.
+                    <br> <br> De asemenea aplicatia permite generarea de statistici in format PDF si CSV cat si generarea unui clasament a celor mai populare animale.
+                    <br><br> Pentru a intelege mai bine ce posibilitati ofera aplicatia va rugam sa cititi functionalitatile.
+                    <br><br> <b>Functionalitati</b> <br> <br>
+                    <b>1. Inregistrare </b>
+                    <br> Componenta permite utilizatorului sa se inregistreze pe site folosind un nume de utilizator, un email si o parola.<br><br>
+                    <b>2. Autentificare</b>
+                    <br>Componenta permite utilizatorului sa se logheze pe site folosind un nume de utilizator si o parola.<br><br>
+                    <b>3. Search bar</b>
+                    <br>Componenta permite cautarea multi-criteriala si generarea rezultatelor corespunzatoare cautarii.<br><br>
+                    <b>4. Afisare album selectat (albume prestabilite)</b>
+                    <br>Componenta permite utilizatorilor selectarea si vizualizarea unui anumit album prestabilit.<br><br>
+                    <b>5. Filtrare album</b>
+                    <br>Componenta permite utilizatorului sa filtreze un album in functie de anumite proprietati generale.<br><br>
+                    <b>6. Salvarea unui album in colectia persoanala</b>
+                    <br>Componenta permite utilizatorului logat sa salveze albumul curent de pe pagina in colectia personala.<br><br>
+                    <b>7. Generare de albume bazate pe anumite proprietati alese de utilizator</b>
+                    <br>Componenta permite utilizatorului sa aleaga mai multe propietati in functie de care se vor tria animalele si se va genera un album.<br><br>
+                    <b>8. Crearea unui album personal</b>
+                    <br>Componenta permite unui utilizator logat sa isi creeze propriul album cu animale.<br><br>
+                    <b>9. Card animal</b>
+                    <br>Fiecare album este format din mai multe carduri cu animale. Cardul cuprinde o poza si numele animalului.<br><br>
+                    <b>10. Slider de imagini pentru fiecare animal</b>
+                    <br>Slider de imagini cu un anumit animal care iti permite sa misti imaginile la stanga sau la dreapta si sa le maresti.<br><br>
+                    <b>11. Like animal</b>
+                    <br>Fiecare animal are pe pagina proprie un buton de like si numarul de like-uri pe care le are. Componenta ajuta la generarea clasamentului celor mai populare animale.<br><br>
+                    <b>12. Adaugarea unui animal intr-un album personal</b>
+                    <br>Fiecare animal are pe pagina proprie un buton “Adauga in album” care permite utilizatorului sa adauge un animal intr-un album propriu.<br><br>
+                    <b>13. Generare de statistici CSV, PDF</b>
+                    <br>In pagina principala exista un buton “Generare statistici” care va genera diverse statistici disponibile in formate CSV si PDF.<br><br>
+                    <b>14. Generare clasament animale populare (flux RSS)</b>
+                    <br>In pagina principala exista un buton “Generare clasament” care va genera top 20 animale in functie de popularitate (numarul de like-uri).<br><br>
+                    <b>15. Albumele mele</b>
+                    <br>Componenta permite utilziatorului logat vizualizarea si afisarea albumelor salvate sau a albumelor personale create.<br><br>
+                    <b>16. Deconectare</b>
+                    <br>Componenta permite unui utilizator logat sa se delogheze de pe site.<br><br>
+                </p>
+            </div>
         </div>
     </div>
-</div>
 
 
 </body>
