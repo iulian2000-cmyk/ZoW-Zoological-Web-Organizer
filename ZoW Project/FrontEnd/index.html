@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Isac Iulian-George">
+    <meta name="author" content="Isac Iulian-George and Dumitru Silviu">
     <meta name="description" content="Zoo">
     <link rel="stylesheet" href="styles/styleMainPage.css">
     <link rel="icon" href="./images/icons/iconZ.png">
@@ -45,20 +45,56 @@
         </form>
     </div>
     <br id="c">
-    <h2 id="albumTitle">Mamifere</h2>
-    <a href="pages/leu.html">
-        <div class="card">
-            <img id="cardBackground" src="./images/leu/leu1.jpg" alt="Background image">
-            <div class="cardInfo">
-                <img id="animalImage" src="./images/leu/leu1.jpg" width="350px" height="296px">
-                <p id="animalName"> LEU </p>
+    <div class="cardsContainer">
+        <h2 id="albumTitle">Mamifere</h2>
+        <a href="pages/leu.html">
+            <div class="card">
+                <img class="cardBackground" src="./images/leu/leu1.jpg" alt="Background image">
+                <div class="cardInfo">
+                    <img class="animalImage" src="./images/leu/leu1.jpg" width="350px" height="296px">
+                    <div class="animalName">
+                        <p> LEU </p>
+                    </div>
+                </div>
+                <div class="likes">
+                    <img class="likesIcon" src="./images/icons/likeIcon.svg" width="20px" height="20px">
+                    <p class="numberOfLikes"> 56 </p>
+                </div>
             </div>
-            <div class="likes">
-                <img id="likesIcon" src="./images/icons/likeIcon.svg" width="20px" height="20px">
-                <p id="numberOfLikes"> 56 </p>
+        </a>
+
+        <a href="pages/flamingo.html">
+            <div class="card">
+                <img class="cardBackground" src="./images/flamingo/flamingo1.jpg" alt="Background image">
+                <div class="cardInfo">
+                    <img class="animalImage" src="./images/flamingo/flamingo1.jpg">
+                    <div class="animalName">
+                        <p> FLAMINGO </p>
+                    </div>
+                </div>
+                <div class="likes">
+                    <img class="likesIcon" src="./images/icons/likeIcon.svg">
+                    <p class="numberOfLikes"> 56 </p>
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
+
+        <a href="pages/cameleon.html">
+            <div class="card">
+                <img class="cardBackground" src="./images/cameleon/cameleon1.jpg" alt="Background image">
+                <div class="cardInfo">
+                    <img class="animalImage" src="./images/cameleon/cameleon1.jpg">
+                    <div class="animalName">
+                        <p> CAMELEON </p>
+                    </div>
+                </div>
+                <div class="likes">
+                    <img class="likesIcon" src="./images/icons/likeIcon.svg">
+                    <p class="numberOfLikes"> 56 </p>
+                </div>
+            </div>
+        </a>
+    </div>
     <div id="menu">
         <div class="sidenav">
             <p> USER MENU </p>
