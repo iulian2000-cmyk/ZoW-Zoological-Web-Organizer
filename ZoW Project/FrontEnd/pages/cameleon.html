@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ro">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,19 @@
     <meta name="author" content="Nechita Roberta">
     <meta name="description" content="ZoW App">
     <link rel="stylesheet" href="../styles/styleAnimalPage.css">
-    <link rel="shortcut icon" href="../images/logo/logo1.png" type="image/x-icon">
+    <link rel="icon" href="../images/icons/iconZ.png">
     <script src="../scripts/scriptAnimalPage.js"></script>
     <title>Cameleon</title>
 </head>
+
 <body>
 
-     <nav class="navigationBar">
+    <nav class="navigationBar">
         <div class="logo">
             <a href="../index.html">
-            <img src="../images/logo/logo.png"height="50" width="150" alt="Image not found!">
+                <img src="../images/logo/logo.png" height="50" width="150" alt="Image not found!">
             </a>
-        </div>    
+        </div>
         <div class="loginStatus">
             <a href="../pages/authentication.html">  Username </a>
         </div>
@@ -29,11 +31,11 @@
                 <div class="contentBox">
                     <h1>CAMELEON</h1>
 
-                    <div class ="whiteBox">
+                    <div class="whiteBox">
                         <br><br>
                         <div class="bullet">
-                            <strong>LONGETIVITATE</strong>  4-8 ani
-                            <strong>CATEGORIE</strong> Reptile 
+                            <strong>LONGETIVITATE</strong> 4-8 ani
+                            <strong>CATEGORIE</strong> Reptile
                             <strong>GREUTATE MEDIE</strong> 1.3kg
                             <strong>INALTIME MEDIE</strong> 35cm
                             <strong>MEDIU DE VIATA</strong> deserturi, paduri tropicale
@@ -48,7 +50,7 @@
                     <button class="button2"> <img id = "AddIcon" src="../images/icons/addIcon.svg"  alt="add icon"> <strong>Add to album</strong> </button>
                 </div>
             </div>
-           
+
         </div>
 
 
@@ -58,17 +60,17 @@
 
             <div class="Slides">
                 <div class="numberImage">1 / 4</div>
-                <img class="ImgGallery" src="../images/cameleon/cameleon2.jpg"  alt="no1" style="width:800px;height:400px; max-width: 100%;">
+                <img class="ImgGallery" src="../images/cameleon/cameleon2.jpg" alt="no1" style="width:800px;height:400px; max-width: 100%;">
             </div>
 
             <div class="Slides">
                 <div class="numberImage">2 / 4</div>
-                <img  class="ImgGallery" src="../images/cameleon/cameleon1.jpg"   alt="no2" style="width:800px;height:400px; max-width: 100%;">              
+                <img class="ImgGallery" src="../images/cameleon/cameleon1.jpg" alt="no2" style="width:800px;height:400px; max-width: 100%;">
             </div>
 
             <div class="Slides">
                 <div class="numberImage">3 / 4</div>
-                <img class ="ImgGallery" src="../images/cameleon/cameleon3.jpg"  alt="no3" style="width:800px;height:400px;max-width: 100%;">
+                <img class="ImgGallery" src="../images/cameleon/cameleon3.jpg" alt="no3" style="width:800px;height:400px;max-width: 100%;">
             </div>
 
             <div class="Slides">
@@ -76,32 +78,31 @@
                 <img class="ImgGallery" src="../images/cameleon/cameleon4.jpg" alt="no4" style="width:800px;height:400px;max-width: 100%;">
             </div>
 
-         
+
             <div class="modal">
                 <span class="close">×</span>
-                <img class="modalImage" id="img01"  alt="zoomImage" >
+                <img class="modalImage" id="img01" alt="zoomImage">
             </div>
 
 
             <script>
-            var modalEle = document.querySelector(".modal");
-            var modalImage = document.querySelector(".modalImage");
-         
-            Array.from(document.querySelectorAll(".ImgGallery")).forEach(item => {
+                var modalEle = document.querySelector(".modal");
+                var modalImage = document.querySelector(".modalImage");
 
-            item.addEventListener("click", event => {
-                modalEle.style.display = "block";
-                modalImage.src = event.target.src;
+                Array.from(document.querySelectorAll(".ImgGallery")).forEach(item => {
+
+                    item.addEventListener("click", event => {
+                        modalEle.style.display = "block";
+                        modalImage.src = event.target.src;
+                    });
                 });
-            });
 
-            document.querySelector(".close").addEventListener("click", () => {
-            modalEle.style.display = "none";
-            });
-
+                document.querySelector(".close").addEventListener("click", () => {
+                    modalEle.style.display = "none";
+                });
             </script>
-            
-             
+
+
             <a class="prevButton" onclick="plusSlides(-1)">&#10094;</a>
             <a class="nextButton" onclick="plusSlides(1)">&#10095;</a>
 
@@ -115,7 +116,7 @@
                     <img class="demo cursor" src="../images/cameleon/cameleon1.jpg" alt="no2" style="width:200px; height:150px" onclick="currentSlide(2)">
                 </div>
                 <div class="col">
-                    <img class="demo cursor" src="../images/cameleon/cameleon3.jpg"  alt="no3" style="width:200px; height:150px" onclick="currentSlide(3)">
+                    <img class="demo cursor" src="../images/cameleon/cameleon3.jpg" alt="no3" style="width:200px; height:150px" onclick="currentSlide(3)">
                 </div>
                 <div class="col">
                     <img class="demo cursor" src="../images/cameleon/cameleon4.jpg" alt="no4" style="width:200px; height:150px" onclick="currentSlide(4)">
@@ -131,84 +132,87 @@
 
 
 
-<div class ="ContentPage" >
+    <div class="ContentPage">
 
-    <div class="Generalitati">
-        <h3 id="subtitle1"> Generalitati </h3>
-        <p> &nbsp; &nbsp; &nbsp; &nbsp; Cameleonul este o reptilă (din familia Chamaeleonidae) arboricolă și insectivoră din regiunile tropicale, cu gheare asemenea unui clește, care o ajută să se prindă de copaci. Are proprietatea de a-și schimba culoarea pielii potrivit mediului înconjurător. În prezent sunt cunoscute 160 de specii, cameleonii făcând parte din rândul speciilor de animale periclitate.</p>
-        <p> &nbsp; &nbsp; &nbsp; &nbsp;Singuratic, cameleonul trăiește în copaci, dar este capabil să alerge rapid în cazul în care este amenințat. Adaptat la viața arboricolă și la vânătoarea de insecte, cameleonul are corpul puternic comprimat lateral, iar degetele picioarelor sunt orientate în două laturi opuse, formând un clește,cu care se prinde de ramurile copacilor. </p>
-        <p>&nbsp; &nbsp; &nbsp; &nbsp;Aproape jumătate din speciile de cameleoni de pe pământ trăiesc în insula Madagascar (Africa). Această comunitate de cameleoni este cea mai mare din lume, fiind unică și prin faptul că numără 59 de specii diferite, care nu se găsesc decât în Madagascar.</p>
-    </div>
-
-    <div class="Stiatica">
-        <h3 id="subtitle2"> Stiati ca ... </h3>
-        <ul>
-            <li>Abilitatea cameleonilor de a-şi schimba culoarea pielii în funcţie de mediul în care se află apare începând cu vârsta de 5 luni.</li>
-            <li>Limba cameleonului poate avea o lungime de 1,5 ori mai mare decât cea a corpului.</li>
-            <li>Urechile cameleonilor sunt atât de mici încât nu pot fi distinse clar cu ochiul liber de către oameni. Ca atare, auzul lor este foarte prost. Totuşi, ei pot auzi anumite sunete şi pot simţi vibraţiile.</li>
-            <li>Limba lor este lipicioasă şi puternică, perfectă pentru a-şi vâna prada şi pentru a o înghiţi cu rapiditate.</li>
-        </ul>
-    </div>
-</div>
-   
-
-<footer>
-    <div class="footerContent">
-        <p> &#169; All rights reserved </p>
-        <p> ZoW Atlas 2021 </p>
-        <button id="aboutBtn"> About </button>
-    </div>
-</footer>
-
-<div id="aboutModal" class="modaldisplay">
-    <div class="aboutContent">
-        <div class="aboutHeader">
-            <span class="closebutton">&times;</span>
-            <h3>ZoW Atlas</h3>
+        <div class="Generalitati">
+            <h3 id="subtitle1"> Generalitati </h3>
+            <p> &nbsp; &nbsp; &nbsp; &nbsp; Cameleonul este o reptilă (din familia Chamaeleonidae) arboricolă și insectivoră din regiunile tropicale, cu gheare asemenea unui clește, care o ajută să se prindă de copaci. Are proprietatea de a-și schimba culoarea
+                pielii potrivit mediului înconjurător. În prezent sunt cunoscute 160 de specii, cameleonii făcând parte din rândul speciilor de animale periclitate.</p>
+            <p> &nbsp; &nbsp; &nbsp; &nbsp;Singuratic, cameleonul trăiește în copaci, dar este capabil să alerge rapid în cazul în care este amenințat. Adaptat la viața arboricolă și la vânătoarea de insecte, cameleonul are corpul puternic comprimat lateral,
+                iar degetele picioarelor sunt orientate în două laturi opuse, formând un clește,cu care se prinde de ramurile copacilor. </p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp;Aproape jumătate din speciile de cameleoni de pe pământ trăiesc în insula Madagascar (Africa). Această comunitate de cameleoni este cea mai mare din lume, fiind unică și prin faptul că numără 59 de specii diferite,
+                care nu se găsesc decât în Madagascar.</p>
         </div>
-        <div class="aboutBody">
-            <p>
-                <b>ZoW Atlas</b> este o aplicatie WEB ce permite utilizatorilor vizualizarea unor albume cu animale impartite pe diverse categorii, generarea de albume in functie de anumite criterii alese de utilizator, filtrarea albumelor, cautarea
-                multi-criteriala din searchbar, salvarea unui album in coletia personala sau chiar crearea propriilor albume. Pentru fiecare animal in parte exista o pagina specifica cu informatii si imagini.
-                <br> <br> De asemenea aplicatia permite generarea de statistici in format PDF si CSV cat si generarea unui clasament a celor mai populare animale.
-                <br><br> Pentru a intelege mai bine ce posibilitati ofera aplicatia va rugam sa cititi functionalitatile.
-                <br><br> <b>Functionalitati</b> <br> <br>
-                <b>1. Inregistrare </b>
-                <br> Componenta permite utilizatorului sa se inregistreze pe site folosind un nume de utilizator, un email si o parola.<br><br>
-                <b>2. Autentificare</b>
-                <br>Componenta permite utilizatorului sa se logheze pe site folosind un nume de utilizator si o parola.<br><br>
-                <b>3. Search bar</b>
-                <br>Componenta permite cautarea multi-criteriala si generarea rezultatelor corespunzatoare cautarii.<br><br>
-                <b>4. Afisare album selectat (albume prestabilite)</b>
-                <br>Componenta permite utilizatorilor selectarea si vizualizarea unui anumit album prestabilit.<br><br>
-                <b>5. Filtrare album</b>
-                <br>Componenta permite utilizatorului sa filtreze un album in functie de anumite proprietati generale.<br><br>
-                <b>6. Salvarea unui album in colectia persoanala</b>
-                <br>Componenta permite utilizatorului logat sa salveze albumul curent de pe pagina in colectia personala.<br><br>
-                <b>7. Generare de albume bazate pe anumite proprietati alese de utilizator</b>
-                <br>Componenta permite utilizatorului sa aleaga mai multe propietati in functie de care se vor tria animalele si se va genera un album.<br><br>
-                <b>8. Crearea unui album personal</b>
-                <br>Componenta permite unui utilizator logat sa isi creeze propriul album cu animale.<br><br>
-                <b>9. Card animal</b>
-                <br>Fiecare album este format din mai multe carduri cu animale. Cardul cuprinde o poza si numele animalului.<br><br>
-                <b>10. Slider de imagini pentru fiecare animal</b>
-                <br>Slider de imagini cu un anumit animal care iti permite sa misti imaginile la stanga sau la dreapta si sa le maresti.<br><br>
-                <b>11. Like animal</b>
-                <br>Fiecare animal are pe pagina proprie un buton de like si numarul de like-uri pe care le are. Componenta ajuta la generarea clasamentului celor mai populare animale.<br><br>
-                <b>12. Adaugarea unui animal intr-un album personal</b>
-                <br>Fiecare animal are pe pagina proprie un buton “Adauga in album” care permite utilizatorului sa adauge un animal intr-un album propriu.<br><br>
-                <b>13. Generare de statistici CSV, PDF</b>
-                <br>In pagina principala exista un buton “Generare statistici” care va genera diverse statistici disponibile in formate CSV si PDF.<br><br>
-                <b>14. Generare clasament animale populare (flux RSS)</b>
-                <br>In pagina principala exista un buton “Generare clasament” care va genera top 20 animale in functie de popularitate (numarul de like-uri).<br><br>
-                <b>15. Albumele mele</b>
-                <br>Componenta permite utilziatorului logat vizualizarea si afisarea albumelor salvate sau a albumelor personale create.<br><br>
-                <b>16. Deconectare</b>
-                <br>Componenta permite unui utilizator logat sa se delogheze de pe site.<br><br>
-            </p>
+
+        <div class="Stiatica">
+            <h3 id="subtitle2"> Stiati ca ... </h3>
+            <ul>
+                <li>Abilitatea cameleonilor de a-şi schimba culoarea pielii în funcţie de mediul în care se află apare începând cu vârsta de 5 luni.</li>
+                <li>Limba cameleonului poate avea o lungime de 1,5 ori mai mare decât cea a corpului.</li>
+                <li>Urechile cameleonilor sunt atât de mici încât nu pot fi distinse clar cu ochiul liber de către oameni. Ca atare, auzul lor este foarte prost. Totuşi, ei pot auzi anumite sunete şi pot simţi vibraţiile.</li>
+                <li>Limba lor este lipicioasă şi puternică, perfectă pentru a-şi vâna prada şi pentru a o înghiţi cu rapiditate.</li>
+            </ul>
         </div>
     </div>
-</div>
+
+
+    <footer>
+        <div class="footerContent">
+            <p> &#169; All rights reserved </p>
+            <p> ZoW Atlas 2021 </p>
+            <button id="aboutBtn"> About </button>
+        </div>
+    </footer>
+
+    <div id="aboutModal" class="modaldisplay">
+        <div class="aboutContent">
+            <div class="aboutHeader">
+                <span class="closebutton">&times;</span>
+                <h3>ZoW Atlas</h3>
+            </div>
+            <div class="aboutBody">
+                <p>
+                    <b>ZoW Atlas</b> este o aplicatie WEB ce permite utilizatorilor vizualizarea unor albume cu animale impartite pe diverse categorii, generarea de albume in functie de anumite criterii alese de utilizator, filtrarea albumelor, cautarea
+                    multi-criteriala din searchbar, salvarea unui album in coletia personala sau chiar crearea propriilor albume. Pentru fiecare animal in parte exista o pagina specifica cu informatii si imagini.
+                    <br> <br> De asemenea aplicatia permite generarea de statistici in format PDF si CSV cat si generarea unui clasament a celor mai populare animale.
+                    <br><br> Pentru a intelege mai bine ce posibilitati ofera aplicatia va rugam sa cititi functionalitatile.
+                    <br><br> <b>Functionalitati</b> <br> <br>
+                    <b>1. Inregistrare </b>
+                    <br> Componenta permite utilizatorului sa se inregistreze pe site folosind un nume de utilizator, un email si o parola.<br><br>
+                    <b>2. Autentificare</b>
+                    <br>Componenta permite utilizatorului sa se logheze pe site folosind un nume de utilizator si o parola.<br><br>
+                    <b>3. Search bar</b>
+                    <br>Componenta permite cautarea multi-criteriala si generarea rezultatelor corespunzatoare cautarii.<br><br>
+                    <b>4. Afisare album selectat (albume prestabilite)</b>
+                    <br>Componenta permite utilizatorilor selectarea si vizualizarea unui anumit album prestabilit.<br><br>
+                    <b>5. Filtrare album</b>
+                    <br>Componenta permite utilizatorului sa filtreze un album in functie de anumite proprietati generale.<br><br>
+                    <b>6. Salvarea unui album in colectia persoanala</b>
+                    <br>Componenta permite utilizatorului logat sa salveze albumul curent de pe pagina in colectia personala.<br><br>
+                    <b>7. Generare de albume bazate pe anumite proprietati alese de utilizator</b>
+                    <br>Componenta permite utilizatorului sa aleaga mai multe propietati in functie de care se vor tria animalele si se va genera un album.<br><br>
+                    <b>8. Crearea unui album personal</b>
+                    <br>Componenta permite unui utilizator logat sa isi creeze propriul album cu animale.<br><br>
+                    <b>9. Card animal</b>
+                    <br>Fiecare album este format din mai multe carduri cu animale. Cardul cuprinde o poza si numele animalului.<br><br>
+                    <b>10. Slider de imagini pentru fiecare animal</b>
+                    <br>Slider de imagini cu un anumit animal care iti permite sa misti imaginile la stanga sau la dreapta si sa le maresti.<br><br>
+                    <b>11. Like animal</b>
+                    <br>Fiecare animal are pe pagina proprie un buton de like si numarul de like-uri pe care le are. Componenta ajuta la generarea clasamentului celor mai populare animale.<br><br>
+                    <b>12. Adaugarea unui animal intr-un album personal</b>
+                    <br>Fiecare animal are pe pagina proprie un buton “Adauga in album” care permite utilizatorului sa adauge un animal intr-un album propriu.<br><br>
+                    <b>13. Generare de statistici CSV, PDF</b>
+                    <br>In pagina principala exista un buton “Generare statistici” care va genera diverse statistici disponibile in formate CSV si PDF.<br><br>
+                    <b>14. Generare clasament animale populare (flux RSS)</b>
+                    <br>In pagina principala exista un buton “Generare clasament” care va genera top 20 animale in functie de popularitate (numarul de like-uri).<br><br>
+                    <b>15. Albumele mele</b>
+                    <br>Componenta permite utilziatorului logat vizualizarea si afisarea albumelor salvate sau a albumelor personale create.<br><br>
+                    <b>16. Deconectare</b>
+                    <br>Componenta permite unui utilizator logat sa se delogheze de pe site.<br><br>
+                </p>
+            </div>
+        </div>
+    </div>
 
 </body>
 
