@@ -1,296 +1,720 @@
-            * {
-                box-sizing: border-box;
-            }
-            
-            body {
-                margin: 0;
-                padding: 0;
-            }
-            
-            .loginstatus {
-                order: 9;
-                margin-left: 10px;
-                color: black;
-                position: relative;
-                left: 65%;
-                margin-bottom: 0%;
-            }
-            
-            .settings {
-                position: relative;
-                left: 2%;
-            }
-            
-            .navBar {
-                display: flex;
-                background-color: #72b0c9;
-                flex-wrap: wrap;
-                align-items: center;
-                height: 5em;
-                width: 100%;
-            }
-            
-            .logo {
-                order: 1;
-                margin-left: 10px;
-                color: black;
-                position: relative;
-                left: 4%;
-            }
-            
-            div.filters {
-                position: absolute;
-                left: 15%;
-            }
-            
-            p#textFilters {
-                font-size: 20px;
-                height: 50%;
-                width: 10%;
-                font-family: Verdana;
-                color: #2c4868;
-            }
-            
-            .search {
-                order: 2;
-                left: 40%;
-                position: relative;
-                width: 300px;
-                height: 40px;
-                left: 10%;
-                position: relative;
-                width: 300px;
-                height: 30px;
-            }
-            
-            .round {
-                width: 100%;
-                border-radius: 15px;
-                border: 1px #000 solid;
-                padding: 5px 5px 5px 25px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 5;
-            }
-            
-            .corner {
-                position: absolute;
-                top: 3px;
-                left: 5px;
-                display: flex;
-                height: 20px;
-                width: 20px;
-                z-index: 10;
-                border-radius: 10px;
-                border: none;
-            }
-            
-            .sidenav {
-                width: 11%;
-                flex-wrap: wrap;
-                height: auto;
-                position: relative;
-                z-index: 1;
-                height: 100%;
-                top: 8.2%;
-                left: 0;
-                display: flex;
-                flex-direction: column;
-                background: #e2f3f9;
-                overflow-x: hidden;
-                padding: 8px 0;
-                min-height: 100vh;
-            }
-            
-            .sidenav p {
-                padding: 6px 8px 6px 16px;
-                text-decoration: none;
-                font-size: 25px;
-                text-align: center;
-                color: #2196F3;
-                display: block;
-            }
-            
-            .sidenav p:hover {
-                color: #2c4868;
-            }
-            
-            .type,
-            .longevitate,
-            .habitat {
-                display: flex;
-                flex-direction: column;
-                background: #e2f3f9;
-                color: #2c4868;
-                position: relative;
-                left: 0%;
-                padding: 16px;
-                font-size: 20px;
-                border: none;
-            }
-            
-            button#generateAlbum,
-            button#generateStats,
-            button#generateOrder,
-            button#generateAlbum,
-            button#predefinedAlbums,
-            button#myAlbums {
-                display: flex;
-                flex-direction: column;
-                background-color: #72b0c9;
-                border: solid, white 5px;
-                border-width: 5px;
-                padding: 15px 25px;
-                width: 150px;
-                position: relative;
-                left: 10%;
-                height: 70px;
-                text-align: center;
-                text-decoration: none;
-                cursor: pointer;
-                font-size: 15px;
-                border-radius: 15px;
-                margin: 4px 1px;
-            }
-            
-            button#generateAlbum:hover,
-            button#generateStats:hover,
-            button#generateOrder:hover,
-            button#generateAlbum:hover,
-            button#predefinedAlbums:hover,
-            button#myAlbums:hover {
-                background-color: #2196F3;
-                box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            }
-            
-            .dropdown1,
-            .dropdown2 {
-                position: relative;
-                display: inline-block;
-            }
-            
-            .dropdown-content1,
-            .dropdown-content2 {
-                display: none;
-                position: relative;
-                background-color: aquamarine;
-                min-width: 100px;
-                width: 100px;
-                height: 100px;
-                left: 20%;
-                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                padding: 10px 10px;
-                z-index: 1;
-            }
-            
-            .dropdown-content1 a,
-            .dropdown-content2 a {
-                text-decoration: none;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            }
-            
-            .dropdown1:hover .dropdown-content1,
-            .dropdown2:hover .dropdown-content2 {
-                display: grid;
-            }
-            
-            div#settings {
-                position: absolute;
-                width: 150px;
-                height: 40px;
-                background-color: #72b0c9;
-                color: black;
-                text-align: center;
-                left: 92%;
-                opacity: 0.5;
-                border-radius: 5px;
-                display: none;
-            }
-            
-            div#settings a {
-                text-decoration: none;
-                color: black;
-                margin-top: 5px;
-            }
-            
-            div.username {
-                position: absolute;
-                left: 91%;
-                text-align: center;
-            }
-            
-            .card {
-                position: absolute;
-                margin-left: 30%;
-                margin-top: 150px;
-                width: 700px;
-                height: 300px;
-                box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-                border-radius: 10px;
-            }
-            
-            #cardBackground {
-                position: relative;
-                opacity: 0.5;
-                height: 100%;
-                width: 100%;
-                border-radius: 10px;
-            }
-            
-            .cardInfo {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 4px;
-                display: flex;
-                flex-flow: row wrap;
-                align-items: center;
-                justify-content: space-between;
-            }
-            
-            #animalImage {
-                order: 1;
-                border-radius: 50%;
-                box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-            }
-            
-            #animalName {
-                order: 2;
-                margin: auto;
-                font: 4em Verdana;
-                color: black;
-                text-shadow: 2px 2px 10px white;
-            }
-            
-            .likes {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 640px;
-                display: flex;
-                flex-direction: row;
-                font-family: Verdana;
-            }
-            
-            #likesIcon {
-                order: 3;
-                align-self: flex-end;
-                margin-bottom: 17px;
-                margin-right: 5px;
-            }
-            
-            #numberOfLikes {
-                order: 4;
-                color: black;
-                align-self: flex-end;
-            }
-            
-            #albumTitle {
-                margin-bottom: 1em;
-                position: absolute;
-                margin-top: 100px;
-                margin-left: 50%;
-            }
+                    * {
+                        box-sizing: border-box;
+                    }
+                    
+                    body {
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    
+                    div.filters {
+                        position: absolute;
+                        left: 20%;
+                    }
+                    
+                    p#textFilters {
+                        font-size: 20px;
+                        height: 50%;
+                        width: 10%;
+                        font-family: Verdana;
+                        color: #2c4868;
+                    }
+                    
+                    br#c {
+                        display: none;
+                    }
+                    
+                    .sidenav {
+                        width: 10%;
+                        flex-wrap: wrap;
+                        height: auto;
+                        position: relative;
+                        z-index: 1;
+                        height: 100%;
+                        top: 8%;
+                        left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        background: #e2f3f9;
+                        overflow-x: hidden;
+                        padding: 8px 0;
+                        min-height: 100vh;
+                    }
+                    
+                    .sidenav p {
+                        padding: 6px 8px 6px 16px;
+                        text-decoration: none;
+                        font-size: 25px;
+                        text-align: center;
+                        color: #2196F3;
+                        display: block;
+                    }
+                    
+                    .sidenav p:hover {
+                        color: #2c4868;
+                    }
+                    
+                    .type,
+                    .longevitate,
+                    .habitat {
+                        display: flex;
+                        flex-direction: column;
+                        background: #e2f3f9;
+                        color: #2c4868;
+                        position: relative;
+                        left: 0%;
+                        padding: 16px;
+                        font-size: 20px;
+                        border: none;
+                    }
+                    
+                    button#generateAlbum,
+                    button#generateStats,
+                    button#generateOrder,
+                    button#generateAlbum,
+                    button#predefinedAlbums,
+                    button#myAlbums {
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #72b0c9;
+                        border: solid, white 5px;
+                        border-width: 5px;
+                        padding: 15px 25px;
+                        width: 150px;
+                        position: relative;
+                        left: 10%;
+                        height: 70px;
+                        text-align: center;
+                        text-decoration: none;
+                        cursor: pointer;
+                        font-size: 15px;
+                        border-radius: 15px;
+                        margin: 4px 1px;
+                    }
+                    
+                    button#generateAlbum:hover,
+                    button#generateStats:hover,
+                    button#generateOrder:hover,
+                    button#generateAlbum:hover,
+                    button#predefinedAlbums:hover,
+                    button#myAlbums:hover {
+                        background-color: #2196F3;
+                        box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    }
+                    
+                    .dropdown1,
+                    .dropdown2 {
+                        position: relative;
+                        display: inline-block;
+                    }
+                    
+                    .dropdown-content1,
+                    .dropdown-content2 {
+                        display: none;
+                        position: relative;
+                        background-color: aquamarine;
+                        min-width: 100px;
+                        width: 100px;
+                        height: 100px;
+                        left: 20%;
+                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                        padding: 10px 10px;
+                        z-index: 1;
+                    }
+                    
+                    .dropdown-content1 a,
+                    .dropdown-content2 a {
+                        text-decoration: none;
+                        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    }
+                    
+                    .dropdown1:hover .dropdown-content1,
+                    .dropdown2:hover .dropdown-content2 {
+                        display: grid;
+                    }
+                    
+                    .navBar {
+                        display: flex;
+                        background-color: #72b0c9;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        width: 100%;
+                        position: relative;
+                        justify-content: space-between;
+                    }
+                    
+                    .navBar-begin {
+                        display: flex;
+                    }
+                    
+                    .settings {
+                        margin-left: 1rem;
+                    }
+                    
+                    .logo {
+                        margin-left: 10px;
+                        color: black;
+                    }
+                    
+                    .round {
+                        border-radius: 15px;
+                        border: 1px #000 solid;
+                        padding: 5px 5px 5px 25px;
+                    }
+                    
+                    .corner {
+                        border-radius: 10px;
+                        border: none;
+                    }
+                    
+                    div#settings a {
+                        text-decoration: none;
+                        color: black;
+                        margin-top: 5px;
+                    }
+                    
+                    div.user {
+                        text-align: center;
+                        display: flex;
+                    }
+                    
+                    .loginstatus {
+                        order: 9;
+                        margin-left: 10px;
+                        color: black;
+                        margin-bottom: 0%;
+                        align-self: center;
+                    }
+                    
+                    div#settings {
+                        position: absolute;
+                        width: 150px;
+                        height: 40px;
+                        background-color: #72b0c9;
+                        color: black;
+                        text-align: center;
+                        right: 0;
+                        opacity: 0.5;
+                        border-radius: 5px;
+                        display: none;
+                    }
+                    
+                    #menu {
+                        display: none;
+                    }
+                    
+                    div#settings a {
+                        text-decoration: none;
+                        color: black;
+                        margin-top: 5px;
+                    }
+                    
+                    .cardsContainer {
+                        width: 100%;
+                        align-items: center;
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    
+                    .card {
+                        position: relative;
+                        margin: 1em;
+                        width: 700px;
+                        height: 300px;
+                        box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+                        border-radius: 10px;
+                    }
+                    
+                    .cardBackground {
+                        position: relative;
+                        opacity: 0.5;
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 10px;
+                    }
+                    
+                    .cardInfo {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 4px;
+                        display: flex;
+                        flex-flow: row wrap;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    
+                    .animalImage {
+                        width: 350px;
+                        height: 296px;
+                        order: 1;
+                        border-radius: 50%;
+                        box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+                    }
+                    
+                    .animalName {
+                        display: flex;
+                        flex-direction: column;
+                        width: 350px;
+                        order: 2;
+                        font: 3em verdana;
+                        align-items: center;
+                        color: black;
+                        text-shadow: 2px 2px 10px white;
+                    }
+                    
+                    .likes {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 640px;
+                        display: flex;
+                        flex-direction: row;
+                        font-family: Verdana;
+                    }
+                    
+                    .likesIcon {
+                        order: 3;
+                        width: 20px;
+                        height: 20px;
+                        align-self: flex-end;
+                        margin-bottom: 17px;
+                        margin-right: 5px;
+                    }
+                    
+                    .numberOfLikes {
+                        order: 4;
+                        color: black;
+                        align-self: flex-end;
+                    }
+                    
+                    #albumTitle {
+                        font-family: 'Lucida Sans';
+                        margin-bottom: 3em;
+                    }
+                    
+                    br#a,
+                    br#b {
+                        display: none;
+                    }
+                    
+                    @media all and (width: 740px) and (height: 360px) {
+                        .sidenav {
+                            width: 20%;
+                            height: 100%;
+                        }
+                        div.filters {
+                            left: 10%;
+                        }
+                        h2.albumTitle {
+                            top: 65%;
+                        }
+                        .settings {
+                            width: 5%;
+                        }
+                        h2#albumTitle,
+                        div.filters {
+                            position: absolute;
+                            left: 30%;
+                        }
+                        p#textFilters {
+                            font-size: 20px;
+                        }
+                        input#chooseFilters1,
+                        input#chooseFilters2,
+                        input#chooseFilters3 {
+                            font-size: 10px;
+                        }
+                        div#settings {
+                            right: 0;
+                        }
+                        input#menuShow {
+                            width: 20;
+                            height: 30;
+                        }
+                        br#a,
+                        br#b {
+                            display: block;
+                        }
+                        div.sidenav p {
+                            left: 0;
+                            font-size: 15px;
+                        }
+                        button#generateStats,
+                        button#generateOrder,
+                        button#generateAlbum,
+                        button#predefinedAlbums,
+                        button#myAlbums {
+                            left: 0;
+                            width: 140px;
+                        }
+                        h2#albumTitle {
+                            display: none;
+                        }
+                        .card {
+                            display: none;
+                        }
+                    }
+                    
+                    @media all and (width: 360px) and (height: 740px) {
+                        .sidenav {
+                            width: 40%;
+                            height: 100%;
+                        }
+                        div.filters {
+                            left: 15%;
+                        }
+                        h2.albumTitle {
+                            top: 65%;
+                        }
+                        .settings {
+                            width: 5%;
+                        }
+                        h2#albumTitle,
+                        div.filters {
+                            position: absolute;
+                            left: 45%;
+                        }
+                        p#textFilters {
+                            font-size: 20px;
+                        }
+                        input#chooseFilters1,
+                        input#chooseFilters2,
+                        input#chooseFilters3 {
+                            font-size: 10px;
+                        }
+                        div#settings {
+                            right: 0;
+                        }
+                        input#menuShow {
+                            width: 20;
+                            height: 30;
+                        }
+                        br#a,
+                        br#b {
+                            display: block;
+                        }
+                        div.sidenav p {
+                            left: 0;
+                            font-size: 15px;
+                        }
+                        button#generateStats,
+                        button#generateOrder,
+                        button#generateAlbum,
+                        button#predefinedAlbums,
+                        button#myAlbums {
+                            left: 0;
+                            width: 140px;
+                        }
+                        h2#albumTitle {
+                            display: none;
+                        }
+                        .card {
+                            display: none;
+                        }
+                    }
+                    
+                    @media all and (((width:768px) and (height:1024px)) or ((width:1024px)and(height:768px))or ((width:375px) and (height:667px)) or ((width:667px) and (height:375px))) {
+                        .card,
+                        h2#albumTitle {
+                            display: none;
+                        }
+                        .sidenav {
+                            width: 40%;
+                        }
+                    }
+                    
+                    @media all and (width:375px) and (height:667px) {
+                        .sidenav {
+                            width: 45%;
+                        }
+                        div.filters {
+                            left: 50%;
+                        }
+                        br#a,
+                        br#b {
+                            display: block;
+                        }
+                    }
+                    
+                    @media all and (width:667px) and (height:375px) {
+                        .sidenav {
+                            width: 30%;
+                        }
+                        div.filters {
+                            left: 30%;
+                        }
+                        br#a,
+                        br#b {
+                            display: block;
+                        }
+                    }
+                    
+                    @media all and (width:768px) and (height:1024px) {
+                        .sidenav {
+                            width: 30%;
+                        }
+                        div.filters {
+                            left: 30%;
+                        }
+                        br#a,
+                        br#b,
+                        br#c,
+                        h2#albumTitle {
+                            display: none;
+                        }
+                        .card {
+                            display: none;
+                        }
+                    }
+                    
+                    @media all and (width:1024px) and (height:768px) {
+                        .sidenav {
+                            width: 20%;
+                        }
+                        div.filters {
+                            left: 30%;
+                        }
+                        br#a,
+                        br#b {
+                            display: none;
+                        }
+                        br#c {
+                            display: block;
+                        }
+                        .card {
+                            left: -7.5%;
+                        }
+                    }
+                    
+                    @media all and (width:375px) and (height:667px) {
+                        .sidenav {
+                            width: 40%;
+                        }
+                        div.filters {
+                            left: 40%;
+                        }
+                        br#a,
+                        br#b {
+                            display: block;
+                        }
+                        h2#albumTitle {
+                            display: none;
+                        }
+                        br#c {
+                            display: none;
+                        }
+                        .card {
+                            display: none;
+                        }
+                        button#generateStats,
+                        button#generateOrder,
+                        button#generateAlbum,
+                        button#predefinedAlbums,
+                        button#myAlbums {
+                            left: 0;
+                            width: 140px;
+                        }
+                    }
+                    
+                    @media all and (max-width:667px) and (max-height:375px) {
+                        h2#albumTitle {
+                            display: none;
+                        }
+                        .card {
+                            display: none;
+                        }
+                    }
+                    
+                    @media all and (max-width:414px) and (max-height:736px) {
+                        h2#albumTitle {
+                            display: none;
+                        }
+                        .card {
+                            display: none;
+                        }
+                        .sidenav {
+                            width: 50%;
+                        }
+                        div.filters {
+                            left: 45%
+                        }
+                        br#a,
+                        br#b {
+                            display: block;
+                        }
+                    }
+                    
+                    @media all and (width:736px) and (height:414px) {
+                        h2#albumTitle {
+                            display: none;
+                        }
+                        .card {
+                            display: none;
+                        }
+                        .sidenav {
+                            width: 48%;
+                        }
+                        div.filters {
+                            left: 30%
+                        }
+                        br#a,
+                        br#b {
+                            display: block;
+                        }
+                    }
+                    
+                    @media all and (width:375px) and (height:812px) {
+                        h2#albumTitle {
+                            display: none;
+                        }
+                        .card {
+                            display: none;
+                        }
+                        .sidenav {
+                            width: 45%;
+                        }
+                        div.filters {
+                            left: 50%
+                        }
+                        br#a,
+                        br#b {
+                            display: block;
+                        }
+                    }
+                    
+                    @media all and (max-width:812px) and (max-height:375px) {
+                        h2#albumTitle {
+                            display: none;
+                        }
+                        .card {
+                            display: none;
+                        }
+                        .sidenav {
+                            width: 25%;
+                        }
+                        div.filters {
+                            left: 30%
+                        }
+                        br#a,
+                        br#b {
+                            display: block;
+                        }
+                    }
+                    
+                    @media all and (((max-width:1024px) and (max-height:1366px)) or ((max-width:1366px) and (max-height:1024px))) {
+                        h2#albumTitle {
+                            display: none;
+                        }
+                        .card {
+                            display: none;
+                        }
+                        .sidenav {
+                            width: 20%;
+                        }
+                        div.filters {
+                            left: 30%
+                        }
+                        br#a,
+                        br#b {
+                            display: block;
+                        }
+                    }
+                    
+                    @media all and ((max-width:360px) and (max-height:640px)) {
+                        h2#albumTitle {
+                            display: none;
+                        }
+                        .card {
+                            display: none;
+                        }
+                        .sidenav {
+                            width: 46%;
+                        }
+                        div.filters {
+                            left: 50%;
+                        }
+                    }
+                    
+                    @media all and (max-width:640px) and (max-height:360px) {
+                        h2#albumTitle,
+                        .card {
+                            display: none;
+                        }
+                        .sidenav {
+                            width: 30%;
+                        }
+                        div.filters {
+                            left: 50%;
+                        }
+                    }
+                    
+                    @media all and (max-width:414px) and (max-height:846px) {
+                        h2#albumTitle {
+                            display: none;
+                        }
+                        .card {
+                            display: none;
+                        }
+                        .sidenav {
+                            width: 49%;
+                        }
+                        div.filters {
+                            left: 50%;
+                        }
+                    }
+                    
+                    @media all and (max-width:414px) and (max-height:896px) {
+                        h2#albumTitle {
+                            display: none;
+                        }
+                        .card {
+                            display: none;
+                        }
+                        .sidenav {
+                            width: 49%;
+                        }
+                        div.filters {
+                            left: 50%;
+                        }
+                    }
+                    
+                    @media all and (max-width:320px) {
+                        .sidenav {
+                            width: 55%;
+                        }
+                        h2#albumTitle,
+                        .card {
+                            display: none;
+                        }
+                        div.filters {
+                            left: 60%;
+                        }
+                    }
+                    
+                    @media all and (max-width:667px) {
+                        .sidenav {
+                            width: 30%;
+                        }
+                        h2#albumTitle,
+                        .card {
+                            display: none;
+                        }
+                        div.filters {
+                            left: 60%;
+                        }
+                    }
+                    
+                    @media all and (max-width:375px) and (max-height:667px) {
+                        .sidenav {
+                            width: 45%;
+                        }
+                        .card,
+                        h2#albumTitle {
+                            display: none;
+                        }
+                    }
