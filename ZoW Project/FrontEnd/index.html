@@ -5,57 +5,147 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Isac Iulian-George">
+    <meta name="author" content="Isac Iulian-George and Dumitru Silviu">
     <meta name="description" content="Zoo">
     <link rel="stylesheet" href="styles/styleMainPage.css">
-    <link rel="shortcut icon" href="images/logo/logo1.png" type="image/x-icon">
+    <link rel="icon" href="./images/icons/iconZ.png">
     <script src="scripts/script.js"></script>
     <title> Zow Atlas</title>
 </head>
 
 <body>
     <nav class="navBar">
-        <div class="settings">
-            <input type="image" src="images/icons/menu.png" alt="Alt text" width="45" height="70" id="menuShow" onclick="showMenu()" />
-        </div>
-        <div class="logo">
-            <img src="images/logo/logo.png" height="70" width="200" alt="Image not found!">
+        <div class="navBar-begin">
+            <div class="settings">
+                <input type="image" src="images/icons/menu.png" alt="Alt text" width="45" height="70" id="menuShow" onclick="showMenu()" />
+            </div>
+            <div class="logo">
+                <img src="images/logo/logo.png" height="70" width="200" alt="Image not found!">
+            </div>
         </div>
         <div class="search">
             <input type="text" name="search" class="round" placeholder="Search" />
-            <input type="submit" class="corner" value="" />
+            <!-- <input type="submit" class="corner" value="" /> -->
         </div>
-        <div class="username">
-            <p> <a href="pages/authentication.html" style="text-decoration: none;"> Username </a> </p>
-        </div>
-        <div class="loginstatus">
-            <input type="image" src="images/icons/arrow.png" alt="Alt text" width="25" height="25" id="settingsShow" onclick="showSettings()" />
+        <div class="user">
+            <div class="username">
+                <p> <a href="pages/authentication.html" style="text-decoration: none;"> Username </a> </p>
+            </div>
+            <div class="loginstatus">
+                <input type="image" src="images/icons/arrow.png" alt="Alt text" width="25" height="25" id="settingsShow" onclick="showSettings()" />
+            </div>
         </div>
     </nav>
     <div class="filters">
         <p id="textFilters"> <i> Filters </i> </p>
         <form id="chooseFilters">
-            <input type="radio" name="filter" value="Order by name" id="chooseFilters1"> &nbsp; Order by name
-            <input type="radio" name="filter" value="Order by longevity" id="chooseFilters2"> &nbsp; Order by longevity
-            <input type="radio" name="filter" value="Order by popularity" id="chooseFilters3"> &nbsp; Order by popularity
+            <input type="radio" name="filter" value="Order by name" id="chooseFilters1"> Order by name <br id="a">
+            <input type="radio" name="filter" value="Order by longevity" id="chooseFilters2"> Order by longevity <br id="b">
+            <input type="radio" name="filter" value="Order by popularity" id="chooseFilters3"> Order by popularity
         </form>
     </div>
-    <h2 id="albumTitle">Mamifere</h2>
-    <a href="pages/leu.html">
-        <div class="card">
-            <img id="cardBackground" src="./images/leu/leu1.jpg" alt="Background image">
-            <div class="cardInfo">
-                <img id="animalImage" src="./images/leu/leu1.jpg" width="350px" height="296px">
-                <p id="animalName"> LEU </p>
+    <br id="c">
+    <div class="cardsContainer">
+        <h2 id="albumTitle">Mamifere</h2>
+        <a href="pages/leu.html">
+            <div class="card">
+                <img class="cardBackground" src="./images/leu/leu1.jpg" alt="Background image">
+                <div class="cardInfo">
+                    <img class="animalImage" src="./images/leu/leu1.jpg" width="350px" height="296px">
+                    <div class="animalName">
+                        <p> LEU </p>
+                    </div>
+                </div>
+                <div class="likes">
+                    <img class="likesIcon" src="./images/icons/likeIcon.svg" width="20px" height="20px">
+                    <p class="numberOfLikes"> 56 </p>
+                </div>
             </div>
-            <div class="likes">
-                <img id="likesIcon" src="./images/icons/likeIcon.svg" width="20px" height="20px">
-                <p id="numberOfLikes"> 56 </p>
+        </a>
+
+        <a href="pages/flamingo.html">
+            <div class="card">
+                <img class="cardBackground" src="./images/flamingo/flamingo1.jpg" alt="Background image">
+                <div class="cardInfo">
+                    <img class="animalImage" src="./images/flamingo/flamingo1.jpg">
+                    <div class="animalName">
+                        <p> FLAMINGO </p>
+                    </div>
+                </div>
+                <div class="likes">
+                    <img class="likesIcon" src="./images/icons/likeIcon.svg">
+                    <p class="numberOfLikes"> 56 </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="pages/cameleon.html">
+            <div class="card">
+                <img class="cardBackground" src="./images/cameleon/cameleon1.jpg" alt="Background image">
+                <div class="cardInfo">
+                    <img class="animalImage" src="./images/cameleon/cameleon1.jpg">
+                    <div class="animalName">
+                        <p> CAMELEON </p>
+                    </div>
+                </div>
+                <div class="likes">
+                    <img class="likesIcon" src="./images/icons/likeIcon.svg">
+                    <p class="numberOfLikes"> 56 </p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div id="menu">
+        <div class="sidenav">
+            <p> USER MENU </p>
+            <button id="generateStats">Generate stats </button>
+            <button id="generateOrder">Generate clasament</button>
+            <button class="habitat"> HABITAT
+          <form>
+            <select id="habitat" >
+              <option val=1> value1 </option>
+              <option val=2> value2</option>
+            </select>
+          </form>
+        </button> <br>
+            <button class="type"> TYPE
+          <form>
+            <select id="type" >
+              <option val=1> value1 </option>
+              <option val=2> value2</option>
+            </select>
+          </form>
+        </button> <br>
+            <button class="longevitate">  LONGEVITATE
+          <form>
+            <select id="longevitate" >
+              <option val=1> value1 </option>
+              <option val=2> value 2</option>
+            </select>
+          </form>
+        </button> <br>
+            <button id="generateAlbum"> Generare album </button>
+            <div class="dropdown1">
+                <button id="predefinedAlbums"> Albume predefinite </button>
+                <div class="dropdown-content1">
+                    <a href="#"> Pasari </a>
+                    <a href="#"> Reptile </a>
+                    <a href="#"> Mamifere </a>
+                    <a href="#"> Acvatice </a>
+                </div>
+            </div>
+            <div class="dropdown2">
+                <button id="myAlbums"> Albumele mele </button>
+                <div class="dropdown-content2">
+                    <a href="#"> Album1  </a>
+                    <a href="#"> Album2 </a>
+                </div>
             </div>
         </div>
-    </a>
-    <div id="menu"> </div>
-    <div id="settings"> </div>
+    </div>
+    <div id="settings">
+        <a href="#"> <strong> Logout </strong> </a>
+    </div>
 </body>
 
 </html>
