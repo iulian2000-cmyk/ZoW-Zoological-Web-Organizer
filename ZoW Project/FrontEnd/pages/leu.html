@@ -16,40 +16,57 @@
 
 <body>
 
+    <div class="navBar">
+        <div class="homeLogo">
+            <a href="../index.html">
+                <img class="homeIcon" src="../images/icons/home.png" alt="home icon">
+            </a>
+            <img class="logo" src="../images/logo/logo.png " alt="logo ">
+        </div>
+        <div class="userOptions">
+            <label id="username"> username </label>
+            <img class="arrow" src="../images/icons/arrow.png" alt="settings" onclick="showLog()">
+        </div>
+    </div>
 
- <div class ="generalContainer">
+    <div class="log">
+        <a href="../pages/authentication.html" id="logText"> Log out </a>
+        <a href="#" id="createAlbum"> New album </a>
+    </div>
+
+    <div class="generalContainer">
         <div class="mare">
-                
-                <div class="box">
-                    <div class="contentBox">
-                        <h1>LEU</h1>
-                    </div>
 
-                    <div class="whiteBox">
-                        <div class="bullet">
-                                <div class="content"><strong>LONGETIVITATE</strong></div>
-                                <div class="content">10 ani salbaticie, 25 de ani captivitate</div>
-                                <div class="content"><strong>CATEGORIE</strong></div>
-                                <div class="content">Mamifere</div>
-                                <div class="content"><strong>GREUTATE MEDIE</strong></div>
-                                <div class="content">200 kg</div>
-                                <div class="content"><strong>INALTIME MEDIE</strong></div>
-                                <div class="content">1,2m</div>
-                                <div class="content"><strong>MEDIU DE VIATA</strong></div>
-                                <div class="content">campii deschise, Africa</div>
-                                <div class="content"><strong>MOD DE HARNIRE</strong></div>
-                                <div class="content">carnivor</div>
-                                <div class="content"><strong>LIKES </strong></div>
-                                <div class="content">56</div>
-                        </div>
-                    </div>
-                    
+            <div class="box">
+                <div class="contentBox">
+                    <h1>LEU</h1>
+                </div>
 
-                    <div class="buttons">
-                        <div class="b1"><button class="button1"><img id = "LikeIcon" src ="../images/icons/likeIcon.svg"  alt="like icon"> <strong>Like</strong> </button></div>
-                        <div class="b2"><button class="button2"> <img id = "AddIcon" src="../images/icons/addIcon.svg"  alt="add icon"> <strong>Add to album</strong> </button></div>
+                <div class="whiteBox">
+                    <div class="bullet">
+                        <div class="content"><strong>LONGETIVITATE</strong></div>
+                        <div class="content">10 ani salbaticie, 25 de ani captivitate</div>
+                        <div class="content"><strong>CATEGORIE</strong></div>
+                        <div class="content">Mamifere</div>
+                        <div class="content"><strong>GREUTATE MEDIE</strong></div>
+                        <div class="content">200 kg</div>
+                        <div class="content"><strong>INALTIME MEDIE</strong></div>
+                        <div class="content">1,2m</div>
+                        <div class="content"><strong>MEDIU DE VIATA</strong></div>
+                        <div class="content">campii deschise, Africa</div>
+                        <div class="content"><strong>MOD DE HARNIRE</strong></div>
+                        <div class="content">carnivor</div>
+                        <div class="content"><strong>LIKES </strong></div>
+                        <div class="content">56</div>
                     </div>
                 </div>
+
+
+                <div class="buttons">
+                    <div class="b1"><button class="button1"><img id = "LikeIcon" src ="../images/icons/likeIcon.svg"  alt="like icon"> <strong>Like</strong> </button></div>
+                    <div class="b2"><button class="button2"> <img id = "AddIcon" src="../images/icons/addIcon.svg"  alt="add icon"> <strong>Add to album</strong> </button></div>
+                </div>
+            </div>
 
 
 
@@ -82,8 +99,8 @@
                     <span class="close">×</span>
                     <img class="modalImage" id="img01" alt="zoomImage">
                 </div>
-            
-    
+
+
                 <a class="prevButton" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="nextButton" onclick="plusSlides(1)">&#10095;</a>
 
@@ -117,16 +134,16 @@
 
             <div class="Generalitati">
                 <h3 id="subtitle1"> Generalitati </h3>
-                <p> &nbsp; &nbsp; &nbsp; &nbsp; Leul (Panthera Leo) este o specie de mamifere carnivore din familia felidelor, fiind una dintre cele patru specii ale genului Panthera, reprezentant al subfamiliei felinelor mari. Este una dintre cele mai mari feline
-                    și unul dintre cei mai mari răpitori tereștri (după ursul polar, ursul brun și tigru).</p>
-                <p> &nbsp; &nbsp; &nbsp; &nbsp;Leii sunt animale carnivore care trăiesc în grupuri (familii) constând din femele înrudite, pui de ambele sexe și un mascul neînrudit, care se împerechează cu femelele adulte. Femelele se ocupă cu vânatul, în timp
-                    ce masculii apără și mențin frontierele teritoriului. Puii masculi sunt dați afară din grup când ajung la maturitate. </p>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp; Leul (Panthera Leo) este o specie de mamifere carnivore din familia felidelor, fiind una dintre cele patru specii ale genului Panthera, reprezentant al subfamiliei felinelor mari. Este una dintre cele mai mari
+                    feline și unul dintre cei mai mari răpitori tereștri (după ursul polar, ursul brun și tigru).</p>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp;Leii sunt animale carnivore care trăiesc în grupuri (familii) constând din femele înrudite, pui de ambele sexe și un mascul neînrudit, care se împerechează cu femelele adulte. Femelele se ocupă cu vânatul, în
+                    timp ce masculii apără și mențin frontierele teritoriului. Puii masculi sunt dați afară din grup când ajung la maturitate. </p>
                 <p>&nbsp; &nbsp; &nbsp; &nbsp;Cu toate că este cunoscut ca „regele junglei”, leul este un animal care trăiește în câmpii deschise, și poate fi găsit prin toată Africa. Chiar și așa, este o specie în pericol, populații semnificative găsindu-se
                     doar în parcurile naționale din Tanzania și Africa de Sud.Ultimul rămas al subspeciei leului asiatic (Panthera leo persica), care în vechime trăia din Grecia până în India, trăiește acum în Pădurea Gir din nord-vestul Indiei. Aproximativ
                     700 de lei mai trăiesc într-un sanctuar din statul Gujarat.</p>
                 <p>&nbsp; &nbsp; &nbsp; &nbsp;Leii au dispărut din Grecia, ultimul loc în care mai trăiau în Europa până în anul 100 d.Hr., dar populații semnificative au rămas în nordul Africii până la începutul secolului XX.Dacă în anii 1960 existau 450.000
-                    de lei, în anul 2011 mai erau cel mult 20.000. Leii sunt un simbol care apare des în heraldica familiilor regale și a nobilimii. Apar și în arta plastică chineză, deși nu au trăit niciodată în China. Niciun alt animal nu a primit mai multă
-                    atenție in artă și literatură. În Biblie este amintit de 130 de ori. În arta epocii pietrei, în special în picturile rupestre, se întâlnesc frecvent desene reprezentând lei.</p>
+                    de lei, în anul 2011 mai erau cel mult 20.000. Leii sunt un simbol care apare des în heraldica familiilor regale și a nobilimii. Apar și în arta plastică chineză, deși nu au trăit niciodată în China. Niciun alt animal nu a primit mai
+                    multă atenție in artă și literatură. În Biblie este amintit de 130 de ori. În arta epocii pietrei, în special în picturile rupestre, se întâlnesc frecvent desene reprezentând lei.</p>
             </div>
 
             <div class="Stiatica">
@@ -199,7 +216,7 @@
                 </div>
             </div>
         </div>
- </div> 
+    </div>
 
 </body>
 
