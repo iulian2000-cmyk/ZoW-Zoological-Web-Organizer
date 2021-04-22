@@ -24,7 +24,7 @@ window.onload = function() {
 
     var btn = document.getElementById("aboutBtn");
 
-    var span = document.getElementsByClassName("close")[0];
+    var span = document.getElementsByClassName("closebutton")[0];
 
     btn.onclick = () => modal.style.display = "block";
 
