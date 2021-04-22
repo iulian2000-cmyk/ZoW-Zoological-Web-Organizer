@@ -19,20 +19,27 @@
             <img class="logo" src="./images/logo/logo.png " alt="logo ">
         </div>
         <div class="searchBar">
-            <input id="searchInput" type="text" placeholder="Search" name="search">
-            <button id="searchButton" type="submit"><img id="searchIcon" src="./images/icons/search.png" alt="search icon"></button>
+            <input class="searchInput" type="text" placeholder="Search" name="search">
+            <button class="searchButton" type="submit"><img class="searchIcon" src="./images/icons/search.png" alt="search icon"></button>
         </div>
         <div class="userOptions">
-            <label id="username"> username </label>
-            <img class="arrow" src="./images/icons/arrow.png" alt="settings" onclick="showLog()">
+            <label class="username"> username </label>
+            <img id="arrow" src="./images/icons/arrow.png" alt="settings" onclick="showLog()">
         </div>
     </div>
 
     <div class="menu ">
         <div class="containerMenu">
             <span id="userMenu"> USER MENU </span>
-            <button class="menuButton"> Generate statistics </button>
-            <button class="menuButton"> Generate ranking </button>
+            <div class="searchBar">
+                <input class="searchInput" type="text" placeholder="Search" name="search">
+                <button class="searchButton" type="submit"><img class="searchIcon" src="./images/icons/search.png" alt="search icon"></button>
+            </div>
+            <button class="menuButton" id="geneS"> Generate statistics </button>
+            <button class="menuButton" id="geneR"> Generate ranking </button>
+            <label class="username"> username </label>
+            <a href="./pages/authentication.html" class="logText"> Log out </a>
+            <a href="#" class="createAlbum"> New album </a>
         </div>
         <div class="generateAlbum">
             <label class="subtitle"> Generate Album </label>
@@ -83,8 +90,8 @@
     </div>
 
     <div class="log">
-        <a href="./pages/authentication.html" id="logText"> Log out </a>
-        <a href="#" id="createAlbum"> New album </a>
+        <a href="./pages/authentication.html" class="logText"> Log out </a>
+        <a href="#" class="createAlbum"> New album </a>
     </div>
 
     <div class="content">
@@ -110,7 +117,7 @@
         <div class="cardsContainer">
             <a href="pages/leu.html">
                 <div class="card">
-                    <img class="cardBackground" src="./images/leu/leu1.jpg" alt="Background image">
+                    <img class="cardBackground" src="./images/leu/leu1.jpg" alt="image of a lion">
                     <div class="cardInfo">
                         <img class="animalImage" src="./images/leu/leu1.jpg" alt="image of a lion">
                         <div class="animalName">
@@ -125,15 +132,15 @@
             </a>
             <a href="pages/flamingo.html">
                 <div class="card">
-                    <img class="cardBackground" src="./images/flamingo/flamingo1.jpg" alt="Background image">
+                    <img class="cardBackground" src="./images/flamingo/flamingo1.jpg" alt="image of a flamingo">
                     <div class="cardInfo">
-                        <img class="animalImage" src="./images/flamingo/flamingo1.jpg">
+                        <img class="animalImage" src="./images/flamingo/flamingo1.jpg" alt="image of a flamingo">
                         <div class="animalName">
                             <p> FLAMINGO </p>
                         </div>
                     </div>
                     <div class="likes">
-                        <img class="likesIcon" src="./images/icons/likeIcon.svg">
+                        <img class="likesIcon" src="./images/icons/likeIcon.svg" alt="likes icon">
                         <span class="numberOfLikes"> 56 </span>
                     </div>
                 </div>
@@ -141,15 +148,15 @@
 
             <a href="pages/cameleon.html">
                 <div class="card">
-                    <img class="cardBackground" src="./images/cameleon/cameleon1.jpg" alt="Background image">
+                    <img class="cardBackground" src="./images/cameleon/cameleon1.jpg" alt="image of a cameleon">
                     <div class="cardInfo">
-                        <img class="animalImage" src="./images/cameleon/cameleon1.jpg">
+                        <img class="animalImage" src="./images/cameleon/cameleon1.jpg" alt="image of a cameleon">
                         <div class="animalName">
                             <p> CAMELEON </p>
                         </div>
                     </div>
                     <div class="likes">
-                        <img class="likesIcon" src="./images/icons/likeIcon.svg">
+                        <img class="likesIcon" src="./images/icons/likeIcon.svg" alt="likes icon">
                         <span class="numberOfLikes"> 56 </span>
                     </div>
                 </div>
