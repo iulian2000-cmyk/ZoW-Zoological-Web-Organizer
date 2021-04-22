@@ -5,12 +5,16 @@ function showMenu() {
     var menu = document.getElementsByClassName("menu")[0];
     if (activeMenu == true) {
         menu.style.display = "flex";
-        document.getElementsByClassName("content")[0].style.width = "calc(100% - 210px)";
+        if (window.innerWidth >= 1150) {
+            document.getElementsByClassName("content")[0].style.width = "calc(100% - 210px)";
+        }
         activeMenu = false;
 
     } else {
         menu.style.display = "none";
-        document.getElementsByClassName("content")[0].style.width = "100%";
+        if (window.innerWidth >= 1150) {
+            document.getElementsByClassName("content")[0].style.width = "100%";
+        }
         activeMenu = true;
     }
 }
