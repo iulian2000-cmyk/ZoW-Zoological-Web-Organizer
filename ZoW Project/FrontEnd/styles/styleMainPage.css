@@ -84,6 +84,7 @@ body {
     background-color: #bbddeb;
     text-align: center;
     font-size: medium;
+    border: 1px solid #2b4868;
 }
 
 .log:hover {
@@ -151,6 +152,7 @@ input[type="text"] {
 }
 
 .menu {
+    z-index: 0;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -164,7 +166,7 @@ input[type="text"] {
 }
 
 .menu:hover {
-    box-shadow: 0 0 8px 1px #2b4868;
+    box-shadow: 0 4px 8px 1px #2b4868;
 }
 
 .containerMenu,
@@ -262,7 +264,6 @@ option {
     z-index: 0;
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
 }
 
 #title {
@@ -319,8 +320,9 @@ option {
 }
 
 .cardsContainer {
+    z-index: -1;
     margin-top: 2em;
-    width: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -360,8 +362,8 @@ option {
 }
 
 .animalImage {
-    max-width: 350px;
-    max-height: 290px;
+    width: 350px;
+    height: 290px;
     border-radius: 50%;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
 }
@@ -388,7 +390,7 @@ option {
 }
 
 .likesIcon {
-    width: 30px;
+    width: 20px;
     height: 20px;
     margin-right: 5px;
 }
@@ -397,4 +399,33 @@ option {
     color: black;
 }
 
-@media all and (max-width: 1220px) {}
+@media all and (max-width: 1220px) {
+    .filters {
+        width: 80%;
+    }
+}
+
+@media all and (max-width: 930px) {
+    .filters {
+        width: 90%;
+    }
+    .logo {
+        margin-left: 3em;
+    }
+}
+
+@media all and (max-width: 930px) {
+    .filters {
+        width: 96%;
+    }
+    .logo {
+        margin-left: 2em;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .navBar {
+        flex-direction: column;
+        height: auto;
+    }
+}
