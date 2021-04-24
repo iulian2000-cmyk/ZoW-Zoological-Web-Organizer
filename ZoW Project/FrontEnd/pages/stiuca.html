@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Isac Iulian">
+    <meta name="description" content="ZoW App">
+    <link rel="stylesheet" href="../styles/styleAnimalPage.css">
+    <link rel="icon" href="../images/icons/iconZ.png">
+    <script src="../scripts/scriptAnimalPage.js"></script>
+    <script src="../scripts/modalScriptSlider.js"></script>
+    <title>Stiuca </title>
+</head>
+
+<body>
+
+    <div class="navBar">
+        <div class="homeLogo">
+            <a href="../index.html">
+                <img class="homeIcon" src="../images/icons/home.png" alt="home icon">
+            </a>
+            <img class="logo" src="../images/logo/logo.png " alt="logo ">
+        </div>
+        <div class="userOptions">
+            <label id="username"> username </label>
+            <img class="arrow" src="../images/icons/arrow.png" alt="settings" onclick="showLog()">
+        </div>
+    </div>
+
+    <div class="log">
+        <a href="../pages/authentication.html" id="logText"> Log out </a>
+        <a href="#" id="createAlbum"> New album </a>
+    </div>
+
+    <div class="generalContainer">
+        <div class="mare">
+
+            <div class="box">
+                <div class="contentBox">
+                    <h1>Stiuca </h1>
+                </div>
+
+                <div class="whiteBox">
+                    <div class="bullet">
+                        <div class="content"><strong>LONGETIVITATE</strong></div>
+                        <div class="content"> 1-3 ani</div>
+                        <div class="content"><strong>CATEGORIE</strong></div>
+                        <div class="content"> Pesti </div>
+                        <div class="content"><strong>GREUTATE MEDIE</strong></div>
+                        <div class="content"> 2-8kg </div>
+                        <div class="content"><strong>INALTIME MEDIE</strong></div>
+                        <div class="content"> 10-50cm</div>
+                        <div class="content"><strong>MEDIU DE VIATA</strong></div>
+                        <div class="content"> Marea Neagra si Marea Mediterana </div>
+                        <div class="content"><strong>MOD DE HARNIRE</strong></div>
+                        <div class="content"> omnivor </div>
+                        <div class="content"><strong>LIKES </strong></div>
+                        <div class="content">56</div>
+                    </div>
+                </div>
+
+
+                <div class="buttons">
+                    <div class="b1"><button class="button1"><img id = "LikeIcon" src ="../images/icons/likeIcon.svg"  alt="like icon"> <strong>Like</strong> </button></div>
+                    <div class="b2"><button class="button2"> <img id = "AddIcon" src="../images/icons/addIcon.svg"  alt="add icon"> <strong>Add to album</strong> </button></div>
+                </div>
+            </div>
+
+
+
+
+            <div class="containerImages">
+
+
+                <div class="Slides">
+                    <div class="numberImage">1 / 4</div>
+                    <img class="ImgGallery" src="../images/stiuca/stiuca1.jpeg" alt="no1">
+                </div>
+
+                <div class="Slides">
+                    <div class="numberImage">2 / 4</div>
+                    <img class="ImgGallery" src="../images/stiuca/stiuca2.jpeg" alt="no2">
+                </div>
+
+                <div class="Slides">
+                    <div class="numberImage">3 / 4</div>
+                    <img class="ImgGallery" src="../images/stiuca/stiuca3.jpeg" alt="no3">
+                </div>
+
+                <div class="Slides">
+                    <div class="numberImage">4 / 4</div>
+                    <img class="ImgGallery" src="../images/stiuca/stiuca4.jpeg" alt="no4">
+                </div>
+
+                <a class="prevButton" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="nextButton" onclick="plusSlides(1)">&#10095;</a>
+
+
+                <div class="modal">
+                    <span class="close">×</span>
+                    <img class="modalImage" id="img01" alt="zoomImage">
+                </div>
+
+
+
+
+
+
+                <div class="row">
+                    <div class="col">
+                        <img class="demo cursor" src="../images/stiuca/stiuca1.jpeg" alt="no1" onclick="currentSlide(1)">
+                    </div>
+                    <div class="col">
+                        <img class="demo cursor" src="../images/stiuca/stiuca2.jpeg" alt="no2" onclick="currentSlide(2)">
+                    </div>
+                    <div class="col">
+                        <img class="demo cursor" src="../images/stiuca/stiuca3.jpeg" alt="no3" onclick="currentSlide(3)">
+                    </div>
+                    <div class="col">
+                        <img class="demo cursor" src="../images/stiuca/stiuca4.jpeg" alt="no4" onclick="currentSlide(4)">
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="ContentPage">
+
+            <div class="Generalitati">
+                <h3 id="subtitle1"> Generalitati </h3>
+                <p>Știuca (Esox lucius) este un pește răpitor dulcicol sau salmastricol, din familia esocide (Esocidae), răspândit în apele stătătoare sau lin curgătoare, cu multă vegetație din zona temperată a Asiei, Europei și Americii de Nord. Are o lungime
+                    obișnuită de 30–40 cm și o greutate de 0,5–1 kg dar poate să atingă până la 2 m și o greutate de 25–30 kg. Corpul este alungit, aproape cilindric, puțin comprimat lateral, și acoperit cu solzi mici. Capul este turtit dorso-ventral
+                    și prelungit într-un bot lat, turtit, asemănător ciocului unei rațe. Gura este largă și înarmată cu numeroși dinți puternici și ascuțiți, limba prevăzută și ea cu dinți. Înotătoarea dorsală deplasată spre coadă, deasupra înotătoarei
+                    anale, dând astfel corpului forma de săgeată. Înotătoarea codală este bifurcată, cu lobii egali. Coloritul corpului variază după ape, de la cenușiu-verzui la galben-verzui pe spate, abdomenul alb-gălbui, laturile cu pete mari, cafenii,
+                    măslinii sau negricioase, care se unesc uneori, dând benzi transversale. Înotătoarele neperechi sunt gălbui-cenușii, cu pete brune sau negricioase, ce se unesc în dungi transversale. Înotătoarele perechi sunt roșcate</p>
+            </div>
+
+            <div class="Stiatica">
+                <h3 id="subtitle2"> Stiati ca ... </h3>
+                <p> Știuca este un pește răpitor foarte lacom, "rechinul" apelor dulci, care atacă nu numai peștii ci și păsările și mamiferele acvatice și se ia la bătaie și cu vidra. Maturitatea sexuală o atinge la vârsta de 3-4 ani. Depune icre pe vegetație,
+                    în februarie-martie, când temperatura apei atinge 8—10°. Are valoare economică ridicată, atât peștele, cât și icrele. Carnea este destul de gustoasă, deși cam slabă și cu multe oase și se consumă sărată și sub formă de conserve (marinată
+                    în sos de roșii). Se poate reproduce și artificial. În România se găsește în toate râurile, jepșile, bălțile, iazurile, lacurile, de la Dunăre și până în zona mrenei.</p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footerContent">
+                <p> &#169; All rights reserved </p>
+                <p> ZoW Atlas 2021 </p>
+                <button id="aboutBtn"> About </button>
+            </div>
+        </footer>
+
+        <div id="aboutModal" class="modaldisplay">
+            <div class="aboutContent">
+                <div class="aboutHeader">
+                    <span class="closebutton">&times;</span>
+                    <h3>ZoW Atlas</h3>
+                </div>
+                <div class="aboutBody">
+                    <p>
+                        <b>ZoW Atlas</b> este o aplicatie WEB ce permite utilizatorilor vizualizarea unor albume cu animale impartite pe diverse categorii, generarea de albume in functie de anumite criterii alese de utilizator, filtrarea albumelor, cautarea
+                        multi-criteriala din searchbar, salvarea unui album in coletia personala sau chiar crearea propriilor albume. Pentru fiecare animal in parte exista o pagina specifica cu informatii si imagini.
+                        <br> <br> De asemenea aplicatia permite generarea de statistici in format PDF si CSV cat si generarea unui clasament a celor mai populare animale.
+                        <br><br> Pentru a intelege mai bine ce posibilitati ofera aplicatia va rugam sa cititi functionalitatile.
+                        <br><br> <b>Functionalitati</b> <br> <br>
+                        <b>1. Inregistrare </b>
+                        <br> Componenta permite utilizatorului sa se inregistreze pe site folosind un nume de utilizator, un email si o parola.<br><br>
+                        <b>2. Autentificare</b>
+                        <br>Componenta permite utilizatorului sa se logheze pe site folosind un nume de utilizator si o parola.<br><br>
+                        <b>3. Search bar</b>
+                        <br>Componenta permite cautarea multi-criteriala si generarea rezultatelor corespunzatoare cautarii.<br><br>
+                        <b>4. Afisare album selectat (albume prestabilite)</b>
+                        <br>Componenta permite utilizatorilor selectarea si vizualizarea unui anumit album prestabilit.<br><br>
+                        <b>5. Filtrare album</b>
+                        <br>Componenta permite utilizatorului sa filtreze un album in functie de anumite proprietati generale.<br><br>
+                        <b>6. Salvarea unui album in colectia persoanala</b>
+                        <br>Componenta permite utilizatorului logat sa salveze albumul curent de pe pagina in colectia personala.<br><br>
+                        <b>7. Generare de albume bazate pe anumite proprietati alese de utilizator</b>
+                        <br>Componenta permite utilizatorului sa aleaga mai multe propietati in functie de care se vor tria animalele si se va genera un album.<br><br>
+                        <b>8. Crearea unui album personal</b>
+                        <br>Componenta permite unui utilizator logat sa isi creeze propriul album cu animale.<br><br>
+                        <b>9. Card animal</b>
+                        <br>Fiecare album este format din mai multe carduri cu animale. Cardul cuprinde o poza si numele animalului.<br><br>
+                        <b>10. Slider de imagini pentru fiecare animal</b>
+                        <br>Slider de imagini cu un anumit animal care iti permite sa misti imaginile la stanga sau la dreapta si sa le maresti.<br><br>
+                        <b>11. Like animal</b>
+                        <br>Fiecare animal are pe pagina proprie un buton de like si numarul de like-uri pe care le are. Componenta ajuta la generarea clasamentului celor mai populare animale.<br><br>
+                        <b>12. Adaugarea unui animal intr-un album personal</b>
+                        <br>Fiecare animal are pe pagina proprie un buton “Adauga in album” care permite utilizatorului sa adauge un animal intr-un album propriu.<br><br>
+                        <b>13. Generare de statistici CSV, PDF</b>
+                        <br>In pagina principala exista un buton “Generare statistici” care va genera diverse statistici disponibile in formate CSV si PDF.<br><br>
+                        <b>14. Generare clasament animale populare (flux RSS)</b>
+                        <br>In pagina principala exista un buton “Generare clasament” care va genera top 20 animale in functie de popularitate (numarul de like-uri).<br><br>
+                        <b>15. Albumele mele</b>
+                        <br>Componenta permite utilziatorului logat vizualizarea si afisarea albumelor salvate sau a albumelor personale create.<br><br>
+                        <b>16. Deconectare</b>
+                        <br>Componenta permite unui utilizator logat sa se delogheze de pe site.<br><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
