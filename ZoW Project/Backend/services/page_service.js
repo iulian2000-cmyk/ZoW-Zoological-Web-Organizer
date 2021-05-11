@@ -9,8 +9,12 @@ var keys = [''];
 
 exports.mainPage = function(req, res) {
     var pathFile = __dirname + url.parse(req.url).pathname;
-    pathFile = pathFile.replace("/Backend/services", "");
-
+    if (process.platform == "win32") {
+        pathFile = pathFile.replace("\\Backend\\services", "");
+        pathFile = pathFile.replace("/FrontEnd/index.html", "\\FrontEnd\\index.html");
+    } else {
+        pathFile = pathFile.replace("/Backend/services", "");
+    }
     var cookies = new Cookies(req, res, { keys: keys });
     var username = cookies.get('username', { signed: true });
 
@@ -35,7 +39,12 @@ exports.mainPage = function(req, res) {
 };
 exports.load_css = function(req, res) {
     var pathFile = __dirname + url.parse(req.url).pathname;
-    pathFile = pathFile.replace("/Backend/services", "");
+    if (process.platform == "win32") {
+
+        pathFile = pathFile.replace("\\Backend\\services", "");
+    } else {
+        pathFile = pathFile.replace("/Backend/services", "");
+    }
     fs.readFile(pathFile, (err, data) => {
         if (err) {
             res.writeHead(404, { 'Content-type': 'application/json' });
@@ -50,7 +59,12 @@ exports.load_css = function(req, res) {
 }
 exports.load_js = function(req, res) {
     var pathFile = __dirname + url.parse(req.url).pathname;
-    pathFile = pathFile.replace("/Backend/services", "");
+    if (process.platform == "win32") {
+
+        pathFile = pathFile.replace("\\Backend\\services", "");
+    } else {
+        pathFile = pathFile.replace("/Backend/services", "");
+    }
     fs.readFile(pathFile, (err, data) => {
         if (err) {
             res.writeHead(404, { 'Content-type': 'application/json' });
@@ -65,7 +79,12 @@ exports.load_js = function(req, res) {
 }
 exports.load_image = function(req, res) {
     var pathFile = __dirname + url.parse(req.url).pathname;
-    pathFile = pathFile.replace("/Backend/services", "");
+    if (process.platform == "win32") {
+
+        pathFile = pathFile.replace("\\Backend\\services", "");
+    } else {
+        pathFile = pathFile.replace("/Backend/services", "");
+    }
     res.writeHead(200, { "Content-Type": "image/png" });
     fs.readFile(pathFile, function(err, content) {
         res.end(content);
@@ -73,7 +92,12 @@ exports.load_image = function(req, res) {
 }
 exports.load_svg = function(req, res) {
     var pathFile = __dirname + url.parse(req.url).pathname;
-    pathFile = pathFile.replace("/Backend/services", "");
+    if (process.platform == "win32") {
+
+        pathFile = pathFile.replace("\\Backend\\services", "");
+    } else {
+        pathFile = pathFile.replace("/Backend/services", "");
+    }
     res.writeHead(200, { "Content-Type": "image/svg+xml" });
     fs.readFile(pathFile, function(err, content) {
         res.end(content);
@@ -82,10 +106,19 @@ exports.load_svg = function(req, res) {
 
 exports.load_page = function(req, res) {
     var pathFile = __dirname + url.parse(req.url).pathname;
-    pathFile = pathFile.replace("/Backend/services", "");
-    var exactPage = req.url.replace("/FrontEnd/pages/", "");
+    var exactPage;
+    if (process.platform == "win32") {
+        pathFile = pathFile.replace("\\Backend\\services", "");
+        pathFile = pathFile.replace("/FrontEnd/pages/", "\\FrontEnd\\pages\\");
+        exactPage = req.url.replace("/FrontEnd/pages/", "");
+        console.log(exactPage);
+    } else {
+        pathFile = pathFile.replace("/Backend/services", "");
+        exactPage = req.url.replace("/FrontEnd/pages/", "");
+    }
     var cookies = new Cookies(req, res, { keys: keys });
 
+    console.log(exactPage);
 
     if (exactPage == "registerpage.html" || exactPage == "authentication.html") {
         cookies.set('username', "", { signed: true });

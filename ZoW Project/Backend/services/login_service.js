@@ -25,8 +25,11 @@ exports.login = function(req, res) {
         var username = post.username;
         var password = post.password;
         var cookies = new Cookies(req, res, { keys: keys });
+        console.log(username);
+        console.log(password);
         if (username && password) {
-             connection.query('SELECT * FROM users WHERE user_name= ' + connection.escape(post.username) + 'AND password_hash = ' + connection.escape(post.password), function(error, results, fields) {
+            connection.query('SELECT * FROM users WHERE user_name= ' + connection.escape(post.username) + 'AND password_hash = ' + connection.escape(post.password), function(error, results, fields) {
+                console.log(results);
                 if (results.length > 0) {
                     cookies.set('username', username, { signed: true });
                     cookies.set('last-active', new Date().toISOString(), { signed: true });
