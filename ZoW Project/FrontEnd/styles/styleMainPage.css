@@ -61,7 +61,7 @@ body {
     cursor: pointer;
     width: 1em;
     height: 1.5em;
-    margin-top: 10px;
+    margin-top: 8px;
     margin-right: 10px;
 }
 
@@ -85,7 +85,6 @@ body {
     text-align: center;
     font-size: medium;
     z-index: 1;
-    border: 1px solid #2b4868;
 }
 
 .log:hover {
@@ -297,8 +296,15 @@ option {
     color: #2b4868;
 }
 
+#orderBy {
+    font-size: 15px;
+    font-weight: 450;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
 .fils {
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -309,7 +315,9 @@ option {
 
 #f1,
 #f2,
-#f3 {
+#f3,
+#f4,
+#f5 {
     font-size: 15px;
     color: black;
 }
@@ -467,10 +475,13 @@ option {
     #userMenu {
         order: 1;
     }
-    #geneS {
+    #geneSP {
+        order: 2;
+    }
+    #geneSC {
         order: 3;
     }
-    #geneR {
+    #viewR {
         order: 4;
     }
     .filters {
@@ -478,9 +489,12 @@ option {
         flex-direction: column;
     }
     #filtersText {
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+    }
+    #orderBy {
+        margin-right: 6px;
+        font-size: 17px;
+        font-weight: 400;
     }
     .fils {
         width: 80%;
@@ -490,6 +504,7 @@ option {
         padding-left: 10px;
         padding-top: 5px;
         padding-bottom: 5px;
+        margin-top: 10px;
     }
     #apply {
         font-size: 16px;
@@ -532,11 +547,6 @@ option {
         width: auto;
         background-color: white;
         padding: 0;
-    }
-    #f1,
-    #f2,
-    #f3 {
-        color: #2b4868;
     }
     #apply {
         font-size: 17px;

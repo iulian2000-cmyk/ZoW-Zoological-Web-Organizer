@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/styleMainPage.css">
     <link rel="icon" href="./images/icons/iconZ.png">
     <script src="./scripts/scriptMainPage.js"></script>
-    <title>Zow-Atlas</title>
+    <title>Zow Atlas</title>
 </head>
 
 <body>
@@ -35,8 +35,9 @@
                 <input class="searchInput" type="text" placeholder="Search" name="search">
                 <button class="searchButton" type="submit"><img class="searchIcon" src="./images/icons/search.png" alt="search icon"></button>
             </div>
-            <button class="menuButton" id="geneS"> Generate statistics </button>
-            <button class="menuButton" id="geneR"> Generate ranking </button>
+            <button class="menuButton" id="geneSP"> Download statistics PDF</button>
+            <button class="menuButton" id="geneSC"> Download statistics CSV</button>
+            <button class="menuButton" id="viewR" onclick="window.location.href = './pages/ranking.html'"> View ranking </button>
             <label class="username"> username </label>
             <a href="./pages/authentication.html" class="logText"> Log out </a>
             <a href="#" class="createAlbum"> New album </a>
@@ -98,18 +99,27 @@
         <h2 id="title">Album title </h2>
         <div class="filters">
             <label id="filtersText"> Filters </label>
+            <label id="orderBy"> Order by: </label>
             <div class="fils">
                 <div>
-                    <label id="f1"> Order by name</label>
+                    <label id="f1"> name</label>
                     <input type="radio" name="filters" value="name">
                 </div>
                 <div>
-                    <label id="f2"> Order by longevity </label>
+                    <label id="f2"> longevity </label>
                     <input type="radio" name="filters" value="longevity">
                 </div>
                 <div>
-                    <label id="f3"> Order by popularity</label>
+                    <label id="f3"> popularity</label>
                     <input type="radio" name="filters" value="popularity">
+                </div>
+                <div>
+                    <label id="f4"> size</label>
+                    <input type="radio" name="filters" value="size">
+                </div>
+                <div>
+                    <label id="f5"> weight</label>
+                    <input type="radio" name="filters" value="weight">
                 </div>
             </div>
             <button id="apply" type="submit" name="apply filters">Apply filters</button>
