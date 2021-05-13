@@ -181,6 +181,7 @@ li {
 }
 
 .button1:hover {
+    cursor: pointer;
     background-color: #72b0c9;
     color: white;
     box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -188,6 +189,7 @@ li {
 }
 
 .button2:hover {
+    cursor: pointer;
     background-color: #72b0c9;
     color: white;
     box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -270,7 +272,6 @@ img {
 }
 
 .ImgGallery {
-    border-radius: 5px;
     cursor: pointer;
     transition: 0.5s;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
