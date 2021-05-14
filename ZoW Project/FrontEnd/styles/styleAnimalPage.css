@@ -524,7 +524,7 @@ img {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 80px;
+    height: 100px;
     width: 150px;
     position: fixed;
     right: 0;

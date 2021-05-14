@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Isac Iulian">
     <meta name="description" content="authentication">
-    <link rel="stylesheet" href="../styles/authenticationStyle.css">
+    <link rel="stylesheet" href="../styles/registerStyle.css">
     <link rel="icon" href="../images/icons/iconZ.png">
     <script src="../scripts/authenticationScript.js"></script>
     <script src="../scripts/modalScript.js"></script>
@@ -24,8 +24,8 @@
                 <label>Username<span>*</span></label>
                 <input type="text" placeholder="Enter username" name="username" required>
             </div>
-            <div class="email" style="display: block;">
-                <label>Email<span></span></label>
+            <div class="email">
+                <label>Email<span>*</span></label>
                 <input type="email" placeholder="Enter email" name="email" required>
             </div>
             <div class="password">
@@ -33,9 +33,6 @@
                 <input type="password" placeholder="Enter password" name="password" required>
             </div>
             <input type="submit" value="Register" class="btn">
-            <div class="loginText">
-                <a href="#" id="logIn"> Login </a>
-            </div>
         </form>
     </div>
     <div class="animals">
@@ -43,7 +40,7 @@
     </div>
     <footer>
         <div class="footerContent">
-            <p> &#169; All rights reserved </p>
+            <p> All rights reserved </p>
             <p> ZoW Atlas 2021 </p>
             <button id="aboutBtn"> About </button>
         </div>
