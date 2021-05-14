@@ -95,8 +95,7 @@ a#admin {
     box-shadow: 0 0 8px 1px #2b4868;
 }
 
-.logText,
-.createAlbum {
+.logText {
     text-decoration: none;
     color: #2b4868;
 }
