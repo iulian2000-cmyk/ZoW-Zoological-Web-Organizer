@@ -21,11 +21,9 @@ exports.download_xml = function(req, res) {
     }
     fs.exists(PathToXML, function(exists) {
         if (exists) {
-            // Content-type is very interesting part that guarantee that
-            // Web browser will handle response in an appropriate manner.
             res.writeHead(200, {
                 "Content-Type": "application/octet-stream",
-                "Content-Disposition": "attachment; filename=" + 'Order.xml'
+                "Content-Disposition": "attachment; filename=" + "Order.xml"
             });
             fs.createReadStream(PathToXML).pipe(res);
         } else {

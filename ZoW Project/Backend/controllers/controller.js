@@ -3,14 +3,16 @@ const url = require('url');
 
 module.exports = http.createServer((req, res) => {
 
-    var pageService, login_service;
+    var pageService, login_service, download_service;
 
     if (process.platform == "win32") {
         pageService = require('..\\services\\page_service.js');
         login_service = require('..\\services\\login_service.js');
+        download_service = require('..\\services\\download_service.js');
     } else {
         pageService = require('../services/page_service.js');
         login_service = require('../services/login_service.js');
+        download_service = require('../services/download_service.js');
     }
     //console.log(exactPage);
     const reqUrl = url.parse(req.url, true);
@@ -18,7 +20,7 @@ module.exports = http.createServer((req, res) => {
 
     console.log("Request URL :" + reqUrl.pathname);
     // GET endpoint 
-    if (reqUrl.pathname.includes("/FrontEnd/pages/") && req.method === 'GET' && (!reqUrl.pathname.includes("ranking.html"))) {
+    if (reqUrl.pathname.includes("/FrontEnd/pages/") && req.method === 'GET' && (!reqUrl.pathname.includes("ranking.html")) && (!(reqUrl.pathname.includes("get_Order")))) {
         pageService.load_page(req, res);
     }
     if (reqUrl.pathname.includes("ranking.html") && req.method === 'GET') {

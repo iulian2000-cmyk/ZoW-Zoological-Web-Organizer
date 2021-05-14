@@ -216,11 +216,9 @@ exports.ranking_page = function(req, res) {
                 } else {
                     dom.window.document.getElementById("admin").style.display = "none";
                     res.write(dom.window.document.documentElement.outerHTML);
-                    res.end();
                 }
                 connection.query('SELECT * FROM animals ORDER BY likes DESC LIMIT 30', function(error, results, fields) {
                     var Order = "";
-
                     var ws = fs.createWriteStream(PathXML);
                     xw = new XMLWriter(true, function(string, encoding) {
                         ws.write(string, encoding);
