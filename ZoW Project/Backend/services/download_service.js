@@ -6,7 +6,6 @@ const { JSDOM } = jsdom;
 var mysql = require('mysql');
 var XMLWriter = require('xml-writer');
 var http = require('http');
-var got = require('got');
 
 
 exports.download_xml = function(req, res) {
