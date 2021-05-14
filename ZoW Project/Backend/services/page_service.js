@@ -42,6 +42,7 @@ exports.mainPage = function(req, res) {
                 if (isAdmin == "1") {
                     dom.window.document.getElementById("admin").style.display = "block";
                 }
+                dom.window.document.getElementById("loginBtn").style.display = "none";
                 res.write(dom.window.document.documentElement.outerHTML);
                 res.end();
             } else {
