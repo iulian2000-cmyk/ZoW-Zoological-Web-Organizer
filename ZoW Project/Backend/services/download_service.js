@@ -11,9 +11,11 @@ var http = require('http');
 exports.download_xml = function(req, res) {
 
     var PathToXML = __dirname + url.parse(req.url).pathname;
+    console.log(PathToXML);
     if (process.platform == "win32") {
-        PathToXML = PathToXML.replace("\\services\\FrontEnd\\pages\\get_Order", "");
+        PathToXML = PathToXML.replace("\\services/FrontEnd/pages/get_Order", "");
         PathToXML = PathToXML + "\\FilesToDownload\\Order.xml";
+        console.log(PathToXML);
     } else {
         PathToXML = PathToXML.replace("/services/FrontEnd/pages/get_Order", "");
         PathToXML = PathToXML + "/FilesToDownload/Order.xml";
