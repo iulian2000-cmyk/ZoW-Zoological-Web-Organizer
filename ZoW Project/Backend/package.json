@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "alert": "^5.0.10",
+    "jsdom": "^16.5.3",
+    "xml-writer": "^1.7.0"
+  }
+}

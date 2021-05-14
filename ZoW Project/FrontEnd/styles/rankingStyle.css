@@ -136,7 +136,7 @@ h2 {
     font-weight: bold;
 }
 
-.ranking {
+#ranking {
     width: 600px;
     height: auto;
     text-align: center;

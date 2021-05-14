@@ -22,7 +22,7 @@ module.exports = http.createServer((req, res) => {
         pageService.load_page(req, res);
     }
     if (reqUrl.pathname.includes("ranking.html") && req.method === 'GET') {
-        // TODO 
+        pageService.ranking_page(req, res);
     }
 
     // GET endpoint
