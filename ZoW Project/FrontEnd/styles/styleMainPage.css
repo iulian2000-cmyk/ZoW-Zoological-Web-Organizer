@@ -22,6 +22,10 @@ body {
     box-shadow: 0 0 3px 1px #2b4868;
 }
 
+a#admin {
+    display: none;
+}
+
 .menuIcon {
     cursor: pointer;
     order: 1;

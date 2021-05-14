@@ -3,86 +3,54 @@ const url = require('url');
 
 module.exports = http.createServer((req, res) => {
 
+    var pageService, login_service;
+
     if (process.platform == "win32") {
-        var pageService = require('..\\services\\page_service.js');
-        var login_service = require('..\\services\\login_service.js');
-
-        const reqUrl = url.parse(req.url, true);
-
-
-        console.log("Request URL :" + reqUrl.pathname);
-        // GET endpoint 
-        if (reqUrl.pathname.includes("/FrontEnd/pages/") && req.method === 'GET') {
-            pageService.load_page(req, res);
-        }
-        // GET endpoint
-        if (reqUrl.pathname == '/FrontEnd/index.html' && req.method === 'GET') {
-            pageService.mainPage(req, res);
-        }
-        // GET endpoint 
-        if (reqUrl.pathname.includes(".css") && req.method === 'GET') {
-            pageService.load_css(req, res);
-        }
-        // GET endpoint
-        if (reqUrl.pathname.includes(".js") && req.method === 'GET') {
-            pageService.load_js(req, res);
-        }
-        // GET endpoint 
-        if ((reqUrl.pathname.includes(".png") || reqUrl.pathname.includes(".jpg")) && req.method === 'GET') {
-            pageService.load_image(req, res);
-        }
-        // GET endpoint 
-        if (reqUrl.pathname.includes(".svg") && req.method === 'GET') {
-            pageService.load_svg(req, res);
-        }
-        // POST endpoint
-        if (reqUrl.pathname == '/FrontEnd/pages/auth' && req.method === 'POST') {
-            login_service.login(req, res);
-        }
-        // POST endpoint
-        if (reqUrl.pathname == '/FrontEnd/pages/register' && req.method === 'POST') {
-            login_service.register(req, res);
-        }
-
+        pageService = require('..\\services\\page_service.js');
+        login_service = require('..\\services\\login_service.js');
     } else {
-        var pageService = require('../services/page_service.js');
-        var login_service = require('../services/login_service.js');
+        pageService = require('../services/page_service.js');
+        login_service = require('../services/login_service.js');
+    }
+    //console.log(exactPage);
+    const reqUrl = url.parse(req.url, true);
 
-        const reqUrl = url.parse(req.url, true);
 
+    console.log("Request URL :" + reqUrl.pathname);
+    // GET endpoint 
+    if (reqUrl.pathname.includes("/FrontEnd/pages/") && req.method === 'GET' && (!reqUrl.pathname.includes("ranking.html"))) {
+        pageService.load_page(req, res);
+    }
+    if (reqUrl.pathname.includes("ranking.html") && req.method === 'GET') {
+        // TODO 
+    }
 
-        console.log("Request URL :" + reqUrl.pathname);
-        // GET endpoint 
-        if (reqUrl.pathname.includes("/FrontEnd/pages/") && req.method === 'GET') {
-            pageService.load_page(req, res);
-        }
-        // GET endpoint
-        if (reqUrl.pathname == '/FrontEnd/index.html' && req.method === 'GET') {
-            pageService.mainPage(req, res);
-        }
-        // GET endpoint 
-        if (reqUrl.pathname.includes(".css") && req.method === 'GET') {
-            pageService.load_css(req, res);
-        }
-        // GET endpoint
-        if (reqUrl.pathname.includes(".js") && req.method === 'GET') {
-            pageService.load_js(req, res);
-        }
-        // GET endpoint 
-        if ((reqUrl.pathname.includes(".png") || reqUrl.pathname.includes(".jpg")) && req.method === 'GET') {
-            pageService.load_image(req, res);
-        }
-        // GET endpoint 
-        if (reqUrl.pathname.includes(".svg") && req.method === 'GET') {
-            pageService.load_svg(req, res);
-        }
-        // POST endpoint
-        if (reqUrl.pathname == '/FrontEnd/pages/auth' && req.method === 'POST') {
-            login_service.login(req, res);
-        }
-        // POST endpoint
-        if (reqUrl.pathname == '/FrontEnd/pages/register' && req.method === 'POST') {
-            login_service.register(req, res);
-        }
+    // GET endpoint
+    if (reqUrl.pathname == '/FrontEnd/index.html' && req.method === 'GET') {
+        pageService.mainPage(req, res);
+    }
+    // GET endpoint 
+    if (reqUrl.pathname.includes(".css") && req.method === 'GET') {
+        pageService.load_css(req, res);
+    }
+    // GET endpoint
+    if (reqUrl.pathname.includes(".js") && req.method === 'GET') {
+        pageService.load_js(req, res);
+    }
+    // GET endpoint 
+    if ((reqUrl.pathname.includes(".png") || reqUrl.pathname.includes(".jpg")) && req.method === 'GET') {
+        pageService.load_image(req, res);
+    }
+    // GET endpoint 
+    if (reqUrl.pathname.includes(".svg") && req.method === 'GET') {
+        pageService.load_svg(req, res);
+    }
+    // POST endpoint
+    if (reqUrl.pathname == '/FrontEnd/pages/auth' && req.method === 'POST') {
+        login_service.login(req, res);
+    }
+    // POST endpoint
+    if (reqUrl.pathname == '/FrontEnd/pages/register' && req.method === 'POST') {
+        login_service.register(req, res);
     }
 });

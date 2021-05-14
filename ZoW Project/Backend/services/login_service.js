@@ -25,14 +25,17 @@ exports.login = function(req, res) {
         var username = post.username;
         var password = post.password;
         var cookies = new Cookies(req, res, { keys: keys });
-        console.log(username);
-        console.log(password);
         if (username && password) {
             connection.query('SELECT * FROM users WHERE user_name= ' + connection.escape(post.username) + 'AND password_hash = ' + connection.escape(post.password), function(error, results, fields) {
-                console.log(results);
                 if (results.length > 0) {
                     cookies.set('username', username, { signed: true });
                     cookies.set('last-active', new Date().toISOString(), { signed: true });
+                    if (results[0].isAdmin == "0") {
+                        cookies.set('isAdmin', "0", { signed: true });
+                    } else {
+                        cookies.set('isAdmin', "1", { signed: true });
+                    }
+
                     res.writeHead(301, { Location: '../index.html' });
                 } else {
                     alert("Invalid username or password ! ");
@@ -61,7 +64,7 @@ exports.register = function(req, res) {
         //console.log(username + "--" + password + "--" + email);
         var cookies = new Cookies(req, res, { keys: keys });
         if (username && password && email) {
-            connection.query('INSERT INTO users VALUES (?,?,?,FALSE);', [username, password, email], function(error, results, fields) {
+            connection.query('INSERT INTO users VALUES (NULL,?,?,?,FALSE);', [username, password, email], function(error, results, fields) {
                 cookies.set('username', username, { signed: true });
                 cookies.set('last-active', new Date().toISOString(), { signed: true });
                 res.writeHead(301, { Location: '../pages/authentication.html' });
