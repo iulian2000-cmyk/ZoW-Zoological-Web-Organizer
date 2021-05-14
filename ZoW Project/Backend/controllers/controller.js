@@ -30,6 +30,10 @@ module.exports = http.createServer((req, res) => {
         pageService.mainPage(req, res);
     }
     // GET endpoint 
+    if ((reqUrl.pathname.includes("get_Order")) && (req.method === 'GET')) {
+        download_service.download_xml(req, res);
+    }
+    // GET endpoint 
     if (reqUrl.pathname.includes(".css") && req.method === 'GET') {
         pageService.load_css(req, res);
     }
