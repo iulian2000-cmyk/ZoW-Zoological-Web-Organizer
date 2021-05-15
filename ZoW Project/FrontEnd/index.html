@@ -36,8 +36,9 @@
                 <input class="searchInput" type="text" placeholder="Search" name="search">
                 <button class="searchButton" type="submit"><img class="searchIcon" src="./images/icons/search.png" alt="search icon"></button>
             </div>
+            <form id="download_csv"> </form>
             <button class="menuButton" id="geneSP"> Download statistics PDF</button>
-            <button class="menuButton" id="geneSC"> Download statistics CSV</button>
+            <button class="menuButton" id="geneSC" formaction="get_CSV" formmethod="GET" form="download_csv"> Download statistics CSV</button>
             <button class="menuButton" id="viewR" onclick="window.location.href = './pages/ranking.html'"> View ranking </button>
             <label class="username"> username </label>
             <a href="./pages/authentication.html" class="logText"> Log out </a>

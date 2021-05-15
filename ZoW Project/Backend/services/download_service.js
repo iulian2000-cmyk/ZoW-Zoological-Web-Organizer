@@ -9,6 +9,12 @@ var http = require('http');
 const fastcsv = require('fast-csv');
 
 
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '123',
+    database: 'Zow_Atlas'
+});
 
 exports.download_xml = function(req, res) {
 
@@ -35,46 +41,43 @@ exports.download_xml = function(req, res) {
 }
 
 
-exports.download_csv = function (req, res){
+exports.download_csv = function(req, res) {
     var PathToCSV = __dirname + url.parse(req.url).pathname;
-   
+
     if (process.platform == "win32") {
-        PathToCSV = PathToCSV.replace("\\services/FrontEnd/pages/get_OrderCSV", "");
+        PathToCSV = PathToCSV.replace("\\services/FrontEnd/get_CSV", "");
         PathToCSV = PathToCSV + "\\FilesToDownload\\Order.csv";
     } else {
-        PathToCSV = PathToCSV.replace("/services/FrontEnd/pages/get_OrderCSV", "");
+        PathToCSV = PathToCSV.replace("/services/FrontEnd/get_CSV", "");
         PathToCSV = PathToCSV + "/FilesToDownload/Order.csv";
     }
-
-
     connection.connect(error => {
         if (error) throw error;
-    
+
         // query data from MySQL
-        connection.query('SELECT * from users', function(error, data, fields) {
-           
+        const SQL_interogation = "SELECT AVG(longevitate) AS \"Medie viata\", (SELECT COUNT(*) FROM animals WHERE TRIM(cardCategorie)=\"Mamifere\") AS \"Numar mamifere\", (SELECT COUNT(*) FROM animals WHERE insecta=1) AS \"Numar insecte \",(SELECT COUNT(*) FROM animals WHERE terestru=1) AS \"Numar animale terestre\", (SELECT COUNT(*) FROM animals WHERE acvatic=1) AS \"Numar animale acvatice\", (SELECT COUNT(*) FROM animals WHERE aerian=1) AS \"Numar animale aeriane\", (SELECT COUNT(*) FROM animals WHERE domestic=1) AS \"Numar animale domestice\", (SELECT COUNT(*) FROM animals WHERE salbatic=1) AS \"Numar animale salbatice\" FROM animals;";
+        connection.query(SQL_interogation, function(error, data, fields) {
+
             if (error) throw error;
             const ws = fs.createWriteStream(PathToCSV);
             const jsonData = JSON.parse(JSON.stringify(data));
-            
-    
+
+
             fastcsv
                 .write(jsonData, { headers: true })
-                .on("finish", function() {    
-                }).pipe(ws);
-        });
-    });
-
-    fs.exists(PathToCSV, function(exists) {
-        if (exists) {
-            res.writeHead(200, {
-                "Content-Type": "application/octet-stream",
-                "Content-Disposition": "attachment; filename=" + "Order.csv"
+                .on("finish", function() {}).pipe(ws);
+            fs.exists(PathToCSV, function(exists) {
+                if (exists) {
+                    res.writeHead(200, {
+                        "Content-Type": "application/octet-stream",
+                        "Content-Disposition": "attachment; filename=" + "Order.csv"
+                    });
+                    fs.createReadStream(PathToCSV).pipe(res);
+                } else {
+                    res.writeHead(400, { "Content-Type": "text/plain" });
+                    res.end("ERROR File does not exist");
+                }
             });
-            fs.createReadStream(PathToCSV).pipe(res);
-        } else {
-            res.writeHead(400, { "Content-Type": "text/plain" });
-            res.end("ERROR File does not exist");
-        }
+        });
     });
 }

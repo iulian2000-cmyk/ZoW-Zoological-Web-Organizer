@@ -20,7 +20,7 @@ module.exports = http.createServer((req, res) => {
 
     console.log("Request URL :" + reqUrl.pathname);
     // GET endpoint 
-    if (reqUrl.pathname.includes("/FrontEnd/pages/") && req.method === 'GET' && (!reqUrl.pathname.includes("ranking.html")) && (!(reqUrl.pathname.includes("get_Order"))) {
+    if (reqUrl.pathname.includes("/FrontEnd/pages/") && req.method === 'GET' && (!reqUrl.pathname.includes("ranking.html")) && (!(reqUrl.pathname.includes("get_Order")))) {
         pageService.load_page(req, res);
     }
     if (reqUrl.pathname.includes("ranking.html") && req.method === 'GET') {
@@ -37,7 +37,7 @@ module.exports = http.createServer((req, res) => {
     }
 
     //GET endpoint
-    if ((reqUrl.pathname.includes("get_OrderCSV")) && (req.method === 'GET')) {
+    if ((reqUrl.pathname.includes("get_CSV")) && (req.method === 'GET')) {
         download_service.download_csv(req, res);
     }
     // GET endpoint 
