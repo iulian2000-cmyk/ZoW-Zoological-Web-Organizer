@@ -195,6 +195,7 @@ exports.ranking_page = function(req, res) {
         exactPage = req.url.replace("/FrontEnd/pages/", "");
         PathXML = pathFile.replace("/FrontEnd/pages/", "/Backend/FilesToDownload/");
     }
+
     PathXML = PathXML.replace("ranking.html", "Order.xml");
     //console.log(PathXML);
     var cookies = new Cookies(req, res, { keys: keys });
