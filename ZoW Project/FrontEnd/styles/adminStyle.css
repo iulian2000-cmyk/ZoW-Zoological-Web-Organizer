@@ -181,6 +181,15 @@ input[type=number]:focus {
     outline: none;
 }
 
+input[type=file] {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+label[for=images] {
+    font-size: 14px;
+}
+
 form {
     display: flex;
     flex-direction: column;

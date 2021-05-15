@@ -144,13 +144,7 @@ h2 {
     margin-right: auto;
     border-collapse: collapse;
     table-layout: fixed;
-    counter-reset: animals;
     margin-bottom: 3em;
-}
-
-tr td:first-child::before {
-    counter-increment: animals;
-    content: counter(animals) ". ";
 }
 
 #ranking,
@@ -309,6 +303,9 @@ footer {
     td {
         font-size: 14px;
     }
+    #rss {
+        font-size: 14px;
+    }
 }
 
 @media all and (max-width: 500px) {
@@ -321,9 +318,6 @@ footer {
     td {
         font-size: 13px;
     }
-}
-
-@media all and (max-width: 500px) {
     #username {
         font-size: 12px;
     }
@@ -358,8 +352,8 @@ footer {
 }
 
 @media all and (max-width: 400px) {
-    .ranking {
-        width: 350px;
+    #ranking {
+        width: 340px;
     }
     th {
         font-size: 14px;
@@ -387,9 +381,6 @@ footer {
     h2 {
         font-size: 18px;
     }
-    #rss {
-        font-size: 16px;
-    }
 }
 
 @media all and (max-width: 325px) {
@@ -407,9 +398,6 @@ footer {
     }
     h2 {
         font-size: 18px;
-    }
-    #rss {
-        font-size: 16px;
     }
 }
 

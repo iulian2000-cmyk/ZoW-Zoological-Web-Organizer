@@ -229,14 +229,14 @@ exports.ranking_page = function(req, res) {
                         //var htmlContentToADD = "<tr> <th>" + results[i].animalName + "</th><th>" + results[i].likes + "</th></tr>";
                         //dom.window.document.getElementById("ranking").appendChild(htmlContentToADD);
                         const tr = dom.window.document.createElement("tr");
-                        const th1 = dom.window.document.createElement("th");
-                        th1.textContent = results[i].animalName;
-                        const th2 = dom.window.document.createElement("th");
-                        th2.textContent = results[i].likes;
-                        tr.appendChild(th1);
-                        tr.appendChild(th2);
+                        const td1 = dom.window.document.createElement("td");
+                        td1.textContent = `${i+1}. ${results[i].animalName}`;
+                        const td2 = dom.window.document.createElement("td");
+                        td2.textContent = results[i].likes;
+                        tr.appendChild(td1);
+                        tr.appendChild(td2);
                         dom.window.document.getElementById("ranking").appendChild(tr);
-                        xw.startElement('Animal').writeElement("Position", i).writeElement("Name", results[i].animalName).writeElement("Likes", results[i].likes).endElement();
+                        xw.startElement('Animal').writeElement("Position", i + 1).writeElement("Name", results[i].animalName).writeElement("Likes", results[i].likes).endElement();
                         //Order = Order + htmlContentToADD;
                     }
                     xw.endElement('Order_Animals_Popularity');
