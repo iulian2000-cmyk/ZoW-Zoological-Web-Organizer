@@ -40,6 +40,12 @@ module.exports = http.createServer((req, res) => {
     if ((reqUrl.pathname.includes("get_CSV")) && (req.method === 'GET')) {
         download_service.download_csv(req, res);
     }
+
+
+     //GET endpoint
+     if ((reqUrl.pathname.includes("get_PDF")) && (req.method === 'GET')) {
+        download_service.download_pdf(req, res);
+    }
     // GET endpoint 
     if (reqUrl.pathname.includes(".css") && req.method === 'GET') {
         pageService.load_css(req, res);
