@@ -11,6 +11,7 @@
     <link rel="icon" href="../images/icons/iconZ.png">
     <script src="../scripts/scriptAnimalPage.js"></script>
     <script src="../scripts/modalScriptSlider.js"></script>
+    <script src="../scripts/modalScript.js"></script>
     <title></title>
 </head>
 
@@ -24,7 +25,7 @@
             <img class="logo" src="../images/logo/logo.png " alt="logo ">
         </div>
         <div class="userOptions">
-            <label id="username"> username </label>
+            <label id="username"> </label>
             <img class="arrow" src="../images/icons/arrow.png" alt="settings" onclick="showLog()">
         </div>
     </div>
@@ -39,25 +40,25 @@
 
             <div class="box">
                 <div class="contentBox">
-                    <h1></h1>
+                    <h1 id="Title_Card"></h1>
                 </div>
 
                 <div class="whiteBox">
                     <div class="bullet">
                         <div class="content"><strong>LONGETIVITATE</strong></div>
-                        <div class="content1"></div>
+                        <div id="content1"></div>
                         <div class="content"><strong>CATEGORIE</strong></div>
-                        <div class="content2"></div>
+                        <div id="content2"></div>
                         <div class="content"><strong>GREUTATE MEDIE</strong></div>
-                        <div class="content3"> </div>
+                        <div id="content3"> </div>
                         <div class="content"><strong>INALTIME MEDIE</strong></div>
-                        <div class="content4"> </div>
+                        <div id="content4"> </div>
                         <div class="content"><strong>MEDIU DE VIATA</strong></div>
-                        <div class="content5"> </div>
+                        <div id="content5"> </div>
                         <div class="content"><strong>MOD DE HARNIRE</strong></div>
-                        <div class="content6"> </div>
+                        <div id="content6"> </div>
                         <div class="content"><strong>LIKES </strong></div>
-                        <div class="content7"> </div>
+                        <div id="content7"> </div>
                     </div>
                 </div>
 
@@ -76,22 +77,22 @@
 
                 <div class="Slides">
                     <div class="numberImage">1 / 4</div>
-                    <img class="ImgGallery1" src="" alt="no1">
+                    <img class="ImgGallery" src="" alt="no1">
                 </div>
 
                 <div class="Slides">
                     <div class="numberImage">2 / 4</div>
-                    <img class="ImgGallery2" src="" alt="no2">
+                    <img class="ImgGallery" src="" alt="no2">
                 </div>
 
                 <div class="Slides">
                     <div class="numberImage">3 / 4</div>
-                    <img class="ImgGallery3" src="" alt="no3">
+                    <img class="ImgGallery" src="" alt="no3">
                 </div>
 
                 <div class="Slides">
                     <div class="numberImage">4 / 4</div>
-                    <img class="ImgGallery4" src="" alt="no4">
+                    <img class="ImgGallery" src="" alt="no4">
                 </div>
 
                 <a class="prevButton" onclick="plusSlides(-1)">&#10094;</a>
@@ -100,7 +101,7 @@
 
                 <div class="modal">
                     <span class="close">×</span>
-                    <img class="modalImage" id="img01" alt="zoomImage">
+                    <img class="modalImage" 01 " alt="zoomImage ">
                 </div>
 
 
@@ -108,18 +109,18 @@
 
 
 
-                <div class="row">
-                    <div class="col">
-                        <img class="demo cursor1" src="" alt="no1" onclick="currentSlide(1)">
+                <div class="row ">
+                    <div class="col ">
+                        <img class="demo cursor " src=" " alt="no1 " onclick="currentSlide(1) ">
                     </div>
-                    <div class="col">
-                        <img class="demo cursor2" src="" alt="no2" onclick="currentSlide(2)">
+                    <div class="col ">
+                        <img class="demo cursor " src=" " alt="no2 " onclick="currentSlide(2) ">
                     </div>
-                    <div class="col">
-                        <img class="demo cursor3" src="" alt="no3" onclick="currentSlide(3)">
+                    <div class="col ">
+                        <img class="demo cursor " src=" " alt="no3 " onclick="currentSlide(3) ">
                     </div>
-                    <div class="col">
-                        <img class="demo cursor4" src="" alt="no4" onclick="currentSlide(4)">
+                    <div class="col ">
+                        <img class="demo cursor " src=" " alt="no4 " onclick="currentSlide(4) ">
                     </div>
                 </div>
 
@@ -132,34 +133,34 @@
 
 
 
-        <div class="ContentPage">
+        <div class="ContentPage ">
 
-            <div class="Generalitati">
-                <h3 id="subtitle1"> Generalitati </h3>
-                <p id="TextGeneralitati"> </p>
+            <div class="Generalitati ">
+                <h3 id="s_1" > Generalitati </h3>
+                <p id="TextGeneralitati "> </p>
             </div>
 
-            <div class="Stiatica">
-                <h3 id="subtitle2"> Stiati ca ... </h3>
-                <p id="StiatiCaText"></p>
+            <div class="Stiatica ">
+                <h3 id="s_2"  > Stiati ca ... </h3>
+                <p id="StiatiCaText "></p>
             </div>
         </div>
 
         <footer>
-            <div class="footerContent">
+            <div class="footerContent ">
                 <p> &#169; All rights reserved </p>
                 <p> ZoW Atlas 2021 </p>
-                <button id="aboutBtn"> About </button>
+                <button id="aboutBtn "> About </button>
             </div>
         </footer>
 
-        <div id="aboutModal" class="modaldisplay">
-            <div class="aboutContent">
-                <div class="aboutHeader">
-                    <span class="closebutton">&times;</span>
+        <div id="aboutModal " class="modaldisplay ">
+            <div class="aboutContent ">
+                <div class="aboutHeader ">
+                    <span class="closebutton ">&times;</span>
                     <h3>ZoW Atlas</h3>
                 </div>
-                <div class="aboutBody">
+                <div class="aboutBody ">
                     <p>
                         <b>ZoW Atlas</b> este o aplicatie WEB ce permite utilizatorilor vizualizarea unor albume cu animale impartite pe diverse categorii, generarea de albume in functie de anumite criterii alese de utilizator, filtrarea albumelor, cautarea
                         multi-criteriala din searchbar, salvarea unui album in coletia personala sau chiar crearea propriilor albume. Pentru fiecare animal in parte exista o pagina specifica cu informatii si imagini.

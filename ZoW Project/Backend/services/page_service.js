@@ -7,6 +7,7 @@ var mysql = require('mysql');
 var XMLWriter = require('xml-writer');
 
 
+
 var keys = [''];
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -93,6 +94,20 @@ exports.load_js = function(req, res) {
         }
     });
 }
+exports.load_jpeg = function(req, res) {
+    var pathFile = __dirname + url.parse(req.url).pathname;
+    if (process.platform == "win32") {
+
+        pathFile = pathFile.replace("\\Backend\\services", "");
+    } else {
+        pathFile = pathFile.replace("/Backend/services", "");
+    }
+    res.writeHead(200, { "Content-Type": "image/jpeg" });
+    fs.readFile(pathFile, function(err, content) {
+        res.end(content);
+    });
+}
+
 exports.load_image = function(req, res) {
     var pathFile = __dirname + url.parse(req.url).pathname;
     if (process.platform == "win32") {
@@ -250,6 +265,60 @@ exports.ranking_page = function(req, res) {
                 res.write(dom.window.document.documentElement.outerHTML);
                 res.end();
             }
+        }
+    });
+}
+
+exports.load_animal_page = function(req, res) {
+
+    var pathFile = __dirname + url.parse(req.url).pathname;
+    if (process.platform == "win32") {
+        pathFile = pathFile.replace("\\Backend\\services", "");
+        pathFile = pathFile.replace("/FrontEnd/pages/", "\\FrontEnd\\pages\\");
+    } else {
+        pathFile = pathFile.replace("/Backend/services", "");
+    }
+    var index_animal = pathFile.substring(pathFile.lastIndexOf("_") + 1, pathFile.lastIndexOf("."));
+
+    pathFile = pathFile.replace("_" + index_animal, "");
+    fs.readFile(pathFile, (err, data) => {
+        if (err) {
+            res.writeHead(404, { 'Content-type': 'application/json' });
+            res.write('Page not found' + JSON.stringify(err));
+            res.end();
+        } else {
+            res.writeHead(200, { 'Content-type': 'text/html' });
+            const dom = new JSDOM(data);
+            connection.query('SELECT * FROM animals WHERE id_animal=' + connection.escape(index_animal), function(error, results, fields) {
+
+                dom.window.document.title = results[0].animalName;
+                dom.window.document.getElementById("Title_Card").textContent = results[0].animalName;
+                dom.window.document.getElementById("content1").textContent = results[0].cardLongevitate;
+                dom.window.document.getElementById("content2").textContent = results[0].cardCategorie;
+                dom.window.document.getElementById("content3").textContent = results[0].cardGreutateMedie;
+                dom.window.document.getElementById("content4").textContent = results[0].cardInaltimeMedie;
+                dom.window.document.getElementById("content5").textContent = results[0].cardMediuDeViata;
+                dom.window.document.getElementById("content6").textContent = results[0].cardModDeHranire;
+                dom.window.document.getElementById("content7").textContent = results[0].likes;
+                dom.window.document.getElementById("TextGeneralitati ").textContent = results[0].generalities;
+                dom.window.document.getElementById("StiatiCaText ").textContent = results[0].stiatiCa;
+
+
+                dom.window.document.getElementsByClassName("ImgGallery")[0].src = results[0].imagePath1
+                dom.window.document.getElementsByClassName("ImgGallery")[1].src = results[0].imagePath2;
+                dom.window.document.getElementsByClassName("ImgGallery")[2].src = results[0].imagePath3;
+                dom.window.document.getElementsByClassName("ImgGallery")[3].src = results[0].imagePath4;
+
+
+                dom.window.document.getElementsByClassName("demo cursor ")[0].src = results[0].imagePath1;
+                dom.window.document.getElementsByClassName("demo cursor ")[1].src = results[0].imagePath2;
+                dom.window.document.getElementsByClassName("demo cursor ")[2].src = results[0].imagePath3;
+                dom.window.document.getElementsByClassName("demo cursor ")[3].src = results[0].imagePath4;
+
+                res.write(dom.window.document.documentElement.outerHTML);
+
+                res.end();
+            });
         }
     });
 }

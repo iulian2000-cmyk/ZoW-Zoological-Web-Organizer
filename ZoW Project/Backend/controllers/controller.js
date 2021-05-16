@@ -20,8 +20,13 @@ module.exports = http.createServer((req, res) => {
 
     console.log("Request URL :" + reqUrl.pathname);
     // GET endpoint 
-    if (reqUrl.pathname.includes("/FrontEnd/pages/") && req.method === 'GET' && (!reqUrl.pathname.includes("ranking.html")) && (!(reqUrl.pathname.includes("get_Order")))) {
+
+    if (reqUrl.pathname.includes("admin.html") || (reqUrl.pathname.includes("authentication.html") || (reqUrl.pathname.includes("registerp")))) {
         pageService.load_page(req, res);
+    }
+
+    if (reqUrl.pathname.includes("animal") && req.method === 'GET' && (!(reqUrl.pathname.includes("jpg")))) {
+        pageService.load_animal_page(req, res);
     }
     if (reqUrl.pathname.includes("ranking.html") && req.method === 'GET') {
         pageService.ranking_page(req, res);
@@ -42,8 +47,8 @@ module.exports = http.createServer((req, res) => {
     }
 
 
-     //GET endpoint
-     if ((reqUrl.pathname.includes("get_PDF")) && (req.method === 'GET')) {
+    //GET endpoint
+    if ((reqUrl.pathname.includes("get_PDF")) && (req.method === 'GET')) {
         download_service.download_pdf(req, res);
     }
     // GET endpoint 
@@ -57,6 +62,9 @@ module.exports = http.createServer((req, res) => {
     // GET endpoint 
     if ((reqUrl.pathname.includes(".png") || reqUrl.pathname.includes(".jpg")) && req.method === 'GET') {
         pageService.load_image(req, res);
+    }
+    if (reqUrl.pathname.includes(".jpeg")) {
+        pageService.load_jpeg(req, res);
     }
     // GET endpoint 
     if (reqUrl.pathname.includes(".svg") && req.method === 'GET') {
