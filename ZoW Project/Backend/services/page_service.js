@@ -233,38 +233,36 @@ exports.ranking_page = function(req, res) {
                 } else {
                     dom.window.document.getElementById("admin").style.display = "none";
                 }
-                connection.query('SELECT * FROM animals ORDER BY likes DESC LIMIT 30', function(error, results, fields) {
-                    //var Order = "";
-                    var ws = fs.createWriteStream(PathXML);
-                    xw = new XMLWriter(true, function(string, encoding) {
-                        ws.write(string, encoding);
-                    });
-                    xw.startElement('Order_Animals_Popularity');
-                    for (i = 0; i < results.length; i++) {
-                        //var htmlContentToADD = "<tr> <th>" + results[i].animalName + "</th><th>" + results[i].likes + "</th></tr>";
-                        //dom.window.document.getElementById("ranking").appendChild(htmlContentToADD);
-                        const tr = dom.window.document.createElement("tr");
-                        const td1 = dom.window.document.createElement("td");
-                        td1.textContent = `${i+1}. ${results[i].animalName}`;
-                        const td2 = dom.window.document.createElement("td");
-                        td2.textContent = results[i].likes;
-                        tr.appendChild(td1);
-                        tr.appendChild(td2);
-                        dom.window.document.getElementById("ranking").appendChild(tr);
-                        xw.startElement('Animal').writeElement("Position", i + 1).writeElement("Name", results[i].animalName).writeElement("Likes", results[i].likes).endElement();
-                        //Order = Order + htmlContentToADD;
-                    }
-                    xw.endElement('Order_Animals_Popularity');
-                    //console.log(Order);
-                    //dom.window.document.getElementById("ranking").innerHTML = dom.window.document.getElementById("ranking").innerHTML + Order;
-                    res.write(dom.window.document.documentElement.outerHTML);
-                    res.end();
-                });
             } else {
                 dom.window.document.getElementById("arrowUserOptions").style.display = "none";
+            }
+            connection.query("SELECT * FROM animals ORDER BY likes DESC LIMIT 30;", function(error, results, fields) {
+                //var Order = "";
+                var ws = fs.createWriteStream(PathXML);
+                xw = new XMLWriter(true, function(string, encoding) {
+                    ws.write(string, encoding);
+                });
+                xw.startElement('Order_Animals_Popularity');
+                for (i = 0; i < results.length; i++) {
+                    //var htmlContentToADD = "<tr> <th>" + results[i].animalName + "</th><th>" + results[i].likes + "</th></tr>";
+                    //dom.window.document.getElementById("ranking").appendChild(htmlContentToADD);
+                    const tr = dom.window.document.createElement("tr");
+                    const td1 = dom.window.document.createElement("td");
+                    td1.textContent = `${i+1}. ${results[i].animalName}`;
+                    const td2 = dom.window.document.createElement("td");
+                    td2.textContent = results[i].likes;
+                    tr.appendChild(td1);
+                    tr.appendChild(td2);
+                    dom.window.document.getElementById("ranking").appendChild(tr);
+                    xw.startElement('Animal').writeElement("Position", i + 1).writeElement("Name", results[i].animalName).writeElement("Likes", results[i].likes).endElement();
+                    //Order = Order + htmlContentToADD;
+                }
+                xw.endElement('Order_Animals_Popularity');
+                //console.log(Order);
+                //dom.window.document.getElementById("ranking").innerHTML = dom.window.document.getElementById("ranking").innerHTML + Order;
                 res.write(dom.window.document.documentElement.outerHTML);
                 res.end();
-            }
+            });
         }
     });
 }
@@ -303,6 +301,9 @@ exports.load_animal_page = function(req, res) {
                 dom.window.document.getElementById("TextGeneralitati ").textContent = results[0].generalities;
                 dom.window.document.getElementById("StiatiCaText ").textContent = results[0].stiatiCa;
 
+
+                dom.window.document.getElementById("like").action = dom.window.document.getElementById("like").action + index_animal;
+                dom.window.document.getElementById("add").action = dom.window.document.getElementById("add").action + index_animal;
 
                 dom.window.document.getElementsByClassName("ImgGallery")[0].src = results[0].imagePath1
                 dom.window.document.getElementsByClassName("ImgGallery")[1].src = results[0].imagePath2;
