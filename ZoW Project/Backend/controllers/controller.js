@@ -26,9 +26,11 @@ module.exports = http.createServer((req, res) => {
     if (reqUrl.pathname.includes("admin.html") || (reqUrl.pathname.includes("authentication.html") || (reqUrl.pathname.includes("registerp")))) {
         pageService.load_page(req, res);
     }
-    if (reqUrl.pathname.includes("like_")) {
+
+    if (reqUrl.pathname.includes("like") && (!reqUrl.pathname.includes("svg"))) {
         animal_service.update_likes(req, res);
     }
+
 
     if (reqUrl.pathname.includes("animal") && req.method === 'GET' && (!(reqUrl.pathname.includes("jpg")))) {
         pageService.load_animal_page(req, res);
