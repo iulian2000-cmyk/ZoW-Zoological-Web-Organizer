@@ -277,7 +277,7 @@ exports.load_animal_page = function(req, res) {
         pathFile = pathFile.replace("/Backend/services", "");
     }
     var index_animal = pathFile.substring(pathFile.lastIndexOf("_") + 1, pathFile.lastIndexOf("."));
-
+    //console.log(index_animal);
     pathFile = pathFile.replace("_" + index_animal, "");
     fs.readFile(pathFile, (err, data) => {
         if (err) {

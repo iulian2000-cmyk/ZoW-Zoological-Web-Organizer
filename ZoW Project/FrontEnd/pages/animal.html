@@ -64,8 +64,12 @@
 
 
                 <div class="buttons">
-                    <div class="b1"><button class="button1"><img id = "LikeIcon" src ="../images/icons/likeIcon.svg"  alt="like icon"> <strong>Like</strong> </button></div>
-                    <div class="b2"><button class="button2"> <img id = "AddIcon" src="../images/icons/addIcon.svg"  alt="add icon"> <strong>Add to album</strong> </button></div>
+                    <form id="like" action="like_" method="PUT">
+                        <div class="b1"><button type="submit" class="button1" form="like"><img id = "LikeIcon" src ="../images/icons/likeIcon.svg"  alt="like icon"> <strong>Like</strong> </button></div>
+                    </form>
+                    <form id="add" action="add_" method="PUT">
+                        <div class="b2"><button class="button2"> <img id = "AddIcon" src="../images/icons/addIcon.svg"  alt="add icon"> <strong>Add to album</strong> </button></div>
+                    </form>
                 </div>
             </div>
 
@@ -136,12 +140,12 @@
         <div class="ContentPage ">
 
             <div class="Generalitati ">
-                <h3 id="s_1" > Generalitati </h3>
+                <h3> Generalitati </h3>
                 <p id="TextGeneralitati "> </p>
             </div>
 
             <div class="Stiatica ">
-                <h3 id="s_2"  > Stiati ca ... </h3>
+                <h3> Stiati ca ... </h3>
                 <p id="StiatiCaText "></p>
             </div>
         </div>

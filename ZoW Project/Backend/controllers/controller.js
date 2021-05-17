@@ -3,16 +3,18 @@ const url = require('url');
 
 module.exports = http.createServer((req, res) => {
 
-    var pageService, login_service, download_service;
+    var pageService, login_service, download_service, animal_service;
 
     if (process.platform == "win32") {
         pageService = require('..\\services\\page_service.js');
         login_service = require('..\\services\\login_service.js');
         download_service = require('..\\services\\download_service.js');
+        animal_service = require('..\\services\\animal_service.js');
     } else {
         pageService = require('../services/page_service.js');
         login_service = require('../services/login_service.js');
         download_service = require('../services/download_service.js');
+        animal_service = require('../services/animal_service.js');
     }
     //console.log(exactPage);
     const reqUrl = url.parse(req.url, true);
@@ -23,6 +25,9 @@ module.exports = http.createServer((req, res) => {
 
     if (reqUrl.pathname.includes("admin.html") || (reqUrl.pathname.includes("authentication.html") || (reqUrl.pathname.includes("registerp")))) {
         pageService.load_page(req, res);
+    }
+    if (reqUrl.pathname.includes("like_")) {
+        animal_service.update_likes(req, res);
     }
 
     if (reqUrl.pathname.includes("animal") && req.method === 'GET' && (!(reqUrl.pathname.includes("jpg")))) {
