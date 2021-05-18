@@ -151,6 +151,7 @@ exports.load_page = function(req, res) {
     }
     var cookies = new Cookies(req, res, { keys: keys });
     console.log(exactPage);
+    var username = cookies.get('username', { signed: true });
     if (exactPage == "registerpage.html" || exactPage == "authentication.html") {
         cookies.set('username', "", { signed: true });
         cookies.set('last-active', "", { signed: true });

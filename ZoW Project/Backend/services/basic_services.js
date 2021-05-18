@@ -53,6 +53,7 @@ exports.delete_user = function(req, res) {
     req.on('end', function() {
         var post = qs.parse(body);
         var username = post.username;
+        console.log("username to delete= " + username);
         connection.query('DELETE FROM users WHERE user_name = ?', [username], function(error, results, fields) {
             res.writeHead(301, { Location: './admin.html' });
             res.end();

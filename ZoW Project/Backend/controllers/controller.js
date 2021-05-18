@@ -32,7 +32,7 @@ module.exports = http.createServer((req, res) => {
     if (reqUrl.pathname.includes("add_user") && req.method === 'POST') {
         basic_service.add_user(req, res);
     }
-    if (reqUrl.pathname.includes("delete_user") && req.method === 'DEL') {
+    if (reqUrl.pathname.includes("delete_user")) {
         basic_service.delete_user(req, res);
     }
 
