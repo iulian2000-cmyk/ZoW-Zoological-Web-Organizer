@@ -3,32 +3,36 @@ const url = require('url');
 
 module.exports = http.createServer((req, res) => {
 
-    var pageService, login_service, download_service, animal_service;
+    var pageService, login_service, download_service, basic_service;
 
     if (process.platform == "win32") {
         pageService = require('..\\services\\page_service.js');
         login_service = require('..\\services\\login_service.js');
         download_service = require('..\\services\\download_service.js');
-        animal_service = require('..\\services\\animal_service.js');
+        basic_service = require('../services/basic_services.js');
     } else {
         pageService = require('../services/page_service.js');
         login_service = require('../services/login_service.js');
         download_service = require('../services/download_service.js');
-        animal_service = require('../services/animal_service.js');
+        basic_service = require('../services/basic_services.js');
     }
     //console.log(exactPage);
     const reqUrl = url.parse(req.url, true);
 
 
     console.log("Request URL :" + reqUrl.pathname);
-    // GET endpoint 
-
-    if (reqUrl.pathname.includes("admin.html") || (reqUrl.pathname.includes("authentication.html") || (reqUrl.pathname.includes("registerp")))) {
+    if (reqUrl.pathname.includes("admin.html") || reqUrl.pathname.includes("authentication.html") || (reqUrl.pathname.includes("registerp"))) {
         pageService.load_page(req, res);
     }
 
-    if (reqUrl.pathname.includes("like") && (!reqUrl.pathname.includes("svg"))) {
-        animal_service.update_likes(req, res);
+    if (reqUrl.pathname.includes("like_")) {
+        basic_service.update_likes(req, res);
+    }
+    if (reqUrl.pathname.includes("add_user") && req.method === 'POST') {
+        basic_service.add_user(req, res);
+    }
+    if (reqUrl.pathname.includes("delete_user") && req.method === 'DEL') {
+        basic_service.delete_user(req, res);
     }
 
 

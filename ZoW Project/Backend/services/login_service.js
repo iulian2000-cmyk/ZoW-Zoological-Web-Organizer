@@ -69,7 +69,6 @@ exports.register = function(req, res) {
                 cookies.set('last-active', new Date().toISOString(), { signed: true });
                 res.writeHead(301, { Location: '../pages/authentication.html' });
                 res.end();
-
             });
         } else {
             res.send('Please enter Username and Password!');

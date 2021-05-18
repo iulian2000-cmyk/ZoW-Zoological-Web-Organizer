@@ -131,7 +131,8 @@ exports.load_svg = function(req, res) {
     }
     res.writeHead(200, { "Content-Type": "image/svg+xml" });
     fs.readFile(pathFile, function(err, content) {
-        res.end(content);
+        res.write(content);
+        res.end();
     });
 }
 
@@ -148,7 +149,7 @@ exports.load_page = function(req, res) {
         exactPage = req.url.replace("/FrontEnd/pages/", "");
     }
     var cookies = new Cookies(req, res, { keys: keys });
-    //console.log(exactPage);
+    console.log(exactPage);
     if (exactPage == "registerpage.html" || exactPage == "authentication.html") {
         cookies.set('username', "", { signed: true });
         cookies.set('last-active', "", { signed: true });
@@ -174,24 +175,10 @@ exports.load_page = function(req, res) {
                 var lastVisit = cookies.get('last-active', { signed: true });
                 var username = cookies.get('username', { signed: true });
                 var isAdmin = cookies.get('isAdmin', { signed: true });
-                if ((typeof lastVisit !== 'undefined') && (typeof username !== 'undefined')) {
-                    const dom = new JSDOM(data);
-                    dom.window.document.getElementById("username").textContent = username;
-                    if (!(exactPage == "admin.html")) {
-                        if (isAdmin == "1") {
-                            dom.window.document.getElementById("admin").style.display = "block";
-                        } else {
-                            dom.window.document.getElementById("admin").style.display = "none";
-                            res.write(dom.window.document.documentElement.outerHTML);
-                            res.end();
-                        }
-                    }
-                    res.write(dom.window.document.documentElement.outerHTML);
-                    res.end();
-                } else {
-                    res.write(data);
-                    res.end();
-                }
+                const dom = new JSDOM(data);
+                dom.window.document.getElementById("username").textContent = username;
+                res.write(dom.window.document.documentElement.outerHTML);
+                res.end();
             }
         });
     }
@@ -279,6 +266,7 @@ exports.load_animal_page = function(req, res) {
     var index_animal = pathFile.substring(pathFile.lastIndexOf("_") + 1, pathFile.lastIndexOf("."));
     //console.log(index_animal);
     pathFile = pathFile.replace("_" + index_animal, "");
+
     fs.readFile(pathFile, (err, data) => {
         if (err) {
             res.writeHead(404, { 'Content-type': 'application/json' });
@@ -302,8 +290,9 @@ exports.load_animal_page = function(req, res) {
                 dom.window.document.getElementById("StiatiCaText ").textContent = results[0].stiatiCa;
 
 
+
                 dom.window.document.getElementById("like").action = dom.window.document.getElementById("like").action + index_animal;
-                dom.window.document.getElementById("add").action = dom.window.document.getElementById("add").action + index_animal;
+                //dom.window.document.getElementById("add").action = dom.window.document.getElementById("add").action + index_animal;
 
                 dom.window.document.getElementsByClassName("ImgGallery")[0].src = results[0].imagePath1
                 dom.window.document.getElementsByClassName("ImgGallery")[1].src = results[0].imagePath2;
