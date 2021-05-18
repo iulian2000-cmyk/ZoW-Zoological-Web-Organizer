@@ -5,6 +5,7 @@ const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 var mysql = require('mysql');
 var XMLWriter = require('xml-writer');
+const { type } = require('os');
 
 
 
@@ -172,18 +173,15 @@ exports.load_page = function(req, res) {
                 res.end();
             } else {
                 res.writeHead(200, { 'Content-type': 'text/html' });
-                var lastVisit = cookies.get('last-active', { signed: true });
-                var username = cookies.get('username', { signed: true });
-                var isAdmin = cookies.get('isAdmin', { signed: true });
                 const dom = new JSDOM(data);
-                dom.window.document.getElementById("username").textContent = username;
+                //dom.window.document.getElementById("username").textContent = username;
                 res.write(dom.window.document.documentElement.outerHTML);
                 res.end();
-
             }
         });
     }
 }
+
 
 exports.ranking_page = function(req, res) {
     var pathFile = __dirname + url.parse(req.url).pathname;
