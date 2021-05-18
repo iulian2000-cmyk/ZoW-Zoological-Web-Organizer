@@ -176,9 +176,34 @@ exports.load_page = function(req, res) {
                 res.writeHead(200, { 'Content-type': 'text/html' });
                 const dom = new JSDOM(data);
                 dom.window.document.getElementById("username").textContent = username;
-                res.write(dom.window.document.documentElement.outerHTML);
-                res.end();
-            }
+                connection.query("SELECT * FROM animals ORDER BY animalName", function(error, results, fields) {
+                    const containter = dom.window.document.getElementById("checkContainer");
+
+                    for (i = 0; i < results.length; i++) {
+                        var div = dom.window.document.createElement("div");
+                        div.style.display = "block";
+
+                        var element = dom.window.document.createElement("input");
+                        element.type = "checkbox";
+                        element.id = i + 1;
+                        element.value = results[i].id_animal;
+                        element.name = results[i].animalName;
+
+                        var label = dom.window.document.createElement("label");
+                        label.textContent = results[i].animalName;
+                        label.for = i + 1;
+
+                        div.appendChild(element);
+                        div.appendChild(label);
+
+                        containter.appendChild(div);
+                    }
+
+
+                    res.write(dom.window.document.documentElement.outerHTML);
+                    res.end();
+                });
+            };
         });
     }
 }

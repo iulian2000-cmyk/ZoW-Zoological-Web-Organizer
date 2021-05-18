@@ -38,6 +38,9 @@ module.exports = http.createServer((req, res) => {
     if (reqUrl.pathname.includes("delete_user")) {
         basic_service.delete_user(req, res);
     }
+    if (reqUrl.pathname.includes("add_album")) {
+        basic_service.add_album(req, res);
+    }
     if (reqUrl.pathname.includes("add_animal")) {
         basic_service.add_animal(req, res);
     }

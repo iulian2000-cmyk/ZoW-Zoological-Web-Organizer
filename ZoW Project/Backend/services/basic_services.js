@@ -105,3 +105,19 @@ exports.delete_animal = function(req, res) {
         });
     });
 }
+
+exports.add_album = function(req, res) {
+    var body = '';
+    req.on('data', function(data) {
+        body += data;
+        if (body.length > 1e6)
+            req.connection.destroy();
+    });
+    req.on('end', function() {
+        var post = qs.parse(body);
+        var nume_album = post.album;
+        Object.values(post).forEach(value => {
+            //console.log(value);
+        });
+    });
+}

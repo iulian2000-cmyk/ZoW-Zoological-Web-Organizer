@@ -207,7 +207,7 @@ form {
     margin-bottom: 20px;
 }
 
-.checkContainer {
+#checkContainer {
     font-size: 13px;
     height: 100px;
     overflow-y: auto;
@@ -216,11 +216,11 @@ form {
     border: 1px solid black;
 }
 
-.checkContainer label {
+#checkContainer label {
     vertical-align: middle;
 }
 
-.checkContainer input {
+#checkContainer input {
     vertical-align: middle;
 }
 

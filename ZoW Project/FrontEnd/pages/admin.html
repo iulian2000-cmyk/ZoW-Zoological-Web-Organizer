@@ -57,25 +57,11 @@
         </div>
         <p class="topText">Albums</p>
         <div class="albums">
-            <form>
+            <form action="add_album" method="POST">
                 <p>Add default album</p>
                 <input type="text" name="album" placeholder="Album name" required>
                 <span id="chooseAnimals">Select animals from database</span>
-                <div class="checkContainer">
-                    <input type="checkbox" id="a1" value="a1" name="animal">
-                    <label for="a1">Animal name</label><br>
-                    <input type="checkbox" id="a2" value="a2" name="animal">
-                    <label for="a2">Animal name</label><br>
-                    <input type="checkbox" id="a3" value="a3" name="animal">
-                    <label for="a3">Animal name</label><br>
-                    <input type="checkbox" id="a4" value="a$" name="animal">
-                    <label for="a4">Animal name</label><br>
-                    <input type="checkbox" id="a5" value="a5" name="animal">
-                    <label for="a5">Animal name</label><br>
-                    <input type="checkbox" id="a6" value="a6" name="animal">
-                    <label for="a6">Animal name</label><br>
-                    <input type="checkbox" id="a7" value="a7" name="animal">
-                    <label for="a7">Animal name</label><br>
+                <div id="checkContainer">
                 </div>
                 <button type="submit" class="submitBtn">Add</button>
             </form>
