@@ -32,10 +32,15 @@ module.exports = http.createServer((req, res) => {
     if (reqUrl.pathname.includes("add_user") && req.method === 'POST') {
         basic_service.add_user(req, res);
     }
+    if (reqUrl.pathname.includes("delete_animal")) {
+        basic_service.delete_animal(req, res);
+    }
     if (reqUrl.pathname.includes("delete_user")) {
         basic_service.delete_user(req, res);
     }
-
+    if (reqUrl.pathname.includes("add_animal")) {
+        basic_service.add_animal(req, res);
+    }
 
     if (reqUrl.pathname.includes("animal") && req.method === 'GET' && (!(reqUrl.pathname.includes("jpg")))) {
         pageService.load_animal_page(req, res);

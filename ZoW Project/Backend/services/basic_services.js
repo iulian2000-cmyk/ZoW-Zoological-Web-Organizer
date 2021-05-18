@@ -44,6 +44,51 @@ exports.add_user = function(req, res) {
 }
 
 exports.delete_user = function(req, res) {
+        var body = '';
+        req.on('data', function(data) {
+            body += data;
+            if (body.length > 1e6)
+                req.connection.destroy();
+        });
+        req.on('end', function() {
+            var post = qs.parse(body);
+            var username = post.username;
+            console.log("username to delete= " + username);
+            connection.query('DELETE FROM users WHERE user_name = ?', [username], function(error, results, fields) {
+                res.writeHead(301, { Location: './admin.html' });
+                res.end();
+            });
+        });
+    }
+    /** 
+     * TODO  : 
+    exports.add_animal = function(req, res) {
+        var body = '';
+        req.on('data', function(data) {
+            body += data;
+            if (body.length > 1e6)
+                req.connection.destroy();
+        });
+        req.on('end', function() {
+            var post = qs.parse(body);
+
+            var animal_name = post.animal;
+            var longevity = post.longevity;
+            var category = post.categories;
+            var weight = post.weight;
+            var height = post.height;
+            var habitat = post.habitat;
+            var generalities = post.generalitati;
+            var statica = post.stiatica;
+
+            //console.log(animal_name + "--" + longevity + "--" + '---' + category + '--' + weight + '--' + height + '--' + habitat + '--' + generalities + '--' + statica);
+
+
+            res.end();
+        });
+    }
+    */
+exports.delete_animal = function(req, res) {
     var body = '';
     req.on('data', function(data) {
         body += data;
@@ -52,9 +97,9 @@ exports.delete_user = function(req, res) {
     });
     req.on('end', function() {
         var post = qs.parse(body);
-        var username = post.username;
-        console.log("username to delete= " + username);
-        connection.query('DELETE FROM users WHERE user_name = ?', [username], function(error, results, fields) {
+        var animal_name = post.animal;
+        console.log(animal_name);
+        connection.query('DELETE FROM animals WHERE animalName = ?', [animal_name], function(error, results, fields) {
             res.writeHead(301, { Location: './admin.html' });
             res.end();
         });

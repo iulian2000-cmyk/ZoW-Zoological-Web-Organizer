@@ -87,7 +87,7 @@
         </div>
         <p class="topText">Animals</p>
         <div class="animals">
-            <form>
+            <form id="add_animal" action="add_animal" method="POST">
                 <p>Add animal to database</p>
                 <input type="text" name="animal" placeholder="Animal name" required>
                 <input type="text" name="longevity" placeholder="Longevity" required>
@@ -107,13 +107,14 @@
                 <input type="number" id="height" name="height" min="0.1" step="0.1" required>
                 <input type="text" name="habitat" placeholder="Habitat" required>
                 <input type="text" name="hranire" placeholder="Mod de hranire" required>
-                <textarea id="t1">Generalitati</textarea>
-                <textarea id="t2">Stiati ca...</textarea>
+                <textarea name="generalitati" id="t1" form="add_animal">Generalitati</textarea>
+                <textarea name="stiatica" id="t2" form="add_animal">Stiati ca...</textarea>
                 <label for="images"> Choose 4 images (jpg, jpeg, png)</label>
                 <input id="images" type="file" multiple="multiple" accept=".jpg,.png,.jpeg" required>
                 <button type="submit" class="submitBtn">Add</button>
             </form>
-            <form>
+
+            <form action="delete_animal" method="POST">
                 <p>Delete animal from database</p>
                 <input type="text" name="animal" placeholder="Animal name" required>
                 <button type="submit" class="submitBtn">Delete</button>
