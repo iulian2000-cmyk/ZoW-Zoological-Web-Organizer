@@ -174,7 +174,7 @@ exports.load_page = function(req, res) {
             } else {
                 res.writeHead(200, { 'Content-type': 'text/html' });
                 const dom = new JSDOM(data);
-                //dom.window.document.getElementById("username").textContent = username;
+                dom.window.document.getElementById("username").textContent = username;
                 res.write(dom.window.document.documentElement.outerHTML);
                 res.end();
             }
