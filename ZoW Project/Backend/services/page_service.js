@@ -179,6 +179,7 @@ exports.load_page = function(req, res) {
                 dom.window.document.getElementById("username").textContent = username;
                 res.write(dom.window.document.documentElement.outerHTML);
                 res.end();
+
             }
         });
     }
