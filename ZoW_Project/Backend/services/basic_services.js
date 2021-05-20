@@ -16,8 +16,7 @@ const connection = mysql.createConnection({
 });
 
 exports.update_likes = function(req, res) {
-    var index_animal = url.parse(req.url).pathname.charAt(url.parse(req.url).pathname.length - 1);
-    console.log(index_animal);
+    var index_animal = req.url.replace("/FrontEnd/pages/like_", "");
     connection.query('UPDATE animals SET likes=likes+1 WHERE id_animal=' + connection.escape(index_animal), function(error, results, fields) {
         res.writeHead(301, { Location: './animal_' + index_animal + '.html' });
         res.end();
@@ -74,7 +73,7 @@ exports.add_animal = function(req, res) {
         var generalities = fields.generalitati;
         var stiatica = fields.stiatica;
         var categorie = fields.categorie;
-
+        var card_longevitate = fields.card_longevitate;
 
         var terestru = fields.terestru;
         var acvatic = fields.acvatic;
@@ -89,6 +88,7 @@ exports.add_animal = function(req, res) {
         var comestibil = fields.comestibil,
             necomestibil;
 
+        var card_categore = fields.card_categorie;
         if (domestic == "1") {
             salbatic = "0";
         } else {
@@ -121,7 +121,7 @@ exports.add_animal = function(req, res) {
         path_System = path_System.replace("pages", "images");
         path_System = path_System.replace("add_animal", "");
         console.log(path_System);
-        var pathImg = "../images";
+        var pathImg = "../images/";
         var index_file = 1;
         Object.values(files).forEach(value => {
             Object.values(value).forEach(file => {
@@ -139,11 +139,21 @@ exports.add_animal = function(req, res) {
         });
         //console.log(name_files);
 
-        ImagePath1 = pathImg + name_files[0];
-        ImagePath2 = pathImg + name_files[1];
-        ImagePath3 = pathImg + name_files[2];
-        ImagePath4 = pathImg + name_files[3];
-
+        ImagePath1 = pathImg + animal_name.toLowerCase() + '/' + name_files[0];
+        ImagePath2 = pathImg + animal_name.toLowerCase() + '/' + name_files[1];
+        ImagePath3 = pathImg + animal_name.toLowerCase() + '/' + name_files[2];
+        ImagePath4 = pathImg + animal_name.toLowerCase() + '/' + name_files[3];
+        var link_page = "../pages/animalPage.html";
+        connection.query(
+            "INSERT INTO animals VALUES (NULL,?,?, ?,?,?,?,0,        ?,?,?, ?,?,? ,?,?,?  ,?,?,?,  ?,?,?, ?,?,? ,?,?,?  )", [
+                animal_name.toUpperCase(), link_page, ImagePath1, ImagePath2, ImagePath3, ImagePath4, terestru, acvatic, aerian, mamifer, pasare, reptila, dinozaur, domestic, insecta, salbatic, comestibil, necomestibil,
+                longevity, generalities, stiatica, card_longevitate, card_categore, mediumWeight, mediumHeight, habitat, Mod_hranire
+            ],
+            function(error, results, fields) {
+                if (error) {
+                    throw error;
+                }
+            });
         res.writeHead(301, { Location: './admin.html' });
         res.end(JSON.stringify({ fields, files }, null, 2));
     });
@@ -159,7 +169,7 @@ exports.delete_animal = function(req, res) {
     req.on('end', function() {
         var post = qs.parse(body);
         var animal_name = post.animal;
-        console.log(animal_name);
+        //console.log(animal_name);
         connection.query('DELETE FROM animals WHERE animalName = ?', [animal_name], function(error, results, fields) {
             res.writeHead(301, { Location: './admin.html' });
             res.end();
@@ -181,6 +191,24 @@ exports.add_album = function(req, res) {
             connection.query('INSERT INTO albumsdefault VALUES (?,?);', [nume_album, value], function(error, results, fields) {
                 console.log("New animal was inserted in " + nume_album);
             });
+        });
+        res.writeHead(301, { Location: "./admin.html" });
+        res.end();
+    });
+}
+
+exports.delete_album = function(req, res) {
+    var body = '';
+    req.on('data', function(data) {
+        body += data;
+        if (body.length > 1e6)
+            req.connection.destroy();
+    });
+    req.on('end', function() {
+        var post = qs.parse(body);
+        var nume_album = post.album;
+        connection.query('DELETE FROM albumsdefault WHERE albumName=? ;', [nume_album], function(error, results, fields) {
+            // 
         });
         res.writeHead(301, { Location: "./admin.html" });
         res.end();
