@@ -46,7 +46,7 @@ CREATE TABLE albumsdefault(
  
     albumName VARCHAR(64) NOT NULL,
     id_animal INT NOT NULL,
-    FOREIGN KEY (id_animal) REFERENCES animals(id_animal),
+    FOREIGN KEY (id_animal) REFERENCES animals(id_animal)
 );
       
 

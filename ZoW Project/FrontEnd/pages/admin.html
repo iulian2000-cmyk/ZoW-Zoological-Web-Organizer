@@ -65,7 +65,7 @@
                 </div>
                 <button type="submit" class="submitBtn">Add</button>
             </form>
-            <form>
+            <form action="delete_album" method="POST">
                 <p> Delete default album</p>
                 <input type="text" name="album" placeholder="Album name" required>
                 <button type="submit" class="submitBtn">Delete</button>
@@ -73,19 +73,67 @@
         </div>
         <p class="topText">Animals</p>
         <div class="animals">
-            <form id="add_animal" action="add_animal" method="POST">
+            <form id="add_animal" action="add_animal" method="post" enctype="multipart/form-data">
                 <p>Add animal to database</p>
                 <input type="text" name="animal" placeholder="Animal name" required>
-                <input type="text" name="longevity" placeholder="Longevity" required>
-                <label for="categories"> Category </label>
-                <select class="select" name="categories">
-                    <option value="terestre"> Terestre </option>
-                    <option value="acvatice"> Acvatice </option>
-                    <option value="aeriene"> Aeriene </option>
-                    <option value="mamifere"> Mamifere </option>
-                    <option value="pasari"> Pasari </option>
-                    <option value="reptile"> Reptile </option>
-                    <option value="dinozauri"> Dinozauri </option>
+                <label for="longevity"> Longevitate exprimata in ani</label>
+                <input type="number" id="height" name="longevity" min="0.1" step="0.1" required>
+                <input type="text" name="card_longevitate" placeholder="Longevity" required>
+                <input type="text" name="card_categorie" placeholder="Categorie" required>
+                <label for="terestru"> Animal terestru </label>
+                <select class="select" name="terestru">
+                    <option value="1"> Da </option>
+                    <option value="0"> Nu </option>
+                </select>
+                <label for="acvatic"> Animal acvatic </label>
+                <select class="select" name="acvatic">
+                    <option value="1"> Da </option>
+                    <option value="0"> Nu </option>
+                </select>
+                <label for="aerian"> Animal aerian </label>
+                <select class="select" name="aerian">
+                    <option value="1"> Da </option>
+                    <option value="0"> Nu </option>
+                </select>
+                <label for="mamifer"> Animal mamifer </label>
+                <select class="select" name="mamifer">
+                    <option value="1"> Da </option>
+                    <option value="0"> Nu </option>
+                </select>
+                <label for="pasare"> Animal zburator </label>
+                <select class="select" name="pasare">
+                    <option value="1"> Da </option>
+                    <option value="0"> Nu </option>
+                </select>
+                <label for="reptila"> Reptila </label>
+                <select class="select" name="reptila">
+                    <option value="1"> Da </option>
+                    <option value="0"> Nu </option>
+                </select>
+                <label for="insecta"> Insecta </label>
+                <select class="select" name="insecta">
+                    <option value="1"> Da </option>
+                    <option value="0"> Nu </option>
+                </select>
+                <label for="dinozaur"> Dinozaur </label>
+                <select class="select" name="dinozaur">
+                    <option value="1"> Da </option>
+                    <option value="0"> Nu </option>
+                </select>
+                <label for="salbatic"> Salbatic </label>
+                <select class="select" name="salbatic">
+                    <option value="1"> Da </option>
+                    <option value="0"> Nu </option>
+                </select>
+                <label for="domestic"> Domestic </label>
+                <select class="select" name="domestic">
+                    <option value="1"> Da </option>
+                    <option value="0"> Nu </option>
+                </select>
+                <label for="comestibil"> Comestibil </label>
+                <select class="select" name="comestibil">
+                    <option value="1"> Da </option>
+                    <option value="0"> Nu </option>
                 </select>
                 <label for="weight">Weight (kg)</label>
                 <input type="number" id="weight" name="weight" min="1" required>
@@ -96,7 +144,7 @@
                 <textarea name="generalitati" id="t1" form="add_animal">Generalitati</textarea>
                 <textarea name="stiatica" id="t2" form="add_animal">Stiati ca...</textarea>
                 <label for="images"> Choose 4 images (jpg, jpeg, png)</label>
-                <input id="images" type="file" multiple="multiple" accept=".jpg,.png,.jpeg" required>
+                <div><input type="file" name="multipleFiles" multiple="multiple" /> </div>
                 <button type="submit" class="submitBtn">Add</button>
             </form>
 

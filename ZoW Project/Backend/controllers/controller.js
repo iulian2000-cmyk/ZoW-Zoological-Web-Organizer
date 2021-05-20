@@ -1,15 +1,15 @@
 const http = require('http');
-const { page } = require('pdfkit');
 const url = require('url');
+const formidable = require('formidable');
 
 module.exports = http.createServer((req, res) => {
 
     var pageService, login_service, download_service, basic_service;
 
     if (process.platform == "win32") {
-        pageService = require('..\\services\\page_service.js');
-        login_service = require('..\\services\\login_service.js');
-        download_service = require('..\\services\\download_service.js');
+        pageService = require('../services/page_service.js');
+        login_service = require('../services/login_service.js');
+        download_service = require('../services/download_service.js');
         basic_service = require('../services/basic_services.js');
     } else {
         pageService = require('../services/page_service.js');
@@ -44,7 +44,9 @@ module.exports = http.createServer((req, res) => {
     if (reqUrl.pathname.includes("add_animal")) {
         basic_service.add_animal(req, res);
     }
-
+    if (reqUrl.pathname.includes("delete_album")) {
+        basic_service.delete_album(req, res);
+    }
     if (reqUrl.pathname.includes("animal") && req.method === 'GET' && (!(reqUrl.pathname.includes("jpg")))) {
         pageService.load_animal_page(req, res);
     }
