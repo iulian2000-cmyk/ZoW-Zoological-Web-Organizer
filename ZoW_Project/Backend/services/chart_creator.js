@@ -3,14 +3,7 @@ var mysql = require('mysql');
 var PdfPrinter = require('pdfmake');
 var fs = require('fs');
 
-var SQL
-
 var SQL_interogation;
-
-
-
-
-
 
 if (process.platform == "win32") {
     SQL_interogation = "SELECT AVG(longevitate) AS \"Medie_viata\"," +
