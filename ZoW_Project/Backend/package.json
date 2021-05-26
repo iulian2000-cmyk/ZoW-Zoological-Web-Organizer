@@ -2,6 +2,7 @@
   "dependencies": {
     "alert": "^5.0.10",
     "cookies": "^0.8.0",
+    "formidable": "^1.2.2",
     "jsdom": "^16.5.3",
     "mysql": "^2.18.1",
     "pdfkit": "^0.12.1",
