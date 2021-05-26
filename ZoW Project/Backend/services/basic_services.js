@@ -214,3 +214,21 @@ exports.delete_album = function(req, res) {
         res.end();
     });
 }
+
+exports.delete_album = function(req, res) {
+    var body = '';
+    req.on('data', function(data) {
+        body += data;
+        if (body.length > 1e6)
+            req.connection.destroy();
+    });
+    req.on('end', function() {
+        var post = qs.parse(body);
+        var nume_album = post.album;
+        connection.query('DELETE FROM albumsdefault WHERE albumName=? ;', [nume_album], function(error, results, fields) {
+            // 
+        });
+        res.writeHead(301, { Location: "./admin.html" });
+        res.end();
+    });
+}
