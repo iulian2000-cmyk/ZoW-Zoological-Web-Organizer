@@ -7,8 +7,6 @@ var mysql = require('mysql');
 var XMLWriter = require('xml-writer');
 const { type } = require('os');
 
-
-
 var keys = [''];
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -28,8 +26,6 @@ exports.mainPage = function(req, res) {
     var cookies = new Cookies(req, res, { keys: keys });
     var username = cookies.get('username', { signed: true });
     var isAdmin = cookies.get('isAdmin', { signed: true });
-
-
 
     fs.readFile(pathFile, (err, data) => {
         if (err) {
@@ -55,6 +51,7 @@ exports.mainPage = function(req, res) {
         }
     });
 };
+
 exports.load_css = function(req, res) {
     var pathFile = __dirname + url.parse(req.url).pathname;
     if (process.platform == "win32") {
@@ -75,6 +72,7 @@ exports.load_css = function(req, res) {
         }
     });
 }
+
 exports.load_js = function(req, res) {
     var pathFile = __dirname + url.parse(req.url).pathname;
     if (process.platform == "win32") {
@@ -95,6 +93,7 @@ exports.load_js = function(req, res) {
         }
     });
 }
+
 exports.load_jpeg = function(req, res) {
     var pathFile = __dirname + url.parse(req.url).pathname;
     if (process.platform == "win32") {
@@ -122,6 +121,7 @@ exports.load_image = function(req, res) {
         res.end(content);
     });
 }
+
 exports.load_svg = function(req, res) {
     var pathFile = __dirname + url.parse(req.url).pathname;
     if (process.platform == "win32") {
@@ -198,8 +198,6 @@ exports.load_page = function(req, res) {
 
                         containter.appendChild(div);
                     }
-
-
                     res.write(dom.window.document.documentElement.outerHTML);
                     res.end();
                 });

@@ -4,13 +4,14 @@ const formidable = require('formidable');
 
 module.exports = http.createServer((req, res) => {
 
-    var pageService, login_service, download_service, basic_service;
+    var pageService, login_service, download_service, basic_service, load_default_album_service;
 
     if (process.platform == "win32") {
         pageService = require('../services/page_service.js');
         login_service = require('../services/login_service.js');
         download_service = require('../services/download_service.js');
         basic_service = require('../services/basic_services.js');
+        load_default_album_service = require('../services/load_default_album_service.js');
     } else {
         pageService = require('../services/page_service.js');
         login_service = require('../services/login_service.js');
@@ -68,7 +69,6 @@ module.exports = http.createServer((req, res) => {
         download_service.download_csv(req, res);
     }
 
-
     //GET endpoint
     if ((reqUrl.pathname.includes("get_PDF")) && (req.method === 'GET')) {
         download_service.download_pdf(req, res);
@@ -99,5 +99,8 @@ module.exports = http.createServer((req, res) => {
     // POST endpoint
     if (reqUrl.pathname == '/FrontEnd/pages/register' && req.method === 'POST') {
         login_service.register(req, res);
+    }
+    if (reqUrl.pathname == '/FrontEnd/load' && req.method === 'GET') {
+        load_default_album_service.load_album(req, res);
     }
 });

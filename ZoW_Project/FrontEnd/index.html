@@ -74,12 +74,12 @@
 
         <div class="albums">
             <label class="subtitle" id="alb"> Default Albums </label>
-            <select class="select" name="my albums">
-                <option value="album1"> Mamifere </option>
-                <option value="album2"> Reptile </option>
-                <option value="album3"> Dinozauri </option>
-            </select>
-            <button class="menuButton" type="submit"> Show album </button>
+            <select class="select" name="defaultAlbums" id="defaultAlbumsId">
+                    <option value="mamifere"> Mamifere </option>
+                    <option value="reptile"> Reptile </option>
+                    <option value="dinozauri"> Dinozauri </option>
+                </select>
+            <button class="menuButton" type="submit" onclick="loadAlbum()"> Show album </button>
         </div>
 
         <div class="myAlbums">
@@ -128,54 +128,10 @@
             </div>
             <button id="apply" type="submit" name="apply filters">Apply filters</button>
         </div>
-        <div class="cardsContainer">
-            <a href="pages/leu.html">
-                <div class="card">
-                    <img class="cardBackground" src="./images/leu/leu1.jpg" alt="image of a lion">
-                    <div class="cardInfo">
-                        <img class="animalImage" src="./images/leu/leu1.jpg" alt="image of a lion">
-                        <div class="animalName">
-                            <p> LEU </p>
-                        </div>
-                    </div>
-                    <div class="likes">
-                        <img class="likesIcon" src="./images/icons/likeIcon.svg" alt="likes icon">
-                        <span class="numberOfLikes"> 56 </span>
-                    </div>
-                </div>
-            </a>
-            <a href="pages/flamingo.html">
-                <div class="card">
-                    <img class="cardBackground" src="./images/flamingo/flamingo1.jpg" alt="image of a flamingo">
-                    <div class="cardInfo">
-                        <img class="animalImage" src="./images/flamingo/flamingo1.jpg" alt="image of a flamingo">
-                        <div class="animalName">
-                            <p> FLAMINGO </p>
-                        </div>
-                    </div>
-                    <div class="likes">
-                        <img class="likesIcon" src="./images/icons/likeIcon.svg" alt="likes icon">
-                        <span class="numberOfLikes"> 56 </span>
-                    </div>
-                </div>
-            </a>
 
-            <a href="pages/cameleon.html">
-                <div class="card">
-                    <img class="cardBackground" src="./images/cameleon/cameleon1.jpg" alt="image of a cameleon">
-                    <div class="cardInfo">
-                        <img class="animalImage" src="./images/cameleon/cameleon1.jpg" alt="image of a cameleon">
-                        <div class="animalName">
-                            <p> CAMELEON </p>
-                        </div>
-                    </div>
-                    <div class="likes">
-                        <img class="likesIcon" src="./images/icons/likeIcon.svg" alt="likes icon">
-                        <span class="numberOfLikes"> 56 </span>
-                    </div>
-                </div>
-            </a>
+        <div id="bigCardsContainer">
         </div>
+
     </div>
 </body>
 
