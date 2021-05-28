@@ -328,11 +328,11 @@ option {
     justify-content: space-between;
 }
 
-#f1,
-#f2,
-#f3,
-#f4,
-#f5 {
+label[for="f1"],
+label[for="f2"],
+label[for="f3"],
+label[for="f4"],
+label[for="f5"] {
     font-size: 15px;
     color: black;
 }

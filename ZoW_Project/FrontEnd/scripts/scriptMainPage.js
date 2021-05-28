@@ -1,5 +1,7 @@
 var activeMenu = true;
 var activeLog = true;
+var cardsToSort = [];
+var propertyForFilters;
 
 function showMenu() {
     var menu = document.getElementsByClassName("menu")[0];
@@ -37,6 +39,7 @@ async function loadAlbum() {
     const serverMessage = await response.json();
     document.getElementById("title").innerHTML = text.toUpperCase();
     displayCards(serverMessage);
+    cardsToSort = serverMessage;
 }
 
 async function searchData() {
@@ -51,13 +54,13 @@ async function searchData() {
 function displayCards(cardsArray) {
 
     const bigCardsContainer = document.getElementById("bigCardsContainer");
-   
-    if(cardsArray.length != 0 ){
+
+    if (cardsArray.length != 0) {
 
         if (document.getElementById("container-for-cards") !== null) {
-            bigCardsContainer.removeChild(document.getElementById("container-for-cards"));     
+            bigCardsContainer.removeChild(document.getElementById("container-for-cards"));
         }
-        if(document.getElementById("exit-id" ) != null){
+        if (document.getElementById("exit-id") != null) {
             bigCardsContainer.removeChild(document.getElementById("exit-id"));
         }
         const cardsContainer = document.createElement("div");
@@ -86,7 +89,7 @@ function displayCards(cardsArray) {
         likesIcon.src = "./images/icons/likeIcon.svg";
         const numberOfLikes = document.createElement("span");
         numberOfLikes.className = "numberOfLikes";
-    
+
         likes.appendChild(likesIcon)
         likes.appendChild(numberOfLikes);
         animalName.appendChild(pName);
@@ -96,7 +99,7 @@ function displayCards(cardsArray) {
         card.appendChild(cardInfo)
         card.appendChild(likes);
         cardHref.appendChild(card);
-    
+
         for (let i = 0; i < cardsArray.length; i++) {
             cardHref.href = `pages/animal_${cardsArray[i].id_animal}.html`;
             cardBackground.src = cardsArray[i].imagePath1;
@@ -106,20 +109,50 @@ function displayCards(cardsArray) {
             cardsContainer.appendChild(cardHref.cloneNode(true));
         }
         bigCardsContainer.appendChild(cardsContainer);
-      
-        
-    }else{ 
+
+
+    } else {
         if (document.getElementById("container-for-cards") !== null) {
-            bigCardsContainer.removeChild(document.getElementById("container-for-cards"));     
-        }    
-        if(document.getElementById("exit-id" ) != null){
+            bigCardsContainer.removeChild(document.getElementById("container-for-cards"));
+        }
+        if (document.getElementById("exit-id") != null) {
             bigCardsContainer.removeChild(document.getElementById("exit-id"));
         }
         const exitMessage = document.createElement("p");
         exitMessage.id = "exit-id";
         exitMessage.textContent = "No animal found in our database!";
         bigCardsContainer.appendChild(exitMessage);
-       
+
     }
-    
+}
+
+function filterCards() {
+    if (cardsToSort.length > 0) {
+        if (document.getElementById('f1').checked) {
+            propertyForFilters = document.getElementById('f1').value;
+        }
+        if (document.getElementById('f2').checked) {
+            propertyForFilters = document.getElementById('f2').value;
+        }
+        if (document.getElementById('f3').checked) {
+            propertyForFilters = document.getElementById('f3').value;
+        }
+        if (document.getElementById('f4').checked) {
+            propertyForFilters = document.getElementById('f4').value;
+        }
+        if (document.getElementById('f5').checked) {
+            propertyForFilters = document.getElementById('f5').value;
+        }
+        displayCards(cardsToSort.sort(compareCardsByProperty));
+    }
+}
+
+function compareCardsByProperty(card1, card2) {
+    if (card1[propertyForFilters] > card2[propertyForFilters]) {
+        return 1;
+    } else if (card1[propertyForFilters] < card2[propertyForFilters]) {
+        return -1;
+    } else {
+        return 0;
+    }
 }

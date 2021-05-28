@@ -19,9 +19,9 @@
             <img class="logo" src="./images/logo/logo.png " alt="logo ">
         </div>
         <div class="searchBar">
-            <input class="searchInput" type="text" id="search-query" placeholder="Search animal" name="search" onkeydown = "if (event.keyCode == 13)
-            document.getElementById('search-button-id').click()" >
-            <button class="searchButton" type="submit" id="search-button-id" onclick="searchData()" ><img class="searchIcon"  src="./images/icons/search.png" alt="search icon"></button>
+            <input class="searchInput" type="text" id="search-query" placeholder="Search animal" name="search" onkeydown="if (event.keyCode == 13)
+            document.getElementById('search-button-id').click()">
+            <button class="searchButton" type="submit" id="search-button-id" onclick="searchData()"><img class="searchIcon"  src="./images/icons/search.png" alt="search icon"></button>
         </div>
         <div class="userOptions">
             <label class="username"> <p id="userLabel"> </p> </label>
@@ -107,27 +107,27 @@
             <label id="orderBy"> Order by: </label>
             <div class="fils">
                 <div>
-                    <label id="f1"> name</label>
-                    <input type="radio" name="filters" value="name">
+                    <label for="f1"> name</label>
+                    <input type="radio" name="filters" value="animalName" id="f1">
                 </div>
                 <div>
-                    <label id="f2"> longevity </label>
-                    <input type="radio" name="filters" value="longevity">
+                    <label for="f2"> longevity </label>
+                    <input type="radio" name="filters" value="longevitate" id="f2">
                 </div>
                 <div>
-                    <label id="f3"> popularity</label>
-                    <input type="radio" name="filters" value="popularity">
+                    <label for="f3"> popularity</label>
+                    <input type="radio" name="filters" value="likes" id="f3">
                 </div>
                 <div>
-                    <label id="f4"> size</label>
-                    <input type="radio" name="filters" value="size">
+                    <label for="f4"> size</label>
+                    <input type="radio" name="filters" value="inaltime" id="f4">
                 </div>
                 <div>
-                    <label id="f5"> weight</label>
-                    <input type="radio" name="filters" value="weight">
+                    <label for="f5"> weight</label>
+                    <input type="radio" name="filters" value="greutate" id="f5">
                 </div>
             </div>
-            <button id="apply" type="submit" name="apply filters">Apply filters</button>
+            <button id="apply" type="submit" name="apply filters" onclick="filterCards()">Apply filters</button>
         </div>
 
         <div id="bigCardsContainer">
