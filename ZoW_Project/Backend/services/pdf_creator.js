@@ -17,4 +17,7 @@ pdfDoc.image('chart2.png', 50, 440, { width: 500, height: 320 });
 pdfDoc.addPage();     
 pdfDoc.image('chart3.png', 50,  50, { width: 500, height: 320 });
 pdfDoc.image('chart4.png', 50,  400, { width: 500, height: 320 });
+pdfDoc.addPage();
+pdfDoc.image('chart5.png', 50,  50, { width: 500, height: 320 });
+pdfDoc.image('chart6.png', 50,  400, { width: 500, height: 320 });
 pdfDoc.end();
