@@ -35,6 +35,7 @@ async function loadAlbum() {
     let text = sel.options[sel.selectedIndex].text.toLowerCase();
     const response = await fetch(`http://127.0.0.1:5000/FrontEnd/load?defaultAlbums=${text}`);
     const serverMessage = await response.json();
+    document.getElementById("title").innerHTML = text.toUpperCase();
     displayCards(serverMessage);
 }
 
