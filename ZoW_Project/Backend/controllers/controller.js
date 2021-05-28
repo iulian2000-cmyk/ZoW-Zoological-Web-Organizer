@@ -19,6 +19,7 @@ module.exports = http.createServer((req, res) => {
         download_service = require('../services/download_service.js');
         basic_service = require('../services/basic_services.js');
         search_bar_service = require('../services/search_bar_service.js');
+        load_default_album_service = require('../services/load_default_album_service.js');
     }
     //console.log(exactPage);
     const reqUrl = url.parse(req.url, true);
