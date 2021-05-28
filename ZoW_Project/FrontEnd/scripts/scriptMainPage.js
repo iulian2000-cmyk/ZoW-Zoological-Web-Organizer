@@ -46,55 +46,69 @@ async function searchData() {
     displayCards(serverMessage);
 }
 
+
 function displayCards(cardsArray) {
+
     const bigCardsContainer = document.getElementById("bigCardsContainer");
-    if (document.getElementById("container-for-cards") !== null) {
-        bigCardsContainer.removeChild(document.getElementById("container-for-cards"));
+   
+    if(cardsArray.length != 0 ){
+      
+        if (document.getElementById("container-for-cards") !== null) {
+            bigCardsContainer.removeChild(document.getElementById("container-for-cards"));     
+        }
+        const cardsContainer = document.createElement("div");
+        cardsContainer.className = "cardsContainer";
+        cardsContainer.id = "container-for-cards";
+        const cardHref = document.createElement("a");
+        cardHref.class = "cardHref";
+        const card = document.createElement("div");
+        card.className = "card";
+        const cardBackground = document.createElement("img");
+        cardBackground.className = "cardBackground";
+        cardBackground.alt = "";
+        const cardInfo = document.createElement("div");
+        cardInfo.className = "cardInfo";
+        const likes = document.createElement("div");
+        likes.className = "likes";
+        const animalImage = document.createElement("img");
+        animalImage.className = "animalImage";
+        animalImage.alt = "";
+        const animalName = document.createElement("div");
+        animalName.className = "animalName";
+        const pName = document.createElement("p");
+        const likesIcon = document.createElement("img");
+        likesIcon.className = "likesIcon";
+        likesIcon.alt = "";
+        likesIcon.src = "./images/icons/likeIcon.svg";
+        const numberOfLikes = document.createElement("span");
+        numberOfLikes.className = "numberOfLikes";
+    
+        likes.appendChild(likesIcon)
+        likes.appendChild(numberOfLikes);
+        animalName.appendChild(pName);
+        cardInfo.appendChild(animalImage)
+        cardInfo.appendChild(animalName);
+        card.appendChild(cardBackground)
+        card.appendChild(cardInfo)
+        card.appendChild(likes);
+        cardHref.appendChild(card);
+    
+        for (let i = 0; i < cardsArray.length; i++) {
+            cardHref.href = `pages/animal_${cardsArray[i].id_animal}.html`;
+            cardBackground.src = cardsArray[i].imagePath1;
+            animalImage.src = cardsArray[i].imagePath1;
+            numberOfLikes.innerHTML = cardsArray[i].likes;
+            pName.innerHTML = cardsArray[i].animalName;
+            cardsContainer.appendChild(cardHref.cloneNode(true));
+        }
+        bigCardsContainer.appendChild(cardsContainer);
+    }else{ 
+        if (document.getElementById("container-for-cards") !== null) {
+            bigCardsContainer.removeChild(document.getElementById("container-for-cards"));     
+        }
+        const exitMessage = document.createElement("p");
+        exitMessage.textContent = "No animal found in our database!";
+        bigCardsContainer.appendChild(exitMessage);
     }
-    const cardsContainer = document.createElement("div");
-    cardsContainer.className = "cardsContainer";
-    cardsContainer.id = "container-for-cards";
-    const cardHref = document.createElement("a");
-    cardHref.class = "cardHref";
-    const card = document.createElement("div");
-    card.className = "card";
-    const cardBackground = document.createElement("img");
-    cardBackground.className = "cardBackground";
-    cardBackground.alt = "";
-    const cardInfo = document.createElement("div");
-    cardInfo.className = "cardInfo";
-    const likes = document.createElement("div");
-    likes.className = "likes";
-    const animalImage = document.createElement("img");
-    animalImage.className = "animalImage";
-    animalImage.alt = "";
-    const animalName = document.createElement("div");
-    animalName.className = "animalName";
-    const pName = document.createElement("p");
-    const likesIcon = document.createElement("img");
-    likesIcon.className = "likesIcon";
-    likesIcon.alt = "";
-    likesIcon.src = "./images/icons/likeIcon.svg";
-    const numberOfLikes = document.createElement("span");
-    numberOfLikes.className = "numberOfLikes";
-
-    likes.appendChild(likesIcon)
-    likes.appendChild(numberOfLikes);
-    animalName.appendChild(pName);
-    cardInfo.appendChild(animalImage)
-    cardInfo.appendChild(animalName);
-    card.appendChild(cardBackground)
-    card.appendChild(cardInfo)
-    card.appendChild(likes);
-    cardHref.appendChild(card);
-
-    for (let i = 0; i < cardsArray.length; i++) {
-        cardHref.href = `pages/animal_${cardsArray[i].id_animal}.html`;
-        cardBackground.src = cardsArray[i].imagePath1;
-        animalImage.src = cardsArray[i].imagePath1;
-        numberOfLikes.innerHTML = cardsArray[i].likes;
-        pName.innerHTML = cardsArray[i].animalName;
-        cardsContainer.appendChild(cardHref.cloneNode(true));
-    }
-    bigCardsContainer.appendChild(cardsContainer);
+    
 }
