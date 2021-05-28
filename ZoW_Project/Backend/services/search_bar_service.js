@@ -9,10 +9,10 @@ const connection = mysql.createConnection({
 });
 exports.search_data = function(req, res) {
     const reqUrl = url.parse(req.url, true);
-    const animalNameToSearch = reqUrl.query.search;
+    const animalNameToSearch = reqUrl.query.search.toUpperCase();
     console.log(animalNameToSearch);
-    
-    connection.query(`SELECT  animalName, likes, imagePath1 from animals where animalName='${animalNameToSearch}';`, function(error, results, fields) {
+
+    connection.query(`SELECT id_animal, animalName, likes, imagePath1 from animals where animalName='${animalNameToSearch}';`, function(error, results, fields) {
         if (results.length > 0) {
             const response = [];
             for (let i = 0; i < results.length; i++) {
@@ -29,4 +29,3 @@ exports.search_data = function(req, res) {
     });
 
 }
-

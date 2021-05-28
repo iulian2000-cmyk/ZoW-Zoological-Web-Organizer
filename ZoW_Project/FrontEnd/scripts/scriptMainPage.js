@@ -38,15 +38,12 @@ async function loadAlbum() {
     displayCards(serverMessage);
 }
 
-function searchData() {
-    const sel = document.getElementById("search-nav");
+async function searchData() {
+    const sel = document.getElementById("search-query");
     let text = sel.value;
-    console.log(text);
-    //const response = await fetch(`http://127.0.0.1:5000/FrontEnd/search?search=${text}`);
-   // const serverMessage = await response.json();
-   // console.log(serverMessage);
-
-    //displayCards(serverMessage);
+    const response = await fetch(`http://127.0.0.1:5000/FrontEnd/search?search=${text}`);
+    const serverMessage = await response.json();
+    displayCards(serverMessage);
 }
 
 function displayCards(cardsArray) {
