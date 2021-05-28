@@ -4,7 +4,7 @@ const formidable = require('formidable');
 
 module.exports = http.createServer((req, res) => {
 
-    var pageService, login_service, download_service, basic_service, load_default_album_service;
+    var pageService, login_service, download_service, basic_service, load_default_album_service,search_bar_service;
 
     if (process.platform == "win32") {
         pageService = require('../services/page_service.js');
@@ -12,11 +12,13 @@ module.exports = http.createServer((req, res) => {
         download_service = require('../services/download_service.js');
         basic_service = require('../services/basic_services.js');
         load_default_album_service = require('../services/load_default_album_service.js');
+        search_bar_service = require('../services/search_bar_service.js');
     } else {
         pageService = require('../services/page_service.js');
         login_service = require('../services/login_service.js');
         download_service = require('../services/download_service.js');
         basic_service = require('../services/basic_services.js');
+        search_bar_service = require('../services/search_bar_service.js');
     }
     //console.log(exactPage);
     const reqUrl = url.parse(req.url, true);
@@ -102,5 +104,9 @@ module.exports = http.createServer((req, res) => {
     }
     if (reqUrl.pathname == '/FrontEnd/load' && req.method === 'GET') {
         load_default_album_service.load_album(req, res);
+    }
+    if (reqUrl.pathname == '/FrontEnd/search' && req.method === 'GET') {
+       search_bar_service.search_data(req, res);
+       console.log("Hereeee");
     }
 });
