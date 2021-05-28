@@ -38,6 +38,14 @@ async function loadAlbum() {
     displayCards(serverMessage);
 }
 
+async function searchData() {
+    const sel = document.getElementsByClassName("searchInput");
+    let text = sel.text.toUpperCase();
+    const response = await fetch(`http://127.0.0.1:5000/FrontEnd/search?search=${text}`);
+    const serverMessage = await response.json();
+    displayCards(serverMessage);
+}
+
 function displayCards(cardsArray) {
     const bigCardsContainer = document.getElementById("bigCardsContainer");
     if (document.getElementById("container-for-cards") !== null) {
