@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/styleMainPage.css">
     <link rel="icon" href="./images/icons/iconZ.png">
     <script src="./scripts/scriptMainPage.js"></script>
+    <script src="./scripts/dataSearch.js"></script>
     <title>Zow Atlas</title>
 </head>
 
@@ -19,8 +20,8 @@
             <img class="logo" src="./images/logo/logo.png " alt="logo ">
         </div>
         <div class="searchBar">
-            <input class="searchInput" type="text" placeholder="Search" name="search">
-            <button class="searchButton" type="submit"><img class="searchIcon" src="./images/icons/search.png" alt="search icon"></button>
+            <input class="searchInput" type="text" id="query" placeholder="Search" name="search">
+            <button class="searchButton" type="submit"  onclick="searchData()"  ><img class="searchIcon"  src="./images/icons/search.png" alt="search icon"></button>
         </div>
         <div class="userOptions">
             <label class="username"> <p id="userLabel"> </p> </label>
