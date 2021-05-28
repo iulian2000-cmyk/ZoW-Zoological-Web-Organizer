@@ -53,9 +53,12 @@ function displayCards(cardsArray) {
     const bigCardsContainer = document.getElementById("bigCardsContainer");
    
     if(cardsArray.length != 0 ){
-      
+
         if (document.getElementById("container-for-cards") !== null) {
             bigCardsContainer.removeChild(document.getElementById("container-for-cards"));     
+        }
+        if(document.getElementById("exit-id" ) != null){
+            bigCardsContainer.removeChild(document.getElementById("exit-id"));
         }
         const cardsContainer = document.createElement("div");
         cardsContainer.className = "cardsContainer";
@@ -103,13 +106,17 @@ function displayCards(cardsArray) {
             cardsContainer.appendChild(cardHref.cloneNode(true));
         }
         bigCardsContainer.appendChild(cardsContainer);
+      
+        
     }else{ 
         if (document.getElementById("container-for-cards") !== null) {
             bigCardsContainer.removeChild(document.getElementById("container-for-cards"));     
-        }
+        }    
         const exitMessage = document.createElement("p");
+        exitMessage.id = "exit-id";
         exitMessage.textContent = "No animal found in our database!";
         bigCardsContainer.appendChild(exitMessage);
+       
     }
     
 }
