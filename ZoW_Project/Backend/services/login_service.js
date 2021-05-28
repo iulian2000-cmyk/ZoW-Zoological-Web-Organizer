@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '123',
-    database: 'Zow_Atlas'
+    database: 'zow_atlas'
 });
 
 exports.login = function(req, res) {
