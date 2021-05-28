@@ -112,6 +112,9 @@ function displayCards(cardsArray) {
         if (document.getElementById("container-for-cards") !== null) {
             bigCardsContainer.removeChild(document.getElementById("container-for-cards"));     
         }    
+        if(document.getElementById("exit-id" ) != null){
+            bigCardsContainer.removeChild(document.getElementById("exit-id"));
+        }
         const exitMessage = document.createElement("p");
         exitMessage.id = "exit-id";
         exitMessage.textContent = "No animal found in our database!";
