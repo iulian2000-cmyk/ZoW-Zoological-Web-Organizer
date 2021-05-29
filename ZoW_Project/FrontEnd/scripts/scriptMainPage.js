@@ -8,7 +8,7 @@ function showMenu() {
     if (activeMenu == true) {
         menu.style.display = "flex";
         if (window.innerWidth >= 1150) {
-            document.getElementsByClassName("content")[0].style.width = "calc(100% - 210px)";
+            document.getElementsByClassName("content")[0].style.width = "calc(100% - 220px)";
         }
         activeMenu = false;
 
@@ -38,8 +38,32 @@ async function loadAlbum() {
     const response = await fetch(`http://127.0.0.1:5000/FrontEnd/load?defaultAlbums=${text}`);
     const serverMessage = await response.json();
     document.getElementById("title").innerHTML = text.toUpperCase();
+    document.getElementsByClassName("filters")[0].style.display = "flex";
     displayCards(serverMessage);
     cardsToSort = serverMessage;
+}
+
+async function generateAlbum() {
+    const sel1 = document.getElementById("generateCategory");
+    const sel2 = document.getElementById("generateDomesticity");
+    const sel3 = document.getElementById("generateEdibility");
+    let textSel1 = sel1.options[sel1.selectedIndex].text.toLowerCase();
+    let textSel2 = sel2.options[sel2.selectedIndex].text.toLowerCase();
+    let textSel3 = sel3.options[sel3.selectedIndex].text.toLowerCase();
+    const response = await fetch(`http://127.0.0.1:5000/FrontEnd/generate?category=${textSel1}&domesticity=${textSel2}&edibility=${textSel3}`);
+    const serverMessage = await response.json();
+    if (serverMessage.length > 0) {
+        document.getElementById("title").innerHTML = "Album generated";
+        displayCards(serverMessage);
+        cardsToSort = serverMessage;
+        document.getElementsByClassName("filters")[0].style.display = "flex";
+    } else {
+        if (document.getElementById("container-for-cards") !== null) {
+            bigCardsContainer.removeChild(document.getElementById("container-for-cards"));
+        }
+        document.getElementById("title").innerHTML = "No animals found based on the selected properties";
+        document.getElementsByClassName("filters")[0].style.display = "none";
+    }
 }
 
 async function searchData() {
@@ -47,7 +71,16 @@ async function searchData() {
     let text = sel.value;
     const response = await fetch(`http://127.0.0.1:5000/FrontEnd/search?search=${text}`);
     const serverMessage = await response.json();
-    displayCards(serverMessage);
+    if (serverMessage.length > 0) {
+        document.getElementById("title").innerHTML = text.toUpperCase();
+        displayCards(serverMessage);
+    } else {
+        if (document.getElementById("container-for-cards") !== null) {
+            bigCardsContainer.removeChild(document.getElementById("container-for-cards"));
+        }
+        document.getElementById("title").innerHTML = "No animal found in our database!";
+    }
+    document.getElementsByClassName("filters")[0].style.display = "none";
 }
 
 
@@ -55,75 +88,57 @@ function displayCards(cardsArray) {
 
     const bigCardsContainer = document.getElementById("bigCardsContainer");
 
-    if (cardsArray.length != 0) {
-
-        if (document.getElementById("container-for-cards") !== null) {
-            bigCardsContainer.removeChild(document.getElementById("container-for-cards"));
-        }
-        if (document.getElementById("exit-id") != null) {
-            bigCardsContainer.removeChild(document.getElementById("exit-id"));
-        }
-        const cardsContainer = document.createElement("div");
-        cardsContainer.className = "cardsContainer";
-        cardsContainer.id = "container-for-cards";
-        const cardHref = document.createElement("a");
-        cardHref.class = "cardHref";
-        const card = document.createElement("div");
-        card.className = "card";
-        const cardBackground = document.createElement("img");
-        cardBackground.className = "cardBackground";
-        cardBackground.alt = "";
-        const cardInfo = document.createElement("div");
-        cardInfo.className = "cardInfo";
-        const likes = document.createElement("div");
-        likes.className = "likes";
-        const animalImage = document.createElement("img");
-        animalImage.className = "animalImage";
-        animalImage.alt = "";
-        const animalName = document.createElement("div");
-        animalName.className = "animalName";
-        const pName = document.createElement("p");
-        const likesIcon = document.createElement("img");
-        likesIcon.className = "likesIcon";
-        likesIcon.alt = "";
-        likesIcon.src = "./images/icons/likeIcon.svg";
-        const numberOfLikes = document.createElement("span");
-        numberOfLikes.className = "numberOfLikes";
-
-        likes.appendChild(likesIcon)
-        likes.appendChild(numberOfLikes);
-        animalName.appendChild(pName);
-        cardInfo.appendChild(animalImage)
-        cardInfo.appendChild(animalName);
-        card.appendChild(cardBackground)
-        card.appendChild(cardInfo)
-        card.appendChild(likes);
-        cardHref.appendChild(card);
-
-        for (let i = 0; i < cardsArray.length; i++) {
-            cardHref.href = `pages/animal_${cardsArray[i].id_animal}.html`;
-            cardBackground.src = cardsArray[i].imagePath1;
-            animalImage.src = cardsArray[i].imagePath1;
-            numberOfLikes.innerHTML = cardsArray[i].likes;
-            pName.innerHTML = cardsArray[i].animalName;
-            cardsContainer.appendChild(cardHref.cloneNode(true));
-        }
-        bigCardsContainer.appendChild(cardsContainer);
-
-
-    } else {
-        if (document.getElementById("container-for-cards") !== null) {
-            bigCardsContainer.removeChild(document.getElementById("container-for-cards"));
-        }
-        if (document.getElementById("exit-id") != null) {
-            bigCardsContainer.removeChild(document.getElementById("exit-id"));
-        }
-        const exitMessage = document.createElement("p");
-        exitMessage.id = "exit-id";
-        exitMessage.textContent = "No animal found in our database!";
-        bigCardsContainer.appendChild(exitMessage);
-
+    if (document.getElementById("container-for-cards") !== null) {
+        bigCardsContainer.removeChild(document.getElementById("container-for-cards"));
     }
+
+    const cardsContainer = document.createElement("div");
+    cardsContainer.className = "cardsContainer";
+    cardsContainer.id = "container-for-cards";
+    const cardHref = document.createElement("a");
+    cardHref.class = "cardHref";
+    const card = document.createElement("div");
+    card.className = "card";
+    const cardBackground = document.createElement("img");
+    cardBackground.className = "cardBackground";
+    cardBackground.alt = "";
+    const cardInfo = document.createElement("div");
+    cardInfo.className = "cardInfo";
+    const likes = document.createElement("div");
+    likes.className = "likes";
+    const animalImage = document.createElement("img");
+    animalImage.className = "animalImage";
+    animalImage.alt = "";
+    const animalName = document.createElement("div");
+    animalName.className = "animalName";
+    const pName = document.createElement("p");
+    const likesIcon = document.createElement("img");
+    likesIcon.className = "likesIcon";
+    likesIcon.alt = "";
+    likesIcon.src = "./images/icons/likeIcon.svg";
+    const numberOfLikes = document.createElement("span");
+    numberOfLikes.className = "numberOfLikes";
+
+    likes.appendChild(likesIcon)
+    likes.appendChild(numberOfLikes);
+    animalName.appendChild(pName);
+    cardInfo.appendChild(animalImage)
+    cardInfo.appendChild(animalName);
+    card.appendChild(cardBackground)
+    card.appendChild(cardInfo)
+    card.appendChild(likes);
+    cardHref.appendChild(card);
+
+    for (let i = 0; i < cardsArray.length; i++) {
+        cardHref.href = `pages/animal_${cardsArray[i].id_animal}.html`;
+        cardBackground.src = cardsArray[i].imagePath1;
+        animalImage.src = cardsArray[i].imagePath1;
+        numberOfLikes.innerHTML = cardsArray[i].likes;
+        pName.innerHTML = cardsArray[i].animalName;
+        cardsContainer.appendChild(cardHref.cloneNode(true));
+    }
+
+    bigCardsContainer.appendChild(cardsContainer);
 }
 
 function filterCards() {

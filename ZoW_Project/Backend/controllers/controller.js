@@ -12,6 +12,7 @@ module.exports = http.createServer((req, res) => {
         download_service = require('../services/download_service.js');
         basic_service = require('../services/basic_services.js');
         load_default_album_service = require('../services/load_default_album_service.js');
+        generate_album_service = require('../services/generate_album_service.js');
         search_bar_service = require('../services/search_bar_service.js');
     } else {
         pageService = require('../services/page_service.js');
@@ -20,6 +21,7 @@ module.exports = http.createServer((req, res) => {
         basic_service = require('../services/basic_services.js');
         search_bar_service = require('../services/search_bar_service.js');
         load_default_album_service = require('../services/load_default_album_service.js');
+        generate_album_service = require('../services/generate_album_service.js');
     }
     //console.log(exactPage);
     const reqUrl = url.parse(req.url, true);
@@ -105,6 +107,9 @@ module.exports = http.createServer((req, res) => {
     }
     if (reqUrl.pathname == '/FrontEnd/load' && req.method === 'GET') {
         load_default_album_service.load_album(req, res);
+    }
+    if (reqUrl.pathname == '/FrontEnd/generate' && req.method === 'GET') {
+        generate_album_service.generate_album(req, res);
     }
     if (reqUrl.pathname == '/FrontEnd/search' && req.method === 'GET') {
         search_bar_service.search_data(req, res);
