@@ -126,9 +126,12 @@ h2 {
     margin-bottom: 20px;
     color: #2b4868;
     box-shadow: 0 0 3px 1px #2b4868;
+    border: none;
     height: auto;
     width: auto;
-    padding: 5px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    background: none;
 }
 
 #rss:hover {
