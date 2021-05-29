@@ -14,7 +14,7 @@ exports.search_data = function(req, res) {
 
     connection.query(`SELECT id_animal, animalName, likes, imagePath1 from animals where animalName=TRIM('${animalNameToSearch}');`, function(error, results, fields) {
         const response = [];
-        
+
         if (results.length > 0) {
             for (let i = 0; i < results.length; i++) {
                 response.push(results[i]);
@@ -23,10 +23,9 @@ exports.search_data = function(req, res) {
             res.writeHead(200, { 'Content-type': 'application/json' });
             res.end(JSON.stringify(response));
         } else {
-        
-            res.writeHead(404, { 'Content-type': 'application/json' });
-            res.write(JSON.stringify(response));
-            res.end();
+            const response = [];
+            res.writeHead(200, { 'Content-type': 'application/json' });
+            res.end(JSON.stringify(response));
         }
     });
 
