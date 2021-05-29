@@ -67,9 +67,17 @@
             </select>
             <label class="properties"> Edibility </label>
             <select class="select" name="edibility" id=generateEdibility>
-                <option value="none">None</option>
-                <option value="comestibil"> Comestibil </option>
-                <option value="necomestibil"> Incomestibil </option>
+            <option value="none">None</option>
+            <option value="comestibil"> Comestibil </option>
+            <option value="necomestibil"> Incomestibil </option>
+            </select>
+            <label class="properties"> Longevity </label>
+            <select class="select" name="longevity" id=generateLongevity>
+                <option value="first">&lt;6 months</option>
+                <option value="second">&lt;1 year</option>
+                <option value="third" selected> 1-10 years</option>
+                <option value="forth"> 10-100 years </option>
+                <option value="fifth"> &gt;100 years </option>
             </select>
             <button class="menuButton" type="submit" onclick="generateAlbum()"> Generate album </button>
         </div>

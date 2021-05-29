@@ -74,10 +74,12 @@ async function generateAlbum() {
     const sel1 = document.getElementById("generateCategory");
     const sel2 = document.getElementById("generateDomesticity");
     const sel3 = document.getElementById("generateEdibility");
+    const sel4 = document.getElementById("generateLongevity");
     let textSel1 = sel1.options[sel1.selectedIndex].text.toLowerCase();
     let textSel2 = sel2.options[sel2.selectedIndex].text.toLowerCase();
     let textSel3 = sel3.options[sel3.selectedIndex].text.toLowerCase();
-    const response = await fetch(`http://127.0.0.1:5000/FrontEnd/generate?category=${textSel1}&domesticity=${textSel2}&edibility=${textSel3}`);
+    let textSel4 = sel4.options[sel4.selectedIndex].text;
+    const response = await fetch(`http://127.0.0.1:5000/FrontEnd/generate?category=${textSel1}&domesticity=${textSel2}&edibility=${textSel3}&longevity=${textSel4}`);
     const serverMessage = await response.json();
     if (serverMessage.length > 0) {
         document.getElementById("title").innerHTML = "Album generated";

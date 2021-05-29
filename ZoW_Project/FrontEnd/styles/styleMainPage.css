@@ -210,12 +210,16 @@ input[type="text"] {
     border: none;
     font-size: 20px;
     color: #2b4868;
-    margin-top: 15px;
 }
 
 #userInstructions:hover {
     cursor: pointer;
     font-weight: bold;
+}
+
+#download_pdf,
+#download_csv {
+    display: none;
 }
 
 .containerMenu,
@@ -240,6 +244,7 @@ input[type="text"] {
     font-size: x-large;
     font-weight: 800;
     color: #2b4868;
+    margin-bottom: 0;
 }
 
 .menuButton {
@@ -325,6 +330,7 @@ option {
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-top: 10px;
 }
 
 #filtersText {
