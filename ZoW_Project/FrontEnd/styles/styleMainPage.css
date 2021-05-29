@@ -176,7 +176,7 @@ input[type="text"] {
     left: 0;
     bottom: 0;
     top: 3.5em;
-    width: 200px;
+    width: 260px;
     overflow: auto;
     z-index: 1;
 }
