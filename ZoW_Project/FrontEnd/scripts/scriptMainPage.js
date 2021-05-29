@@ -3,6 +3,32 @@ var activeLog = true;
 var cardsToSort = [];
 var propertyForFilters;
 
+window.onload = function() {
+    var modal = document.getElementById("aboutModal");
+
+    var btn = document.getElementById("userInstructions");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = () => {
+        modal.style.display = "block";
+        document.getElementsByClassName("navBar")[0].style.zIndex = -1;
+    }
+    span.onclick = () => {
+        modal.style.display = "none";
+        document.getElementsByClassName("navBar")[0].style.display = "flex";
+        document.getElementsByClassName("navBar")[0].style.zIndex = 2;
+    }
+
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.getElementsByClassName("navBar")[0].style.display = "flex";
+            document.getElementsByClassName("navBar")[0].style.zIndex = 2;
+        }
+    }
+}
+
 function showMenu() {
     var menu = document.getElementsByClassName("menu")[0];
     if (activeMenu == true) {
@@ -39,6 +65,7 @@ async function loadAlbum() {
     const serverMessage = await response.json();
     document.getElementById("title").innerHTML = text.toUpperCase();
     document.getElementsByClassName("filters")[0].style.display = "flex";
+    document.getElementById("mainImage").style.display = "none";
     displayCards(serverMessage);
     cardsToSort = serverMessage;
 }
@@ -57,6 +84,7 @@ async function generateAlbum() {
         displayCards(serverMessage);
         cardsToSort = serverMessage;
         document.getElementsByClassName("filters")[0].style.display = "flex";
+        document.getElementById("mainImage").style.display = "none";
     } else {
         if (document.getElementById("container-for-cards") !== null) {
             bigCardsContainer.removeChild(document.getElementById("container-for-cards"));
@@ -73,6 +101,7 @@ async function searchData() {
     const serverMessage = await response.json();
     if (serverMessage.length > 0) {
         document.getElementById("title").innerHTML = text.toUpperCase();
+        document.getElementById("mainImage").style.display = "none";
         displayCards(serverMessage);
     } else {
         if (document.getElementById("container-for-cards") !== null) {
