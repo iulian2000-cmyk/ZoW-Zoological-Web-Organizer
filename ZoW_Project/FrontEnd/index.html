@@ -49,28 +49,29 @@
         <div class="generateAlbum">
             <label class="subtitle"> Generate Album </label>
             <label class="properties"> Category </label>
-            <select class="select" name="categories">
-                <option value="terestre"> Terestre </option>
-                <option value="acvatice"> Acvatice </option>
-                <option value="aeriene"> Aeriene </option>
-                <option value="mamifere"> Mamifere </option>
-                <option value="pasari"> Pasari </option>
-                <option value="reptile"> Reptile </option>
-                <option value="dinozauri"> Dinozauri </option>
+            <select class="select" name="category" id="generateCategory">
+                <option value="terestru"> Terestru </option>
+                <option value="acvatic"> Acvatic </option>
+                <option value="aerian"> Aerian </option>
+                <option value="mamifer"> Mamifer </option>
+                <option value="pasare"> Pasare </option>
+                <option value="reptila"> Reptila </option>
+                <option value="dinozaur"> Dinozaur </option>
+                <option value="insecta"> Insecta </option>
             </select>
             <label class="properties"> Domesticity </label>
-            <select class="select" name="domesticity">
+            <select class="select" name="domesticity" id="generateDomesticity">
                 <option value="none"> None </option>
                 <option value="domestic"> Domestic </option>
                 <option value="salbatic"> Salbatic </option>
             </select>
             <label class="properties"> Edibility </label>
-            <select class="select" name="edibility">
+            <select class="select" name="edibility" id=generateEdibility>
                 <option value="none">None</option>
                 <option value="comestibil"> Comestibil </option>
-                <option value="necomestibil"> Necomestibil </option>
+                <option value="necomestibil"> Incomestibil </option>
             </select>
-            <button class="menuButton" type="submit"> Generate album </button>
+            <button class="menuButton" type="submit" onclick="generateAlbum()"> Generate album </button>
         </div>
 
         <div class="albums">
@@ -79,12 +80,15 @@
                     <option value="mamifere"> Mamifere </option>
                     <option value="reptile"> Reptile </option>
                     <option value="dinozauri"> Dinozauri </option>
+                    <option value="insecte"> Insecte </option>
+                    <option value="pasari"> Pasari </option>
+                    <option value="pesti"> Pesti </option>
                 </select>
             <button class="menuButton" type="submit" onclick="loadAlbum()"> Show album </button>
         </div>
 
         <div class="myAlbums">
-            <label class="subtitle" id="myalb"> My albums </label>
+            <label class="subtitle" id="myalb"> Saved albums </label>
             <select class="select" name="my albums">
                 <option value="album1"> Album1 </option>
                 <option value="album2"> Album2 </option>
