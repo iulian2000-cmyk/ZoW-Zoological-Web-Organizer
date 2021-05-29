@@ -21,9 +21,9 @@ exports.load_album = function(req, res) {
             res.writeHead(200, { 'Content-type': 'application/json' });
             res.end(JSON.stringify(response));
         } else {
-            res.writeHead(404, { 'Content-type': 'application/json' });
-            res.write('Page not found' + JSON.stringify(err));
-            res.end();
+            const response = [];
+            res.writeHead(200, { 'Content-type': 'application/json' });
+            res.end(JSON.stringify(response));
         }
     });
 }
