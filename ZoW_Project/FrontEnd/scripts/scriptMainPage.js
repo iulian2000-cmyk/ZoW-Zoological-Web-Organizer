@@ -78,7 +78,7 @@ async function searchData() {
         if (document.getElementById("container-for-cards") !== null) {
             bigCardsContainer.removeChild(document.getElementById("container-for-cards"));
         }
-        document.getElementById("title").innerHTML = "No animal found in our database!";
+        document.getElementById("title").innerHTML = `No results found for "${text}"`;
     }
     document.getElementsByClassName("filters")[0].style.display = "none";
 }

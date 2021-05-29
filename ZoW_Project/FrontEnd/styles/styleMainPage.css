@@ -291,7 +291,7 @@ option {
 }
 
 .filters {
-    display: flex;
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
