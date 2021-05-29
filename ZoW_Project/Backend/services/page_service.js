@@ -44,6 +44,7 @@ exports.mainPage = function(req, res) {
                 res.write(dom.window.document.documentElement.outerHTML);
                 res.end();
             } else {
+                dom.window.document.getElementsByClassName("myAlbums")[0].style.display = "none";
                 dom.window.document.getElementById("arrow").style.display = "none";
                 res.write(dom.window.document.documentElement.outerHTML);
                 res.end();
