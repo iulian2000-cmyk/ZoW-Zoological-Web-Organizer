@@ -116,7 +116,6 @@ module.exports = http.createServer((req, res) => {
         search_bar_service.search_data(req, res);
     }
     if (reqUrl.pathname.includes("save") && req.method === 'POST') {
-        console.log("am ajuns in controller");
         save_album_service.save_album(req, res);
     }
 

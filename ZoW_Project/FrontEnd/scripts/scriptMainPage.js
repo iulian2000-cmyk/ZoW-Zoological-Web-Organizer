@@ -225,7 +225,6 @@ async function saveAlbum() {
         for (let obj of cardsToSort) {
             objToSend.animals.push(obj.id_animal);
         }
-        console.log(objToSend);
         const response = await fetch(`http://127.0.0.1:5000/FrontEnd/save`, {
                 method: 'POST',
                 headers: {
@@ -233,7 +232,13 @@ async function saveAlbum() {
                 },
                 body: JSON.stringify(objToSend)
             })
-            .then(response => alert("Album saved successfully!"))
+            .then(response => {
+                if (response.ok) {
+                    alert("Album saved successfully!");
+                } else {
+                    alert("Failed - You already have an album with this name!");
+                }
+            })
             .catch(error => alert(`${error}`));
     } else {
         if (albumName) {
