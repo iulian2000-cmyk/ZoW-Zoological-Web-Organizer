@@ -114,4 +114,7 @@ module.exports = http.createServer((req, res) => {
     if (reqUrl.pathname == '/FrontEnd/search' && req.method === 'GET') {
         search_bar_service.search_data(req, res);
     }
+    if (reqUrl.pathname == '/FrontEnd/suggestion' && req.method === 'GET') {
+        search_bar_service.search_data_suggestion(req, res);
+    }
 });
