@@ -10,7 +10,6 @@ const connection = mysql.createConnection({
 exports.search_data = function(req, res) {
     const reqUrl = url.parse(req.url, true);
     const animalNameToSearch = reqUrl.query.search.toUpperCase();
-    console.log(animalNameToSearch);
 
     connection.query(`SELECT id_animal, animalName, likes, imagePath1 from animals where animalName=TRIM('${animalNameToSearch}');`, function(error, results, fields) {
         const response = [];
@@ -30,4 +29,3 @@ exports.search_data = function(req, res) {
     });
 
 }
-
