@@ -235,6 +235,11 @@ async function saveAlbum() {
             .then(response => {
                 if (response.ok) {
                     alert("Album saved successfully!");
+                    const option = document.createElement("option");
+                    option.value = albumName;
+                    option.innerHTML = albumName;
+                    const sel = document.getElementById("saved-albums-select");
+                    sel.appendChild(option);
                 } else {
                     alert("Failed - You already have an album with this name!");
                 }
