@@ -508,6 +508,41 @@ label[for="f5"] {
     font-weight: bold;
 }
 
+.searchBar .autocom-box{
+    padding: 0;
+    opacity: 0;
+    width: auto;
+    pointer-events: none;
+    max-height: 280px;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 10;
+    background-color: aqua;
+  }
+   
+  .searchBar.active .autocom-box{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+   
+  .autocom-box li{
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+  
+  }
+   
+  .searchBar.active .autocom-box li{
+    display: block;
+  }
+  .autocom-box li:hover{
+    background: #efefef;
+  }
+
 .close:hover,
 .close:focus {
     color: #000;
