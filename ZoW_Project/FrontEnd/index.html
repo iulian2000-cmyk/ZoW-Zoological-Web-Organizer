@@ -22,10 +22,10 @@
             <input class="searchInput" type="text" id="search-query" placeholder="Search animal" name="search" onkeydown="if (event.keyCode == 13)
             document.getElementById('search-button-id').click()">
             <button class="searchButton" type="submit" id="search-button-id" onclick="searchData()"><img class="searchIcon"  src="./images/icons/search.png" alt="search icon"></button>
-    
+
         </div>
         <div class="userOptions">
-            <label class="username"> <p id="userLabel"> </p> </label>
+            <label class="username"> <p id="userLabel"></p> </label>
             <a href="pages/authentication.html" id="loginBtn">Log in</a>
             <img id="arrow" src="./images/icons/arrow.png" alt="settings" onclick="showLog()">
         </div>
@@ -116,6 +116,10 @@
     <div class="content">
         <h2 id="title">Welcome to ZoW ATLAS</h2>
         <button type="button" id="userInstructions">See user instructions</button>
+        <div class="saveAndshare">
+            <button type="button" id="saveBtnId" onclick="saveAlbum()">Save Album</button>
+            <button type="button" id="shareBtnId">Share Album</button>
+        </div>
         <div class="filters">
             <label id="filtersText"> Filters </label>
             <label id="orderBy"> Order by: </label>

@@ -66,6 +66,7 @@ async function loadAlbum() {
     document.getElementById("title").innerHTML = text.toUpperCase();
     document.getElementsByClassName("filters")[0].style.display = "flex";
     document.getElementById("mainImage").style.display = "none";
+    document.getElementsByClassName("saveAndshare")[0].style.display = "none";
     displayCards(serverMessage);
     cardsToSort = serverMessage;
 }
@@ -87,12 +88,18 @@ async function generateAlbum() {
         cardsToSort = serverMessage;
         document.getElementsByClassName("filters")[0].style.display = "flex";
         document.getElementById("mainImage").style.display = "none";
+        if (document.getElementById("userLabel").innerHTML.length > 0) {
+            document.getElementsByClassName("saveAndshare")[0].style.display = "flex";
+        } else {
+            document.getElementsByClassName("saveAndshare")[0].style.display = "none";
+        }
     } else {
         if (document.getElementById("container-for-cards") !== null) {
             bigCardsContainer.removeChild(document.getElementById("container-for-cards"));
         }
         document.getElementById("title").innerHTML = "No animals found based on the selected properties";
         document.getElementsByClassName("filters")[0].style.display = "none";
+        document.getElementsByClassName("saveAndshare")[0].style.display = "none";
     }
 }
 
@@ -112,13 +119,14 @@ async function searchData() {
         document.getElementById("title").innerHTML = `No results found for "${text}"`;
     }
     document.getElementsByClassName("filters")[0].style.display = "none";
+    document.getElementsByClassName("saveAndshare")[0].style.display = "none";
 }
 
 
 function displayCards(cardsArray) {
 
     const bigCardsContainer = document.getElementById("bigCardsContainer");
-    
+
 
     if (document.getElementById("container-for-cards") !== null) {
         bigCardsContainer.removeChild(document.getElementById("container-for-cards"));
@@ -201,5 +209,35 @@ function compareCardsByProperty(card1, card2) {
         return -1;
     } else {
         return 0;
+    }
+}
+
+async function saveAlbum() {
+    let albumName = prompt("Enter a name for the album (it must contain only letters and numbers):", "");
+    let regex = /[a-zA-Z0-9]+/;
+    if (regex.test(albumName) && albumName) {
+        const objToSend = {
+            username: "",
+            animals: [],
+            album: albumName
+        };
+        objToSend.username = document.getElementById("userLabel").textContent;
+        for (let obj of cardsToSort) {
+            objToSend.animals.push(obj.id_animal);
+        }
+        console.log(objToSend);
+        const response = await fetch(`http://127.0.0.1:5000/FrontEnd/save`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(objToSend)
+            })
+            .then(response => alert("Album saved successfully!"))
+            .catch(error => alert(`${error}`));
+    } else {
+        if (albumName) {
+            alert("Invalid name, please try again.");
+        }
     }
 }

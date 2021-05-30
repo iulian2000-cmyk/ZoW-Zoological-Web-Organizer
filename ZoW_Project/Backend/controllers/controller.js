@@ -4,7 +4,7 @@ const formidable = require('formidable');
 
 module.exports = http.createServer((req, res) => {
 
-    var pageService, login_service, download_service, basic_service, load_default_album_service, search_bar_service;
+    var pageService, login_service, download_service, basic_service, load_default_album_service, search_bar_service, save_album_service;
 
     if (process.platform == "win32") {
         pageService = require('../services/page_service.js');
@@ -14,6 +14,7 @@ module.exports = http.createServer((req, res) => {
         load_default_album_service = require('../services/load_default_album_service.js');
         generate_album_service = require('../services/generate_album_service.js');
         search_bar_service = require('../services/search_bar_service.js');
+        save_album_service = require('../services/save_album_service.js');
     } else {
         pageService = require('../services/page_service.js');
         login_service = require('../services/login_service.js');
@@ -22,10 +23,10 @@ module.exports = http.createServer((req, res) => {
         search_bar_service = require('../services/search_bar_service.js');
         load_default_album_service = require('../services/load_default_album_service.js');
         generate_album_service = require('../services/generate_album_service.js');
+        save_album_service = require('../services/save_album_service.js');
     }
-    //console.log(exactPage);
-    const reqUrl = url.parse(req.url, true);
 
+    const reqUrl = url.parse(req.url, true);
 
     console.log("Request URL :" + reqUrl.pathname);
     if (reqUrl.pathname.includes("admin.html") || reqUrl.pathname.includes("authentication.html") || (reqUrl.pathname.includes("registerp"))) {
@@ -113,6 +114,10 @@ module.exports = http.createServer((req, res) => {
     }
     if (reqUrl.pathname == '/FrontEnd/search' && req.method === 'GET') {
         search_bar_service.search_data(req, res);
+    }
+    if (reqUrl.pathname.includes("save") && req.method === 'POST') {
+        console.log("am ajuns in controller");
+        save_album_service.save_album(req, res);
     }
 
 });
