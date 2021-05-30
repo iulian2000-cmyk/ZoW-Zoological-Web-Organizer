@@ -115,35 +115,6 @@ async function searchData() {
 }
 
 
-
-async function searchStates() {
-   
-    const search = document.getElementById("search-query");
-    let searchText= search.value; 
-    const res = await fetch(`http://127.0.0.1:5000/FrontEnd/suggestion?txt=` + searchText);
-    const states = await res.json();
-
-    outputHTML(states);
-
-};
-
-function outputHTML(matches){
-    if(matches.length > 0){
-        const autocomBox = document.getElementById("autocomplete-id");
-        const ul = document.getElementById("ul-id");
-        for (let contor = 0; contor <matches.length ; contor++){
-            var li = document.createElement("li");
-            var animalSuggestion = document.createElement("span");
-            animalSuggestion.innerHTML = matches[contor].animalName;
-            li.appendChild(animalSuggestion);      
-            ul.appendChild(li);       
-        }
-    
-      autocomBox.appendChild(ul);
-    }
-};
-
-
 function displayCards(cardsArray) {
 
     const bigCardsContainer = document.getElementById("bigCardsContainer");
