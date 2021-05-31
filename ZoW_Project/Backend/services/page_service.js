@@ -51,9 +51,20 @@ exports.mainPage = function(req, res) {
                                 dom.window.document.getElementById("shared-albums-select").appendChild(option);
                             }
                             res.write(dom.window.document.documentElement.outerHTML);
-                            res.end();
                         }
                     });
+                });
+                connection.query(`SELECT albumCustomName from customAlbums natural join users where user_name='${username}';`, function(error, results, fields) {
+                    if (results.length > 0) {
+                        for (i = 0; i < results.length; i++) {
+                            var option = dom.window.document.createElement("option");
+                            option.value = results[i].albumCustomName;
+                            option.innerHTML = results[i].albumCustomName;
+                            dom.window.document.getElementById("saved-albums-select").appendChild(option);
+                        }
+                        res.write(dom.window.document.documentElement.outerHTML);
+                        res.end();
+                    }
                 });
 
             } else {
