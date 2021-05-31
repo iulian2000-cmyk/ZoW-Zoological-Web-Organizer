@@ -95,11 +95,17 @@
                 </select>
             <button class="menuButton" type="submit" onclick="loadAlbum()"> Show album </button>
         </div>
-
         <div class="myAlbums">
             <label class="subtitle" id="myalb"> Saved albums </label>
-            <select class="select" name="my albums" id="saved-albums-select">
-                <option value="empty" disabled selected> Select album </option>
+            <select class="select" name="savedAlbums" id="saved-albums-select">
+                <option value="empty" disabled selected>Select album</option>
+            </select>
+            <button class="menuButton" type="submit" onclick="loadSavedAlbum()"> Show album </button>
+        </div>
+        <div class="sharedAlbums">
+            <label class="subtitle" id="shareAlb"> Received albums </label>
+            <select class="select" name="sharedAlbums" id="shared-albums-select">
+                <option value="empty" disabled selected>Select album</option>
             </select>
             <button class="menuButton" type="submit"> Show album </button>
         </div>
@@ -116,7 +122,7 @@
         <a href="./pages/manual.html"><button type="button" id="userInstructions"> See user instructions</button></a>
         <div class="saveAndshare">
             <button type="button" id="saveBtnId" onclick="saveAlbum()">Save Album</button>
-            <button type="button" id="shareBtnId">Share Album</button>
+            <button type="button" id="shareBtnId" onclick="shareAlbum()">Share Album</button>
         </div>
         <div class="filters">
             <label id="filtersText"> Filters </label>
