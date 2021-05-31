@@ -77,6 +77,8 @@ async function loadSavedAlbum(){
         document.getElementsByClassName("filters")[0].style.display = "flex";
         document.getElementById("mainImage").style.display = "none";
         document.getElementsByClassName("saveAndshare")[0].style.display = "flex";
+        document.getElementById("shareBtnId").style.display = "block";
+        document.getElementById("saveBtnId").style.display = "none";
         displayCards(serverMessage);
         cardsToSort = serverMessage;
     }
@@ -101,6 +103,8 @@ async function generateAlbum() {
         document.getElementById("mainImage").style.display = "none";
         if (document.getElementById("userLabel").innerHTML.length > 0) {
             document.getElementsByClassName("saveAndshare")[0].style.display = "flex";
+            document.getElementById("shareBtnId").style.display = "none";
+            document.getElementById("saveBtnId").style.display = "block";
         } else {
             document.getElementsByClassName("saveAndshare")[0].style.display = "none";
         }
