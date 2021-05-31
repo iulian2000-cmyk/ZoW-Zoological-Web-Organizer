@@ -1,47 +1,47 @@
 <Order_Animals_Popularity>
     <Animal>
         <Position>1</Position>
-        <Name>FURNICA</Name>
-        <Likes>5</Likes>
+        <Name>CARABUS DE MAI</Name>
+        <Likes>1</Likes>
     </Animal>
     <Animal>
         <Position>2</Position>
+        <Name>PRIVIGHETOARE</Name>
+        <Likes>1</Likes>
+    </Animal>
+    <Animal>
+        <Position>3</Position>
         <Name>AFIDE</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
-        <Position>3</Position>
+        <Position>4</Position>
         <Name>ALBINA</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
-        <Position>4</Position>
+        <Position>5</Position>
         <Name>BIBAN DE ACVARIU</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
-        <Position>5</Position>
+        <Position>6</Position>
         <Name>BOTIA MACRACANTHA</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
-        <Position>6</Position>
+        <Position>7</Position>
         <Name>CALCAN</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
-        <Position>7</Position>
+        <Position>8</Position>
         <Name>CAMELEON</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
-        <Position>8</Position>
-        <Name>CAPUSA</Name>
-        <Likes>0</Likes>
-    </Animal>
-    <Animal>
         <Position>9</Position>
-        <Name>CARABUS DE MAI</Name>
+        <Name>CAPUSA</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
@@ -91,62 +91,62 @@
     </Animal>
     <Animal>
         <Position>19</Position>
-        <Name>GREIERE</Name>
+        <Name>FURNICA</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>20</Position>
-        <Name>LEU</Name>
+        <Name>GREIERE</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>21</Position>
-        <Name>MOLLY</Name>
+        <Name>LEU</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>22</Position>
-        <Name>ODONUS NIGER</Name>
+        <Name>MOLLY</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>23</Position>
-        <Name>PESTE PIATRA</Name>
+        <Name>ODONUS NIGER</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>24</Position>
-        <Name>PESTELE OSCAR</Name>
+        <Name>PESTE PIATRA</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>25</Position>
-        <Name>PESTELE PAPAGAL</Name>
+        <Name>PESTELE OSCAR</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>26</Position>
-        <Name>PESTELE PARADIS</Name>
+        <Name>PESTELE PAPAGAL</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>27</Position>
-        <Name>PESTELE ZEBRA</Name>
+        <Name>PESTELE PARADIS</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>28</Position>
-        <Name>PUFFER</Name>
+        <Name>PESTELE ZEBRA</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>29</Position>
-        <Name>PURICE</Name>
+        <Name>PUFFER</Name>
         <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>30</Position>
-        <Name>PYTERYGOTA</Name>
+        <Name>PURICE</Name>
         <Likes>0</Likes>
     </Animal>
 </Order_Animals_Popularity>

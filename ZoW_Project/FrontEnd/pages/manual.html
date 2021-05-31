@@ -9,27 +9,18 @@
     <link rel="stylesheet" href="../styles/styleManual.css">
     <link rel="icon" href="../images/icons/iconZ.png">
     <script src="../scripts/manualScript.js"></script>
+    <script src="../scripts/modalScript.js"></script>
     <title>Zow Atlas</title>
 </head>
 
 <body>
     <div class="navBar">
         <div class="menuLogo">
-            <a href="../index.html" ><img class="menuIcon" src="../images/icons/homeIcon.svg" alt="menu icon" ></a>
+            <a href="../index.html" ><img class="menuIcon" src="../images/icons/home.png" alt="menu icon" ></a>
             <img class="logo" src="../images/logo/logo.png " alt="logo ">
-        </div>
-        <div class="userOptions">
-            <label id="username">  </label>
-            <img class="arrow" src="../images/icons/arrow.png" alt="settings" onclick="showLog()" id="arrowUserOptions">
         </div>
     </div>
   
-    <div class="log">
-        <a href="../pages/authentication.html" class="logText"> Log out </a>
-        <a href="#" class="logText"> New album </a>
-        <a href="../pages/admin.html" class="logText" id="admin"> Admin page </a>
-    </div>
-
     <div class="manualContent">
         <header>
             <h1> ZoW Atlas - Manual de Instructiuni </h1>
@@ -52,15 +43,14 @@
                         <li> <a href="#chapter2_5"> Filtrare album </a> </li>
                         <li> <a href="#chapter2_6"> Salvarea unui album in colectia persoanala </a> </li>
                         <li> <a href="#chapter2_7"> Generare de albume bazate pe anumite proprietati alese de utilizator </a> </li>
-                        <li> <a href="#chapter2_8"> Crearea unui album personal </a> </li>
-                        <li> <a href="#chapter2_9"> Card animal </a> </li>
-                        <li> <a href="#chapter2_10"> Like animal</a> </li>
-                        <li> <a href="#chapter2_11"> Slider de imagini pentru fiecare animal</a> </li>
-                        <li> <a href="#chapter2_12"> Generare de statistici CSV, PDF</a> </li>
-                        <li> <a href="#chapter2_13"> Generare clasament animale populare (flux RSS)</a> </li>
-                        <li> <a href="#chapter2_14"> Albume salvate</a> </li>
-                        <li> <a href="#chapter2_15"> Partajare albume</a> </li>
-                        <li> <a href="#chapter2_16"> Deconectare</a> </li>
+                        <li> <a href="#chapter2_8"> Card animal </a> </li>
+                        <li> <a href="#chapter2_9"> Like animal</a> </li>
+                        <li> <a href="#chapter2_10"> Slider de imagini pentru fiecare animal</a> </li>
+                        <li> <a href="#chapter2_11"> Generare de statistici CSV, PDF</a> </li>
+                        <li> <a href="#chapter2_12"> Generare clasament animale populare (flux RSS)</a> </li>
+                        <li> <a href="#chapter2_13"> Albume salvate</a> </li>
+                        <li> <a href="#chapter2_14"> Partajare albume</a> </li>
+                        <li> <a href="#chapter2_15"> Deconectare</a> </li>
                     </ol>
                 </li>
             </ol> 
@@ -128,61 +118,80 @@
                     Componenta permite utilizatorului sa aleaga mai multe propietati in functie de care se vor tria animalele si se va genera un album.
                 </p>
             </section>
+           
             <section id="chapter2_8">
-                <h3> 2.8 Crearea unui album personal</h3>
-                <p>
-                    Componenta permite unui utilizator logat sa isi creeze propriul album cu animale.
-                </p>
-            </section>
-            <section id="chapter2_9">
-                <h3> 2.9 Card animal</h3>
+                <h3> 2.8 Card animal</h3>
                 <p>
                     Fiecare album este format din mai multe carduri cu animale. Cardul cuprinde o poza, numele animalului respectiv numarul de like-uri primite de la utilizatori de-a lungul timpului.
                 </p>
             </section>
-            <section id="chapter2_10">
-                <h3> 2.10 Like animal</h3>
+            <section id="chapter2_9">
+                <h3> 2.9 Like animal</h3>
                 <p>
                     Fiecare animal are pe pagina proprie un buton de like si numarul de like-uri pe care le are. Componenta ajuta la generarea clasamentului celor mai populare animale.
                 </p>
             </section>
-            <section id="chapter2_11">
-                <h3> 2.11 Slider de imagini pentru fiecare animal</h3>
+            <section id="chapter2_10">
+                <h3> 2.10 Slider de imagini pentru fiecare animal</h3>
                 <p>
                     Slider de imagini cu un anumit animal care iti permite sa misti imaginile la stanga sau la dreapta si sa le maresti.
                 </p>
             </section>
-            <section id="chapter2_12">
-                <h3> 2.12  Generare de statistici CSV, PDF</h3>
+            <section id="chapter2_11">
+                <h3> 2.11  Generare de statistici CSV, PDF</h3>
                 <p>
                     In pagina principala exista doua butoane “Download statistics PDF”/"Download statistics CSV" care vor genera diverse statistici in conformitate cu informatiile disponibile la nivel de baza de date in formate CSV si PDF.
                 </p>
             </section>
-            <section id="chapter2_13">
-                <h3> 2.13 Generare clasament animale populare (flux RSS)</h3>
+            <section id="chapter2_12">
+                <h3> 2.12 Generare clasament animale populare (flux RSS)</h3>
                 <p>
                     In pagina principala exista un buton “View Ranking” care va genera top 20 animale in functie de popularitate, proprietate ce este masurata prin numarul de like-uri ale fiecarui animal.
                 </p>
             </section>
-            <section id="chapter2_14">
-                <h3> 2.14 Albume salvate</h3>
+            <section id="chapter2_13">
+                <h3> 2.13 Albume salvate</h3>
                 <p>
                     Componenta permite utilziatorului logat vizualizarea si afisarea albumelor salvate sau a albumelor personale create.
                 </p>
             </section>
-            <section id="chapter2_15">
-                <h3> 2.15 Partajare albume</h3>
+            <section id="chapter2_14">
+                <h3> 2.14 Partajare albume</h3>
                 <p>
                    Componenta permite unui utilizator logat in aplicatie sa partajeze un album deja creeat unui alt utlizator inregistrat in aplicatie.
                 </p>
             </section>
-            <section id="chapter2_16">
-                <h3> 2.16 Deconectare</h3>
+            <section id="chapter2_15">
+                <h3> 2.15 Deconectare</h3>
                 <p>
                     Componenta permite unui utilizator logat sa se delogheze de pe site.
                 </p>
             </section>
         </section>    
 
+    </div>
+
+    <footer>
+        <div class="footerContent ">
+            <p> &#169; All rights reserved </p>
+            <p> ZoW Atlas 2021 </p>
+            <button id="aboutBtn" > About </button>
+        </div>
+    </footer>
+
+    <div id="aboutModal" class="modal">
+        <div class="aboutContent">
+            <div class="aboutHeader">
+                <span class="close">&times;</span>
+                <h3>ZoW Atlas</h3>
+            </div>
+            <div class="aboutBody">
+                <p>
+                    <b>ZoW - Zoological Web Organizer</b> are drept scop final realizarea unei aplicatii web, mai exact unui atlas zoologic digital ce ofera utilizatorului o serie de functionalitati. Acesta poate sa vizualizeze albumele intial generate de catre aplicatie dar si sa genereze propriile albume tematice personalizate in functie de cerintele sale(animale de companie, domestice, salbatice etc) prin intermediul unei cautari multi-criteriale pe baza unor filtre la nivelul bazei de date.Se va crea atat un clasament al celor mai populare animale pe baza sistemului de rating de care dispune utilizatorul, disponibil si ca flux de date RSS cat si diverse statistici disponibile in formate deschise-minimal, CSV si PDF.
+                    <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;Electron\&quot; modified=\&quot;2021-04-01T16:28:09.636Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.4.3 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36\&quot; etag=\&quot;7OYbk65znj1GANzVFchE\&quot; version=\&quot;14.4.3\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;e4CY1KfmZ_HjEQV-NOpp\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+                    <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+                </p>
+            </div>
+        </div>
     </div>
 </body>
