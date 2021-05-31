@@ -8,7 +8,11 @@ CREATE TABLE users(
     PRIMARY KEY (id_user)
 );
 
-
+CREATE TABLE shared_albums(
+	id_user1 INTEGER NOT NULL,
+	id_albumCustom INTEGER NOT NULL,
+	id_user2 INTEGER NOT NULL
+);
 
 CREATE TABLE albumsdefault(
  

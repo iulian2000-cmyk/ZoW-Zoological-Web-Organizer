@@ -9,7 +9,7 @@ window.onload = function() {
 
     var span = document.getElementsByClassName("close")[0];
 
-  
+
     span.onclick = () => {
         modal.style.display = "none";
         document.getElementsByClassName("navBar")[0].style.display = "flex";
@@ -238,6 +238,40 @@ async function saveAlbum() {
                     sel.appendChild(option);
                 } else {
                     alert("Failed - You already have an album with this name!");
+                }
+            })
+            .catch(error => alert(`${error}`));
+    } else {
+        if (albumName) {
+            alert("Invalid name, please try again.");
+        }
+    }
+}
+
+async function shareAlbum() {
+    let albumName = prompt("Enter a name for the album (it must contain only letters and numbers):", "");
+    var userName = prompt("With who do you want to share ?");
+    let regex = /[a-zA-Z0-9]+/;
+    if (regex.test(albumName) && albumName) {
+        const objToSend = {
+            user1: "",
+            user2: "",
+            album: albumName
+        };
+        objToSend.user1 = document.getElementById("userLabel").textContent;
+        objToSend.user2 = userName;
+        const response = await fetch(`http://127.0.0.1:5000/FrontEnd/share`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(objToSend)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("Album shared successfully!");
+                } else {
+                    alert("OOOP");
                 }
             })
             .catch(error => alert(`${error}`));
