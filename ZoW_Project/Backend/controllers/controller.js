@@ -4,7 +4,7 @@ const formidable = require('formidable');
 
 module.exports = http.createServer((req, res) => {
 
-    var pageService, login_service, download_service, basic_service, load_default_album_service, search_bar_service, save_album_service;
+    var pageService, login_service, download_service, basic_service, load_default_album_service, search_bar_service, save_album_service, load_saved_album_service;
 
     if (process.platform == "win32") {
         pageService = require('../services/page_service.js');
@@ -15,6 +15,7 @@ module.exports = http.createServer((req, res) => {
         generate_album_service = require('../services/generate_album_service.js');
         search_bar_service = require('../services/search_bar_service.js');
         save_album_service = require('../services/save_album_service.js');
+        load_saved_album_service = require('../services/load_saved_album_service.js');
     } else {
         pageService = require('../services/page_service.js');
         login_service = require('../services/login_service.js');
@@ -24,6 +25,7 @@ module.exports = http.createServer((req, res) => {
         load_default_album_service = require('../services/load_default_album_service.js');
         generate_album_service = require('../services/generate_album_service.js');
         save_album_service = require('../services/save_album_service.js');
+        load_saved_album_service = require('../services/load_saved_album_service.js');
     }
 
     const reqUrl = url.parse(req.url, true);
@@ -114,6 +116,9 @@ module.exports = http.createServer((req, res) => {
     }
     if (reqUrl.pathname == '/FrontEnd/search' && req.method === 'GET') {
         search_bar_service.search_data(req, res);
+    }
+    if (reqUrl.pathname == '/FrontEnd/load_saved_album' && req.method === 'GET') {
+        load_saved_album_service.load_album(req, res);
     }
     if (reqUrl.pathname.includes("save") && req.method === 'POST') {
         save_album_service.save_album(req, res);

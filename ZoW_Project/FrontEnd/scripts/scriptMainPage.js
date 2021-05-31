@@ -67,6 +67,21 @@ async function loadAlbum() {
     cardsToSort = serverMessage;
 }
 
+async function loadSavedAlbum(){
+    const sel = document.getElementById("saved-albums-select");
+    let text = sel.options[sel.selectedIndex].text;
+    if(text !== "Select album"){
+        const response = await fetch(`http://127.0.0.1:5000/FrontEnd/load_saved_album?savedAlbums=${text}`);
+        const serverMessage = await response.json();
+        document.getElementById("title").innerHTML = text;
+        document.getElementsByClassName("filters")[0].style.display = "flex";
+        document.getElementById("mainImage").style.display = "none";
+        document.getElementsByClassName("saveAndshare")[0].style.display = "none";
+        displayCards(serverMessage);
+        cardsToSort = serverMessage;
+    }
+}
+
 async function generateAlbum() {
     const sel1 = document.getElementById("generateCategory");
     const sel2 = document.getElementById("generateDomesticity");
