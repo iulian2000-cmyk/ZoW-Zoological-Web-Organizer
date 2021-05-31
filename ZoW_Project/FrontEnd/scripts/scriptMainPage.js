@@ -67,10 +67,10 @@ async function loadAlbum() {
     cardsToSort = serverMessage;
 }
 
-async function loadSavedAlbum(){
+async function loadSavedAlbum() {
     const sel = document.getElementById("saved-albums-select");
     let text = sel.options[sel.selectedIndex].text;
-    if(text !== "Select album"){
+    if (text !== "Select album") {
         const response = await fetch(`http://127.0.0.1:5000/FrontEnd/load_saved_album?savedAlbums=${text}`);
         const serverMessage = await response.json();
         document.getElementById("title").innerHTML = text;
@@ -268,7 +268,8 @@ async function saveAlbum() {
 }
 
 async function shareAlbum() {
-    let albumName = prompt("Enter a name for the album (it must contain only letters and numbers):", "");
+    const sel = document.getElementById("saved-albums-select");
+    let albumName = sel.options[sel.selectedIndex].text;
     var userName = prompt("With who do you want to share ?");
     let regex = /[a-zA-Z0-9]+/;
     if (regex.test(albumName) && albumName) {
@@ -290,7 +291,7 @@ async function shareAlbum() {
                 if (response.ok) {
                     alert("Album shared successfully!");
                 } else {
-                    alert("OOOP");
+                    alert(" The user doesn't exist ! ");
                 }
             })
             .catch(error => alert(`${error}`));
