@@ -41,35 +41,10 @@ exports.mainPage = function(req, res) {
                     dom.window.document.getElementById("admin").style.display = "block";
                 }
                 dom.window.document.getElementById("loginBtn").style.display = "none";
-                connection.query("SELECT * FROM users WHERE user_name=?", [username], function(error, results, fields) {
-                    connection.query("SELECT albumCustomName  FROM shared_albums JOIN customAlbums ON customAlbums.id_albumCustom=shared_albums.id_albumCustom WHERE id_user2=?", [results[0].id_user], function(error, results, fields) {
-                        if (results.length > 0) {
-                            for (i = 0; i < results.length; i++) {
-                                var option = dom.window.document.createElement("option");
-                                option.value = results[i].albumCustomName;
-                                option.innerHTML = results[i].albumCustomName;
-                                dom.window.document.getElementById("shared-albums-select").appendChild(option);
-                            }
-                            //res.write(dom.window.document.documentElement.outerHTML);
-                        }
-                        connection.query(`SELECT albumCustomName from customAlbums natural join users where user_name='${username}';`, function(error, results, fields) {
-                            if (results.length > 0) {
-                                for (i = 0; i < results.length; i++) {
-                                    var option = dom.window.document.createElement("option");
-                                    option.value = results[i].albumCustomName;
-                                    option.innerHTML = results[i].albumCustomName;
-                                    dom.window.document.getElementById("saved-albums-select").appendChild(option);
-                                }
-                            }
-                            res.write(dom.window.document.documentElement.outerHTML);
-                            res.end();
-                        });
-                    });
-                });
-
+                res.write(dom.window.document.documentElement.outerHTML);
+                res.end();
             } else {
                 dom.window.document.getElementsByClassName("myAlbums")[0].style.display = "none";
-                dom.window.document.getElementsByClassName("sharedAlbums")[0].style.display = "none";
                 dom.window.document.getElementById("arrow").style.display = "none";
                 res.write(dom.window.document.documentElement.outerHTML);
                 res.end();
@@ -362,7 +337,7 @@ exports.load_animal_page = function(req, res) {
     });
 }
 
-exports.load_manual = function(req, res) {
+exports.load_manual= function(req, res){
     var pathFile = __dirname + url.parse(req.url).pathname;
     if (process.platform == "win32") {
         pathFile = pathFile.replace("\\Backend\\services", "");
@@ -370,16 +345,16 @@ exports.load_manual = function(req, res) {
     } else {
         pathFile = pathFile.replace("/Backend/services", "");
     }
-    fs.readFile(pathFile, (err, data) => {
+    fs.readFile(pathFile,(err, data) => {
         if (err) {
             res.writeHead(404, { 'Content-type': 'application/json' });
             res.write('Page not found' + JSON.stringify(err));
             res.end();
         } else {
-            res.writeHead(200, { 'Content-type': 'text/html' });
+            res.writeHead(200, { 'Content-type': 'text/html' } );
             res.write(data);
             res.end();
         }
-
+            
     });
 }

@@ -8,11 +8,7 @@ CREATE TABLE users(
     PRIMARY KEY (id_user)
 );
 
-CREATE TABLE shared_albums(
-	id_user1 INTEGER NOT NULL,
-	id_albumCustom INTEGER NOT NULL,
-	id_user2 INTEGER NOT NULL
-);
+
 
 CREATE TABLE albumsdefault(
  
@@ -21,6 +17,8 @@ CREATE TABLE albumsdefault(
     FOREIGN KEY (id_animal) REFERENCES animals(id_animal),
 );
       
+
+
 CREATE TABLE customAlbums(
     id_albumCustom INT NOT NULL AUTO_INCREMENT,
     albumCustomName VARCHAR(64) NOT NULL,

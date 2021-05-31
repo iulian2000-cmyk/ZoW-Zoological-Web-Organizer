@@ -9,7 +9,7 @@ window.onload = function() {
 
     var span = document.getElementsByClassName("close")[0];
 
-
+  
     span.onclick = () => {
         modal.style.display = "none";
         document.getElementsByClassName("navBar")[0].style.display = "flex";
@@ -67,23 +67,6 @@ async function loadAlbum() {
     cardsToSort = serverMessage;
 }
 
-async function loadSavedAlbum() {
-    const sel = document.getElementById("saved-albums-select");
-    let text = sel.options[sel.selectedIndex].text;
-    if (text !== "Select album") {
-        const response = await fetch(`http://127.0.0.1:5000/FrontEnd/load_saved_album?savedAlbums=${text}`);
-        const serverMessage = await response.json();
-        document.getElementById("title").innerHTML = text;
-        document.getElementsByClassName("filters")[0].style.display = "flex";
-        document.getElementById("mainImage").style.display = "none";
-        document.getElementsByClassName("saveAndshare")[0].style.display = "flex";
-        document.getElementById("shareBtnId").style.display = "block";
-        document.getElementById("saveBtnId").style.display = "none";
-        displayCards(serverMessage);
-        cardsToSort = serverMessage;
-    }
-}
-
 async function generateAlbum() {
     const sel1 = document.getElementById("generateCategory");
     const sel2 = document.getElementById("generateDomesticity");
@@ -103,8 +86,6 @@ async function generateAlbum() {
         document.getElementById("mainImage").style.display = "none";
         if (document.getElementById("userLabel").innerHTML.length > 0) {
             document.getElementsByClassName("saveAndshare")[0].style.display = "flex";
-            document.getElementById("shareBtnId").style.display = "none";
-            document.getElementById("saveBtnId").style.display = "block";
         } else {
             document.getElementsByClassName("saveAndshare")[0].style.display = "none";
         }
@@ -257,41 +238,6 @@ async function saveAlbum() {
                     sel.appendChild(option);
                 } else {
                     alert("Failed - You already have an album with this name!");
-                }
-            })
-            .catch(error => alert(`${error}`));
-    } else {
-        if (albumName) {
-            alert("Invalid name, please try again.");
-        }
-    }
-}
-
-async function shareAlbum() {
-    const sel = document.getElementById("saved-albums-select");
-    let albumName = sel.options[sel.selectedIndex].text;
-    var userName = prompt("With who do you want to share ?");
-    let regex = /[a-zA-Z0-9]+/;
-    if (regex.test(albumName) && albumName) {
-        const objToSend = {
-            user1: "",
-            user2: "",
-            album: albumName
-        };
-        objToSend.user1 = document.getElementById("userLabel").textContent;
-        objToSend.user2 = userName;
-        const response = await fetch(`http://127.0.0.1:5000/FrontEnd/share`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(objToSend)
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert("Album shared successfully!");
-                } else {
-                    alert(" The user doesn't exist ! ");
                 }
             })
             .catch(error => alert(`${error}`));
