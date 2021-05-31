@@ -76,7 +76,7 @@ async function loadSavedAlbum(){
         document.getElementById("title").innerHTML = text;
         document.getElementsByClassName("filters")[0].style.display = "flex";
         document.getElementById("mainImage").style.display = "none";
-        document.getElementsByClassName("saveAndshare")[0].style.display = "none";
+        document.getElementsByClassName("saveAndshare")[0].style.display = "flex";
         displayCards(serverMessage);
         cardsToSort = serverMessage;
     }

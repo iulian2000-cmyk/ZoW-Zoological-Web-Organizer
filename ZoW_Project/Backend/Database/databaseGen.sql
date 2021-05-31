@@ -21,8 +21,6 @@ CREATE TABLE albumsdefault(
     FOREIGN KEY (id_animal) REFERENCES animals(id_animal),
 );
       
-
-
 CREATE TABLE customAlbums(
     id_albumCustom INT NOT NULL AUTO_INCREMENT,
     albumCustomName VARCHAR(64) NOT NULL,
