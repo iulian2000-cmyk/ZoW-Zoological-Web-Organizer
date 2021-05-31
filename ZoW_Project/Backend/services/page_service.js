@@ -45,6 +45,7 @@ exports.mainPage = function(req, res) {
                 res.end();
             } else {
                 dom.window.document.getElementsByClassName("myAlbums")[0].style.display = "none";
+                dom.window.document.getElementsByClassName("sharedAlbums")[0].style.display = "none";
                 dom.window.document.getElementById("arrow").style.display = "none";
                 res.write(dom.window.document.documentElement.outerHTML);
                 res.end();
