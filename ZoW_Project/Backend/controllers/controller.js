@@ -118,5 +118,7 @@ module.exports = http.createServer((req, res) => {
     if (reqUrl.pathname.includes("save") && req.method === 'POST') {
         save_album_service.save_album(req, res);
     }
-
+    if(reqUrl.pathname.includes("manual.html" )){
+        pageService.load_manual(req,res);
+    }
 });

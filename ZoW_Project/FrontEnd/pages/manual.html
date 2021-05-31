@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nechita Roberta">
+    <link rel="stylesheet" href="../styles/styleManual.css">
+    <link rel="icon" href="../images/icons/iconZ.png">
+    <script src="../scripts/manualScript.js"></script>
+    <title>Zow Atlas</title>
+</head>
+
+<body>
+    <div class="navBar">
+        <div class="menuLogo">
+            <a href="../index.html" ><img class="menuIcon" src="../images/icons/homeIcon.svg" alt="menu icon" ></a>
+            <img class="logo" src="../images/logo/logo.png " alt="logo ">
+        </div>
+        <div class="userOptions">
+            <label id="username">  </label>
+            <img class="arrow" src="../images/icons/arrow.png" alt="settings" onclick="showLog()" id="arrowUserOptions">
+        </div>
+    </div>
+  
+    <div class="log">
+        <a href="../pages/authentication.html" class="logText"> Log out </a>
+        <a href="#" class="logText"> New album </a>
+        <a href="../pages/admin.html" class="logText" id="admin"> Admin page </a>
+    </div>
+
+    <div class="manualContent">
+        <header>
+            <h1> ZoW Atlas - Manual de Instructiuni </h1>
+        </header>
+        <section class="chapters">
+            <ol>
+                <li>
+                    <a href="#chapter1"> Descriere generala </a>
+                    <ol>
+                        <li> <a href="#chapter1_1"> Perspectiva aplicatiei </a> </li>
+                        <li> <a href="#chapter1_2"> Specificatii tehnice utilizator </a> </li>
+                    </ol>
+                </li>
+                <li> <a href="#chapter2"> Functionalitati </a>
+                    <ol>
+                        <li> <a href="#chapter2_1"> Inregistrare </a> </li>
+                        <li> <a href="#chapter2_2"> Autentificare </a> </li>
+                        <li> <a href="#chapter2_3"> Search bar </a> </li>
+                        <li> <a href="#chapter2_4"> Afisare album selectat (albume prestabilite) </a> </li>
+                        <li> <a href="#chapter2_5"> Filtrare album </a> </li>
+                        <li> <a href="#chapter2_6"> Salvarea unui album in colectia persoanala </a> </li>
+                        <li> <a href="#chapter2_7"> Generare de albume bazate pe anumite proprietati alese de utilizator </a> </li>
+                        <li> <a href="#chapter2_8"> Crearea unui album personal </a> </li>
+                        <li> <a href="#chapter2_9"> Card animal </a> </li>
+                        <li> <a href="#chapter2_10"> Like animal</a> </li>
+                        <li> <a href="#chapter2_11"> Slider de imagini pentru fiecare animal</a> </li>
+                        <li> <a href="#chapter2_12"> Generare de statistici CSV, PDF</a> </li>
+                        <li> <a href="#chapter2_13"> Generare clasament animale populare (flux RSS)</a> </li>
+                        <li> <a href="#chapter2_14"> Albume salvate</a> </li>
+                        <li> <a href="#chapter2_15"> Partajare albume</a> </li>
+                        <li> <a href="#chapter2_16"> Deconectare</a> </li>
+                    </ol>
+                </li>
+            </ol> 
+        </section>   
+        
+        <section id="chapter1">
+            <h2> 1. Descriere generala</h2>
+            <section id="chapter1_1">
+                <h3> 1.1 Perspectiva aplicatiei  </h3>
+                <p>
+                    <b>ZoW Atlas</b> este o aplicatie WEB ce permite utilizatorilor vizualizarea unor albume cu animale impartite pe diverse categorii, generarea de albume in functie de anumite criterii alese de utilizator, filtrarea albumelor, cautarea
+                    multi-criteriala din searchbar, salvarea unui album in coletia personala sau chiar crearea propriilor albume. Pentru fiecare animal in parte exista o pagina specifica cu informatii si imagini.Fiind o aplicatie open-source, se presupune a fi utilizata de un numar nelimitat de useri, incluzand si un sistem de logare,ce aduce o serie de functionalitati in plus.
+                </p>
+            </section>
+            <section id="chapter1_2">
+                <h3> 1.2 Specificatii tehnice utilizatori </h3>
+                <p>
+                    Aplicatia ZoW este <b>destinata tuturor utilizatorilor</b> de aplicatii web. Datorita functionalitatilor pe care le detine, aceasta se adreseaza in special utilizatorilor care doresc sa afle informatii despre diferite categorii de animale. Se considera ca utilizatorul are cunostintele de baza de operare pe internet si acces la un dispozitiv conectat la retea.
+                    <br>Aplicatia va avea in principiu <b>doua clase majore de utilizatori</b> : utilizatori activi - inregistrati / ce folosesc aplicatia pentru functionalitatile premium de creare albume personalizate, respectiv simpli vizitatori care intra in general pentru a vizualiza si a cauta informatii cu privire la un animal din aplicatie. Se presupune ca, categoria majoritara va fi cea a userilor activi care vor frecventa regulat aplicatia.
+                </p>
+            </section>
+        </section>    
+
+        <section id="chapter2">
+            <h2> 2. Functionalitati</h2>
+            <section id="chapter2_1">
+                <h3> 2.1 Inregistrare</h3>
+                <p>
+                    Componenta permite utilizatorului sa se inregistreze pe site folosind un nume de utilizator, un email si o parola.
+                </p>
+            </section>
+            <section id="chapter2_2">
+                <h3> 2.2 Autentificare </h3>
+                <p>
+                    Componenta permite utilizatorului sa se logheze pe site folosind un nume de utilizator si o parola.
+                </p>
+            </section>
+            <section id="chapter2_3">
+                <h3> 2.3 Search Bar</h3>
+                <p>
+                    Componenta permite cautarea multi-criteriala si generarea rezultatelor corespunzatoare cautarii.
+                </p>
+            </section>
+            <section id="chapter2_4">
+                <h3> 2.4 Afisare album selectat (albume prestabilite)</h3>
+                <p>
+                    Componenta permite utilizatorilor selectarea si vizualizarea unui anumit album prestabilit in aplicatie.
+                </p>
+            </section>
+            <section id="chapter2_5">
+                <h3> 2.5 Filtrare album</h3>
+                <p>
+                    Componenta permite utilizatorului sa filtreze un album in functie de anumite proprietati generale prestabilite in aplicatie.
+                </p>
+            </section>
+            <section id="chapter2_6">
+                <h3> 2.6 Salvarea unui album in colectia persoanala</h3>
+                <p>
+                    Componenta permite utilizatorului logat sa salveze albumul curent de pe pagina in colectia personala.
+                </p>
+            </section>
+            <section id="chapter2_7">
+                <h3> 2.7 Generare de albume bazate pe anumite proprietati alese de utilizator</h3>
+                <p>
+                    Componenta permite utilizatorului sa aleaga mai multe propietati in functie de care se vor tria animalele si se va genera un album.
+                </p>
+            </section>
+            <section id="chapter2_8">
+                <h3> 2.8 Crearea unui album personal</h3>
+                <p>
+                    Componenta permite unui utilizator logat sa isi creeze propriul album cu animale.
+                </p>
+            </section>
+            <section id="chapter2_9">
+                <h3> 2.9 Card animal</h3>
+                <p>
+                    Fiecare album este format din mai multe carduri cu animale. Cardul cuprinde o poza, numele animalului respectiv numarul de like-uri primite de la utilizatori de-a lungul timpului.
+                </p>
+            </section>
+            <section id="chapter2_10">
+                <h3> 2.10 Like animal</h3>
+                <p>
+                    Fiecare animal are pe pagina proprie un buton de like si numarul de like-uri pe care le are. Componenta ajuta la generarea clasamentului celor mai populare animale.
+                </p>
+            </section>
+            <section id="chapter2_11">
+                <h3> 2.11 Slider de imagini pentru fiecare animal</h3>
+                <p>
+                    Slider de imagini cu un anumit animal care iti permite sa misti imaginile la stanga sau la dreapta si sa le maresti.
+                </p>
+            </section>
+            <section id="chapter2_12">
+                <h3> 2.12  Generare de statistici CSV, PDF</h3>
+                <p>
+                    In pagina principala exista doua butoane “Download statistics PDF”/"Download statistics CSV" care vor genera diverse statistici in conformitate cu informatiile disponibile la nivel de baza de date in formate CSV si PDF.
+                </p>
+            </section>
+            <section id="chapter2_13">
+                <h3> 2.13 Generare clasament animale populare (flux RSS)</h3>
+                <p>
+                    In pagina principala exista un buton “View Ranking” care va genera top 20 animale in functie de popularitate, proprietate ce este masurata prin numarul de like-uri ale fiecarui animal.
+                </p>
+            </section>
+            <section id="chapter2_14">
+                <h3> 2.14 Albume salvate</h3>
+                <p>
+                    Componenta permite utilziatorului logat vizualizarea si afisarea albumelor salvate sau a albumelor personale create.
+                </p>
+            </section>
+            <section id="chapter2_15">
+                <h3> 2.15 Partajare albume</h3>
+                <p>
+                   Componenta permite unui utilizator logat in aplicatie sa partajeze un album deja creeat unui alt utlizator inregistrat in aplicatie.
+                </p>
+            </section>
+            <section id="chapter2_16">
+                <h3> 2.16 Deconectare</h3>
+                <p>
+                    Componenta permite unui utilizator logat sa se delogheze de pe site.
+                </p>
+            </section>
+        </section>    
+
+    </div>
+</body>

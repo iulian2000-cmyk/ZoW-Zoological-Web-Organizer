@@ -336,3 +336,25 @@ exports.load_animal_page = function(req, res) {
         }
     });
 }
+
+exports.load_manual= function(req, res){
+    var pathFile = __dirname + url.parse(req.url).pathname;
+    if (process.platform == "win32") {
+        pathFile = pathFile.replace("\\Backend\\services", "");
+        pathFile = pathFile.replace("/FrontEnd/pages/", "\\FrontEnd\\pages\\");
+    } else {
+        pathFile = pathFile.replace("/Backend/services", "");
+    }
+    fs.readFile(pathFile,(err, data) => {
+        if (err) {
+            res.writeHead(404, { 'Content-type': 'application/json' });
+            res.write('Page not found' + JSON.stringify(err));
+            res.end();
+        } else {
+            res.writeHead(200, { 'Content-type': 'text/html' } );
+            res.write(data);
+            res.end();
+        }
+            
+    });
+}

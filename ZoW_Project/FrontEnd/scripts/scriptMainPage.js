@@ -6,14 +6,10 @@ var propertyForFilters;
 window.onload = function() {
     var modal = document.getElementById("aboutModal");
 
-    var btn = document.getElementById("userInstructions");
 
     var span = document.getElementsByClassName("close")[0];
 
-    btn.onclick = () => {
-        modal.style.display = "block";
-        document.getElementsByClassName("navBar")[0].style.zIndex = -1;
-    }
+  
     span.onclick = () => {
         modal.style.display = "none";
         document.getElementsByClassName("navBar")[0].style.display = "flex";
