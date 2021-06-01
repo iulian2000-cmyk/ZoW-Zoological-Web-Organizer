@@ -352,7 +352,7 @@ option {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 100%;
+    height: auto;
     align-items: center;
     justify-content: space-between;
 }
@@ -654,27 +654,27 @@ label[for="f5"] {
     .filters {
         background-color: white;
         flex-direction: column;
+        align-items: center;
+        margin-top: 0;
     }
 
     #filtersText {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+        flex-direction: column;
+    }
+
+    .fils {
+        padding: 5px 8px;
+        background-color: #bbddeb;
+        margin-top: 8px;
+        margin-bottom: 14px;
+        width: 70%;
     }
 
     #orderBy {
         margin-right: 6px;
-        font-size: 17px;
+        font-size: 15px;
         font-weight: 400;
-    }
-
-    .fils {
-        width: 80%;
-        background-color: #bbddeb;
-        margin-bottom: 15px;
-        padding-right: 10px;
-        padding-left: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-top: 10px;
     }
 
     #apply {
