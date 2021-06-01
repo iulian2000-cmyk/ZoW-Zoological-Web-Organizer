@@ -188,7 +188,8 @@ input[type="text"] {
 .containerMenu,
 .generateAlbum,
 .myAlbums,
-.albums {
+.albums,
+.sharedAlbums {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -223,7 +224,8 @@ input[type="text"] {
 
 .containerMenu,
 .generateAlbum,
-.albums {
+.albums,
+.myAlbums {
     box-shadow: 0px 2px 2px #72b0c9;
 }
 
@@ -234,7 +236,8 @@ input[type="text"] {
 
 .generateAlbum,
 .myAlbums,
-.albums {
+.albums,
+.sharedAlbums {
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -292,7 +295,8 @@ option {
 }
 
 #myalb,
-#alb {
+#alb,
+#shareAlb {
     margin-bottom: 1em;
 }
 
@@ -556,6 +560,7 @@ label[for="f5"] {
     .aboutContent {
         width: 80%;
     }
+
     .aboutBody {
         font-size: small;
     }
@@ -565,6 +570,7 @@ label[for="f5"] {
     .filters {
         width: 80%;
     }
+
     .menu {
         width: 240px;
     }
@@ -574,6 +580,7 @@ label[for="f5"] {
     .filters {
         width: 90%;
     }
+
     .logo {
         margin-left: 3em;
     }
@@ -583,6 +590,7 @@ label[for="f5"] {
     .filters {
         width: 96%;
     }
+
     .logo {
         margin-left: 2em;
     }
@@ -592,6 +600,7 @@ label[for="f5"] {
     .filters {
         width: 96%;
     }
+
     .logo {
         margin-left: 2em;
     }
@@ -601,45 +610,57 @@ label[for="f5"] {
     .navBar .searchBar {
         display: none;
     }
+
     .logo {
         margin-left: 10em;
     }
+
     .menu .searchBar {
         margin-top: 10px;
         order: 2;
         display: flex;
         width: 88%;
     }
+
     .searchButton {
         background-color: #72b0c9;
     }
+
     .searchButton:hover {
         background-color: #72b0c9;
     }
+
     #userMenu {
         order: 1;
     }
+
     #geneSP {
         order: 2;
     }
+
     #geneSC {
         order: 3;
     }
+
     #viewR {
         order: 4;
     }
+
     .filters {
         background-color: white;
         flex-direction: column;
     }
+
     #filtersText {
         margin-bottom: 10px;
     }
+
     #orderBy {
         margin-right: 6px;
         font-size: 17px;
         font-weight: 400;
     }
+
     .fils {
         width: 80%;
         background-color: #bbddeb;
@@ -650,13 +671,16 @@ label[for="f5"] {
         padding-bottom: 5px;
         margin-top: 10px;
     }
+
     #apply {
         font-size: 16px;
         height: 1.5em;
     }
+
     .card {
         width: 600px;
     }
+
     .animalName {
         font-size: 40px;
     }
@@ -672,10 +696,12 @@ label[for="f5"] {
     .fils {
         width: 98%;
     }
+
     .card {
         width: 500px;
         height: 250px;
     }
+
     .animalName {
         font-weight: 450;
     }
@@ -685,6 +711,7 @@ label[for="f5"] {
     .logo {
         margin-left: 6em;
     }
+
     .fils {
         flex-direction: column;
         align-items: center;
@@ -692,6 +719,7 @@ label[for="f5"] {
         background-color: white;
         padding: 0;
     }
+
     #apply {
         font-size: 17px;
     }
@@ -702,6 +730,7 @@ label[for="f5"] {
         width: 450px;
         height: 250px;
     }
+
     .animalName {
         font-size: 30px;
         font-weight: 500;
@@ -714,27 +743,34 @@ label[for="f5"] {
         width: 100%;
         height: 60px;
     }
+
     .logo {
         margin-left: 8em;
     }
+
     .userOptions {
         display: none;
     }
+
     .menu {
         width: 100%;
     }
+
     .menu .username {
         order: 5;
         display: flex;
     }
+
     .menu .createAlbum {
         display: block;
         order: 6;
     }
+
     .menu .logText {
         display: block;
         order: 7;
     }
+
     .menu .logText,
     .menu .createAlbum,
     .menu .username {
@@ -742,13 +778,16 @@ label[for="f5"] {
         font-size: 17px;
         font-weight: 500;
     }
+
     .menuButton {
         width: 60%;
     }
+
     .select {
         width: 50%;
         height: 2.5em;
     }
+
     .properties {
         font-size: larger;
     }
@@ -772,15 +811,19 @@ label[for="f5"] {
         width: 350px;
         height: 190px;
     }
+
     .animalImage {
         display: none;
     }
+
     .cardBackground {
         opacity: 0.8;
     }
+
     .likes {
         display: none;
     }
+
     .animalName {
         color: white;
         text-shadow: 3px 3px 6px black;
@@ -791,6 +834,7 @@ label[for="f5"] {
     .logo {
         margin-left: 4em;
     }
+
     .card {
         width: 320px;
         height: 180px;
@@ -814,6 +858,7 @@ label[for="f5"] {
     .logo {
         margin-left: 2em;
     }
+
     .card {
         width: 250px;
         height: 160;
