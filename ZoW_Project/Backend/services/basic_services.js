@@ -145,9 +145,9 @@ exports.add_animal = function(req, res) {
         ImagePath4 = pathImg + animal_name.toLowerCase() + '/' + name_files[3];
         var link_page = "../pages/animalPage.html";
         connection.query(
-            "INSERT INTO animals VALUES (NULL,?,?, ?,?,?,?,0,        ?,?,?, ?,?,? ,?,?,?  ,?,?,?,  ?,?,?, ?,?,? ,?,?,?  )", [
+            "INSERT INTO animals VALUES (NULL,?,?, ?,?,?,?,0,?,?,?,?,?, ?,?,? ,?,?,?  ,?,?,?,  ?,?,?, ?,?,? ,?,?,?  )", [
                 animal_name.toUpperCase(), link_page, ImagePath1, ImagePath2, ImagePath3, ImagePath4, terestru, acvatic, aerian, mamifer, pasare, reptila, dinozaur, domestic, insecta, salbatic, comestibil, necomestibil,
-                longevity, generalities, stiatica, card_longevitate, card_categore, mediumWeight, mediumHeight, habitat, Mod_hranire
+                longevity, weight, height, generalities, stiatica, card_longevitate, card_categore, mediumWeight, mediumHeight, habitat, Mod_hranire
             ],
             function(error, results, fields) {
                 if (error) {
