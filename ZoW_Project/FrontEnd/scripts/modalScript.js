@@ -8,7 +8,7 @@ window.onload = function() {
     btn.onclick = () => {
         modal.style.display = "block";
         if (document.getElementsByClassName("navBar")) {
-            document.getElementsByClassName("navBar")[0].style.zIndex = -1;
+            document.getElementsByClassName("navBar")[0].style.zIndex = 0;
         }
     }
     span.onclick = () => {

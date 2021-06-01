@@ -63,8 +63,8 @@ a#admin {
 
 #arrow {
     cursor: pointer;
-    width: 1em;
-    height: 1.5em;
+    width: 16px;
+    height: 24px;
     margin-top: 8px;
     margin-right: 10px;
 }
@@ -199,7 +199,7 @@ input[type="text"] {
 
 #mainImage {
     position: absolute;
-    max-width: auto;
+    max-width: 100%;
     height: auto;
     margin: 0 auto;
     bottom: 0;
@@ -453,9 +453,7 @@ label[for="f5"] {
     color: black;
 }
 
-.menu .searchBar,
 .menu .username,
-.menu .createAlbum,
 .menu .logText {
     display: none;
 }
@@ -544,6 +542,35 @@ label[for="f5"] {
     cursor: pointer;
 }
 
+@media all and (max-width: 1050px) {
+    .searchBar {
+        margin-left: 100px;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .searchBar {
+        margin-right: 0;
+        margin-left: 20px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+}
+
+@media all and (max-width: 860px) {
+    .searchBar {
+        margin-left: 80px;
+    }
+}
+
+@media all and (max-width: 920px) {
+    .searchBar {
+        margin-right: 50px;
+    }
+}
+
 @media all and (max-width: 1000px) {
     .aboutContent {
         width: 60%;
@@ -606,30 +633,8 @@ label[for="f5"] {
     }
 }
 
+
 @media all and (max-width: 750px) {
-    .navBar .searchBar {
-        display: none;
-    }
-
-    .logo {
-        margin-left: 10em;
-    }
-
-    .menu .searchBar {
-        margin-top: 10px;
-        order: 2;
-        display: flex;
-        width: 88%;
-    }
-
-    .searchButton {
-        background-color: #72b0c9;
-    }
-
-    .searchButton:hover {
-        background-color: #72b0c9;
-    }
-
     #userMenu {
         order: 1;
     }
@@ -705,12 +710,19 @@ label[for="f5"] {
     .animalName {
         font-weight: 450;
     }
+
+    .logo {
+        display: none;
+    }
+}
+
+@media all and (max-width: 600px) {
+    #mainImage {
+        display: none;
+    }
 }
 
 @media all and (max-width: 570px) {
-    .logo {
-        margin-left: 6em;
-    }
 
     .fils {
         flex-direction: column;
@@ -738,18 +750,14 @@ label[for="f5"] {
 }
 
 @media all and (max-width: 500px) {
-    .menuLogo {
-        order: 1;
-        width: 100%;
-        height: 60px;
+
+    #loginBtn {
+        font-size: 15px;
     }
 
-    .logo {
-        margin-left: 8em;
-    }
-
-    .userOptions {
-        display: none;
+    #arrow {
+        width: 13px;
+        height: 20px;
     }
 
     .menu {
@@ -761,18 +769,12 @@ label[for="f5"] {
         display: flex;
     }
 
-    .menu .createAlbum {
-        display: block;
-        order: 6;
-    }
-
     .menu .logText {
         display: block;
         order: 7;
     }
 
     .menu .logText,
-    .menu .createAlbum,
     .menu .username {
         margin-top: 15px;
         font-size: 17px;
@@ -800,16 +802,15 @@ label[for="f5"] {
     }
 }
 
-@media all and (max-width: 450px) {
-    .logo {
-        margin-left: 6em;
-    }
-}
-
 @media all and (max-width: 430px) {
     .card {
         width: 350px;
         height: 190px;
+    }
+
+    .searchBar {
+        margin-left: 30px;
+        margin-right: 20px;
     }
 
     .animalImage {
@@ -824,6 +825,10 @@ label[for="f5"] {
         display: none;
     }
 
+    .userOptions {
+        display: none;
+    }
+
     .animalName {
         color: white;
         text-shadow: 3px 3px 6px black;
@@ -831,10 +836,6 @@ label[for="f5"] {
 }
 
 @media all and (max-width: 390px) {
-    .logo {
-        margin-left: 4em;
-    }
-
     .card {
         width: 320px;
         height: 180px;
@@ -855,10 +856,6 @@ label[for="f5"] {
 }
 
 @media all and (max-width: 310px) {
-    .logo {
-        margin-left: 2em;
-    }
-
     .card {
         width: 250px;
         height: 160;
