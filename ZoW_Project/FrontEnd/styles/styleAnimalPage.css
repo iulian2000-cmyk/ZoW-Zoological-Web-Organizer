@@ -126,6 +126,10 @@ h3 {
     text-align: center;
     background-color: #72b0c9;
 }
+#modalAtlas{
+    background-color:#2c4868;
+    color: white;
+}
 
 .Stiatica {
     margin-right: 3.5%;
@@ -150,7 +154,6 @@ h3 {
     font-size: 30px;
     size: 20px;
     margin-bottom: 3%;
-    justify-content: space-evenly;
     align-content: center;
 }
 
@@ -164,20 +167,12 @@ h3 {
     border: solid;
     border-color: white;
     border-width: 3px;
+    align-items:center;
+
+    
 }
 
-.buttons .button2 {
-    background-color: #72b0c9;
-    font-size: 15px;
-    padding: 5px 25px;
-    position: relative;
-    margin: auto;
-    border-radius: 15px;
-    border: solid;
-    border-color: white;
-    border-width: 3px;
-    margin-left: 20%;
-}
+
 
 .button1:hover {
     cursor: pointer;
@@ -187,13 +182,7 @@ h3 {
     border-radius: 15px;
 }
 
-.button2:hover {
-    cursor: pointer;
-    background-color: #72b0c9;
-    color: white;
-    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 15px;
-}
+
 
 * {
     box-sizing: border-box;
@@ -232,7 +221,7 @@ img {
 .prevButton,
 .nextButton {
     cursor: pointer;
-    position: absolute;
+    position:absolute;
     top: 40%;
     width: auto;
     padding: 16px;
@@ -305,16 +294,7 @@ img {
     margin-bottom: 4em;
 }
 
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
+
 
 .close {
     position: absolute;
@@ -541,10 +521,24 @@ img {
         flex-direction: column;
     }
 }
+@media all and (max-width: 1300px) {
+    .nextButton{
+        right: 2%;
+    }
+}
+@media all and (max-width: 1250px) {
+    .nextButton{
+        right: 4%;
+    }
+}
+
 
 @media all and (max-width: 1000px) {
     .aboutContent {
         width: 60%;
+    }
+    .nextButton{
+        right: 4%;
     }
 }
 
@@ -604,14 +598,14 @@ img {
         width: 100%;
     }
 
-    .nextButton {
+    /*.nextButton {
         right: 4.5%;
-    }
+    }*/
 }
 
 @media all and (max-width: 975px) {
     .buttons {
-        width: 80%;
+       
         font-size: small;
     }
 
@@ -660,7 +654,7 @@ img {
 
     .nextButton,
     .prevButton {
-        top: 140%;
+        top: 125%;
     }
 
     .nextButton {
@@ -711,10 +705,13 @@ img {
     .footerContent {
         flex-direction: column;
     }
-
-    .buttons {
-        width: 100%;
+    
+    .prevButton,
+    .nextButton {
+        top: 125%;
     }
+
+   
 }
 
 @media all and (max-width: 426px) {
@@ -722,13 +719,10 @@ img {
         font-size: 95%;
     }
 
-    .buttons {
-        width: 100%;
-    }
 
     .prevButton,
     .nextButton {
-        top: 135%;
+        top: 125%;
     }
 }
 
@@ -757,7 +751,7 @@ img {
 
     .prevButton,
     .nextButton {
-        top: 135%;
+        top: 125%;
     }
 
     .nextButton {
@@ -766,10 +760,7 @@ img {
 }
 
 @media all and (max-width: 350px) {
-    .buttons {
-        width: 95%;
-    }
-
+ 
     .modalImage {
         width: 100%;
         align-items: center;
@@ -777,7 +768,7 @@ img {
 
     .prevButton,
     .nextButton {
-        top: 135%;
+        top: 125%;
     }
 }
 

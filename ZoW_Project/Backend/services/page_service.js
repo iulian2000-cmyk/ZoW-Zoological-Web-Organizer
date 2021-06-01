@@ -343,10 +343,12 @@ exports.load_animal_page = function(req, res) {
                 dom.window.document.getElementById("like").action = dom.window.document.getElementById("like").action + index_animal;
                 //dom.window.document.getElementById("add").action = dom.window.document.getElementById("add").action + index_animal;
 
-                dom.window.document.getElementsByClassName("ImgGallery")[0].src = results[0].imagePath1
+                dom.window.document.getElementsByClassName("ImgGallery")[0].src = results[0].imagePath1;
                 dom.window.document.getElementsByClassName("ImgGallery")[1].src = results[0].imagePath2;
                 dom.window.document.getElementsByClassName("ImgGallery")[2].src = results[0].imagePath3;
                 dom.window.document.getElementsByClassName("ImgGallery")[3].src = results[0].imagePath4;
+
+                //dom.window.document.getElementsByClassName("myImg")[0].src = results[0].imagePath1;
 
 
                 dom.window.document.getElementsByClassName("demo cursor ")[0].src = results[0].imagePath1;
