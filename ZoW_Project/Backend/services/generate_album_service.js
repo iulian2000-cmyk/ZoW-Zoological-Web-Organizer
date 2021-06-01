@@ -39,7 +39,7 @@ exports.generate_album = function(req, res) {
     }
 
     if (domesticity !== "none" && edibility !== "none") {
-        connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where ${category}=1 and ${domesticity}=1 and ${edibility}=1 and (longevitate between ${longevityArray[0]} and ${longevityArray[1]});`, function(error, results, fields) {
+        connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where ?=1 and ?=1 and ?=1 and (longevitate between ? and ?);`, [category, domesticity, edibility, longevityArray[0], longevityArray[1]], function(error, results, fields) {
             if (results.length > 0) {
                 const response = [];
                 for (let i = 0; i < results.length; i++) {
@@ -55,7 +55,7 @@ exports.generate_album = function(req, res) {
             }
         });
     } else if (domesticity !== "none" && edibility === "none") {
-        connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where ${category}=1 and ${domesticity}=1 and (longevitate between ${longevityArray[0]} and ${longevityArray[1]});`, function(error, results, fields) {
+        connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where ?=1 and ?=1 and (longevitate between ? and ? );`, [category, domesticity, longevityArray[0], longevityArray[1]], function(error, results, fields) {
             if (results.length > 0) {
                 const response = [];
                 for (let i = 0; i < results.length; i++) {
@@ -71,7 +71,7 @@ exports.generate_album = function(req, res) {
             }
         });
     } else if (domesticity === "none" && edibility !== "none") {
-        connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where ${category}=1 and ${edibility}=1 and (longevitate between ${longevityArray[0]} and ${longevityArray[1]});`, function(error, results, fields) {
+        connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where ?=1 and ?=1 and (longevitate between ? and ?);`, [category, domesticity, longevityArray[0], longevityArray[1]], function(error, results, fields) {
             if (results.length > 0) {
                 const response = [];
                 for (let i = 0; i < results.length; i++) {
@@ -87,7 +87,7 @@ exports.generate_album = function(req, res) {
             }
         });
     } else if (domesticity === "none" && edibility === "none") {
-        connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where ${category}=1 and (longevitate between ${longevityArray[0]} and ${longevityArray[1]});`, function(error, results, fields) {
+        connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where ?=1 and (longevitate between ? and ?);`, [category, longevityArray[0], longevityArray[1]], function(error, results, fields) {
             if (results.length > 0) {
                 const response = [];
                 for (let i = 0; i < results.length; i++) {

@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
 exports.load_album = function(req, res) {
     const reqUrl = url.parse(req.url, true);
     const albumNameToSearch = reqUrl.query.defaultAlbums;
-    connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from albumsdefault natural join animals where albumName='${albumNameToSearch}';`, function(error, results, fields) {
+    connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from albumsdefault natural join animals where albumName=?;`, [albumNameToSearch], function(error, results, fields) {
         if (results.length > 0) {
             const response = [];
             for (let i = 0; i < results.length; i++) {

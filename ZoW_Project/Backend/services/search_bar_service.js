@@ -11,7 +11,7 @@ exports.search_data = function(req, res) {
     const reqUrl = url.parse(req.url, true);
     const animalNameToSearch = reqUrl.query.search.toUpperCase();
 
-    connection.query(`SELECT id_animal, animalName, likes, imagePath1 from animals where animalName=TRIM('${animalNameToSearch}');`, function(error, results, fields) {
+    connection.query(`SELECT id_animal, animalName, likes, imagePath1 from animals where animalName=TRIM(?);`, [animalNameToSearch], function(error, results, fields) {
         const response = [];
 
         if (results.length > 0) {

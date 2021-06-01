@@ -52,7 +52,7 @@ exports.mainPage = function(req, res) {
                             }
                             //res.write(dom.window.document.documentElement.outerHTML);
                         }
-                        connection.query(`SELECT albumCustomName from customAlbums natural join users where user_name='${username}';`, function(error, results, fields) {
+                        connection.query(`SELECT albumCustomName from customAlbums natural join users where user_name=?;`, [username], function(error, results, fields) {
                             if (results.length > 0) {
                                 for (i = 0; i < results.length; i++) {
                                     var option = dom.window.document.createElement("option");
