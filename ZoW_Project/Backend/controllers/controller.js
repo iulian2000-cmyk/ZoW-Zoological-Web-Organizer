@@ -5,7 +5,7 @@ const formidable = require('formidable');
 module.exports = http.createServer((req, res) => {
 
     var pageService, login_service, download_service, basic_service, load_default_album_service, search_bar_service, save_album_service, load_saved_album_service,
-        share_album_service;
+        share_album_service, load_shared_album_service;
 
     pageService = require('../services/page_service.js');
     login_service = require('../services/login_service.js');
@@ -17,7 +17,7 @@ module.exports = http.createServer((req, res) => {
     save_album_service = require('../services/save_album_service.js');
     load_saved_album_service = require('../services/load_saved_album_service.js');
     share_album_service = require('../services/share_album_service');
-
+    load_shared_album_service= require('../services/load_shared_album_service.js');
 
     const reqUrl = url.parse(req.url, true);
 
@@ -110,6 +110,9 @@ module.exports = http.createServer((req, res) => {
     }
     if (reqUrl.pathname == '/FrontEnd/load_saved_album' && req.method === 'GET') {
         load_saved_album_service.load_album(req, res);
+    }
+    if (reqUrl.pathname == '/FrontEnd/load_shared_album' && req.method === 'GET') {
+        load_shared_album_service.load_album(req, res);
     }
     if (reqUrl.pathname.includes("save") && req.method === 'POST') {
         save_album_service.save_album(req, res);

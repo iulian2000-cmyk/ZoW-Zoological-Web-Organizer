@@ -84,6 +84,23 @@ async function loadSavedAlbum() {
     }
 }
 
+async function loadSharedAlbum(){
+    const sel = document.getElementById("shared-albums-select");
+    let text = sel.options[sel.selectedIndex].text;
+    if (text !== "Select album") {
+        const response = await fetch(`http://127.0.0.1:5000/FrontEnd/load_shared_album?sharedAlbums=${text}`);
+        const serverMessage = await response.json();
+        document.getElementById("title").innerHTML = text;
+        document.getElementsByClassName("filters")[0].style.display = "flex";
+        document.getElementById("mainImage").style.display = "none";
+        document.getElementsByClassName("saveAndshare")[0].style.display = "flex";
+        document.getElementById("shareBtnId").style.display = "block";
+        document.getElementById("saveBtnId").style.display = "block";
+        displayCards(serverMessage);
+        cardsToSort = serverMessage;
+    }
+}
+
 async function generateAlbum() {
     const sel1 = document.getElementById("generateCategory");
     const sel2 = document.getElementById("generateDomesticity");
