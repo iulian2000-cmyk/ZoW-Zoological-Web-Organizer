@@ -36,11 +36,17 @@ exports.mainPage = function(req, res) {
             const dom = new JSDOM(data);
             res.writeHead(200, { 'Content-type': 'text/html' });
             if (typeof username !== 'undefined') {
-                dom.window.document.getElementById("userLabel").textContent = username;
                 if (isAdmin == "1") {
                     dom.window.document.getElementById("admin").style.display = "block";
+                    dom.window.document.getElementById("adminMenu").style.display = "block";
                 }
+                dom.window.document.getElementById("userLabel").textContent = username;
+                dom.window.document.getElementById("usernameMenu").textContent = username;
                 dom.window.document.getElementById("loginBtn").style.display = "none";
+                console.log(dom.window.innerWidth);
+                dom.window.document.getElementById("usernameMenu").style.display = "block";
+                dom.window.document.getElementById("loginMenu").style.display = "none";
+                dom.window.document.getElementById("logoutMenu").style.display = "block";
                 connection.query("SELECT * FROM users WHERE user_name=?", [username], function(error, results, fields) {
                     connection.query("SELECT albumCustomName  FROM shared_albums JOIN customAlbums ON customAlbums.id_albumCustom=shared_albums.id_albumCustom WHERE id_user2=?", [results[0].id_user], function(error, results, fields) {
                         if (results.length > 0) {
@@ -71,6 +77,8 @@ exports.mainPage = function(req, res) {
                 dom.window.document.getElementsByClassName("myAlbums")[0].style.display = "none";
                 dom.window.document.getElementsByClassName("sharedAlbums")[0].style.display = "none";
                 dom.window.document.getElementById("arrow").style.display = "none";
+                dom.window.document.getElementById("usernameMenu").style.display = "none";
+                dom.window.document.getElementById("logoutMenu").style.display = "none";
                 res.write(dom.window.document.documentElement.outerHTML);
                 res.end();
             }
