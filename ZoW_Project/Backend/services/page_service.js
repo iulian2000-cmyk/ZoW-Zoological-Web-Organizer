@@ -43,10 +43,11 @@ exports.mainPage = function(req, res) {
                 dom.window.document.getElementById("userLabel").textContent = username;
                 dom.window.document.getElementById("usernameMenu").textContent = username;
                 dom.window.document.getElementById("loginBtn").style.display = "none";
-                console.log(dom.window.innerWidth);
+                //console.log(dom.window.innerWidth);
                 dom.window.document.getElementById("usernameMenu").style.display = "block";
                 dom.window.document.getElementById("loginMenu").style.display = "none";
                 dom.window.document.getElementById("logoutMenu").style.display = "block";
+                var flag_user_who_shared = 0;
                 connection.query("SELECT * FROM users WHERE user_name=?", [username], function(error, results, fields) {
                     connection.query("SELECT albumCustomName  FROM shared_albums JOIN customAlbums ON customAlbums.id_albumCustom=shared_albums.id_albumCustom WHERE id_user2=?", [results[0].id_user], function(error, results, fields) {
                         if (results.length > 0) {
@@ -55,6 +56,7 @@ exports.mainPage = function(req, res) {
                                 option.value = results[i].albumCustomName;
                                 option.innerHTML = results[i].albumCustomName;
                                 dom.window.document.getElementById("shared-albums-select").appendChild(option);
+                                flag_user_who_shared = 1;
                             }
                             //res.write(dom.window.document.documentElement.outerHTML);
                         }
@@ -66,7 +68,9 @@ exports.mainPage = function(req, res) {
                                     option.innerHTML = results[i].albumCustomName;
                                     dom.window.document.getElementById("saved-albums-select").appendChild(option);
                                 }
-                                dom.window.document.getElementById("title").innerHTML += "<br> &nbsp; &nbsp; &nbsp; Someone shared an album with you ! ";
+                                if (flag_user_who_shared == 1) {
+                                    dom.window.document.getElementById("title").innerHTML += "<p>  Someone shared an album with you ! </p> ";
+                                }
                             }
                             res.write(dom.window.document.documentElement.outerHTML);
                             res.end();
@@ -344,8 +348,8 @@ exports.load_animal_page = function(req, res) {
                 dom.window.document.getElementById("content5").textContent = results[0].cardMediuDeViata;
                 dom.window.document.getElementById("content6").textContent = results[0].cardModDeHranire;
                 dom.window.document.getElementById("content7").textContent = results[0].likes;
-                dom.window.document.getElementById("TextGeneralitati ").textContent = results[0].generalities;
-                dom.window.document.getElementById("StiatiCaText ").textContent = results[0].stiatiCa;
+                dom.window.document.getElementById("TextGeneralitati").textContent = results[0].generalities;
+                dom.window.document.getElementById("StiatiCaText").textContent = results[0].stiatiCa;
 
 
 

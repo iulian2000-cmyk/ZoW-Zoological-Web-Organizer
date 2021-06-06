@@ -18,7 +18,7 @@ body {
 }
 
 h1 {
-    color: white solid;
+    color: white;
     text-align: center;
     margin-left: auto;
     display: flex;
@@ -47,7 +47,6 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 0 25px 24px rgba(0, 0, 0, 0.06);
     border-style: double;
-    border-width: large;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -121,13 +120,13 @@ li {
 
 h3 {
     color: black;
-    text-shadow: black;
     font-size: 20px;
     text-align: center;
     background-color: #72b0c9;
 }
-#modalAtlas{
-    background-color:#2c4868;
+
+#modalAtlas {
+    background-color: #2c4868;
     color: white;
 }
 
@@ -152,7 +151,6 @@ h3 {
     flex-direction: row;
     margin: auto;
     font-size: 30px;
-    size: 20px;
     margin-bottom: 3%;
     align-content: center;
 }
@@ -167,12 +165,8 @@ h3 {
     border: solid;
     border-color: white;
     border-width: 3px;
-    align-items:center;
-
-    
+    align-items: center;
 }
-
-
 
 .button1:hover {
     cursor: pointer;
@@ -181,8 +175,6 @@ h3 {
     box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 15px;
 }
-
-
 
 * {
     box-sizing: border-box;
@@ -221,7 +213,7 @@ img {
 .prevButton,
 .nextButton {
     cursor: pointer;
-    position:absolute;
+    position: absolute;
     top: 40%;
     width: auto;
     padding: 16px;
@@ -294,8 +286,6 @@ img {
     margin-bottom: 4em;
 }
 
-
-
 .close {
     position: absolute;
     top: 15px;
@@ -350,7 +340,6 @@ img {
         top: -300px;
         opacity: 0
     }
-
     to {
         top: 0;
         opacity: 1
@@ -362,7 +351,6 @@ img {
         top: -300px;
         opacity: 0
     }
-
     to {
         top: 0;
         opacity: 1
@@ -521,23 +509,24 @@ img {
         flex-direction: column;
     }
 }
+
 @media all and (max-width: 1300px) {
-    .nextButton{
+    .nextButton {
         right: 2%;
     }
 }
+
 @media all and (max-width: 1250px) {
-    .nextButton{
+    .nextButton {
         right: 4%;
     }
 }
-
 
 @media all and (max-width: 1000px) {
     .aboutContent {
         width: 60%;
     }
-    .nextButton{
+    .nextButton {
         right: 4%;
     }
 }
@@ -552,7 +541,6 @@ img {
     .aboutContent {
         width: 80%;
     }
-
     .aboutBody {
         font-size: small;
     }
@@ -563,17 +551,14 @@ img {
         flex-wrap: wrap;
         justify-content: space-around;
     }
-
     .box {
         width: 30%;
         height: auto;
         margin: auto;
     }
-
     .content {
         font-size: 15px;
     }
-
     .containerImages {
         width: 65%;
         height: auto;
@@ -581,23 +566,19 @@ img {
         top: 10%;
         padding: 30px;
     }
-
     .Slides {
         width: 100%;
         height: 100%;
     }
-
     .row {
         display: flex;
         flex-direction: row;
         width: 100%;
         height: 100%;
     }
-
     .cursor {
         width: 100%;
     }
-
     /*.nextButton {
         right: 4.5%;
     }*/
@@ -605,10 +586,8 @@ img {
 
 @media all and (max-width: 975px) {
     .buttons {
-       
         font-size: small;
     }
-
     .box {
         height: 100%;
     }
@@ -622,12 +601,10 @@ img {
         align-items: center;
         height: auto;
     }
-
     .box {
         width: 50%;
         flex-direction: column;
     }
-
     .containerImages {
         width: 100%;
         margin: auto;
@@ -635,32 +612,26 @@ img {
         padding: 30px;
         flex-direction: column;
     }
-
     .Slides {
         width: 100%;
         height: 100%;
     }
-
     .row {
         display: flex;
         flex-direction: row;
         width: 100%;
         height: 100%;
     }
-
     .cursor {
         width: 100%;
     }
-
     .nextButton,
     .prevButton {
         top: 125%;
     }
-
     .nextButton {
         right: 4%;
     }
-
     .modalImage {
         width: 80%;
     }
@@ -670,7 +641,6 @@ img {
     .mare {
         margin-top: 15%;
     }
-
     .box {
         width: 65%;
     }
@@ -681,45 +651,34 @@ img {
         margin-top: 15%;
         flex-direction: column;
     }
-
     .box {
         width: 90%;
     }
-
     .containerImages {
         width: 100%;
     }
-
     .nextButton {
         right: 7%;
     }
-
     .row {
         display: none;
     }
-
     .content {
         font-size: 100%;
     }
-
     .footerContent {
         flex-direction: column;
     }
-    
     .prevButton,
     .nextButton {
         top: 125%;
     }
-
-   
 }
 
 @media all and (max-width: 426px) {
     .content {
         font-size: 95%;
     }
-
-
     .prevButton,
     .nextButton {
         top: 125%;
@@ -731,41 +690,33 @@ img {
         margin-top: 25%;
         flex-direction: column;
     }
-
     .box {
         width: 95%;
         height: 60%;
     }
-
     .containerImages {
         width: 100%;
     }
-
     .nextButton {
         right: 8%;
     }
-
     .content {
         font-size: 95%;
     }
-
     .prevButton,
     .nextButton {
         top: 125%;
     }
-
     .nextButton {
         right: 8%;
     }
 }
 
 @media all and (max-width: 350px) {
- 
     .modalImage {
         width: 100%;
         align-items: center;
     }
-
     .prevButton,
     .nextButton {
         top: 125%;
@@ -776,7 +727,6 @@ img {
     #username {
         font-size: 12px;
     }
-
     .arrow {
         height: 1.3em;
         width: 0.8em;

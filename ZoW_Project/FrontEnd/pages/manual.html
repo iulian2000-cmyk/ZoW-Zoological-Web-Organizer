@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 
 <head>
     <meta charset="UTF-8">
@@ -16,11 +16,11 @@
 <body>
     <div class="navBar">
         <div class="menuLogo">
-            <a href="../index.html" ><img class="menuIcon" src="../images/icons/home.png" alt="menu icon" ></a>
+            <a href="../index.html"><img class="menuIcon" src="../images/icons/home.png" alt="menu icon"></a>
             <img class="logo" src="../images/logo/logo.png " alt="logo ">
         </div>
     </div>
-  
+
     <div class="manualContent">
         <header>
             <h1> ZoW Atlas - Manual de Instructiuni </h1>
@@ -28,7 +28,9 @@
         <section class="chapters">
             <ol>
                 <li>
-                    <a href="#chapter1"> Descriere generala </a>
+                    <a href="#chapter1">
+                        <h2> Descriere generala </h2>
+                    </a>
                     <ol>
                         <li> <a href="#chapter1_1"> Perspectiva aplicatiei </a> </li>
                         <li> <a href="#chapter1_2"> Specificatii tehnice utilizator </a> </li>
@@ -53,26 +55,29 @@
                         <li> <a href="#chapter2_15"> Deconectare</a> </li>
                     </ol>
                 </li>
-            </ol> 
-        </section>   
-        
+            </ol>
+        </section>
+
         <section id="chapter1">
             <h2> 1. Descriere generala</h2>
             <section id="chapter1_1">
-                <h3> 1.1 Perspectiva aplicatiei  </h3>
+                <h3> 1.1 Perspectiva aplicatiei </h3>
                 <p>
                     <b>ZoW Atlas</b> este o aplicatie WEB ce permite utilizatorilor vizualizarea unor albume cu animale impartite pe diverse categorii, generarea de albume in functie de anumite criterii alese de utilizator, filtrarea albumelor, cautarea
-                    multi-criteriala din searchbar, salvarea unui album in coletia personala sau chiar crearea propriilor albume. Pentru fiecare animal in parte exista o pagina specifica cu informatii si imagini.Fiind o aplicatie open-source, se presupune a fi utilizata de un numar nelimitat de useri, incluzand si un sistem de logare,ce aduce o serie de functionalitati in plus.
+                    multi-criteriala din searchbar, salvarea unui album in coletia personala sau chiar crearea propriilor albume. Pentru fiecare animal in parte exista o pagina specifica cu informatii si imagini.Fiind o aplicatie open-source, se presupune
+                    a fi utilizata de un numar nelimitat de useri, incluzand si un sistem de logare,ce aduce o serie de functionalitati in plus.
                 </p>
             </section>
             <section id="chapter1_2">
                 <h3> 1.2 Specificatii tehnice utilizatori </h3>
                 <p>
-                    Aplicatia ZoW este <b>destinata tuturor utilizatorilor</b> de aplicatii web. Datorita functionalitatilor pe care le detine, aceasta se adreseaza in special utilizatorilor care doresc sa afle informatii despre diferite categorii de animale. Se considera ca utilizatorul are cunostintele de baza de operare pe internet si acces la un dispozitiv conectat la retea.
-                    <br>Aplicatia va avea in principiu <b>doua clase majore de utilizatori</b> : utilizatori activi - inregistrati / ce folosesc aplicatia pentru functionalitatile premium de creare albume personalizate, respectiv simpli vizitatori care intra in general pentru a vizualiza si a cauta informatii cu privire la un animal din aplicatie. Se presupune ca, categoria majoritara va fi cea a userilor activi care vor frecventa regulat aplicatia.
+                    Aplicatia ZoW este <b>destinata tuturor utilizatorilor</b> de aplicatii web. Datorita functionalitatilor pe care le detine, aceasta se adreseaza in special utilizatorilor care doresc sa afle informatii despre diferite categorii de
+                    animale. Se considera ca utilizatorul are cunostintele de baza de operare pe internet si acces la un dispozitiv conectat la retea.
+                    <br>Aplicatia va avea in principiu <b>doua clase majore de utilizatori</b> : utilizatori activi - inregistrati / ce folosesc aplicatia pentru functionalitatile premium de creare albume personalizate, respectiv simpli vizitatori care
+                    intra in general pentru a vizualiza si a cauta informatii cu privire la un animal din aplicatie. Se presupune ca, categoria majoritara va fi cea a userilor activi care vor frecventa regulat aplicatia.
                 </p>
             </section>
-        </section>    
+        </section>
 
         <section id="chapter2">
             <h2> 2. Functionalitati</h2>
@@ -118,7 +123,7 @@
                     Componenta permite utilizatorului sa aleaga mai multe propietati in functie de care se vor tria animalele si se va genera un album.
                 </p>
             </section>
-           
+
             <section id="chapter2_8">
                 <h3> 2.8 Card animal</h3>
                 <p>
@@ -138,7 +143,7 @@
                 </p>
             </section>
             <section id="chapter2_11">
-                <h3> 2.11  Generare de statistici CSV, PDF</h3>
+                <h3> 2.11 Generare de statistici CSV, PDF</h3>
                 <p>
                     In pagina principala exista doua butoane “Download statistics PDF”/"Download statistics CSV" care vor genera diverse statistici in conformitate cu informatiile disponibile la nivel de baza de date in formate CSV si PDF.
                 </p>
@@ -158,9 +163,10 @@
             <section id="chapter2_14">
                 <h3> 2.14 Partajare albume</h3>
                 <p>
-                   Componenta permite unui utilizator logat in aplicatie sa partajeze un album deja creeat unui alt utlizator inregistrat in aplicatie.Mai exact schimbul de albume se realizeaza in urmatorul mod, odata ce utilizatorul X genereaza un album, acesta are posibilitatea de a-l salva in 
-                   sectiunea0 "Saved Albums", apasand butonul "Show album" din meniu, utlizatorul are dreptul de a distribui albumul salvat prin optiunea "Share Album", urmand apoi sa introduca numele utilizatorului/utilizatorilor carora doreste sa le partajeze albumul. In cazul in care partajarea se face la nivelul
-                   de useri multiplii, numele utilizatorilor trebuie separat prin virgula(ex: Y,Z). Ulterior, in cazul partajarii cu succes, userii Y respectiv Z, vor primi o notificare in care le este anunta partajarea. Albumul partajat poate fi accesat de acestia din sectiunea "Received Albums".
+                    Componenta permite unui utilizator logat in aplicatie sa partajeze un album deja creeat unui alt utlizator inregistrat in aplicatie.Mai exact schimbul de albume se realizeaza in urmatorul mod, odata ce utilizatorul X genereaza un album, acesta are posibilitatea
+                    de a-l salva in sectiunea0 "Saved Albums", apasand butonul "Show album" din meniu, utlizatorul are dreptul de a distribui albumul salvat prin optiunea "Share Album", urmand apoi sa introduca numele utilizatorului/utilizatorilor carora
+                    doreste sa le partajeze albumul. In cazul in care partajarea se face la nivelul de useri multiplii, numele utilizatorilor trebuie separat prin virgula(ex: Y,Z). Ulterior, in cazul partajarii cu succes, userii Y respectiv Z, vor primi
+                    o notificare in care le este anunta partajarea. Albumul partajat poate fi accesat de acestia din sectiunea "Received Albums".
                 </p>
             </section>
             <section id="chapter2_15">
@@ -169,7 +175,7 @@
                     Componenta permite unui utilizator logat sa se delogheze de pe site.
                 </p>
             </section>
-        </section>    
+        </section>
 
     </div>
 
@@ -177,7 +183,7 @@
         <div class="footerContent ">
             <p> &#169; All rights reserved </p>
             <p> ZoW Atlas 2021 </p>
-            <button id="aboutBtn" > About </button>
+            <button id="aboutBtn"> About </button>
         </div>
     </footer>
 
@@ -188,12 +194,16 @@
                 <h3>ZoW Atlas</h3>
             </div>
             <div class="aboutBody">
-                <p>
-                    <b>ZoW - Zoological Web Organizer</b> are drept scop final realizarea unei aplicatii web, mai exact unui atlas zoologic digital ce ofera utilizatorului o serie de functionalitati. Acesta poate sa vizualizeze albumele intial generate de catre aplicatie dar si sa genereze propriile albume tematice personalizate in functie de cerintele sale(animale de companie, domestice, salbatice etc) prin intermediul unei cautari multi-criteriale pe baza unor filtre la nivelul bazei de date.Se va crea atat un clasament al celor mai populare animale pe baza sistemului de rating de care dispune utilizatorul, disponibil si ca flux de date RSS cat si diverse statistici disponibile in formate deschise-minimal, CSV si PDF.
-                    <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;Electron\&quot; modified=\&quot;2021-06-05T17:32:02.276Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.6.13 Chrome/89.0.4389.128 Electron/12.0.7 Safari/537.36\&quot; etag=\&quot;hUhFeH4sA-XKqSCtJwaz\&quot; version=\&quot;14.6.13\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;e4CY1KfmZ_HjEQV-NOpp\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
-                    <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
-                </p>
+
+                <b>ZoW - Zoological Web Organizer</b> are drept scop final realizarea unei aplicatii web, mai exact unui atlas zoologic digital ce ofera utilizatorului o serie de functionalitati. Acesta poate sa vizualizeze albumele intial generate de
+                catre aplicatie dar si sa genereze propriile albume tematice personalizate in functie de cerintele sale(animale de companie, domestice, salbatice etc) prin intermediul unei cautari multi-criteriale pe baza unor filtre la nivelul bazei
+                de date.Se va crea atat un clasament al celor mai populare animale pe baza sistemului de rating de care dispune utilizatorul, disponibil si ca flux de date RSS cat si diverse statistici disponibile in formate deschise-minimal, CSV si PDF.
+                <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;Electron\&quot; modified=\&quot;2021-06-05T17:32:02.276Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.6.13 Chrome/89.0.4389.128 Electron/12.0.7 Safari/537.36\&quot; etag=\&quot;hUhFeH4sA-XKqSCtJwaz\&quot; version=\&quot;14.6.13\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;e4CY1KfmZ_HjEQV-NOpp\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+                <script src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+
             </div>
         </div>
     </div>
 </body>
+
+</html>

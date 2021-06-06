@@ -40,9 +40,9 @@
                 <input type="password" name="password" placeholder="Password" required>
                 <span id="privText"> Admin privileges:</span>
                 <div class="privileges">
-                    <label for="yes">yes</label>
+                    <label>yes</label>
                     <input type="radio" id="yes" value="1" name="privileges">
-                    <label for="no">no</label>
+                    <label>no</label>
                     <input type="radio" id="no" value="0" name="privileges" checked>
                 </div>
                 <button type="submit" class="submitBtn">Add</button>
@@ -74,74 +74,74 @@
             <form id="add_animal" action="add_animal" method="post" enctype="multipart/form-data">
                 <p>Add animal to database</p>
                 <input type="text" name="animal" placeholder="Animal name" required>
-                <label for="longevity"> Longevitate exprimata in ani</label>
-                <input type="number" id="height" name="longevity" min="0.1" step="0.1" required>
+                <label> Longevitate exprimata in ani</label>
+                <input type="number" name="longevity" min="0.1" step="0.1" required>
                 <input type="text" name="card_longevitate" placeholder="Cati ani si cate luni ? " required>
                 <input type="text" name="card_categorie" placeholder="Categorie" required>
-                <label for="terestru"> Animal terestru </label>
+                <label> Animal terestru </label>
                 <select class="select" name="terestru">
                     <option value="1"> Da </option>
                     <option value="0"> Nu </option>
                 </select>
-                <label for="acvatic"> Animal acvatic </label>
+                <label> Animal acvatic </label>
                 <select class="select" name="acvatic">
                     <option value="1"> Da </option>
                     <option value="0"> Nu </option>
                 </select>
-                <label for="aerian"> Animal aerian </label>
+                <label> Animal aerian </label>
                 <select class="select" name="aerian">
                     <option value="1"> Da </option>
                     <option value="0"> Nu </option>
                 </select>
-                <label for="mamifer"> Animal mamifer </label>
+                <label> Animal mamifer </label>
                 <select class="select" name="mamifer">
                     <option value="1"> Da </option>
                     <option value="0"> Nu </option>
                 </select>
-                <label for="pasare"> Animal zburator </label>
+                <label> Animal zburator </label>
                 <select class="select" name="pasare">
                     <option value="1"> Da </option>
                     <option value="0"> Nu </option>
                 </select>
-                <label for="reptila"> Reptila </label>
+                <label> Reptila </label>
                 <select class="select" name="reptila">
                     <option value="1"> Da </option>
                     <option value="0"> Nu </option>
                 </select>
-                <label for="insecta"> Insecta </label>
+                <label> Insecta </label>
                 <select class="select" name="insecta">
                     <option value="1"> Da </option>
                     <option value="0"> Nu </option>
                 </select>
-                <label for="dinozaur"> Dinozaur </label>
+                <label> Dinozaur </label>
                 <select class="select" name="dinozaur">
                     <option value="1"> Da </option>
                     <option value="0"> Nu </option>
                 </select>
-                <label for="salbatic"> Salbatic </label>
+                <label> Salbatic </label>
                 <select class="select" name="salbatic">
                     <option value="1"> Da </option>
                     <option value="0"> Nu </option>
                 </select>
-                <label for="domestic"> Domestic </label>
+                <label> Domestic </label>
                 <select class="select" name="domestic">
                     <option value="1"> Da </option>
                     <option value="0"> Nu </option>
                 </select>
-                <label for="comestibil"> Comestibil </label>
+                <label> Comestibil </label>
                 <select class="select" name="comestibil">
                     <option value="1"> Da </option>
                     <option value="0"> Nu </option>
                 </select>
-                <label for="weight">Weight (kg)</label>
+                <label>Weight (kg)</label>
                 <input type="number" id="weight" name="weight" min="1" step="0.01" required>
-                <label for="height">Height (m)</label>
+                <label>Height (m)</label>
                 <input type="number" id="height" name="height" min="0.1" step="0.01" required>
                 <input type="text" name="habitat" placeholder="Habitat" required>
                 <input type="text" name="hranire" placeholder="Mod de hranire" required>
                 <textarea name="generalitati" id="t1" form="add_animal">Generalitati</textarea>
                 <textarea name="stiatica" id="t2" form="add_animal">Stiati ca...</textarea>
-                <label for="images"> Choose 4 images (jpg, jpeg, png)</label>
+                <label> Choose 4 images (jpg, jpeg, png)</label>
                 <div><input type="file" name="multipleFiles" multiple="multiple" /> </div>
                 <button type="submit" class="submitBtn">Add</button>
             </form>
