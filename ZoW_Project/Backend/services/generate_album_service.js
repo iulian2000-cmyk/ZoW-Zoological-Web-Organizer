@@ -93,7 +93,7 @@ exports.generate_album = function(req, res) {
             }
         });
     } else if (domesticity === "none" && edibility === "none") {
-        connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where ${category}=1 and (longevitate between ? and ?);`, [category, longevityArray[0], longevityArray[1]], function(error, results, fields) {
+        connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where ${category}=1 and (longevitate between ? and ?);`, [longevityArray[0], longevityArray[1]], function(error, results, fields) {
             console.log('4 ' + error);
             if (results.length > 0) {
                 const response = [];
