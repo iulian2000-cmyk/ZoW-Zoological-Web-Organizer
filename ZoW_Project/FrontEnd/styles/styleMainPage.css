@@ -343,7 +343,7 @@ option {
 
 #orderBy {
     font-size: 15px;
-    font-weight: 450;
+    font-weight: 400;
     margin-left: 10px;
     margin-top: 3px;
 }
@@ -714,7 +714,7 @@ label[for="f5"] {
     }
 
     .animalName {
-        font-weight: 450;
+        font-weight: 400;
     }
 
     .logo {
@@ -857,13 +857,13 @@ label[for="f5"] {
 @media all and (max-width: 350px) {
     .card {
         width: 260px;
-        height: 160;
+        height: 160px;
     }
 }
 
 @media all and (max-width: 310px) {
     .card {
         width: 250px;
-        height: 160;
+        height: 160px;
     }
 }
