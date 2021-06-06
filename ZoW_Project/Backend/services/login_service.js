@@ -26,7 +26,7 @@ exports.login = function(req, res) {
         var password = post.password;
         var cookies = new Cookies(req, res, { keys: keys });
         if (username && password) {
-            connection.query('SELECT * FROM users WHERE user_name= ' + connection.escape(post.username) + 'AND password_hash = ' + connection.escape(post.password), function(error, results, fields) {
+            connection.query('SELECT * FROM users WHERE user_name= ' + connection.escape(post.username) + 'AND password_hash=SHA1(' + connection.escape(post.password) + ');', function(error, results, fields) {
                 if (results.length > 0) {
                     cookies.set('username', username, { signed: true });
                     cookies.set('last-active', new Date().toISOString(), { signed: true });
@@ -64,7 +64,7 @@ exports.register = function(req, res) {
         //console.log(username + "--" + password + "--" + email);
         var cookies = new Cookies(req, res, { keys: keys });
         if (username && password && email) {
-            connection.query('INSERT INTO users VALUES (NULL,?,?,?,FALSE);', [username, password, email], function(error, results, fields) {
+            connection.query('INSERT INTO users VALUES (NULL,?,SHA1(?),?,FALSE);', [username, password, email], function(error, results, fields) {
                 cookies.set('username', username, { signed: true });
                 cookies.set('last-active', new Date().toISOString(), { signed: true });
                 res.writeHead(301, { Location: '../pages/authentication.html' });
