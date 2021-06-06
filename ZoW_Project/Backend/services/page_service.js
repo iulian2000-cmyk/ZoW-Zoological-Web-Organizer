@@ -60,6 +60,7 @@ exports.mainPage = function(req, res) {
                                     option.innerHTML = results[i].albumCustomName;
                                     dom.window.document.getElementById("saved-albums-select").appendChild(option);
                                 }
+                                dom.window.document.getElementById("title").innerHTML += "<br> &nbsp; &nbsp; &nbsp; Someone shared an album with you ! ";
                             }
                             res.write(dom.window.document.documentElement.outerHTML);
                             res.end();
