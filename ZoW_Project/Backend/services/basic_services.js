@@ -36,7 +36,7 @@ exports.add_user = function(req, res) {
         var password = post.password;
         var email = post.email;
         var isAdmin = post.privileges;
-        connection.query('INSERT INTO users VALUES (NULL,?,?,?,?)', [username, password, email, isAdmin], function(error, results, fields) {
+        connection.query('INSERT INTO users VALUES (NULL,?,SHA1(?),?,?)', [username, password, email, isAdmin], function(error, results, fields) {
             res.writeHead(301, { Location: './admin.html' });
             res.end();
         });
