@@ -74,10 +74,12 @@ exports.mainPage = function(req, res) {
                                     var newElement = dom.window.document.createElement("p");
                                     newElement.style.color = "#2b4868";
                                     newElement.style.fontSize = "20px";
-                                    newElement.style.marginBottom = "1em";
+                                    newElement.style.marginBottom = "0.5em";
                                     newElement.style.marginTop = "1em";
                                     newElement.style.textShadow = "1px 1px 2px #72b0c9";
+                                    newElement.id = "notificationText";
                                     newElement.innerHTML = " Someone shared an album with you ! ";
+                                    newElement.style.display = "block";
                                     referenceElement.before(newElement);
                                     //parentElement.insertBefore(newElement, referenceElement);
                                 }

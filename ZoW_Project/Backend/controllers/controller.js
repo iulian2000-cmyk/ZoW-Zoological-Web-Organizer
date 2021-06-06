@@ -1,4 +1,3 @@
-import { add_album, add_animal } from '../services/basic_services';
 const http = require('http');
 const url = require('url');
 const formidable = require('formidable');

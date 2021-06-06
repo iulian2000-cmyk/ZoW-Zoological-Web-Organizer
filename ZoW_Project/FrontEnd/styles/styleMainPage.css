@@ -211,6 +211,7 @@ input[type="text"] {
     border: none;
     font-size: 20px;
     color: #2b4868;
+    margin-top: 1em;
 }
 
 #userInstructions:hover {

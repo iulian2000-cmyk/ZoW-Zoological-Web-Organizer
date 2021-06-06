@@ -63,6 +63,7 @@ async function loadAlbum() {
     document.getElementsByClassName("filters")[0].style.display = "flex";
     document.getElementById("mainImage").style.display = "none";
     document.getElementsByClassName("saveAndshare")[0].style.display = "none";
+    document.getElementById("notificationText").style.display = "none";
     displayCards(serverMessage);
     cardsToSort = serverMessage;
 }
@@ -79,6 +80,7 @@ async function loadSavedAlbum() {
         document.getElementsByClassName("saveAndshare")[0].style.display = "flex";
         document.getElementById("shareBtnId").style.display = "block";
         document.getElementById("saveBtnId").style.display = "none";
+        document.getElementById("notificationText").style.display = "none";
         displayCards(serverMessage);
         cardsToSort = serverMessage;
     }
@@ -96,6 +98,7 @@ async function loadSharedAlbum(){
         document.getElementsByClassName("saveAndshare")[0].style.display = "flex";
         document.getElementById("shareBtnId").style.display = "block";
         document.getElementById("saveBtnId").style.display = "block";
+        document.getElementById("notificationText").style.display = "none";
         displayCards(serverMessage);
         cardsToSort = serverMessage;
     }
@@ -133,6 +136,7 @@ async function generateAlbum() {
         document.getElementsByClassName("filters")[0].style.display = "none";
         document.getElementsByClassName("saveAndshare")[0].style.display = "none";
     }
+    document.getElementById("notificationText").style.display = "none";
 }
 
 async function searchData() {
@@ -152,6 +156,7 @@ async function searchData() {
     }
     document.getElementsByClassName("filters")[0].style.display = "none";
     document.getElementsByClassName("saveAndshare")[0].style.display = "none";
+    document.getElementById("notificationText").style.display = "none";
 }
 
 

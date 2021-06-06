@@ -21,12 +21,13 @@ exports.save_album = function(req, res) {
         const albumName = objectReceived.album;
         let idUser = 0;
         let id_album = 0;
+
         connection.query(`select id_user from users where user_name=?;`, [username], function(error, results, fields) {
             idUser = results[0].id_user;
             connection.query(`select * from customAlbums where albumCustomName=? and id_user=?;`, [albumName, idUser], function(error, results, fields) {
                 if (results.length == 0) {
                     connection.query(`insert into customAlbums values (NULL,?,?);`, [albumName, idUser], function(error, results, fields) {
-                        connection.query(`select id_albumCustom from customAlbums where albumCustomName=?';`, [albumName], function(error, results, fields) {
+                        connection.query(`select id_albumCustom from customAlbums where albumCustomName=?;`, [albumName], function(error, results, fields) {
                             id_album = results[0].id_albumCustom;
                             for (let id of animals) {
                                 connection.query(`insert into addAnimalToAlbum values (?,?);`, [id_album, id], function(error, results, fields) {});
