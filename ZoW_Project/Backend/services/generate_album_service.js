@@ -39,7 +39,8 @@ exports.generate_album = function(req, res) {
     }
 
     if (domesticity !== "none" && edibility !== "none") {
-        connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where =1 and ?=1 and ?=1 and (longevitate between ? and ?);`, [category, domesticity, edibility, longevityArray[0], longevityArray[1]], function(error, results, fields) {
+        connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where` + connection.escape(category) + `=1 and ` + connection.escape(domesticity) + `=1 and ` + connection.escape(edibility) + `=1 and (longevitate between ? and ?);`, [longevityArray[0], longevityArray[1]], function(error, results, fields) {
+            console.log('1 ' + error);
             if (results.length > 0) {
                 const response = [];
                 for (let i = 0; i < results.length; i++) {
@@ -55,23 +56,27 @@ exports.generate_album = function(req, res) {
             }
         });
     } else if (domesticity !== "none" && edibility === "none") {
-        connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where ?=1 and ?=1 and (longevitate between ? and ? );`, [category, domesticity, longevityArray[0], longevityArray[1]], function(error, results, fields) {
-            if (results.length > 0) {
-                const response = [];
-                for (let i = 0; i < results.length; i++) {
-                    response.push(results[i]);
-                    response[i].imagePath1 = response[i].imagePath1.slice(1);
+        connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where ` + connection.escape(category) + `=1 and ` + connection.escape(domesticity) +
+            `=1 and (longevitate between ` + connection.escape(longevityArray[0]) + ` and ` + connection.escape(longevityArray[1]) + `);`,
+            function(error, results, fields) {
+                console.log('2 ' + error);
+                if (results.length > 0) {
+                    const response = [];
+                    for (let i = 0; i < results.length; i++) {
+                        response.push(results[i]);
+                        response[i].imagePath1 = response[i].imagePath1.slice(1);
+                    }
+                    res.writeHead(200, { 'Content-type': 'application/json' });
+                    res.end(JSON.stringify(response));
+                } else {
+                    const response = [];
+                    res.writeHead(200, { 'Content-type': 'application/json' });
+                    res.end(JSON.stringify(response));
                 }
-                res.writeHead(200, { 'Content-type': 'application/json' });
-                res.end(JSON.stringify(response));
-            } else {
-                const response = [];
-                res.writeHead(200, { 'Content-type': 'application/json' });
-                res.end(JSON.stringify(response));
-            }
-        });
+            });
     } else if (domesticity === "none" && edibility !== "none") {
         connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where ?=1 and ?=1 and (longevitate between ? and ?);`, [category, domesticity, longevityArray[0], longevityArray[1]], function(error, results, fields) {
+            console.log('3 ' + error);
             if (results.length > 0) {
                 const response = [];
                 for (let i = 0; i < results.length; i++) {
@@ -88,6 +93,7 @@ exports.generate_album = function(req, res) {
         });
     } else if (domesticity === "none" && edibility === "none") {
         connection.query(`SELECT id_animal, animalName, longevitate, likes, inaltime, greutate, imagePath1 from animals where ?=1 and (longevitate between ? and ?);`, [category, longevityArray[0], longevityArray[1]], function(error, results, fields) {
+            console.log('4 ' + error);
             if (results.length > 0) {
                 const response = [];
                 for (let i = 0; i < results.length; i++) {
