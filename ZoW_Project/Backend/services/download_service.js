@@ -52,11 +52,8 @@ exports.download_csv = function(req, res) {
         PathToCSV = PathToCSV.replace("/services/FrontEnd/get_CSV", "");
         PathToCSV = PathToCSV + "/FilesToDownload/Order.csv";
     }
-    connection.connect(error => {
-        if (error) throw error;
 
-        // query data from MySQL
-        const SQL_interogation = "SELECT AVG(longevitate) AS \"Medie viata\", (SELECT COUNT(*) FROM animals WHERE TRIM(cardCategorie)=\"Mamifere\") AS \"Numar mamifere\", (SELECT COUNT(*) FROM animals WHERE insecta=1) AS \"Numar insecte \",(SELECT COUNT(*) FROM animals WHERE terestru=1) AS \"Numar animale terestre\", (SELECT COUNT(*) FROM animals WHERE acvatic=1) AS \"Numar animale acvatice\", (SELECT COUNT(*) FROM animals WHERE aerian=1) AS \"Numar animale aeriane\", (SELECT COUNT(*) FROM animals WHERE domestic=1) AS \"Numar animale domestice\", (SELECT COUNT(*) FROM animals WHERE salbatic=1) AS \"Numar animale salbatice\" FROM animals;";
+        const SQL_interogation = "SELECT AVG(longevitate) AS \"Medie viata\", (SELECT COUNT(*) FROM animals WHERE TRIM(cardCategorie)=\"Mamifere\") AS \"Numar mamifere\", (SELECT COUNT(*) FROM animals WHERE insecta=1) AS \"Numar insecte \",(SELECT COUNT(*) FROM animals WHERE terestru=1) AS \"Numar animale terestre\", (SELECT COUNT(*) FROM animals WHERE acvatic=1) AS \"Numar animale acvatice\", (SELECT COUNT(*) FROM animals WHERE aerian=1) AS \"Numar animale aeriane\", (SELECT COUNT(*) FROM animals WHERE domestic=1) AS \"Numar animale domestice\", (SELECT COUNT(*) FROM animals WHERE salbatic=1) AS \"Numar animale salbatice\", (SELECT AVG(greutate) FROM animals WHERE TRIM(cardCategorie) = \"Mamifere\") AS \"Greutate medie mamifere(kg)\" ,(SELECT AVG(greutate) FROM animals WHERE TRIM(cardCategorie) = \"Pasari\") AS \"Greutate medie pasari(kg)\" ,(SELECT AVG(greutate) FROM animals WHERE TRIM(cardCategorie) = \"Insecte\") AS \"Greutate medie insecte(kg)\" ,(SELECT AVG(greutate) FROM animals WHERE TRIM(cardCategorie) = \"Reptile\") AS \"Greutate medie reptile(kg)\" ,(SELECT AVG(greutate) FROM animals WHERE TRIM(cardCategorie) = \"Dinozauri\") AS \"Greutate medie dinozauri(kg)\" ,(SELECT AVG(greutate) FROM animals WHERE TRIM(cardCategorie) = \"Pesti\") AS \"Greutate medie pesti(kg)\" , (SELECT AVG(inaltime) FROM animals WHERE TRIM(cardCategorie) = \"Mamifere\") AS \"Inaltime medie mamifere(m)\" , (SELECT AVG(inaltime) FROM animals WHERE TRIM(cardCategorie) = \"Pasari\") AS \"Inaltime medie pasari(m)\" ,(SELECT AVG(inaltime) FROM animals WHERE TRIM(cardCategorie) = \"Dinozauri\") AS \"Inaltime medie dinozauri(m)\" ,(SELECT AVG(inaltime) FROM animals WHERE TRIM(cardCategorie) = \"Reptile\") AS \"Inaltime medie reptile(m)\"  FROM animals;";
         connection.query(SQL_interogation, function(error, data, fields) {
 
             if (error) throw error;
@@ -80,7 +77,6 @@ exports.download_csv = function(req, res) {
                 }
             });
         });
-    });
 }
 
 
