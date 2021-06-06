@@ -69,7 +69,16 @@ exports.mainPage = function(req, res) {
                                     dom.window.document.getElementById("saved-albums-select").appendChild(option);
                                 }
                                 if (flag_user_who_shared == 1) {
-                                    dom.window.document.getElementById("title").innerHTML += "<p>  Someone shared an album with you ! </p> ";
+                                    var parentElement = dom.window.document.getElementsByClassName("content");
+                                    var referenceElement = dom.window.document.getElementById("userInstructions");
+                                    var newElement = dom.window.document.createElement("p");
+                                    newElement.style.color = "#2b4868";
+                                    newElement.style.marginTop = "3.5em";
+                                    newElement.style.marginBottom = "1em";
+                                    newElement.style.textShadow = "1px 1px 2px #72b0c9";
+                                    newElement.innerHTML = " Someone shared an album with you ! ";
+                                    referenceElement.before(newElement);
+                                    //parentElement.insertBefore(newElement, referenceElement);
                                 }
                             }
                             res.write(dom.window.document.documentElement.outerHTML);
