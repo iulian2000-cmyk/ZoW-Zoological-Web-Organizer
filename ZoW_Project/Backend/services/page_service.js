@@ -73,8 +73,9 @@ exports.mainPage = function(req, res) {
                                     var referenceElement = dom.window.document.getElementById("userInstructions");
                                     var newElement = dom.window.document.createElement("p");
                                     newElement.style.color = "#2b4868";
-                                    newElement.style.marginTop = "3.5em";
+                                    newElement.style.fontSize = "20px";
                                     newElement.style.marginBottom = "1em";
+                                    newElement.style.marginTop = "1em";
                                     newElement.style.textShadow = "1px 1px 2px #72b0c9";
                                     newElement.innerHTML = " Someone shared an album with you ! ";
                                     referenceElement.before(newElement);

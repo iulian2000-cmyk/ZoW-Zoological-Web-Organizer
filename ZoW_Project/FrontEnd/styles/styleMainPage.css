@@ -312,9 +312,13 @@ option {
     overflow-x: hidden;
 }
 
+.content p {
+    margin-top: 0;
+}
+
 #title {
     color: #2b4868;
-    margin: 3.5em auto 1em auto;
+    margin: 3.5em auto 0 auto;
     text-align: center;
     text-shadow: 1px 1px 2px #72b0c9;
 }
