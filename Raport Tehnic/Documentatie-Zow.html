@@ -54,19 +54,20 @@
                     <li> <a href="#chapter4_1"> Inregistrare </a> </li>
                     <li> <a href="#chapter4_2"> Autentificare </a> </li>
                     <li> <a href="#chapter4_3"> Search bar </a> </li>
-                    <li> <a href="#chapter4_4"> Afisare album selectat (albume prestabilite) </a> </li>
+                    <li> <a href="#chapter4_4"> Afisare album default (albume prestabilite) </a> </li>
                     <li> <a href="#chapter4_5"> Filtrare album </a> </li>
                     <li> <a href="#chapter4_6"> Salvarea unui album in colectia persoanala  </a> </li>
                     <li> <a href="#chapter4_7"> Generare de albume bazate pe anumite proprietati alese de utilizator </a> </li>
-                    <li> <a href="#chapter4_8"> Crearea unui album personal  </a> </li>
+                    <li> <a href="#chapter4_8"> Received albums </a> </li>
                     <li> <a href="#chapter4_9"> Card animal </a> </li>
                     <li> <a href="#chapter4_10"> Slider de imagini pentru fiecare animal  </a> </li>
                     <li> <a href="#chapter4_11"> Like animal  </a> </li>
-                    <li> <a href="#chapter4_12"> Adaugarea unui animal intr-un album personal  </a> </li>
+                    <li> <a href="#chapter4_12"> Partajare album </a> </li>
                     <li> <a href="#chapter4_13"> Generare de statistici CSV, PDF  </a> </li>
-                    <li> <a href="#chapter4_14"> Generare clasament animale populare (flux RSS) </a> </li>
-                    <li> <a href="#chapter4_15"> Albumele mele </a> </li>
-                    <li> <a href="#chapter4_16"> Deconectare </a> </li>
+                    <li> <a href="#chapter4_14"> Generare clasament animale populare si download flux RSS </a> </li>
+                    <li> <a href="#chapter4_15"> Saved albums </a> </li>
+                    <li> <a href="#chapter4_16"> Notificare user </a> </li>
+                    <li> <a href="#chapter4_17"> Deconectare </a> </li>
                 </ol>
             </li>
             <li> <a href="#chapter5"> Other Nonfunctional Requirements </a>
@@ -189,10 +190,10 @@
                 &nbsp; &nbsp; &nbsp; &nbsp; Produsul final este un atlas Zoologic Digital, mai exact o aplicatie web (open-source) ce functioneaza independent si este destinata uzului general. Fiind o aplicatie open-source, se presupune a fi utilizata de un numar nelimitat
                 de useri, incluzand si un sistem de logare,ce aduce o serie de functionalitati in plus. Componentele majore ale aplicatie sunt doua : FRONTEND si BACKEND.
                 <br> &nbsp; &nbsp; &nbsp; &nbsp;Partea de FRONT (HTML,CSS,JavaScript) face legatura cu user-ul,prin intermediul ei acesta poate vedea si interactiona cu WEB sever-ul, beneficiind astfel de toate functionalitatile aplicatiei. &nbsp; &nbsp;
-                &nbsp; &nbsp;Partea de BACK(Node.js, Typescript, Typeorm) asigura corectitudinea functionalitatilor, fiind zona de implementare propriu-zisa. Desigur, ca modalitate de stocare a datelor ce intra in componenta produsului, este folosita
+                <br>&nbsp; &nbsp; &nbsp; &nbsp;Partea de BACK(Node.js, Typescript, Typeorm) asigura corectitudinea functionalitatilor, fiind zona de implementare propriu-zisa. Desigur, ca modalitate de stocare a datelor ce intra in componenta produsului, este folosita
                 o baza de date MySQL.
                 <br> Atasez diagrama aplicatiei ce ilustreaza componentele principale din care este alcatuita :
-                <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;Electron\&quot; modified=\&quot;2021-04-01T16:13:54.314Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.4.3 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36\&quot; etag=\&quot;PzsMiJq3R2HyJdykBY5f\&quot; version=\&quot;14.4.3\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;GmiwDMexxhOpCZKFl61L\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+                <div class="mxgraph" style="max-width:130%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;Electron\&quot; modified=\&quot;2021-04-01T16:13:54.314Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.4.3 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36\&quot; etag=\&quot;PzsMiJq3R2HyJdykBY5f\&quot; version=\&quot;14.4.3\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;GmiwDMexxhOpCZKFl61L\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
                 <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
             </p>
         </section>
@@ -200,26 +201,27 @@
             <h3> 2.2 Product Functions </h3>
             <p>
                 &nbsp; &nbsp; &nbsp; &nbsp; Aceasta aplicatie ofera utilizatorului o serie de functionalitati:
-                <ul type=s quare id="unord">
+                <ul type="square" id="unord">
                     <li> Inregistrare </li>
                     <li> Autentificare </li>
                     <li> Search bar </li>
-                    <li> Vizualizare informatii </li>
-                    <li> Generare de albume personalizate </li>
-                    <li> Carduri cu animale </li>
-                    <li> Slider de imagini </li>
-                    <li> Generare Top 10 Clasament</li>
-                    <li> Like Animal- sistem de rating </li>
-                    <li> Filtrare Albume </li>
-                    <li> Generare statistici</li>
-                    <li> Creare albume personalizate</li>
-                    <li> Adaugare animal la un album personalizat</li>
-                    <li> Salvare albume personalizate in MyAlbums</li>
+                    <li> Afisare album selectat (albume prestabilite) </li>
+                    <li> Filtrare album </li>
+                    <li> Salvarea unui album in colectia persoanala </li>
+                    <li> Generare de albume bazate pe anumite proprietati alese de utilizator </li>
+                    <li> Card animal</li>
+                    <li> Like animal </li>
+                    <li> Slider de imagini pentru fiecare animal </li>
+                    <li> Generare de statistici CSV, PDF</li>
+                    <li> Generare clasament animale populare (flux RSS)</li>
+                    <li> Albume salvate</li>
+                    <li> Partajare albume</li>
+                    <li> Deconectare</li>
                 </ul>
                 &nbsp; &nbsp; &nbsp; &nbsp; De mentionat faptul ca toate aceste functionalitati sunt disponibile doar pentru utilizatori inregistrati si logati in aplicatie. Restul utilizatorilor nelogati au accesul limitat la unele functionalitati precum creare/salvare
                 albume personale/ adaugare animal la album personal. Atasez diagrama :
-                <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;Electron\&quot; modified=\&quot;2021-04-01T16:28:09.636Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.4.3 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36\&quot; etag=\&quot;7OYbk65znj1GANzVFchE\&quot; version=\&quot;14.4.3\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;e4CY1KfmZ_HjEQV-NOpp\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
-                <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+               <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;Electron\&quot; modified=\&quot;2021-06-05T17:32:02.276Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.6.13 Chrome/89.0.4389.128 Electron/12.0.7 Safari/537.36\&quot; etag=\&quot;hUhFeH4sA-XKqSCtJwaz\&quot; version=\&quot;14.6.13\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;e4CY1KfmZ_HjEQV-NOpp\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+               <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
 
             </p>
         </section>
@@ -257,14 +259,14 @@
             <h3> 2.6 User Documentation </h3>
             <p>
                 &nbsp; &nbsp; &nbsp; &nbsp; Aplicatia intra in categoria aplicatiilor web, iar folosirea acesteia va fi una intuitiva,mai exact sugerata de intrega interfata ce faciliteaza utilizatorului navigarea in aplicatie si descoperirea de comenzi utile. Suplimentar,
-                va fi introdusa in subsolul paginii o rubrica <strong>About</strong>>, ce trimite catre un ghid de utilizare ale comenzilor site-ului.
+                va fi introdusa in subsolul paginii o rubrica <strong>About</strong>, respectiv o pagina dedicata ce trimite catre un <strong>ghid de utilizare</strong> ale comenzilor site-ului.
             </p>
         </section>
         <section id="chapter2_7">
             <h3> 2.7 Assumptions and Dependencies </h3>
             <p>
                 &nbsp; &nbsp; &nbsp; &nbsp; Daca utilizatorul pierde conexiunea cu internetul, atunci inevitabil aplicatia web nu va mai raspunde si functionalitatile sale devin indisponibile.
-                <br> &nbsp; &nbsp; &nbsp; &nbsp; Dependenta SOFTWARE: Daca dezvolatorii aplicatie nu acorda atentie necesara asupra codului scris, mai ales, atunci cand folosesc API - uri ameninta performanta si securitatea aplicatiei. &nbsp; &nbsp; &nbsp;
+                <br> &nbsp; &nbsp; &nbsp; &nbsp; Dependenta SOFTWARE: Daca dezvolatorii aplicatie nu acorda atentie necesara asupra codului scris, mai ales, atunci cand folosesc API - uri ameninta performanta si securitatea aplicatiei.<br> &nbsp; &nbsp; &nbsp;
                 &nbsp; Conexiunea cu baza de date trebuie sa fie una sigura, este foarte importanta structurarea sa deoarece pe baza acesteia se construiesc filtrele de cautare multi-criteriala.
             </p>
         </section>
@@ -344,7 +346,8 @@
             <br> Call catre baza de date din backend si interogarea acesteia pentru verificarea existentei user-ului si corectitudinea parolei. Daca datele corespund se interogheaza baza de date din nou pentru a prelua numele si id-urile albumelor personale
             ale utilizatorului.
             <br> Response de la backend catre frontend cu datele obtinute in urma interogarii.
-            <br> Afisarea continutului corespunzator si incarcarea componentei ce contine numele utilizatorului pe pagina principala plus numele albumelor personale in sectiunea “Albumele mele” din meniu.
+            <br> Afisarea continutului corespunzator si incarcarea componentei ce contine numele utilizatorului pe pagina principala plus numele albumelor salvate in sectiunea “Saved albums” si numele albumelor primite din partajari in sectiunea "Received albums" din meniu.
+            <br> Setarea cookie-urilor.
         </p>
     </section>
     <section id="chapter4_3">
@@ -352,11 +355,11 @@
         <p>
             4.3.1 Description and Priority Provide
             <br> Priority High
-            <br> Componenta permite cautarea multi-criteriala si generarea rezultatelor corespunzatoare cautarii.
+            <br> Componenta permite cautarea unui animal specific si generarea rezultatului corespunzator.
             <br>
             <br> 4.3.2 Stimulus/Response Sequences
             <br> Utilizatorul apasa pe bara de search – Sistemul focuseaza bara de search si permite utilizatorului introducerea de text.
-            <br> Utilizatorul apasa enter dupa ce a introdus text in bara de cautare – Sistemul afiseaza rezultatele pentru acea cautare.
+            <br> Utilizatorul apasa enter dupa ce a introdus text in bara de cautare – Sistemul afiseaza rezultatul pentru acea cautare sau un mesaj de eroare in cazul in care nu sunt gasite date in conformitate cu inputul introdus.
             <br>
             <br> 4.3.3 Functional Requirments
             <br> Preluarea textului din field-ul de input al barii de cautare.
@@ -367,14 +370,14 @@
         </p>
     </section>
     <section id="chapter4_4">
-        <h3> 4.4 Afisare album selectat (albume prestabilite) </h3>
+        <h3> 4.4 Afisare album default (albume prestabilite) </h3>
         <p>
             4.4.1 Description and Priority Provide
             <br> Priority High
             <br> Componenta permite utilizatorilor selectarea si vizualizarea unui anumit album prestabilit.
             <br>
             <br> 4.4.2 Stimulus/Response Sequences
-            <br> Utilizatorul selecteaza un album pe care doreste sa il vada – Sistemul permite utiliztorului sa selecteze un singur album.
+            <br> Utilizatorul selecteaza un album pe care doreste sa il vada – Sistemul permite utilizatorului sa selecteze un singur album.
             <br> Utilizatorul apasa pe butonul “Afiseaza album” – Sistemul genereaza si afiseaza in pagina albumul selectat.
             <br>
             <br> 4.4.3 Functional Requirments
@@ -392,7 +395,7 @@
             <br> Componenta permite utilizatorului sa filtreze un album in functie de anumite proprietati generale.
             <br>
             <br> 4.5.2 Stimulus/Response Sequences
-            <br> Utilizatorul selecteaza proprietatea dorita pentru filtrare si apasa pe butonul “Filtreaza album” – Sistemul filtreaza albumul si il afiseaza conform preferintelor.
+            <br> Utilizatorul selecteaza proprietatea dorita pentru filtrare si apasa pe butonul "Apply filters" – Sistemul filtreaza albumul si il afiseaza conform preferintelor.
             <br>
             <br> 4.5.3 Functional Requirments
             <br> Sortarea si rearanjarea componentelor albumului in pagina in functie de proprietatea selectata pentru filtrare.
@@ -406,13 +409,11 @@
             <br> Componenta permite utilizatorului logat sa salveze albumul curent de pe pagina in colectia personala.
             <br>
             <br> 4.6.2 Stimulus/Response Sequences
-            <br> Utilizatorul apasa pe butonul “Salveaza album”, dar nu este logat pe site – sistemul directioneaza utilizatorul catre pagina de autentificare.
-            <br> Utilizatorul apasa pe butonul “Salveaza album” si este logat pe site – sistemul salveaza respectivul album in colectia utilizatorului.
+            <br> Utilizatorul apasa pe butonul “Save album” – sistemul salveaza respectivul album in colectia utilizatorului.
             <br>
             <br> 4.6.3 Functional Requirments
-            <br> Verificare daca utilizatorul este logat prin interogarea statusului din baza de date.
             <br> Identificarea albumului pe care utilizatorul doreste sa il salveze si transmiterea acestor date din frontend catre backend.
-            <br> Accesarea bazei de date din backend si inserarea datelor preluate in tabelul special destinat albumelor userilor.
+            <br> Accesarea bazei de date din backend si inserarea datelor preluate in tabelul special destinat albumelor salvate de catre useri.
         </p>
     </section>
     <section id="chapter4_7">
@@ -420,10 +421,10 @@
         <p>
             4.7.1 Description and Priority Provide
             <br> Priority High
-            <br> Componenta permite utilizatorului sa aleaga mai multe propietati in functie de care se vor tria animalele si se va genera un album.
+            <br> Componenta permite utilizatorului sa aleaga mai multe proprietati in functie de care se vor tria animalele si se va genera un album.
             <br>
             <br> 4.7.2 Stimulus/Response Sequences
-            <br> Utilizatorul selecteaza proprietatile dorite si apasa pe butonul “Generare album” – Sistemul afiseaza albumul conform preferintelor.
+            <br> Utilizatorul selecteaza proprietatile dorite si apasa pe butonul “Generate album” – Sistemul afiseaza albumul conform preferintelor sau un mesaj in cazul in care nu se gasesc animale care sa respecte toate proprietatile.
             <br>
             <br> 4.7.3 Functional Requirments
             <br> Liste de tip dropdown cu optiuni posibile.
@@ -435,22 +436,22 @@
         </p>
     </section>
     <section id="chapter4_8">
-        <h3> 4.8 Crearea unui album personal </h3>
+        <h3> 4.8 Received Albums </h3>
         <p>
             4.8.1 Description and Priority Provide
             <br> Priority Medium
-            <br> Componenta permite unui utilizator logat sa isi creeze propriul album cu animale.
+            <br> Componenta permite unui utilizator sa vizualizeze albumele primite de la alti useri in urma partajarii.
             <br>
-            <br> 4.8.2 Stimulus/Response Sequences
-            <br> Utilizatorul apasa pe butonul “Creare album”, dar nu este logat pe site – Sistemul nu permite utilizarea butonului si directioneaza user-ul catre pagina de autentificare.
-            <br> Utilizatorul apasa pe butonul “Creare album” si este logat pe site – Sistemul permite utilizarea butonului si creeaza albumul.
+            <br> 4.15.2 Stimulus/Response Sequences
+            <br> Userul apasa pe lista de tip dropdown din sectiunea “Received albums” – Sistemul afiseaza albumele primite din partajari ale utilizatorului si ii permite selectarea unuia.
+            <br> Userul selecteaza unul dintre albume si apasa pe butonul “Show album” – Sistemul afiseaza albumul selectat.
             <br>
-            <br> 4.8.3 Functional Requirments
-            <br> Verificare daca utilizatorul este logat prin interogarea statusului din baza de date.
-            <br> Pop-up a unei casete de input text atunci cand user-ul apasa pe butonul de creare album pentru a alege numele albumului.
-            <br> Trasmiterea datelor introduse din frontend catre backend.
-            <br> Accesarea bazei de date din backend si inserarea albumului in tabelul special destinat albumelor userilor.
-            <br> Afisarea din frontend a textului “Album creat cu succes” si introducerea acestuia in meniul din stanga la sectiunea “Albumele mele”.
+            <br> 4.15.3 Functional Requirments
+            <br> Incarcarea numelor albumelor salvate in sectiunea "Received Albums" specifice userului logat atunci cand se acceseaza pagina principala a site-ului.
+            <br> Request din frontend catre backend.
+            <br> Accesarea si interogarea bazei de date din backend pentru a selecta animalele corespunzatoare albumului dorit.
+            <br> Response de la backend catre frontend cu datele obtinute in urma interogarii.
+            <br> Crearea componentelor de afisat in frontend, in functie de datele primite de la backend.
         </p>
     </section>
     <section id="chapter4_9">
@@ -501,63 +502,70 @@
         </p>
     </section>
     <section id="chapter4_12">
-        <h3> 4.12 Adaugarea unui animal intr-un album personal </h3>
+        <h3> 4.12 Partajare album </h3>
         <p>
             4.12.1 Description and Priority Provide
-            <br> Fiecare animal va avea pe pagina proprie un buton “Adauga in album” care permite utilizatorului sa adauge un animal intr-un album propriu.
-            <br> Priority Medium
+            <br> Utilizatorii pot partaja albumele salvate catre alti utilizatori prin intermediul butonului "Share album".
+            <br> Priority High
             <br>
             <br> 4.12.2 Stimulus/Response Sequences
-            <br> Utilizatorul apasa pe butonul “Adauga in album”, dar nu este logat pe site – Sistemul directioneaza utilizatorul catre pagina de autentificare.
-            <br> Utilizatorul apasa pe butonul “Adauga in album” si este logat – Sistemul afiseaza lista cu albumele utilizatorului disponibile in care poate adauga animalul.
+            <br> Utilizatorul apasa pe butonul “Share album” – Sistemul afiseaza un prompt in care userul trebuie sa introduca numele utilizatorilor catre care doreste sa partajeze albumul.
+            <br> Sistemul verifica ca datele introduse in prompt sa fie corecte si sa existe in baza de date, iar in functie de acest aspect partajarea are loc cu succes sau nu se realizeaza.
             <br>
             <br> 4.12.3 Functional Requirments
-            <br> Verificare daca utilizatorul este logat prin interogarea statusului din baza de date.
-            <br> Selectarea numelor albumelor incarcate in sectiunea “Albumele mele” si afisarea acestora intr-o lista din care se poate alege un singur album.
-            <br> Accesarea din backend a bazei de date si inserarea id-ului animalului corespunzator in albumul personal ales de user.
-            <br> Afisarea mesajului “Animalul a fost adaugat cu succes in album”.
-        </p>
+            <br> Selectarea datelor introduse in prompt si validarea acestora. In urma validarii datele vor fi trimise catre backend.
+            <br> Selectarea numelui albumului pe care utilizatorul doreste sa il partajeze si trimiterea acestuia catre backend.
+            <br> Accesarea din backend a bazei de date si efectuarea operatiilor necesare pentru ca albumul respectiv sa apara in sectiunea "Received albums" a utilizatorilor catre care s-a trimis albumul.
+            <br> Afisarea unui mesaj de succes/eroare dupa operatiunea de partajare.
     </section>
     <section id="chapter4_13">
         <h3> 4.13 Generare de statistici CSV, PDF </h3>
         <p>
             4.13.1 Description and Priority Provide
             <br> Priority High
-            <br> In pagina principala va exista un buton “Generare statistici” care va genera diverse statistici disponibile in formate CSV si PDF.
+            <br> In pagina principala, in meniu, vor exista doua butoane “Generate statistics PDF” si “Generate statistics CSV” care vor genera diverse statistici disponibile in formate CSV si PDF.
             <br>
             <br> 4.13.2 Stimulus/Response Sequences
-            <br> Utilizatorul apasa pe butonul “Generare statisitici” – Sistemul genereaza statisici diverse in formar CSV si PDF.
+            <br> Utilizatorul apasa pe butonul “Generare statisitics PDF” – Sistemul genereaza statisici diverse in format PDF folosind chart-uri si tabele si ofera fisierul spre download.
+            <br> Utilizatorul apasa pe butonul “Generare statisitics CSV” – Sistemul genereaza statisici diverse in format CSV folosind si ofera un fisier de tip excel spre download.
             <br>
             <br> 4.13.3 Functional Requirments
-            <br> TBD
+            <br> Folosirea librariilor pdfkit si chartjs pentru crearea statisticilor in PDF.
+            <br> Folosirea librariei fastcsv pentru crearea statisticilor in format CSV.
         </p>
     </section>
     <section id="chapter4_14">
-        <h3> 4.14 Generare clasament animale populare (flux RSS)</h3>
+        <h3> 4.14 Generare clasament animale populare si download flux RSS</h3>
         <p>
             4.14.1 Description and Priority Provide
             <br> Priority Medium
-            <br> In pagina principala va exista un buton “Generare clasament” care va genera top 20 animale in functie de popularitate (numarul de like-uri).
+            <br> In pagina principala va exista un buton “View Ranking” care va trimite catre o pagina unde se va genera top 30 animale in functie de popularitate (numarul de like-uri). 
+            Pe pagina respectiva va exista un buton "Download RSS data feed" prin care utilizatorul poate downloada clasamentul in format XML.
             <br>
             <br> 4.14.2 Stimulus/Response Sequences
-            <br> Utilizatorul apasa pe butonul “Generare clasament” – Sistemul genereaza clasamentul primelor 20 de animale cele mai populare.
+            <br> Utilizatorul apasa pe butonul “View Ranking” – Sistemul genereaza clasamentul primelor 30 de animale cele mai populare si incarca pargina corespunzatoare unde se gaseste clasamentul.
+            <br> Utilizatorul apasa pe butonul "Download RSS data feed" - Sistemul genereaza clasamentul in format XML si il ofera spre download.
             <br>
             <br> 4.14.3 Functional Requirments
-            <br> TBD
+            <br> Request din frontend catre backend.
+            <br> Accesarea si interogarea bazei de date din backend pentru a selecta animalele cu cele mai multe like-uri.
+            <br> Generarea paginii cu clasamentul conform datelor obtinute in urma interogarii.
+            <br> Generarea documentului in format XML pregatit pentru a fi downloadat.
         </p>
     </section>
     <section id="chapter4_15">
-        <h3> 4.15 Albumele mele</h3>
+        <h3> 4.15 Saved albums</h3>
         <p>
             4.15.1 Description and Priority Provide
             <br> Priority Medium
-            <br> Componenta permite utilziatorului logat vizualizarea si afisarea albumelor salvate sau a albumelor personale create.
+            <br> Componenta permite utilziatorului logat vizualizarea si afisarea albumelor salvate.
             <br>
             <br> 4.15.2 Stimulus/Response Sequences
-            <br> Userul apasa pe lista de tip dropdown din sectiunea “Albumele mele” – Sistemul afiseaza albule personale si salvate ale utilizatorului si ii permite selectarea unuia.
-            <br> Userul selecteaza unul dintre albume si apasa pe butonul “Afiseaza album” – Sistemul afiseaza albumul selectat.
+            <br> Userul apasa pe lista de tip dropdown din sectiunea “Saved albums” – Sistemul afiseaza albumele salvate ale utilizatorului si ii permite selectarea unuia.
+            <br> Userul selecteaza unul dintre albume si apasa pe butonul “Show album” – Sistemul afiseaza albumul selectat.
             <br>
             <br> 4.15.3 Functional Requirments
+            <br> Incarcarea numelor albumelor salvate in sectiunea "Saved Albums" specifice userului logat atunci cand se acceseaza pagina principala a site-ului.
             <br> Request din frontend catre backend.
             <br> Accesarea si interogarea bazei de date din backend pentru a selecta animalele corespunzatoare albumului dorit.
             <br> Response de la backend catre frontend cu datele obtinute in urma interogarii.
@@ -565,6 +573,21 @@
         </p>
     </section>
     <section id="chapter4_16">
+        <h3> 4.16 Notificare user</h3>
+        <p>
+            4.16.1 Description and Priority Provide
+            <br> Priority Medium
+            <br> 
+            <br>
+            <br> 4.16.2 Stimulus/Response Sequences
+            <br> 
+            <br>
+            <br> 4.16.3 Functional Requirments
+            <br> 
+            <br> 
+        </p>
+    </section>
+    <section id="chapter4_17">
         <h3> 4.16 Deconectare</h3>
         <p>
             4.16.1 Description and Priority Provide
@@ -572,11 +595,11 @@
             <br> Componenta permite unui utilizator logat sa se delogheze de pe site.
             <br>
             <br> 4.16.2 Stimulus/Response Sequences
-            <br> Userul apasa pe butonul “Delogare” – Sistemul delogheaza utilizatorul de pe site.
+            <br> Userul apasa pe butonul “Log out” – Sistemul delogheaza utilizatorul de pe site.
             <br>
             <br> 4.16.3 Functional Requirments
             <br> Request din frontend catre backend.
-            <br> Accesarea bazei de date din backend si update la statusul utilizatorului pe 0 (delogat).
+            <br> Update cookie cu statusul utilizatorului pe 0 (delogat).
             <br> Response de la backend catre frontend si actualizarea componentelor din frontend in urma delogarii.
         </p>
     </section>
@@ -585,8 +608,8 @@
         <section id="chapter5_1">
             <h3> 5.1 Performance Requirements </h3>
             <p>
-                Se va dori ca filtrarea albumelor, cautarea multi-criteriala, generarea albumelor bazate pe proprietati si afisarea albumelor sa se realizeze cat mai rapid. Prin urmare se va opta pentru imagini de tip .jpg / .jpeg care se pot incarca rapid si se va utiliza
-                lazy loading.
+                Se va dori ca filtrarea albumelor, cautarea multi-criteriala, afisarea albumelor, generarea albumelor bazate pe proprietati si afisarea albumelor sa se realizeze cat mai rapid. Prin urmare se va opta pentru imagini de tip .jpg / .jpeg care se pot incarca rapid, iar baza
+                de date va fi conceputa in asa fel incat sa sprijine rapiditate request-urilor de date.
             </p>
         </section>
         <section id="chapter5_2">
@@ -598,7 +621,7 @@
         <section id="chapter5_3">
             <h3> 5.3 Security Requirements </h3>
             <p>
-                Se va recurge la tehnici de prevenire a atacurilor precum Cross Site Scripting sau SQL injection.
+                Se va recurge la tehnici de prevenire a atacurilor precum SQL injection, iar parolele utilizatorilor vor fi hashuite in baza de date.
             </p>
         </section>
         <section id="chapter5_4">
@@ -609,7 +632,7 @@
                 <br>
                 <br> Accesibility
                 <br> Se va recurge la un Design UI/UX care sa ofere posibilitatea tuturor persoanelor, inclusiv cele cu probleme (distingerea culorilor, focusarea atentiei, etc.), sa acceseze si sa foloseasca site-ul. Pentru aceasta se va tine cont de
-                contrastul culorilor si implementarea va permite utilizatorilor folosirea unui screen reader.
+                contrastul culorilor si marimea fontului sa fie potrivite, iar navigarea pe pagina sa fie cat mai usoara.
             </p>
         </section>
     </section>

@@ -22,7 +22,8 @@ body {
     box-shadow: 0 0 3px 1px #2b4868;
 }
 
-a#admin {
+a#admin,
+#adminMenu {
     display: none;
 }
 
@@ -80,7 +81,7 @@ a#admin {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 100px;
+    height: 70px;
     width: 150px;
     position: fixed;
     right: 0;
@@ -542,6 +543,26 @@ label[for="f5"] {
     cursor: pointer;
 }
 
+#loginMenu,
+#logoutMenu,
+#adminMenu {
+    text-decoration: none;
+    color: #2b4868;
+    margin: 8px 0;
+}
+
+.appear {
+    display: none;
+    margin: 10px auto 0 auto;
+    text-align: center;
+}
+
+@media all and (max-width: 500px) {
+    .appear {
+        display: block;
+    }
+}
+
 @media all and (max-width: 1050px) {
     .searchBar {
         margin-left: 100px;
@@ -635,21 +656,6 @@ label[for="f5"] {
 
 
 @media all and (max-width: 750px) {
-    #userMenu {
-        order: 1;
-    }
-
-    #geneSP {
-        order: 2;
-    }
-
-    #geneSC {
-        order: 3;
-    }
-
-    #viewR {
-        order: 4;
-    }
 
     .filters {
         background-color: white;
