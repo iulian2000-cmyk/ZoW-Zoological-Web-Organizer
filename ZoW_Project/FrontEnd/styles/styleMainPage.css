@@ -314,7 +314,7 @@ option {
 
 #title {
     color: #2b4868;
-    margin-top: 3.5em auto 1em auto;
+    margin: 3.5em auto 1em auto;
     text-align: center;
     text-shadow: 1px 1px 2px #72b0c9;
 }
