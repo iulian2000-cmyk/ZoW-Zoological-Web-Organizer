@@ -314,7 +314,11 @@ option {
 }
 
 .content p {
+    font-weight: 500;
+    font-size: 32px;
     margin-top: 0;
+    text-align: center;
+    transform: scaleY(1.8);
 }
 
 #title {
@@ -433,7 +437,6 @@ label[for="f5"] {
 .animalName {
     margin: auto;
     width: auto;
-    font-size: 50px;
     color: black;
     text-shadow: 2px 2px 10px white;
 }
@@ -697,8 +700,8 @@ label[for="f5"] {
         width: 600px;
     }
 
-    .animalName {
-        font-size: 40px;
+    .content p {
+        font-size: 28px;
     }
 }
 
@@ -718,8 +721,8 @@ label[for="f5"] {
         height: 250px;
     }
 
-    .animalName {
-        font-weight: 400;
+    .content p {
+        font-size: 22px;
     }
 
     .logo {
@@ -754,9 +757,8 @@ label[for="f5"] {
         height: 250px;
     }
 
-    .animalName {
-        font-size: 30px;
-        font-weight: 500;
+    .content p {
+        font-size: 20px;
     }
 }
 
@@ -810,6 +812,10 @@ label[for="f5"] {
     .card {
         width: 400px;
         height: 200px;
+    }
+
+    .content p {
+        font-size: 18px;
     }
 }
 
