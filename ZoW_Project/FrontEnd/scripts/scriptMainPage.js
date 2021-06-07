@@ -250,12 +250,24 @@ function filterCards() {
 }
 
 function compareCardsByProperty(card1, card2) {
-    if (card1[propertyForFilters] > card2[propertyForFilters]) {
-        return 1;
-    } else if (card1[propertyForFilters] < card2[propertyForFilters]) {
-        return -1;
-    } else {
-        return 0;
+    console.log(propertyForFilters);
+    if(propertyForFilters !== "animalName"){
+        if (card1[propertyForFilters] < card2[propertyForFilters]) {
+            return 1;
+        } else if (card1[propertyForFilters] > card2[propertyForFilters]) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+    else{
+        if (card1[propertyForFilters] > card2[propertyForFilters]) {
+            return 1;
+        } else if (card1[propertyForFilters] < card2[propertyForFilters]) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 }
 
