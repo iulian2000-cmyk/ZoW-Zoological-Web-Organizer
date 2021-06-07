@@ -22,6 +22,14 @@ body {
     box-shadow: 0 0 3px 1px #2b4868;
 }
 
+#loginBtn {
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #1b3652;
+    margin-top: 5px;
+}
+
 .homeIcon {
     cursor: pointer;
     width: 2em;
@@ -221,7 +229,6 @@ footer {
         top: -300px;
         opacity: 0
     }
-
     to {
         top: 0;
         opacity: 1
@@ -233,7 +240,6 @@ footer {
         top: -300px;
         opacity: 0
     }
-
     to {
         top: 0;
         opacity: 1
@@ -289,12 +295,10 @@ footer {
     #ranking {
         width: 500px;
     }
-
     h1 {
         font-size: 25px;
         padding-top: 1em;
     }
-
     h2 {
         font-size: 20px;
     }
@@ -304,15 +308,12 @@ footer {
     #ranking {
         width: 470px;
     }
-
     th {
         font-size: 16px;
     }
-
     td {
         font-size: 14px;
     }
-
     #rss {
         font-size: 14px;
     }
@@ -322,19 +323,15 @@ footer {
     #ranking {
         width: 420px;
     }
-
     th {
         font-size: 15px;
     }
-
     td {
         font-size: 13px;
     }
-
     #username {
         font-size: 12px;
     }
-
     .arrow {
         height: 1.3em;
         width: 0.8em;
@@ -357,11 +354,9 @@ footer {
     #ranking {
         width: 380px;
     }
-
     th {
         font-size: 15px;
     }
-
     td {
         font-size: 13px;
     }
@@ -371,11 +366,9 @@ footer {
     #ranking {
         width: 340px;
     }
-
     th {
         font-size: 14px;
     }
-
     td {
         font-size: 12px;
     }
@@ -385,21 +378,17 @@ footer {
     #ranking {
         width: 310px;
     }
-
     th {
         font-size: 13px;
         height: 30px;
     }
-
     td {
         font-size: 11px;
         height: 25px;
     }
-
     h1 {
         font-size: 22px;
     }
-
     h2 {
         font-size: 18px;
     }
@@ -409,19 +398,15 @@ footer {
     #ranking {
         width: 270px;
     }
-
     th {
         font-size: 12px;
     }
-
     td {
         font-size: 10px;
     }
-
     h1 {
         font-size: 22px;
     }
-
     h2 {
         font-size: 18px;
     }
@@ -449,7 +434,6 @@ footer {
     .aboutContent {
         width: 80%;
     }
-
     .aboutBody {
         font-size: small;
     }

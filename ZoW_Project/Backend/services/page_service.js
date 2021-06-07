@@ -318,7 +318,9 @@ exports.ranking_page = function(req, res) {
                 } else {
                     dom.window.document.getElementById("admin").style.display = "none";
                 }
+                dom.window.document.getElementById("loginBtn").style.display = "none";
             } else {
+                dom.window.document.getElementById("loginBtn").style.display = "block";
                 dom.window.document.getElementById("arrowUserOptions").style.display = "none";
             }
             connection.query("SELECT * FROM animals ORDER BY likes DESC LIMIT 30;", function(error, results, fields) {
@@ -373,6 +375,15 @@ exports.load_animal_page = function(req, res) {
         } else {
             res.writeHead(200, { 'Content-type': 'text/html' });
             const dom = new JSDOM(data);
+            var cookies = new Cookies(req, res, { keys: keys });
+            var username = cookies.get('username', { signed: true });
+            if (typeof username !== 'undefined') {
+                dom.window.document.getElementById("loginBtn").style.display = "none";
+                dom.window.document.getElementsByClassName("arrow")[0].style.display = "block";
+            } else {
+                dom.window.document.getElementById("loginBtn").style.display = "block";
+                dom.window.document.getElementsByClassName("arrow")[0].style.display = "none";
+            }
             connection.query('SELECT * FROM animals WHERE id_animal=' + connection.escape(index_animal), function(error, results, fields) {
                 if (results.length > 0) {
                     dom.window.document.title = results[0].animalName;

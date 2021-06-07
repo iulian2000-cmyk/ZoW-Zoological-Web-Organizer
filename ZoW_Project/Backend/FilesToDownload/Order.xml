@@ -1,152 +1,152 @@
 <Order_Animals_Popularity>
     <Animal>
         <Position>1</Position>
-        <Name>RANDUNICA</Name>
-        <Likes>98</Likes>
+        <Name>LEU</Name>
+        <Likes>4</Likes>
     </Animal>
     <Animal>
         <Position>2</Position>
-        <Name>VIPERA</Name>
-        <Likes>98</Likes>
+        <Name>TYRANNOSAURUS</Name>
+        <Likes>3</Likes>
     </Animal>
     <Animal>
         <Position>3</Position>
-        <Name>PTERODACTYLUS</Name>
-        <Likes>96</Likes>
+        <Name>AFIDE</Name>
+        <Likes>1</Likes>
     </Animal>
     <Animal>
         <Position>4</Position>
-        <Name>ALBINA</Name>
-        <Likes>95</Likes>
+        <Name>STEGOSAURUS</Name>
+        <Likes>1</Likes>
     </Animal>
     <Animal>
         <Position>5</Position>
-        <Name>PTERANODON</Name>
-        <Likes>92</Likes>
+        <Name>ALBINA</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>6</Position>
-        <Name>ARRHINOCERATOPS</Name>
-        <Likes>91</Likes>
+        <Name>BIBAN DE ACVARIU</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>7</Position>
-        <Name>BARZA</Name>
-        <Likes>89</Likes>
+        <Name>BOTIA MACRACANTHA</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>8</Position>
-        <Name>PORUMBEL</Name>
-        <Likes>89</Likes>
+        <Name>CALCAN</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>9</Position>
-        <Name>SPINOSAURUS</Name>
-        <Likes>88</Likes>
+        <Name>CAMELEON</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>10</Position>
-        <Name>CROCODIL</Name>
-        <Likes>88</Likes>
+        <Name>CAPUSA</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>11</Position>
-        <Name>FLUTURE</Name>
-        <Likes>86</Likes>
+        <Name>CARABUS DE MAI</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>12</Position>
-        <Name>TARANTULA</Name>
-        <Likes>86</Likes>
+        <Name>CARAS</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>13</Position>
-        <Name>CARABUS DE MAI</Name>
-        <Likes>85</Likes>
+        <Name>CLOVN</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>14</Position>
-        <Name>VULTUR PESCAR</Name>
-        <Likes>85</Likes>
+        <Name>COROPISNITA</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>15</Position>
-        <Name>SALAMANDRA</Name>
-        <Likes>84</Likes>
+        <Name>DORADA</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>16</Position>
-        <Name>PESTELE OSCAR</Name>
-        <Likes>78</Likes>
+        <Name>FLAMINGO</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>17</Position>
-        <Name>VACA</Name>
-        <Likes>77</Likes>
+        <Name>FLUTURE</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>18</Position>
-        <Name>GREIERE</Name>
-        <Likes>76</Likes>
+        <Name>PASAREA COLIBRI</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>19</Position>
-        <Name>ZYGENTOMA</Name>
-        <Likes>74</Likes>
+        <Name>LEBADA NEAGRA</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>20</Position>
-        <Name>STIUCA</Name>
-        <Likes>73</Likes>
+        <Name>FTIRAPTERE</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>21</Position>
-        <Name>PAPAGAL MOLUCAN</Name>
-        <Likes>73</Likes>
+        <Name>FURNICA</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>22</Position>
-        <Name>ZEBRA</Name>
-        <Likes>71</Likes>
+        <Name>GREIERE</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>23</Position>
-        <Name>BIBAN DE ACVARIU</Name>
-        <Likes>70</Likes>
+        <Name>MOLLY</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>24</Position>
-        <Name>AFIDE</Name>
-        <Likes>68</Likes>
+        <Name>ODONUS NIGER</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>25</Position>
-        <Name>TYLOSAURUS</Name>
-        <Likes>68</Likes>
+        <Name>PESTE PIATRA</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>26</Position>
-        <Name>FTIRAPTERE</Name>
-        <Likes>67</Likes>
+        <Name>PESTELE OSCAR</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>27</Position>
-        <Name>VIEPSE</Name>
-        <Likes>66</Likes>
+        <Name>PESTELE PAPAGAL</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>28</Position>
-        <Name>MIERLA</Name>
-        <Likes>66</Likes>
+        <Name>PESTELE PARADIS</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>29</Position>
-        <Name>STENOPELIX</Name>
-        <Likes>66</Likes>
+        <Name>PESTELE ZEBRA</Name>
+        <Likes>0</Likes>
     </Animal>
     <Animal>
         <Position>30</Position>
-        <Name>DRAGON BARBOS</Name>
-        <Likes>66</Likes>
+        <Name>PUFFER</Name>
+        <Likes>0</Likes>
     </Animal>
 </Order_Animals_Popularity>
