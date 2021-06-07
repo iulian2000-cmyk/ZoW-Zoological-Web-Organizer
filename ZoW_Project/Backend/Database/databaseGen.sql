@@ -11,7 +11,9 @@ CREATE TABLE users(
 CREATE TABLE shared_albums(
 	id_user1 INTEGER NOT NULL,
 	id_albumCustom INTEGER NOT NULL,
-	id_user2 INTEGER NOT NULL
+	id_user2 INTEGER NOT NULL,
+	FOREIGN KEY (id_user1) REFERENCES users(id_user),
+	FOREIGN KEY (id_user2) REFERENCES users(id_user),
 );
 
 CREATE TABLE albumsdefault(
