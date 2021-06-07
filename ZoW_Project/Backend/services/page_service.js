@@ -373,40 +373,45 @@ exports.load_animal_page = function(req, res) {
             res.writeHead(200, { 'Content-type': 'text/html' });
             const dom = new JSDOM(data);
             connection.query('SELECT * FROM animals WHERE id_animal=' + connection.escape(index_animal), function(error, results, fields) {
-
-                dom.window.document.title = results[0].animalName;
-                dom.window.document.getElementById("Title_Card").textContent = results[0].animalName;
-                dom.window.document.getElementById("content1").textContent = results[0].cardLongevitate;
-                dom.window.document.getElementById("content2").textContent = results[0].cardCategorie;
-                dom.window.document.getElementById("content3").textContent = results[0].cardGreutateMedie;
-                dom.window.document.getElementById("content4").textContent = results[0].cardInaltimeMedie;
-                dom.window.document.getElementById("content5").textContent = results[0].cardMediuDeViata;
-                dom.window.document.getElementById("content6").textContent = results[0].cardModDeHranire;
-                dom.window.document.getElementById("content7").textContent = results[0].likes;
-                dom.window.document.getElementById("TextGeneralitati").textContent = results[0].generalities;
-                dom.window.document.getElementById("StiatiCaText").textContent = results[0].stiatiCa;
-
-
-
-                dom.window.document.getElementById("like").action = dom.window.document.getElementById("like").action + index_animal;
-                //dom.window.document.getElementById("add").action = dom.window.document.getElementById("add").action + index_animal;
-
-                dom.window.document.getElementsByClassName("ImgGallery")[0].src = results[0].imagePath1;
-                dom.window.document.getElementsByClassName("ImgGallery")[1].src = results[0].imagePath2;
-                dom.window.document.getElementsByClassName("ImgGallery")[2].src = results[0].imagePath3;
-                dom.window.document.getElementsByClassName("ImgGallery")[3].src = results[0].imagePath4;
-
-                //dom.window.document.getElementsByClassName("myImg")[0].src = results[0].imagePath1;
+                if (results.length > 0) {
+                    dom.window.document.title = results[0].animalName;
+                    dom.window.document.getElementById("Title_Card").textContent = results[0].animalName;
+                    dom.window.document.getElementById("content1").textContent = results[0].cardLongevitate;
+                    dom.window.document.getElementById("content2").textContent = results[0].cardCategorie;
+                    dom.window.document.getElementById("content3").textContent = results[0].cardGreutateMedie;
+                    dom.window.document.getElementById("content4").textContent = results[0].cardInaltimeMedie;
+                    dom.window.document.getElementById("content5").textContent = results[0].cardMediuDeViata;
+                    dom.window.document.getElementById("content6").textContent = results[0].cardModDeHranire;
+                    dom.window.document.getElementById("content7").textContent = results[0].likes;
+                    dom.window.document.getElementById("TextGeneralitati").textContent = results[0].generalities;
+                    dom.window.document.getElementById("StiatiCaText").textContent = results[0].stiatiCa;
 
 
-                dom.window.document.getElementsByClassName("demo cursor ")[0].src = results[0].imagePath1;
-                dom.window.document.getElementsByClassName("demo cursor ")[1].src = results[0].imagePath2;
-                dom.window.document.getElementsByClassName("demo cursor ")[2].src = results[0].imagePath3;
-                dom.window.document.getElementsByClassName("demo cursor ")[3].src = results[0].imagePath4;
 
-                res.write(dom.window.document.documentElement.outerHTML);
+                    dom.window.document.getElementById("like").action = dom.window.document.getElementById("like").action + index_animal;
+                    //dom.window.document.getElementById("add").action = dom.window.document.getElementById("add").action + index_animal;
 
-                res.end();
+                    dom.window.document.getElementsByClassName("ImgGallery")[0].src = results[0].imagePath1;
+                    dom.window.document.getElementsByClassName("ImgGallery")[1].src = results[0].imagePath2;
+                    dom.window.document.getElementsByClassName("ImgGallery")[2].src = results[0].imagePath3;
+                    dom.window.document.getElementsByClassName("ImgGallery")[3].src = results[0].imagePath4;
+
+                    //dom.window.document.getElementsByClassName("myImg")[0].src = results[0].imagePath1;
+
+
+                    dom.window.document.getElementsByClassName("demo cursor ")[0].src = results[0].imagePath1;
+                    dom.window.document.getElementsByClassName("demo cursor ")[1].src = results[0].imagePath2;
+                    dom.window.document.getElementsByClassName("demo cursor ")[2].src = results[0].imagePath3;
+                    dom.window.document.getElementsByClassName("demo cursor ")[3].src = results[0].imagePath4;
+
+                    res.write(dom.window.document.documentElement.outerHTML);
+                    res.end();
+                } else {
+                    res.writeHead(404, { 'Content-type': 'application/json' });
+                    res.write('Animal not found' + JSON.stringify(err));
+                    res.end();
+                }
+
             });
         }
     });
