@@ -84,8 +84,20 @@ exports.mainPage = function(req, res) {
                                     //parentElement.insertBefore(newElement, referenceElement);
                                 }
                             }
-                            res.write(dom.window.document.documentElement.outerHTML);
-                            res.end();
+                            connection.query('SELECT DISTINCT albumName FROM albumsdefault;', function(error, results, fields) {
+                                if (results.length > 0) {
+                                    for (i = 0; i < results.length; i++) {
+                                        const option = dom.window.document.createElement("option");
+                                        option.value = results[i].albumName;
+                                        option.innerHTML = results[i].albumName.toUpperCase();
+                                        const sel = dom.window.document.getElementById("defaultAlbumsId");
+                                        sel.appendChild(option);
+                                    }
+                                }
+                                res.write(dom.window.document.documentElement.outerHTML);
+                                res.end();
+                            });
+
                         });
                     });
                 });
