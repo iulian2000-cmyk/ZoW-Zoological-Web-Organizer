@@ -80,6 +80,7 @@ exports.mainPage = function(req, res) {
                                     newElement.id = "notificationText";
                                     newElement.innerHTML = " Someone shared an album with you ! ";
                                     newElement.style.display = "block";
+                                    newElement.style.transform = "scaleY(1)";
                                     referenceElement.before(newElement);
                                     //parentElement.insertBefore(newElement, referenceElement);
                                 }
@@ -259,13 +260,13 @@ exports.load_page = function(req, res) {
 
                         var element = dom.window.document.createElement("input");
                         element.type = "checkbox";
-                        element.id = i + 1;
+                        element.id = `a${i + 1}`;
                         element.value = results[i].id_animal;
                         element.name = results[i].animalName;
 
                         var label = dom.window.document.createElement("label");
+                        label.setAttribute("for", `a${i + 1}`);
                         label.textContent = results[i].animalName;
-                        label.for = i + 1;
 
                         div.appendChild(element);
                         div.appendChild(label);

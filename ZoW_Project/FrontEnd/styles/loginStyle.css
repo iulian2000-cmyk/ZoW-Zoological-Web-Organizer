@@ -40,9 +40,7 @@ label>span {
 
 #animalsImg {
     position: relative;
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
+    width: auto;
     max-height: 225px;
 }
 
@@ -72,6 +70,11 @@ label>span {
 .loginText {
     margin-top: 1em;
     text-align: center;
+}
+
+#logo {
+    height: 80px;
+    width: auto;
 }
 
 .loginText {

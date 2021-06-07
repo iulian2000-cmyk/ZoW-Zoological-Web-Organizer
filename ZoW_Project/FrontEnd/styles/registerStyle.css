@@ -33,11 +33,14 @@ label>span {
     text-align: center;
 }
 
+#logo {
+    height: 80px;
+    width: auto;
+}
+
 #animalsImg {
     position: relative;
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
+    width: auto;
     max-height: 225px;
 }
 
@@ -142,6 +145,7 @@ input[type=email]:focus {
         top: -300px;
         opacity: 0
     }
+
     to {
         top: 0;
         opacity: 1
@@ -153,6 +157,7 @@ input[type=email]:focus {
         top: -300px;
         opacity: 0
     }
+
     to {
         top: 0;
         opacity: 1
@@ -202,6 +207,7 @@ input[type=email]:focus {
     .animals {
         display: none;
     }
+
     .footerContent {
         flex-direction: column;
     }
@@ -211,6 +217,7 @@ input[type=email]:focus {
     .login {
         width: 280px;
     }
+
     .logo {
         margin-left: 0;
     }
@@ -238,6 +245,7 @@ input[type=email]:focus {
     .aboutContent {
         width: 80%;
     }
+
     .aboutBody {
         font-size: small;
     }

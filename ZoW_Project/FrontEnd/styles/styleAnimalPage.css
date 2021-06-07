@@ -18,7 +18,7 @@ body {
 }
 
 h1 {
-    color: white;
+    color: black;
     text-align: center;
     margin-left: auto;
     display: flex;
@@ -340,6 +340,7 @@ img {
         top: -300px;
         opacity: 0
     }
+
     to {
         top: 0;
         opacity: 1
@@ -351,6 +352,7 @@ img {
         top: -300px;
         opacity: 0
     }
+
     to {
         top: 0;
         opacity: 1
@@ -462,7 +464,7 @@ img {
 
 .arrow {
     cursor: pointer;
-    width: 1em;
+    width: auto;
     height: 1.5em;
     margin-top: 8px;
     margin-right: 10px;
@@ -526,6 +528,7 @@ img {
     .aboutContent {
         width: 60%;
     }
+
     .nextButton {
         right: 4%;
     }
@@ -541,6 +544,7 @@ img {
     .aboutContent {
         width: 80%;
     }
+
     .aboutBody {
         font-size: small;
     }
@@ -551,14 +555,17 @@ img {
         flex-wrap: wrap;
         justify-content: space-around;
     }
+
     .box {
         width: 30%;
         height: auto;
         margin: auto;
     }
+
     .content {
         font-size: 15px;
     }
+
     .containerImages {
         width: 65%;
         height: auto;
@@ -566,19 +573,23 @@ img {
         top: 10%;
         padding: 30px;
     }
+
     .Slides {
         width: 100%;
         height: 100%;
     }
+
     .row {
         display: flex;
         flex-direction: row;
         width: 100%;
         height: 100%;
     }
+
     .cursor {
         width: 100%;
     }
+
     /*.nextButton {
         right: 4.5%;
     }*/
@@ -588,6 +599,7 @@ img {
     .buttons {
         font-size: small;
     }
+
     .box {
         height: 100%;
     }
@@ -601,10 +613,12 @@ img {
         align-items: center;
         height: auto;
     }
+
     .box {
         width: 50%;
         flex-direction: column;
     }
+
     .containerImages {
         width: 100%;
         margin: auto;
@@ -612,26 +626,32 @@ img {
         padding: 30px;
         flex-direction: column;
     }
+
     .Slides {
         width: 100%;
         height: 100%;
     }
+
     .row {
         display: flex;
         flex-direction: row;
         width: 100%;
         height: 100%;
     }
+
     .cursor {
         width: 100%;
     }
+
     .nextButton,
     .prevButton {
         top: 125%;
     }
+
     .nextButton {
         right: 4%;
     }
+
     .modalImage {
         width: 80%;
     }
@@ -641,6 +661,7 @@ img {
     .mare {
         margin-top: 15%;
     }
+
     .box {
         width: 65%;
     }
@@ -651,24 +672,31 @@ img {
         margin-top: 15%;
         flex-direction: column;
     }
+
     .box {
         width: 90%;
     }
+
     .containerImages {
         width: 100%;
     }
+
     .nextButton {
         right: 7%;
     }
+
     .row {
         display: none;
     }
+
     .content {
         font-size: 100%;
     }
+
     .footerContent {
         flex-direction: column;
     }
+
     .prevButton,
     .nextButton {
         top: 125%;
@@ -679,6 +707,7 @@ img {
     .content {
         font-size: 95%;
     }
+
     .prevButton,
     .nextButton {
         top: 125%;
@@ -690,23 +719,29 @@ img {
         margin-top: 25%;
         flex-direction: column;
     }
+
     .box {
         width: 95%;
         height: 60%;
     }
+
     .containerImages {
         width: 100%;
     }
+
     .nextButton {
         right: 8%;
     }
+
     .content {
         font-size: 95%;
     }
+
     .prevButton,
     .nextButton {
         top: 125%;
     }
+
     .nextButton {
         right: 8%;
     }
@@ -717,6 +752,7 @@ img {
         width: 100%;
         align-items: center;
     }
+
     .prevButton,
     .nextButton {
         top: 125%;
@@ -727,6 +763,7 @@ img {
     #username {
         font-size: 12px;
     }
+
     .arrow {
         height: 1.3em;
         width: 0.8em;

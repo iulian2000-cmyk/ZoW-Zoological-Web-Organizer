@@ -57,7 +57,7 @@ body {
 
 .arrow {
     cursor: pointer;
-    width: 1em;
+    width: auto;
     height: 1.5em;
     margin-top: 8px;
     margin-right: 10px;
@@ -259,6 +259,7 @@ textarea {
     #username {
         font-size: 12px;
     }
+
     .arrow {
         height: 1.3em;
         width: 0.8em;
@@ -278,6 +279,7 @@ textarea {
 }
 
 @media all and (max-width: 660px) {
+
     .users,
     .albums,
     .animals {
@@ -288,6 +290,7 @@ textarea {
 }
 
 @media all and (max-width: 410px) {
+
     .users,
     .albums,
     .animals {
@@ -296,6 +299,7 @@ textarea {
 }
 
 @media all and (max-width: 320px) {
+
     .users,
     .albums,
     .animals {

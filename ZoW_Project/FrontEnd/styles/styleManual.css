@@ -40,8 +40,8 @@ body {
 .menuIcon {
     cursor: pointer;
     order: 1;
-    width: 24px;
-    height: 32px;
+    width: auto;
+    height: 30px;
     margin-top: 10px;
     margin-left: 10px;
 }
